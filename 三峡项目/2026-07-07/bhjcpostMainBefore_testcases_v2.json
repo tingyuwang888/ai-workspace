@@ -1,24 +1,25 @@
 {
   "strategyCode": "bhjcpostMain",
   "strategyName": "保后检查主策略",
-  "generatedAt": "2026-07-07T14:49:49.812548",
+  "generatedAt": "2026-07-07T15:21:41.416916",
   "summary": {
-    "total": 662,
+    "total": 672,
     "byModule": {
-      "规则": 570,
+      "规则": 574,
       "函数": 51,
-      "决策流分支覆盖": 31,
-      "策略预警等级覆盖": 10
+      "决策流分支覆盖": 21,
+      "策略预警等级覆盖": 10,
+      "跨子策略综合": 16
     },
     "byCaseType": {
       "正案例": 238,
       "反案例": 261,
-      "边界案例": 163
+      "边界案例": 173
     }
   },
   "testCases": [
     {
-      "id": "TC_EBGS01_HIT",
+      "id": "TC_001",
       "desc": "命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -37,7 +38,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS01_MISS",
+      "id": "TC_002",
       "desc": "未命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -56,7 +57,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS01_AND0",
+      "id": "TC_003",
       "desc": "AND拆解：企业近3个月法定代表人存在变更记录企查查 - 仅企业近3个月法定代表人变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -75,7 +76,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS01_STRICT0",
+      "id": "TC_004",
       "desc": "严格边界：企业近3个月法定代表人存在变更记录企查查 - 企业近3个月法定代表人变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -94,7 +95,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS02_HIT",
+      "id": "TC_005",
       "desc": "命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -113,7 +114,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS02_MISS",
+      "id": "TC_006",
       "desc": "未命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -132,7 +133,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS02_AND0",
+      "id": "TC_007",
       "desc": "AND拆解：企业近3个月存在股权变更记录企查查 - 仅企业近3个月存在股权变更记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -151,7 +152,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS02_STRICT0",
+      "id": "TC_008",
       "desc": "严格边界：企业近3个月存在股权变更记录企查查 - 企业近3个月存在股权变更记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -170,7 +171,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS03_HIT",
+      "id": "TC_009",
       "desc": "命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -189,7 +190,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS03_MISS",
+      "id": "TC_010",
       "desc": "未命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -208,7 +209,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS03_AND0",
+      "id": "TC_011",
       "desc": "AND拆解：企业近3个月存在经营范围变更记录企查查 - 仅企业近3个月经营范围变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -227,7 +228,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS03_STRICT0",
+      "id": "TC_012",
       "desc": "严格边界：企业近3个月存在经营范围变更记录企查查 - 企业近3个月经营范围变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -246,7 +247,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGS04_HIT",
+      "id": "TC_013",
       "desc": "命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -265,7 +266,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGS04_MISS",
+      "id": "TC_014",
       "desc": "未命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -284,7 +285,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGS04_AND0",
+      "id": "TC_015",
       "desc": "AND拆解：企业近3个月存在注销信息记录企查查 - 仅企业近3个月注销吊销信息数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -303,7 +304,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGS04_STRICT0",
+      "id": "TC_016",
       "desc": "严格边界：企业近3个月存在注销信息记录企查查 - 企业近3个月注销吊销信息数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -322,7 +323,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGS05_HIT",
+      "id": "TC_017",
       "desc": "命中验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "正案例",
@@ -340,7 +341,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS05_MISS",
+      "id": "TC_018",
       "desc": "未命中验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "反案例",
@@ -358,7 +359,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS05_BOUND",
+      "id": "TC_019",
       "desc": "边界值验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "边界案例",
@@ -376,7 +377,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS06_HIT",
+      "id": "TC_020",
       "desc": "命中验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "正案例",
@@ -394,7 +395,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS06_MISS",
+      "id": "TC_021",
       "desc": "未命中验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "反案例",
@@ -412,7 +413,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS06_BOUND",
+      "id": "TC_022",
       "desc": "边界值验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "边界案例",
@@ -430,7 +431,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS07_HIT",
+      "id": "TC_023",
       "desc": "命中验证：企业近3个月存在注册资本减少变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -449,7 +450,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS07_MISS",
+      "id": "TC_024",
       "desc": "未命中验证：企业近3个月存在注册资本减少变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -468,7 +469,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS07_AND0",
+      "id": "TC_025",
       "desc": "AND拆解：企业近3个月存在注册资本减少变更记录企查查 - 仅企业近3个月注册资本减少变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -487,7 +488,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS07_STRICT0",
+      "id": "TC_026",
       "desc": "严格边界：企业近3个月存在注册资本减少变更记录企查查 - 企业近3个月注册资本减少变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -506,7 +507,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS08_HIT",
+      "id": "TC_027",
       "desc": "命中验证：企业近3个月存在注册资本增加变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -525,7 +526,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS08_MISS",
+      "id": "TC_028",
       "desc": "未命中验证：企业近3个月存在注册资本增加变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -544,7 +545,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS08_AND0",
+      "id": "TC_029",
       "desc": "AND拆解：企业近3个月存在注册资本增加变更记录企查查 - 仅企业近3个月注册资本增加变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -563,7 +564,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS08_STRICT0",
+      "id": "TC_030",
       "desc": "严格边界：企业近3个月存在注册资本增加变更记录企查查 - 企业近3个月注册资本增加变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -582,7 +583,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS09_HIT",
+      "id": "TC_031",
       "desc": "命中验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "正案例",
@@ -600,7 +601,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS09_MISS",
+      "id": "TC_032",
       "desc": "未命中验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "反案例",
@@ -618,7 +619,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS09_BOUND",
+      "id": "TC_033",
       "desc": "边界值验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "边界案例",
@@ -636,7 +637,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS10_HIT",
+      "id": "TC_034",
       "desc": "命中验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "正案例",
@@ -654,7 +655,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS10_MISS",
+      "id": "TC_035",
       "desc": "未命中验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "反案例",
@@ -672,7 +673,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS10_BOUND",
+      "id": "TC_036",
       "desc": "边界值验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "边界案例",
@@ -690,7 +691,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS11_HIT",
+      "id": "TC_037",
       "desc": "命中验证：企业注册资本虚高企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -707,7 +708,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - PaidCapRatio: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGS11_MISS",
+      "id": "TC_038",
       "desc": "未命中验证：企业注册资本虚高企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -724,7 +725,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - PaidCapRatio: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBNS01_HIT",
+      "id": "TC_039",
       "desc": "命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -743,7 +744,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS01_MISS",
+      "id": "TC_040",
       "desc": "未命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -762,7 +763,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS01_AND0",
+      "id": "TC_041",
       "desc": "AND拆解：企业近3个月法定代表人存在变更记录企查查 - 仅企业近3个月法定代表人变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -781,7 +782,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS01_STRICT0",
+      "id": "TC_042",
       "desc": "严格边界：企业近3个月法定代表人存在变更记录企查查 - 企业近3个月法定代表人变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -800,7 +801,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS02_HIT",
+      "id": "TC_043",
       "desc": "命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -819,7 +820,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS02_MISS",
+      "id": "TC_044",
       "desc": "未命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -838,7 +839,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS02_AND0",
+      "id": "TC_045",
       "desc": "AND拆解：企业近3个月存在股权变更记录企查查 - 仅企业近3个月存在股权变更记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -857,7 +858,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS02_STRICT0",
+      "id": "TC_046",
       "desc": "严格边界：企业近3个月存在股权变更记录企查查 - 企业近3个月存在股权变更记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -876,7 +877,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS03_HIT",
+      "id": "TC_047",
       "desc": "命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -895,7 +896,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS03_MISS",
+      "id": "TC_048",
       "desc": "未命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -914,7 +915,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS03_AND0",
+      "id": "TC_049",
       "desc": "AND拆解：企业近3个月存在经营范围变更记录企查查 - 仅企业近3个月经营范围变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -933,7 +934,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS03_STRICT0",
+      "id": "TC_050",
       "desc": "严格边界：企业近3个月存在经营范围变更记录企查查 - 企业近3个月经营范围变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -952,7 +953,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNS04_HIT",
+      "id": "TC_051",
       "desc": "命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -971,7 +972,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNS04_MISS",
+      "id": "TC_052",
       "desc": "未命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -990,7 +991,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNS04_AND0",
+      "id": "TC_053",
       "desc": "AND拆解：企业近3个月存在注销信息记录企查查 - 仅企业近3个月注销吊销信息数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1009,7 +1010,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNS04_STRICT0",
+      "id": "TC_054",
       "desc": "严格边界：企业近3个月存在注销信息记录企查查 - 企业近3个月注销吊销信息数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1028,7 +1029,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGP01_HIT",
+      "id": "TC_055",
       "desc": "命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1047,7 +1048,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP01_MISS",
+      "id": "TC_056",
       "desc": "未命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1066,7 +1067,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP01_AND0",
+      "id": "TC_057",
       "desc": "AND拆解：企业近3个月法定代表人存在变更记录企查查 - 仅企业近3个月法定代表人变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1085,7 +1086,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP01_STRICT0",
+      "id": "TC_058",
       "desc": "严格边界：企业近3个月法定代表人存在变更记录企查查 - 企业近3个月法定代表人变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1104,7 +1105,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP02_HIT",
+      "id": "TC_059",
       "desc": "命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1123,7 +1124,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP02_MISS",
+      "id": "TC_060",
       "desc": "未命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1142,7 +1143,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP02_AND0",
+      "id": "TC_061",
       "desc": "AND拆解：企业近3个月存在股权变更记录企查查 - 仅企业近3个月存在股权变更记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1161,7 +1162,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP02_STRICT0",
+      "id": "TC_062",
       "desc": "严格边界：企业近3个月存在股权变更记录企查查 - 企业近3个月存在股权变更记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1180,7 +1181,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP03_HIT",
+      "id": "TC_063",
       "desc": "命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1199,7 +1200,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP03_MISS",
+      "id": "TC_064",
       "desc": "未命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1218,7 +1219,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP03_AND0",
+      "id": "TC_065",
       "desc": "AND拆解：企业近3个月存在经营范围变更记录企查查 - 仅企业近3个月经营范围变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1237,7 +1238,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP03_STRICT0",
+      "id": "TC_066",
       "desc": "严格边界：企业近3个月存在经营范围变更记录企查查 - 企业近3个月经营范围变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1256,7 +1257,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBGP04_HIT",
+      "id": "TC_067",
       "desc": "命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1275,7 +1276,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGP04_MISS",
+      "id": "TC_068",
       "desc": "未命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1294,7 +1295,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGP04_AND0",
+      "id": "TC_069",
       "desc": "AND拆解：企业近3个月存在注销信息记录企查查 - 仅企业近3个月注销吊销信息数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1313,7 +1314,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGP04_STRICT0",
+      "id": "TC_070",
       "desc": "严格边界：企业近3个月存在注销信息记录企查查 - 企业近3个月注销吊销信息数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1332,7 +1333,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBGP05_HIT",
+      "id": "TC_071",
       "desc": "命中验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "正案例",
@@ -1350,7 +1351,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP05_MISS",
+      "id": "TC_072",
       "desc": "未命中验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "反案例",
@@ -1368,7 +1369,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP05_BOUND",
+      "id": "TC_073",
       "desc": "边界值验证：企业近3个月注册资本大幅减少企查查1",
       "group": "规则",
       "caseType": "边界案例",
@@ -1386,7 +1387,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP06_HIT",
+      "id": "TC_074",
       "desc": "命中验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "正案例",
@@ -1404,7 +1405,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP06_MISS",
+      "id": "TC_075",
       "desc": "未命中验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "反案例",
@@ -1422,7 +1423,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP06_BOUND",
+      "id": "TC_076",
       "desc": "边界值验证：企业近3个月注册资本大幅减少企查查2",
       "group": "规则",
       "caseType": "边界案例",
@@ -1440,7 +1441,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP07_HIT",
+      "id": "TC_077",
       "desc": "命中验证：企业近3个月存在注册资本减少变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1459,7 +1460,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP07_MISS",
+      "id": "TC_078",
       "desc": "未命中验证：企业近3个月存在注册资本减少变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1478,7 +1479,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP07_AND0",
+      "id": "TC_079",
       "desc": "AND拆解：企业近3个月存在注册资本减少变更记录企查查 - 仅企业近3个月注册资本减少变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1497,7 +1498,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP07_STRICT0",
+      "id": "TC_080",
       "desc": "严格边界：企业近3个月存在注册资本减少变更记录企查查 - 企业近3个月注册资本减少变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1516,7 +1517,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP08_HIT",
+      "id": "TC_081",
       "desc": "命中验证：企业近3个月存在注册资本增加变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1535,7 +1536,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP08_MISS",
+      "id": "TC_082",
       "desc": "未命中验证：企业近3个月存在注册资本增加变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1554,7 +1555,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP08_AND0",
+      "id": "TC_083",
       "desc": "AND拆解：企业近3个月存在注册资本增加变更记录企查查 - 仅企业近3个月注册资本增加变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1573,7 +1574,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP08_STRICT0",
+      "id": "TC_084",
       "desc": "严格边界：企业近3个月存在注册资本增加变更记录企查查 - 企业近3个月注册资本增加变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1592,7 +1593,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP09_HIT",
+      "id": "TC_085",
       "desc": "命中验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "正案例",
@@ -1610,7 +1611,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP09_MISS",
+      "id": "TC_086",
       "desc": "未命中验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "反案例",
@@ -1628,7 +1629,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP09_BOUND",
+      "id": "TC_087",
       "desc": "边界值验证：企业实缴资本占比过低企查查1",
       "group": "规则",
       "caseType": "边界案例",
@@ -1646,7 +1647,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP10_HIT",
+      "id": "TC_088",
       "desc": "命中验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "正案例",
@@ -1664,7 +1665,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP10_MISS",
+      "id": "TC_089",
       "desc": "未命中验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "反案例",
@@ -1682,7 +1683,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP10_BOUND",
+      "id": "TC_090",
       "desc": "边界值验证：企业实缴资本占比过低企查查2",
       "group": "规则",
       "caseType": "边界案例",
@@ -1700,7 +1701,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - RegistCapi: 命中数据; 2003(企查查客户身份识别) - PaidCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP11_HIT",
+      "id": "TC_091",
       "desc": "命中验证：企业注册资本虚高企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1717,7 +1718,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - PaidCapRatio: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBGP11_MISS",
+      "id": "TC_092",
       "desc": "未命中验证：企业注册资本虚高企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1734,7 +1735,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - PaidCapRatio: 命中数据; 2003(企查查客户身份识别) - RegistCapi: 命中数据"
     },
     {
-      "id": "TC_EBNP01_HIT",
+      "id": "TC_093",
       "desc": "命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1753,7 +1754,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP01_MISS",
+      "id": "TC_094",
       "desc": "未命中验证：企业近3个月法定代表人存在变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1772,7 +1773,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP01_AND0",
+      "id": "TC_095",
       "desc": "AND拆解：企业近3个月法定代表人存在变更记录企查查 - 仅企业近3个月法定代表人变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1791,7 +1792,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP01_STRICT0",
+      "id": "TC_096",
       "desc": "严格边界：企业近3个月法定代表人存在变更记录企查查 - 企业近3个月法定代表人变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1810,7 +1811,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP02_HIT",
+      "id": "TC_097",
       "desc": "命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1829,7 +1830,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP02_MISS",
+      "id": "TC_098",
       "desc": "未命中验证：企业近3个月存在股权变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1848,7 +1849,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP02_AND0",
+      "id": "TC_099",
       "desc": "AND拆解：企业近3个月存在股权变更记录企查查 - 仅企业近3个月存在股权变更记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1867,7 +1868,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP02_STRICT0",
+      "id": "TC_100",
       "desc": "严格边界：企业近3个月存在股权变更记录企查查 - 企业近3个月存在股权变更记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1886,7 +1887,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP03_HIT",
+      "id": "TC_101",
       "desc": "命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1905,7 +1906,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP03_MISS",
+      "id": "TC_102",
       "desc": "未命中验证：企业近3个月存在经营范围变更记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -1924,7 +1925,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP03_AND0",
+      "id": "TC_103",
       "desc": "AND拆解：企业近3个月存在经营范围变更记录企查查 - 仅企业近3个月经营范围变更记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -1943,7 +1944,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP03_STRICT0",
+      "id": "TC_104",
       "desc": "严格边界：企业近3个月存在经营范围变更记录企查查 - 企业近3个月经营范围变更记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -1962,7 +1963,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - ChangeList: 命中数据"
     },
     {
-      "id": "TC_EBNP04_HIT",
+      "id": "TC_105",
       "desc": "命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -1981,7 +1982,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNP04_MISS",
+      "id": "TC_106",
       "desc": "未命中验证：企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -2000,7 +2001,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNP04_AND0",
+      "id": "TC_107",
       "desc": "AND拆解：企业近3个月存在注销信息记录企查查 - 仅企业近3个月注销吊销信息数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2019,7 +2020,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNP04_STRICT0",
+      "id": "TC_108",
       "desc": "严格边界：企业近3个月存在注销信息记录企查查 - 企业近3个月注销吊销信息数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2038,7 +2039,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_EBNP05_HIT",
+      "id": "TC_109",
       "desc": "命中验证：工程资质等级降级_高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2055,7 +2056,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP05_MISS",
+      "id": "TC_110",
       "desc": "未命中验证：工程资质等级降级_高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2072,7 +2073,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP05_HIT",
+      "id": "TC_111",
       "desc": "命中验证：工程资质等级降级_极高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2089,7 +2090,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP05_MISS",
+      "id": "TC_112",
       "desc": "未命中验证：工程资质等级降级_极高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2106,7 +2107,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP06_HIT",
+      "id": "TC_113",
       "desc": "命中验证：核心资质证书到期_中风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2116,14 +2117,15 @@
         "S_S_BIZID": "TC_BIZ_EBNP06",
         "S_S_CUSTNO": "TC_CUST_EBNP06",
         "S_S_ORGCODE": "010117",
-        "S_E_APIMODEL": "30"
+        "S_E_APIMODEL": "30",
+        "qualExpDays": 89
       },
       "targetRuleSet": "bhjcEntBasicNonfinancingPriv",
       "targetRule": "EBNP06",
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP06_MISS",
+      "id": "TC_114",
       "desc": "未命中验证：核心资质证书到期_中风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2133,14 +2135,33 @@
         "S_S_BIZID": "TC_BIZ_EBNP06_M",
         "S_S_CUSTNO": "TC_CUST_EBNP06_M",
         "S_S_ORGCODE": "010117",
-        "S_E_APIMODEL": "30"
+        "S_E_APIMODEL": "30",
+        "qualExpDays": 95
       },
       "targetRuleSet": "bhjcEntBasicNonfinancingPriv",
       "targetRule": "EBNP06",
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP07_HIT",
+      "id": "TC_115",
+      "desc": "边界值验证：核心资质证书到期_中风险",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "使用阈值临界值测试 EBNP06，验证边界判定",
+      "expected": "命中：EBNP06(核心资质证书到期_中风险)[中风险预警]",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_EBNP06_B",
+        "S_S_CUSTNO": "TC_CUST_EBNP06_B",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "qualExpDays": 90
+      },
+      "targetRuleSet": "bhjcEntBasicNonfinancingPriv",
+      "targetRule": "EBNP06",
+      "thirdPartyMock": "255(企查查资质证书): 命中数据"
+    },
+    {
+      "id": "TC_116",
       "desc": "命中验证：核心资质证书到期_高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2157,7 +2178,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP07_MISS",
+      "id": "TC_117",
       "desc": "未命中验证：核心资质证书到期_高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2174,7 +2195,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP08_HIT",
+      "id": "TC_118",
       "desc": "命中验证：核心资质证书到期_极高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2191,7 +2212,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP08_MISS",
+      "id": "TC_119",
       "desc": "未命中验证：核心资质证书到期_极高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2208,7 +2229,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP09_HIT",
+      "id": "TC_120",
       "desc": "命中验证：资质证书状态异常_极高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2225,7 +2246,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP09_MISS",
+      "id": "TC_121",
       "desc": "未命中验证：资质证书状态异常_极高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2242,7 +2263,7 @@
       "thirdPartyMock": "255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP10_HIT",
+      "id": "TC_122",
       "desc": "命中验证：资质证书状态异常_高风险",
       "group": "规则",
       "caseType": "正案例",
@@ -2259,7 +2280,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据; 255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP10_MISS",
+      "id": "TC_123",
       "desc": "未命中验证：资质证书状态异常_高风险",
       "group": "规则",
       "caseType": "反案例",
@@ -2276,7 +2297,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据; 255(企查查资质证书): 命中数据"
     },
     {
-      "id": "TC_EBNP11_HIT",
+      "id": "TC_124",
       "desc": "命中验证：企业中标信息查询企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -2293,7 +2314,7 @@
       "thirdPartyMock": "EBNP08(中标信息查询): 命中数据"
     },
     {
-      "id": "TC_EBNP11_MISS",
+      "id": "TC_125",
       "desc": "未命中验证：企业中标信息查询企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -2310,7 +2331,7 @@
       "thirdPartyMock": "EBNP08(中标信息查询): 命中数据"
     },
     {
-      "id": "TC_ECGX01_HIT",
+      "id": "TC_126",
       "desc": "命中验证：企业存在未结清逾期借贷账户",
       "group": "规则",
       "caseType": "正案例",
@@ -2329,7 +2350,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX01_MISS",
+      "id": "TC_127",
       "desc": "未命中验证：企业存在未结清逾期借贷账户",
       "group": "规则",
       "caseType": "反案例",
@@ -2348,7 +2369,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX01_AND0",
+      "id": "TC_128",
       "desc": "AND拆解：企业存在未结清逾期借贷账户 - 仅企业未结清逾期借贷账户数不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2367,7 +2388,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX01_STRICT0",
+      "id": "TC_129",
       "desc": "严格边界：企业存在未结清逾期借贷账户 - 企业未结清逾期借贷账户数=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2386,7 +2407,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX02_HIT",
+      "id": "TC_130",
       "desc": "命中验证：企业存在未结清不良类借贷交易余额",
       "group": "规则",
       "caseType": "正案例",
@@ -2404,7 +2425,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX02_MISS",
+      "id": "TC_131",
       "desc": "未命中验证：企业存在未结清不良类借贷交易余额",
       "group": "规则",
       "caseType": "反案例",
@@ -2422,7 +2443,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX02_STRICT0",
+      "id": "TC_132",
       "desc": "严格边界：企业存在未结清不良类借贷交易余额 - 企业未结清不良类借贷交易余额=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2440,7 +2461,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX03_HIT",
+      "id": "TC_133",
       "desc": "命中验证：企业未结清借贷交易账户存在关注记录",
       "group": "规则",
       "caseType": "正案例",
@@ -2459,7 +2480,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX03_MISS",
+      "id": "TC_134",
       "desc": "未命中验证：企业未结清借贷交易账户存在关注记录",
       "group": "规则",
       "caseType": "反案例",
@@ -2478,7 +2499,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX03_AND0",
+      "id": "TC_135",
       "desc": "AND拆解：企业未结清借贷交易账户存在关注记录 - 仅企业未结清关注类借贷交易账户数不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2497,7 +2518,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX03_STRICT0",
+      "id": "TC_136",
       "desc": "严格边界：企业未结清借贷交易账户存在关注记录 - 企业未结清关注类借贷交易账户数=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2516,7 +2537,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX04_HIT",
+      "id": "TC_137",
       "desc": "命中验证：企业存在未结清逾期对外担保账户",
       "group": "规则",
       "caseType": "正案例",
@@ -2535,7 +2556,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX04_MISS",
+      "id": "TC_138",
       "desc": "未命中验证：企业存在未结清逾期对外担保账户",
       "group": "规则",
       "caseType": "反案例",
@@ -2554,7 +2575,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX04_AND0",
+      "id": "TC_139",
       "desc": "AND拆解：企业存在未结清逾期对外担保账户 - 仅企业未结清逾期对外担保账户数不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2573,7 +2594,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX04_STRICT0",
+      "id": "TC_140",
       "desc": "严格边界：企业存在未结清逾期对外担保账户 - 企业未结清逾期对外担保账户数=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2592,7 +2613,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX05_HIT",
+      "id": "TC_141",
       "desc": "命中验证：企业存在未结清不良类担保交易余额",
       "group": "规则",
       "caseType": "正案例",
@@ -2610,7 +2631,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX05_MISS",
+      "id": "TC_142",
       "desc": "未命中验证：企业存在未结清不良类担保交易余额",
       "group": "规则",
       "caseType": "反案例",
@@ -2628,7 +2649,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX05_STRICT0",
+      "id": "TC_143",
       "desc": "严格边界：企业存在未结清不良类担保交易余额 - 企业未结清不良类担保交易余额=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2646,7 +2667,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX06_HIT",
+      "id": "TC_144",
       "desc": "命中验证：企业未结清担保交易账户存在关注记录",
       "group": "规则",
       "caseType": "正案例",
@@ -2665,7 +2686,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX06_MISS",
+      "id": "TC_145",
       "desc": "未命中验证：企业未结清担保交易账户存在关注记录",
       "group": "规则",
       "caseType": "反案例",
@@ -2684,7 +2705,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX06_AND0",
+      "id": "TC_146",
       "desc": "AND拆解：企业未结清担保交易账户存在关注记录 - 仅企业未结清关注类担保交易账户数不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2703,7 +2724,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX06_STRICT0",
+      "id": "TC_147",
       "desc": "严格边界：企业未结清担保交易账户存在关注记录 - 企业未结清关注类担保交易账户数=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2722,7 +2743,7 @@
       "thirdPartyMock": "征信报告: 命中数据"
     },
     {
-      "id": "TC_ECGX07_HIT",
+      "id": "TC_148",
       "desc": "命中验证：企业存在未结清欠息记录",
       "group": "规则",
       "caseType": "正案例",
@@ -2740,7 +2761,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX07_MISS",
+      "id": "TC_149",
       "desc": "未命中验证：企业存在未结清欠息记录",
       "group": "规则",
       "caseType": "反案例",
@@ -2758,7 +2779,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ECGX07_STRICT0",
+      "id": "TC_150",
       "desc": "严格边界：企业存在未结清欠息记录 - 企业未结清欠息余额=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2776,7 +2797,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLS01_HIT",
+      "id": "TC_151",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -2795,7 +2816,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLS01_MISS",
+      "id": "TC_152",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -2814,7 +2835,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLS01_AND0",
+      "id": "TC_153",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2833,7 +2854,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLS01_STRICT0",
+      "id": "TC_154",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2852,7 +2873,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLS02_HIT",
+      "id": "TC_155",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -2871,7 +2892,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLS02_MISS",
+      "id": "TC_156",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -2890,7 +2911,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLS02_AND0",
+      "id": "TC_157",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2909,7 +2930,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLS02_STRICT0",
+      "id": "TC_158",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -2928,7 +2949,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLS03_HIT",
+      "id": "TC_159",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -2947,7 +2968,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLS03_MISS",
+      "id": "TC_160",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -2966,7 +2987,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLS03_AND0",
+      "id": "TC_161",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -2985,7 +3006,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLS03_STRICT0",
+      "id": "TC_162",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3004,7 +3025,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLS04_HIT",
+      "id": "TC_163",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3023,7 +3044,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS04_MISS",
+      "id": "TC_164",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3042,7 +3063,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS04_AND0",
+      "id": "TC_165",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3061,7 +3082,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS04_STRICT0",
+      "id": "TC_166",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3080,7 +3101,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS05_HIT",
+      "id": "TC_167",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "正案例",
@@ -3098,7 +3119,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS05_MISS",
+      "id": "TC_168",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "反案例",
@@ -3116,7 +3137,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS05_BOUND",
+      "id": "TC_169",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "边界案例",
@@ -3134,7 +3155,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS06_HIT",
+      "id": "TC_170",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -3154,7 +3175,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_MISS",
+      "id": "TC_171",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -3174,7 +3195,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_BOUND",
+      "id": "TC_172",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -3194,7 +3215,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_OR0_HIT",
+      "id": "TC_173",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3214,7 +3235,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_OR0_BOUND",
+      "id": "TC_174",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -3234,7 +3255,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_OR1_HIT",
+      "id": "TC_175",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3254,7 +3275,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_OR1_BOUND",
+      "id": "TC_176",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -3274,7 +3295,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS06_OR_MISS",
+      "id": "TC_177",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3294,7 +3315,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLS07_HIT",
+      "id": "TC_178",
       "desc": "命中验证：企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3311,7 +3332,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS07_MISS",
+      "id": "TC_179",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3328,7 +3349,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLS08_HIT",
+      "id": "TC_180",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3347,7 +3368,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLS08_MISS",
+      "id": "TC_181",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3366,7 +3387,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLS08_AND0",
+      "id": "TC_182",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3385,7 +3406,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLS08_STRICT0",
+      "id": "TC_183",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3404,7 +3425,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLS09_HIT",
+      "id": "TC_184",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3423,7 +3444,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLS09_MISS",
+      "id": "TC_185",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3442,7 +3463,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLS09_AND0",
+      "id": "TC_186",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3461,7 +3482,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLS09_STRICT0",
+      "id": "TC_187",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3480,7 +3501,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDS01_HIT",
+      "id": "TC_188",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3499,7 +3520,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDS01_MISS",
+      "id": "TC_189",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3518,7 +3539,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDS01_AND0",
+      "id": "TC_190",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3537,7 +3558,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDS01_STRICT0",
+      "id": "TC_191",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3556,7 +3577,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDS02_HIT",
+      "id": "TC_192",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3575,7 +3596,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDS02_MISS",
+      "id": "TC_193",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3594,7 +3615,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDS02_AND0",
+      "id": "TC_194",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3613,7 +3634,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDS02_STRICT0",
+      "id": "TC_195",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3632,7 +3653,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDS03_HIT",
+      "id": "TC_196",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3651,7 +3672,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDS03_MISS",
+      "id": "TC_197",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3670,7 +3691,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDS03_AND0",
+      "id": "TC_198",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3689,7 +3710,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDS03_STRICT0",
+      "id": "TC_199",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3708,7 +3729,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDS04_HIT",
+      "id": "TC_200",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3727,7 +3748,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS04_MISS",
+      "id": "TC_201",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -3746,7 +3767,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS04_AND0",
+      "id": "TC_202",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3765,7 +3786,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS04_STRICT0",
+      "id": "TC_203",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -3784,7 +3805,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS05_HIT",
+      "id": "TC_204",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "正案例",
@@ -3802,7 +3823,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS05_MISS",
+      "id": "TC_205",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "反案例",
@@ -3820,7 +3841,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS05_BOUND",
+      "id": "TC_206",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "边界案例",
@@ -3838,7 +3859,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS06_HIT",
+      "id": "TC_207",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -3858,7 +3879,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_MISS",
+      "id": "TC_208",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -3878,7 +3899,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_BOUND",
+      "id": "TC_209",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -3898,7 +3919,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_OR0_HIT",
+      "id": "TC_210",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3918,7 +3939,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_OR0_BOUND",
+      "id": "TC_211",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -3938,7 +3959,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_OR1_HIT",
+      "id": "TC_212",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -3958,7 +3979,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_OR1_BOUND",
+      "id": "TC_213",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -3978,7 +3999,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS06_OR_MISS",
+      "id": "TC_214",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -3998,7 +4019,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDS07_HIT",
+      "id": "TC_215",
       "desc": "命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4009,14 +4030,15 @@
         "S_S_CUSTNO": "TC_CUST_ELDS07",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 3
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": 3
       },
       "targetRuleSet": "bhjcEntLawsuitBelSoe",
       "targetRule": "ELDS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS07_MISS",
+      "id": "TC_216",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4027,14 +4049,15 @@
         "S_S_CUSTNO": "TC_CUST_ELDS07_M",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": 0
       },
       "targetRuleSet": "bhjcEntLawsuitBelSoe",
       "targetRule": "ELDS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS07_STRICT0",
+      "id": "TC_217",
       "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月裁判文书中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4045,14 +4068,53 @@
         "S_S_CUSTNO": "TC_CUST_ELDS07_STRICT0",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": 3
       },
       "targetRuleSet": "bhjcEntLawsuitBelSoe",
       "targetRule": "ELDS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDS08_HIT",
+      "id": "TC_218",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELDS07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELDS07_STRICT2",
+        "S_S_CUSTNO": "TC_CUST_ELDS07_STRICT2",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": 3
+      },
+      "targetRuleSet": "bhjcEntLawsuitBelSoe",
+      "targetRule": "ELDS07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_219",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELDS07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELDS07_STRICT4",
+        "S_S_CUSTNO": "TC_CUST_ELDS07_STRICT4",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": 0
+      },
+      "targetRuleSet": "bhjcEntLawsuitBelSoe",
+      "targetRule": "ELDS07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_220",
       "desc": "命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4071,7 +4133,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDS08_MISS",
+      "id": "TC_221",
       "desc": "未命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4090,7 +4152,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDS08_AND0",
+      "id": "TC_222",
       "desc": "AND拆解：企业近3个月存在终本记录企查查 - 仅企业近3个月终本记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4109,7 +4171,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDS08_STRICT0",
+      "id": "TC_223",
       "desc": "严格边界：企业近3个月存在终本记录企查查 - 企业近3个月终本记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4128,7 +4190,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDS09_HIT",
+      "id": "TC_224",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4147,7 +4209,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDS09_MISS",
+      "id": "TC_225",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4166,7 +4228,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDS09_AND0",
+      "id": "TC_226",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4185,7 +4247,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDS09_STRICT0",
+      "id": "TC_227",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4204,7 +4266,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDS10_HIT",
+      "id": "TC_228",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4223,7 +4285,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDS10_MISS",
+      "id": "TC_229",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4242,7 +4304,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDS10_AND0",
+      "id": "TC_230",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4261,7 +4323,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDS10_STRICT0",
+      "id": "TC_231",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4280,7 +4342,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNS01_HIT",
+      "id": "TC_232",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4299,7 +4361,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNS01_MISS",
+      "id": "TC_233",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4318,7 +4380,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNS01_AND0",
+      "id": "TC_234",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4337,7 +4399,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNS01_STRICT0",
+      "id": "TC_235",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4356,7 +4418,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNS02_HIT",
+      "id": "TC_236",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4375,7 +4437,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNS02_MISS",
+      "id": "TC_237",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4394,7 +4456,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNS02_AND0",
+      "id": "TC_238",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4413,7 +4475,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNS02_STRICT0",
+      "id": "TC_239",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4432,7 +4494,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNS03_HIT",
+      "id": "TC_240",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4451,7 +4513,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNS03_MISS",
+      "id": "TC_241",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4470,7 +4532,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNS03_AND0",
+      "id": "TC_242",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4489,7 +4551,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNS03_STRICT0",
+      "id": "TC_243",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4508,7 +4570,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNS04_HIT",
+      "id": "TC_244",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4527,7 +4589,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS04_MISS",
+      "id": "TC_245",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4546,7 +4608,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS04_AND0",
+      "id": "TC_246",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4565,7 +4627,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS04_STRICT0",
+      "id": "TC_247",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4584,7 +4646,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS05_HIT",
+      "id": "TC_248",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "正案例",
@@ -4602,7 +4664,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS05_MISS",
+      "id": "TC_249",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "反案例",
@@ -4620,7 +4682,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS05_BOUND",
+      "id": "TC_250",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "边界案例",
@@ -4638,7 +4700,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS06_HIT",
+      "id": "TC_251",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -4658,7 +4720,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_MISS",
+      "id": "TC_252",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -4678,7 +4740,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_BOUND",
+      "id": "TC_253",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -4698,7 +4760,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_OR0_HIT",
+      "id": "TC_254",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4718,7 +4780,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_OR0_BOUND",
+      "id": "TC_255",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -4738,7 +4800,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_OR1_HIT",
+      "id": "TC_256",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4758,7 +4820,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_OR1_BOUND",
+      "id": "TC_257",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -4778,7 +4840,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS06_OR_MISS",
+      "id": "TC_258",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4798,7 +4860,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNS07_HIT",
+      "id": "TC_259",
       "desc": "命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4809,14 +4871,15 @@
         "S_S_CUSTNO": "TC_CUST_ELNS07",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 3
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
       },
       "targetRuleSet": "bhjcEntLawsuitNonfSoe",
       "targetRule": "ELNS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS07_MISS",
+      "id": "TC_260",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4827,14 +4890,15 @@
         "S_S_CUSTNO": "TC_CUST_ELNS07_M",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[]"
       },
       "targetRuleSet": "bhjcEntLawsuitNonfSoe",
       "targetRule": "ELNS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS07_STRICT0",
+      "id": "TC_261",
       "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月裁判文书中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4845,14 +4909,53 @@
         "S_S_CUSTNO": "TC_CUST_ELNS07_STRICT0",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
       },
       "targetRuleSet": "bhjcEntLawsuitNonfSoe",
       "targetRule": "ELNS07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNS08_HIT",
+      "id": "TC_262",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELNS07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELNS07_STRICT2",
+        "S_S_CUSTNO": "TC_CUST_ELNS07_STRICT2",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitNonfSoe",
+      "targetRule": "ELNS07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_263",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELNS07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELNS07_STRICT4",
+        "S_S_CUSTNO": "TC_CUST_ELNS07_STRICT4",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitNonfSoe",
+      "targetRule": "ELNS07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_264",
       "desc": "命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4871,7 +4974,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNS08_MISS",
+      "id": "TC_265",
       "desc": "未命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4890,7 +4993,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNS08_AND0",
+      "id": "TC_266",
       "desc": "AND拆解：企业近3个月存在终本记录企查查 - 仅企业近3个月终本记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4909,7 +5012,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNS08_STRICT0",
+      "id": "TC_267",
       "desc": "严格边界：企业近3个月存在终本记录企查查 - 企业近3个月终本记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -4928,7 +5031,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNS09_HIT",
+      "id": "TC_268",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -4947,7 +5050,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNS09_MISS",
+      "id": "TC_269",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -4966,7 +5069,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNS09_AND0",
+      "id": "TC_270",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -4985,7 +5088,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNS09_STRICT0",
+      "id": "TC_271",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5004,7 +5107,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNS10_HIT",
+      "id": "TC_272",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5023,7 +5126,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNS10_MISS",
+      "id": "TC_273",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5042,7 +5145,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNS10_AND0",
+      "id": "TC_274",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5061,7 +5164,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNS10_STRICT0",
+      "id": "TC_275",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5080,7 +5183,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLP01_HIT",
+      "id": "TC_276",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5099,7 +5202,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLP01_MISS",
+      "id": "TC_277",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5118,7 +5221,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLP01_AND0",
+      "id": "TC_278",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5137,7 +5240,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLP01_STRICT0",
+      "id": "TC_279",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5156,7 +5259,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELLP02_HIT",
+      "id": "TC_280",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5175,7 +5278,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLP02_MISS",
+      "id": "TC_281",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5194,7 +5297,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLP02_AND0",
+      "id": "TC_282",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5213,7 +5316,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLP02_STRICT0",
+      "id": "TC_283",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5232,7 +5335,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELLP03_HIT",
+      "id": "TC_284",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5251,7 +5354,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLP03_MISS",
+      "id": "TC_285",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5270,7 +5373,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLP03_AND0",
+      "id": "TC_286",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5289,7 +5392,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLP03_STRICT0",
+      "id": "TC_287",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5308,7 +5411,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELLP04_HIT",
+      "id": "TC_288",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5327,7 +5430,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP04_MISS",
+      "id": "TC_289",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5346,7 +5449,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP04_AND0",
+      "id": "TC_290",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5365,7 +5468,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP04_STRICT0",
+      "id": "TC_291",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5384,7 +5487,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP05_HIT",
+      "id": "TC_292",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "正案例",
@@ -5402,7 +5505,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP05_MISS",
+      "id": "TC_293",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "反案例",
@@ -5420,7 +5523,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP05_BOUND",
+      "id": "TC_294",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "边界案例",
@@ -5438,7 +5541,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP06_HIT",
+      "id": "TC_295",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -5458,7 +5561,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_MISS",
+      "id": "TC_296",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -5478,7 +5581,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_BOUND",
+      "id": "TC_297",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -5498,7 +5601,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_OR0_HIT",
+      "id": "TC_298",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5518,7 +5621,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_OR0_BOUND",
+      "id": "TC_299",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -5538,7 +5641,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_OR1_HIT",
+      "id": "TC_300",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5558,7 +5661,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_OR1_BOUND",
+      "id": "TC_301",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -5578,7 +5681,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP06_OR_MISS",
+      "id": "TC_302",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5598,7 +5701,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELLP07_HIT",
+      "id": "TC_303",
       "desc": "命中验证：企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5615,7 +5718,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP07_MISS",
+      "id": "TC_304",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5632,7 +5735,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELLP08_HIT",
+      "id": "TC_305",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5651,7 +5754,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLP08_MISS",
+      "id": "TC_306",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5670,7 +5773,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLP08_AND0",
+      "id": "TC_307",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5689,7 +5792,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLP08_STRICT0",
+      "id": "TC_308",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5708,7 +5811,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELLP09_HIT",
+      "id": "TC_309",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5727,7 +5830,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLP09_MISS",
+      "id": "TC_310",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5746,7 +5849,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLP09_AND0",
+      "id": "TC_311",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5765,7 +5868,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELLP09_STRICT0",
+      "id": "TC_312",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5784,7 +5887,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDP01_HIT",
+      "id": "TC_313",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5803,7 +5906,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDP01_MISS",
+      "id": "TC_314",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5822,7 +5925,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDP01_AND0",
+      "id": "TC_315",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5841,7 +5944,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDP01_STRICT0",
+      "id": "TC_316",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5860,7 +5963,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELDP02_HIT",
+      "id": "TC_317",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5879,7 +5982,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDP02_MISS",
+      "id": "TC_318",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5898,7 +6001,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDP02_AND0",
+      "id": "TC_319",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5917,7 +6020,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDP02_STRICT0",
+      "id": "TC_320",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -5936,7 +6039,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELDP03_HIT",
+      "id": "TC_321",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -5955,7 +6058,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDP03_MISS",
+      "id": "TC_322",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -5974,7 +6077,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDP03_AND0",
+      "id": "TC_323",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -5993,7 +6096,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDP03_STRICT0",
+      "id": "TC_324",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6012,7 +6115,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELDP04_HIT",
+      "id": "TC_325",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6031,7 +6134,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP04_MISS",
+      "id": "TC_326",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6050,7 +6153,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP04_AND0",
+      "id": "TC_327",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6069,7 +6172,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP04_STRICT0",
+      "id": "TC_328",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6088,7 +6191,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP05_HIT",
+      "id": "TC_329",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "正案例",
@@ -6106,7 +6209,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP05_MISS",
+      "id": "TC_330",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "反案例",
@@ -6124,7 +6227,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP05_BOUND",
+      "id": "TC_331",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "边界案例",
@@ -6142,7 +6245,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP06_HIT",
+      "id": "TC_332",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -6162,7 +6265,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_MISS",
+      "id": "TC_333",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -6182,7 +6285,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_BOUND",
+      "id": "TC_334",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -6202,7 +6305,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_OR0_HIT",
+      "id": "TC_335",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6222,7 +6325,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_OR0_BOUND",
+      "id": "TC_336",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -6242,7 +6345,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_OR1_HIT",
+      "id": "TC_337",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6262,7 +6365,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_OR1_BOUND",
+      "id": "TC_338",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -6282,7 +6385,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP06_OR_MISS",
+      "id": "TC_339",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6302,7 +6405,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELDP07_HIT",
+      "id": "TC_340",
       "desc": "命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6313,14 +6416,15 @@
         "S_S_CUSTNO": "TC_CUST_ELDP07",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 3
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
       },
       "targetRuleSet": "bhjcEntLawsuitBelPriv",
       "targetRule": "ELDP07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP07_MISS",
+      "id": "TC_341",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6331,14 +6435,15 @@
         "S_S_CUSTNO": "TC_CUST_ELDP07_M",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[]"
       },
       "targetRuleSet": "bhjcEntLawsuitBelPriv",
       "targetRule": "ELDP07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP07_STRICT0",
+      "id": "TC_342",
       "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月裁判文书中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6349,14 +6454,53 @@
         "S_S_CUSTNO": "TC_CUST_ELDP07_STRICT0",
         "S_S_ORGCODE": "010117",
         "S_E_APIMODEL": "30",
-        "loanDisputeCnt": 0
+        "loanDisputeCnt": 0,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
       },
       "targetRuleSet": "bhjcEntLawsuitBelPriv",
       "targetRule": "ELDP07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELDP08_HIT",
+      "id": "TC_343",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELDP07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELDP07_STRICT2",
+        "S_S_CUSTNO": "TC_CUST_ELDP07_STRICT2",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitBelPriv",
+      "targetRule": "ELDP07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_344",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELDP07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELDP07_STRICT4",
+        "S_S_CUSTNO": "TC_CUST_ELDP07_STRICT4",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": 3,
+        "ent3mJudgmentLoanDisputeDefendantDetailQcc": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitBelPriv",
+      "targetRule": "ELDP07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_345",
       "desc": "命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6375,7 +6519,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDP08_MISS",
+      "id": "TC_346",
       "desc": "未命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6394,7 +6538,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDP08_AND0",
+      "id": "TC_347",
       "desc": "AND拆解：企业近3个月存在终本记录企查查 - 仅企业近3个月终本记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6413,7 +6557,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDP08_STRICT0",
+      "id": "TC_348",
       "desc": "严格边界：企业近3个月存在终本记录企查查 - 企业近3个月终本记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6432,7 +6576,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELDP09_HIT",
+      "id": "TC_349",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6451,7 +6595,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDP09_MISS",
+      "id": "TC_350",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6470,7 +6614,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDP09_AND0",
+      "id": "TC_351",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6489,7 +6633,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDP09_STRICT0",
+      "id": "TC_352",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6508,7 +6652,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELDP10_HIT",
+      "id": "TC_353",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6527,7 +6671,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDP10_MISS",
+      "id": "TC_354",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6546,7 +6690,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDP10_AND0",
+      "id": "TC_355",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6565,7 +6709,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELDP10_STRICT0",
+      "id": "TC_356",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6584,7 +6728,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNP01_HIT",
+      "id": "TC_357",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6603,7 +6747,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNP01_MISS",
+      "id": "TC_358",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6622,7 +6766,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNP01_AND0",
+      "id": "TC_359",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6641,7 +6785,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNP01_STRICT0",
+      "id": "TC_360",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6660,7 +6804,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ELNP02_HIT",
+      "id": "TC_361",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6679,7 +6823,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNP02_MISS",
+      "id": "TC_362",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6698,7 +6842,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNP02_AND0",
+      "id": "TC_363",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6717,7 +6861,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNP02_STRICT0",
+      "id": "TC_364",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6736,7 +6880,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ELNP03_HIT",
+      "id": "TC_365",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6755,7 +6899,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNP03_MISS",
+      "id": "TC_366",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6774,7 +6918,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNP03_AND0",
+      "id": "TC_367",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6793,7 +6937,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNP03_STRICT0",
+      "id": "TC_368",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6812,7 +6956,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ELNP04_HIT",
+      "id": "TC_369",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -6831,7 +6975,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP04_MISS",
+      "id": "TC_370",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -6850,7 +6994,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP04_AND0",
+      "id": "TC_371",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -6869,7 +7013,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP04_STRICT0",
+      "id": "TC_372",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -6888,7 +7032,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP05_HIT",
+      "id": "TC_373",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "正案例",
@@ -6906,7 +7050,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP05_MISS",
+      "id": "TC_374",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "反案例",
@@ -6924,7 +7068,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP05_BOUND",
+      "id": "TC_375",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "边界案例",
@@ -6942,7 +7086,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP06_HIT",
+      "id": "TC_376",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -6962,7 +7106,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_MISS",
+      "id": "TC_377",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -6982,7 +7126,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_BOUND",
+      "id": "TC_378",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -7002,7 +7146,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_OR0_HIT",
+      "id": "TC_379",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7022,7 +7166,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_OR0_BOUND",
+      "id": "TC_380",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -7042,7 +7186,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_OR1_HIT",
+      "id": "TC_381",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7062,7 +7206,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_OR1_BOUND",
+      "id": "TC_382",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -7082,7 +7226,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP06_OR_MISS",
+      "id": "TC_383",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7102,7 +7246,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ELNP07_HIT",
+      "id": "TC_384",
       "desc": "命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7112,14 +7256,15 @@
         "S_S_BIZID": "TC_BIZ_ELNP07",
         "S_S_CUSTNO": "TC_CUST_ELNP07",
         "S_S_ORGCODE": "010117",
-        "S_E_APIMODEL": "30"
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
       },
       "targetRuleSet": "bhjcEntLawsuitNonfPriv",
       "targetRule": "ELNP07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP07_MISS",
+      "id": "TC_385",
       "desc": "未命中验证：企业近3个月存在为被告的借款合同纠纷记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7129,14 +7274,69 @@
         "S_S_BIZID": "TC_BIZ_ELNP07_M",
         "S_S_CUSTNO": "TC_CUST_ELNP07_M",
         "S_S_ORGCODE": "010117",
-        "S_E_APIMODEL": "30"
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": "[]"
       },
       "targetRuleSet": "bhjcEntLawsuitNonfPriv",
       "targetRule": "ELNP07",
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ELNP08_HIT",
+      "id": "TC_386",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月裁判文书中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月裁判文书中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELNP07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELNP07_STRICT0",
+        "S_S_CUSTNO": "TC_CUST_ELNP07_STRICT0",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitNonfPriv",
+      "targetRule": "ELNP07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_387",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月法院公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELNP07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELNP07_STRICT2",
+        "S_S_CUSTNO": "TC_CUST_ELNP07_STRICT2",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitNonfPriv",
+      "targetRule": "ELNP07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_388",
+      "desc": "严格边界：企业近3个月存在为被告的借款合同纠纷记录企查查 - 企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查=0（>不含等于）",
+      "group": "规则",
+      "caseType": "边界案例",
+      "scenario": "严格运算符边界：企业近3个月开庭公告中为被告的借款合同纠纷记录数量企查查恰好=0，>不含等于，应不命中",
+      "expected": "未命中：ELNP07(企业近3个月存在为被告的借款合同纠纷记录企查查)",
+      "params": {
+        "S_S_BIZID": "TC_BIZ_ELNP07_STRICT4",
+        "S_S_CUSTNO": "TC_CUST_ELNP07_STRICT4",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "loanDisputeCnt": "[{\"CaseRole\": \"被告\", \"CaseType\": \"金融借款合同纠纷\", \"Court\": \"某市人民法院\", \"AnnouncementDate\": \"2026-06-22\"}]"
+      },
+      "targetRuleSet": "bhjcEntLawsuitNonfPriv",
+      "targetRule": "ELNP07",
+      "thirdPartyMock": "887(企查查司法案件): 命中数据"
+    },
+    {
+      "id": "TC_389",
       "desc": "命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7155,7 +7355,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNP08_MISS",
+      "id": "TC_390",
       "desc": "未命中验证：企业近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7174,7 +7374,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNP08_AND0",
+      "id": "TC_391",
       "desc": "AND拆解：企业近3个月存在终本记录企查查 - 仅企业近3个月终本记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7193,7 +7393,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNP08_STRICT0",
+      "id": "TC_392",
       "desc": "严格边界：企业近3个月存在终本记录企查查 - 企业近3个月终本记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7212,7 +7412,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_ELNP09_HIT",
+      "id": "TC_393",
       "desc": "命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7231,7 +7431,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNP09_MISS",
+      "id": "TC_394",
       "desc": "未命中验证：企业存在破产记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7250,7 +7450,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNP09_AND0",
+      "id": "TC_395",
       "desc": "AND拆解：企业存在破产记录企查查 - 仅企业破产记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7269,7 +7469,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNP09_STRICT0",
+      "id": "TC_396",
       "desc": "严格边界：企业存在破产记录企查查 - 企业破产记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7288,7 +7488,7 @@
       "thirdPartyMock": "761(企查查破产案件): 命中数据"
     },
     {
-      "id": "TC_ELNP10_HIT",
+      "id": "TC_397",
       "desc": "命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7307,7 +7507,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNP10_MISS",
+      "id": "TC_398",
       "desc": "未命中验证：企业存在清算记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7326,7 +7526,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNP10_AND0",
+      "id": "TC_399",
       "desc": "AND拆解：企业存在清算记录企查查 - 仅企业清算记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7345,7 +7545,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ELNP10_STRICT0",
+      "id": "TC_400",
       "desc": "严格边界：企业存在清算记录企查查 - 企业清算记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7364,7 +7564,7 @@
       "thirdPartyMock": "无三方数据依赖"
     },
     {
-      "id": "TC_ENLX01_HIT",
+      "id": "TC_401",
       "desc": "命中验证：企业当前纳税信用等级为d企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7382,7 +7582,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - TaxPayerLevel: 命中数据"
     },
     {
-      "id": "TC_ENLX01_MISS",
+      "id": "TC_402",
       "desc": "未命中验证：企业当前纳税信用等级为d企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7400,7 +7600,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - TaxPayerLevel: 命中数据"
     },
     {
-      "id": "TC_ENLX02_HIT",
+      "id": "TC_403",
       "desc": "命中验证：企业近3个月有欠税记录",
       "group": "规则",
       "caseType": "正案例",
@@ -7419,7 +7619,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENLX02_MISS",
+      "id": "TC_404",
       "desc": "未命中验证：企业近3个月有欠税记录",
       "group": "规则",
       "caseType": "反案例",
@@ -7438,7 +7638,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENLX02_AND0",
+      "id": "TC_405",
       "desc": "AND拆解：企业近3个月有欠税记录 - 仅企业近3个月有欠税记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7457,7 +7657,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENLX02_STRICT0",
+      "id": "TC_406",
       "desc": "严格边界：企业近3个月有欠税记录 - 企业近3个月有欠税记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7476,7 +7676,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENLX03_HIT",
+      "id": "TC_407",
       "desc": "命中验证：企业近3个月存在税收违法记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7495,7 +7695,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENLX03_MISS",
+      "id": "TC_408",
       "desc": "未命中验证：企业近3个月存在税收违法记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7514,7 +7714,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENLX03_AND0",
+      "id": "TC_409",
       "desc": "AND拆解：企业近3个月存在税收违法记录企查查 - 仅企业近3个月税收违法记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7533,7 +7733,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENLX03_STRICT0",
+      "id": "TC_410",
       "desc": "严格边界：企业近3个月存在税收违法记录企查查 - 企业近3个月税收违法记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7552,7 +7752,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENLX04_HIT",
+      "id": "TC_411",
       "desc": "命中验证：企业当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7571,7 +7771,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENLX04_MISS",
+      "id": "TC_412",
       "desc": "未命中验证：企业当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7590,7 +7790,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENLX04_AND0",
+      "id": "TC_413",
       "desc": "AND拆解：企业当前存在股权冻结企查查 - 仅企业当前股权冻结记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7609,7 +7809,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENLX04_STRICT0",
+      "id": "TC_414",
       "desc": "严格边界：企业当前存在股权冻结企查查 - 企业当前股权冻结记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7628,7 +7828,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENLX05_HIT",
+      "id": "TC_415",
       "desc": "命中验证：企业当前存在严重违法且未移出企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7647,7 +7847,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENLX05_MISS",
+      "id": "TC_416",
       "desc": "未命中验证：企业当前存在严重违法且未移出企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7666,7 +7866,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENLX05_AND0",
+      "id": "TC_417",
       "desc": "AND拆解：企业当前存在严重违法且未移出企查查 - 仅企业当前严重违法且未移出记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7685,7 +7885,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENLX05_STRICT0",
+      "id": "TC_418",
       "desc": "严格边界：企业当前存在严重违法且未移出企查查 - 企业当前严重违法且未移出记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7704,7 +7904,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENLX06_HIT",
+      "id": "TC_419",
       "desc": "命中验证：企业近3个月存在司法拍卖记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7723,7 +7923,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENLX06_MISS",
+      "id": "TC_420",
       "desc": "未命中验证：企业近3个月存在司法拍卖记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7742,7 +7942,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENLX06_AND0",
+      "id": "TC_421",
       "desc": "AND拆解：企业近3个月存在司法拍卖记录企查查 - 仅企业近3个月司法拍卖记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7761,7 +7961,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENLX06_STRICT0",
+      "id": "TC_422",
       "desc": "严格边界：企业近3个月存在司法拍卖记录企查查 - 企业近3个月司法拍卖记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7780,7 +7980,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENLX07_HIT",
+      "id": "TC_423",
       "desc": "命中验证：企业当前存在股权出质企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7799,7 +7999,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENLX07_MISS",
+      "id": "TC_424",
       "desc": "未命中验证：企业当前存在股权出质企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7818,7 +8018,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENLX07_AND0",
+      "id": "TC_425",
       "desc": "AND拆解：企业当前存在股权出质企查查 - 仅企业近3个月存在股权出质记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7837,7 +8037,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENLX07_STRICT0",
+      "id": "TC_426",
       "desc": "严格边界：企业当前存在股权出质企查查 - 企业近3个月存在股权出质记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7856,7 +8056,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENLX08_HIT",
+      "id": "TC_427",
       "desc": "命中验证：企业近3个月存在行政处罚企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7875,7 +8075,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX08_MISS",
+      "id": "TC_428",
       "desc": "未命中验证：企业近3个月存在行政处罚企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7894,7 +8094,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX08_AND0",
+      "id": "TC_429",
       "desc": "AND拆解：企业近3个月存在行政处罚企查查 - 仅企业近3个月行政处罚记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7913,7 +8113,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX08_STRICT0",
+      "id": "TC_430",
       "desc": "严格边界：企业近3个月存在行政处罚企查查 - 企业近3个月行政处罚记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -7932,7 +8132,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX09_HIT",
+      "id": "TC_431",
       "desc": "命中验证：企业近3个月存在环保处罚企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -7951,7 +8151,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX09_MISS",
+      "id": "TC_432",
       "desc": "未命中验证：企业近3个月存在环保处罚企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -7970,7 +8170,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX09_AND0",
+      "id": "TC_433",
       "desc": "AND拆解：企业近3个月存在环保处罚企查查 - 仅企业近3个月环保处罚记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -7989,7 +8189,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX09_STRICT0",
+      "id": "TC_434",
       "desc": "严格边界：企业近3个月存在环保处罚企查查 - 企业近3个月环保处罚记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8008,7 +8208,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENLX10_HIT",
+      "id": "TC_435",
       "desc": "命中验证：企业当前存在经营异常且未移出企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8027,7 +8227,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENLX10_MISS",
+      "id": "TC_436",
       "desc": "未命中验证：企业当前存在经营异常且未移出企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8046,7 +8246,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENLX10_AND0",
+      "id": "TC_437",
       "desc": "AND拆解：企业当前存在经营异常且未移出企查查 - 仅企业当前经营异常且未移出记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8065,7 +8265,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENLX10_STRICT0",
+      "id": "TC_438",
       "desc": "严格边界：企业当前存在经营异常且未移出企查查 - 企业当前经营异常且未移出记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8084,7 +8284,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENLX11_HIT",
+      "id": "TC_439",
       "desc": "命中验证：企业近3个月内存在负面舆情预警通",
       "group": "规则",
       "caseType": "正案例",
@@ -8102,7 +8302,7 @@
       "thirdPartyMock": "新闻舆情数据源: 命中数据"
     },
     {
-      "id": "TC_ENLX11_MISS",
+      "id": "TC_440",
       "desc": "未命中验证：企业近3个月内存在负面舆情预警通",
       "group": "规则",
       "caseType": "反案例",
@@ -8120,7 +8320,7 @@
       "thirdPartyMock": "新闻舆情数据源: 命中数据"
     },
     {
-      "id": "TC_ENDX01_HIT",
+      "id": "TC_441",
       "desc": "命中验证：企业当前纳税信用等级为d企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8138,7 +8338,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - TaxPayerLevel: 命中数据"
     },
     {
-      "id": "TC_ENDX01_MISS",
+      "id": "TC_442",
       "desc": "未命中验证：企业当前纳税信用等级为d企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8156,7 +8356,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - TaxPayerLevel: 命中数据"
     },
     {
-      "id": "TC_ENDX02_HIT",
+      "id": "TC_443",
       "desc": "命中验证：企业近3个月累计欠税金额企查查>10000",
       "group": "规则",
       "caseType": "正案例",
@@ -8174,7 +8374,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX02_MISS",
+      "id": "TC_444",
       "desc": "未命中验证：企业近3个月累计欠税金额企查查>10000",
       "group": "规则",
       "caseType": "反案例",
@@ -8192,7 +8392,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX02_BOUND",
+      "id": "TC_445",
       "desc": "边界值验证：企业近3个月累计欠税金额企查查>10000",
       "group": "规则",
       "caseType": "边界案例",
@@ -8210,7 +8410,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX02_STRICT0",
+      "id": "TC_446",
       "desc": "严格边界：企业近3个月累计欠税金额企查查>10000 - 企业近3个月累计欠税金额企查查=10000（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8228,7 +8428,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX03_HIT",
+      "id": "TC_447",
       "desc": "命中验证：企业近3个月有欠税记录",
       "group": "规则",
       "caseType": "正案例",
@@ -8247,7 +8447,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX03_MISS",
+      "id": "TC_448",
       "desc": "未命中验证：企业近3个月有欠税记录",
       "group": "规则",
       "caseType": "反案例",
@@ -8266,7 +8466,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX03_AND0",
+      "id": "TC_449",
       "desc": "AND拆解：企业近3个月有欠税记录 - 仅企业近3个月有欠税记录企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8285,7 +8485,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX03_STRICT0",
+      "id": "TC_450",
       "desc": "严格边界：企业近3个月有欠税记录 - 企业近3个月有欠税记录企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8304,7 +8504,7 @@
       "thirdPartyMock": "757(企查查欠税公告): 命中数据"
     },
     {
-      "id": "TC_ENDX04_HIT",
+      "id": "TC_451",
       "desc": "命中验证：企业近3个月存在税收违法记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8323,7 +8523,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENDX04_MISS",
+      "id": "TC_452",
       "desc": "未命中验证：企业近3个月存在税收违法记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8342,7 +8542,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENDX04_AND0",
+      "id": "TC_453",
       "desc": "AND拆解：企业近3个月存在税收违法记录企查查 - 仅企业近3个月税收违法记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8361,7 +8561,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENDX04_STRICT0",
+      "id": "TC_454",
       "desc": "严格边界：企业近3个月存在税收违法记录企查查 - 企业近3个月税收违法记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8380,7 +8580,7 @@
       "thirdPartyMock": "756(企查查税收违法): 命中数据"
     },
     {
-      "id": "TC_ENDX05_HIT",
+      "id": "TC_455",
       "desc": "命中验证：企业当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8399,7 +8599,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENDX05_MISS",
+      "id": "TC_456",
       "desc": "未命中验证：企业当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8418,7 +8618,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENDX05_AND0",
+      "id": "TC_457",
       "desc": "AND拆解：企业当前存在股权冻结企查查 - 仅企业当前股权冻结记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8437,7 +8637,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENDX05_STRICT0",
+      "id": "TC_458",
       "desc": "严格边界：企业当前存在股权冻结企查查 - 企业当前股权冻结记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8456,7 +8656,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_ENDX06_HIT",
+      "id": "TC_459",
       "desc": "命中验证：企业当前存在严重违法且未移出企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8475,7 +8675,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENDX06_MISS",
+      "id": "TC_460",
       "desc": "未命中验证：企业当前存在严重违法且未移出企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8494,7 +8694,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENDX06_AND0",
+      "id": "TC_461",
       "desc": "AND拆解：企业当前存在严重违法且未移出企查查 - 仅企业当前严重违法且未移出记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8513,7 +8713,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENDX06_STRICT0",
+      "id": "TC_462",
       "desc": "严格边界：企业当前存在严重违法且未移出企查查 - 企业当前严重违法且未移出记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8532,7 +8732,7 @@
       "thirdPartyMock": "748(企查查严重违法): 命中数据"
     },
     {
-      "id": "TC_ENDX07_HIT",
+      "id": "TC_463",
       "desc": "命中验证：企业近3个月存在司法拍卖记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8551,7 +8751,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENDX07_MISS",
+      "id": "TC_464",
       "desc": "未命中验证：企业近3个月存在司法拍卖记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8570,7 +8770,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENDX07_AND0",
+      "id": "TC_465",
       "desc": "AND拆解：企业近3个月存在司法拍卖记录企查查 - 仅企业近3个月司法拍卖记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8589,7 +8789,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENDX07_STRICT0",
+      "id": "TC_466",
       "desc": "严格边界：企业近3个月存在司法拍卖记录企查查 - 企业近3个月司法拍卖记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8608,7 +8808,7 @@
       "thirdPartyMock": "744(企查查司法拍卖): 命中数据"
     },
     {
-      "id": "TC_ENDX08_HIT",
+      "id": "TC_467",
       "desc": "命中验证：企业当前存在股权出质企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8627,7 +8827,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENDX08_MISS",
+      "id": "TC_468",
       "desc": "未命中验证：企业当前存在股权出质企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8646,7 +8846,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENDX08_AND0",
+      "id": "TC_469",
       "desc": "AND拆解：企业当前存在股权出质企查查 - 仅企业近3个月存在股权出质记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8665,7 +8865,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENDX08_STRICT0",
+      "id": "TC_470",
       "desc": "严格边界：企业当前存在股权出质企查查 - 企业近3个月存在股权出质记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8684,7 +8884,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ENDX09_HIT",
+      "id": "TC_471",
       "desc": "命中验证：企业近3个月存在行政处罚企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8703,7 +8903,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX09_MISS",
+      "id": "TC_472",
       "desc": "未命中验证：企业近3个月存在行政处罚企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8722,7 +8922,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX09_AND0",
+      "id": "TC_473",
       "desc": "AND拆解：企业近3个月存在行政处罚企查查 - 仅企业近3个月行政处罚记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8741,7 +8941,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX09_STRICT0",
+      "id": "TC_474",
       "desc": "严格边界：企业近3个月存在行政处罚企查查 - 企业近3个月行政处罚记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8760,7 +8960,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX10_HIT",
+      "id": "TC_475",
       "desc": "命中验证：企业近3个月行政处罚累计金额企查查>5万",
       "group": "规则",
       "caseType": "正案例",
@@ -8778,7 +8978,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX10_MISS",
+      "id": "TC_476",
       "desc": "未命中验证：企业近3个月行政处罚累计金额企查查>5万",
       "group": "规则",
       "caseType": "反案例",
@@ -8796,7 +8996,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX10_BOUND",
+      "id": "TC_477",
       "desc": "边界值验证：企业近3个月行政处罚累计金额企查查>5万",
       "group": "规则",
       "caseType": "边界案例",
@@ -8814,7 +9014,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX10_STRICT0",
+      "id": "TC_478",
       "desc": "严格边界：企业近3个月行政处罚累计金额企查查>5万 - 企业近3个月行政处罚累计金额企查查=50000（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8832,7 +9032,7 @@
       "thirdPartyMock": "865(企查查行政处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX11_HIT",
+      "id": "TC_479",
       "desc": "命中验证：企业近3个月存在环保处罚企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8851,7 +9051,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX11_MISS",
+      "id": "TC_480",
       "desc": "未命中验证：企业近3个月存在环保处罚企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8870,7 +9070,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX11_AND0",
+      "id": "TC_481",
       "desc": "AND拆解：企业近3个月存在环保处罚企查查 - 仅企业近3个月环保处罚记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8889,7 +9089,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX11_STRICT0",
+      "id": "TC_482",
       "desc": "严格边界：企业近3个月存在环保处罚企查查 - 企业近3个月环保处罚记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8908,7 +9108,7 @@
       "thirdPartyMock": "746(企查查环保处罚): 命中数据"
     },
     {
-      "id": "TC_ENDX12_HIT",
+      "id": "TC_483",
       "desc": "命中验证：企业当前存在经营异常且未移出企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -8927,7 +9127,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENDX12_MISS",
+      "id": "TC_484",
       "desc": "未命中验证：企业当前存在经营异常且未移出企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -8946,7 +9146,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENDX12_AND0",
+      "id": "TC_485",
       "desc": "AND拆解：企业当前存在经营异常且未移出企查查 - 仅企业当前经营异常且未移出记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -8965,7 +9165,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENDX12_STRICT0",
+      "id": "TC_486",
       "desc": "严格边界：企业当前存在经营异常且未移出企查查 - 企业当前经营异常且未移出记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -8984,7 +9184,7 @@
       "thirdPartyMock": "739(企查查经营异常): 命中数据"
     },
     {
-      "id": "TC_ENDX13_HIT",
+      "id": "TC_487",
       "desc": "命中验证：企业近3个月内存在负面舆情预警通",
       "group": "规则",
       "caseType": "正案例",
@@ -9002,7 +9202,7 @@
       "thirdPartyMock": "新闻舆情数据源: 命中数据"
     },
     {
-      "id": "TC_ENDX13_MISS",
+      "id": "TC_488",
       "desc": "未命中验证：企业近3个月内存在负面舆情预警通",
       "group": "规则",
       "caseType": "反案例",
@@ -9020,7 +9220,7 @@
       "thirdPartyMock": "新闻舆情数据源: 命中数据"
     },
     {
-      "id": "TC_PLEP01_HIT",
+      "id": "TC_489",
       "desc": "命中验证：个人近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9039,7 +9239,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLEP01_MISS",
+      "id": "TC_490",
       "desc": "未命中验证：个人近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9058,7 +9258,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLEP01_AND0",
+      "id": "TC_491",
       "desc": "AND拆解：个人近3个月存在限制高消费记录企查查 - 仅个人近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9077,7 +9277,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLEP01_STRICT0",
+      "id": "TC_492",
       "desc": "严格边界：个人近3个月存在限制高消费记录企查查 - 个人近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9096,7 +9296,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLEP02_HIT",
+      "id": "TC_493",
       "desc": "命中验证：个人近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9115,7 +9315,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLEP02_MISS",
+      "id": "TC_494",
       "desc": "未命中验证：个人近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9134,7 +9334,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLEP02_AND0",
+      "id": "TC_495",
       "desc": "AND拆解：个人近3个月存在失信记录企查查 - 仅个人近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9153,7 +9353,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLEP02_STRICT0",
+      "id": "TC_496",
       "desc": "严格边界：个人近3个月存在失信记录企查查 - 个人近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9172,7 +9372,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLEP03_HIT",
+      "id": "TC_497",
       "desc": "命中验证：个人近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9191,7 +9391,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLEP03_MISS",
+      "id": "TC_498",
       "desc": "未命中验证：个人近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9210,7 +9410,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLEP03_AND0",
+      "id": "TC_499",
       "desc": "AND拆解：个人近3个月存在被执行记录企查查 - 仅个人近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9229,7 +9429,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLEP03_STRICT0",
+      "id": "TC_500",
       "desc": "严格边界：个人近3个月存在被执行记录企查查 - 个人近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9248,7 +9448,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLDX01_HIT",
+      "id": "TC_501",
       "desc": "命中验证：个人近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9267,7 +9467,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLDX01_MISS",
+      "id": "TC_502",
       "desc": "未命中验证：个人近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9286,7 +9486,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLDX01_AND0",
+      "id": "TC_503",
       "desc": "AND拆解：个人近3个月存在限制高消费记录企查查 - 仅个人近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9305,7 +9505,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLDX01_STRICT0",
+      "id": "TC_504",
       "desc": "严格边界：个人近3个月存在限制高消费记录企查查 - 个人近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9324,7 +9524,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_PLDX02_HIT",
+      "id": "TC_505",
       "desc": "命中验证：个人近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9343,7 +9543,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLDX02_MISS",
+      "id": "TC_506",
       "desc": "未命中验证：个人近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9362,7 +9562,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLDX02_AND0",
+      "id": "TC_507",
       "desc": "AND拆解：个人近3个月存在失信记录企查查 - 仅个人近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9381,7 +9581,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLDX02_STRICT0",
+      "id": "TC_508",
       "desc": "严格边界：个人近3个月存在失信记录企查查 - 个人近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9400,7 +9600,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_PLDX03_HIT",
+      "id": "TC_509",
       "desc": "命中验证：个人近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9419,7 +9619,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLDX03_MISS",
+      "id": "TC_510",
       "desc": "未命中验证：个人近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9438,7 +9638,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLDX03_AND0",
+      "id": "TC_511",
       "desc": "AND拆解：个人近3个月存在被执行记录企查查 - 仅个人近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9457,7 +9657,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLDX03_STRICT0",
+      "id": "TC_512",
       "desc": "严格边界：个人近3个月存在被执行记录企查查 - 个人近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9476,7 +9676,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_PLDX04_HIT",
+      "id": "TC_513",
       "desc": "命中验证：个人近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9495,7 +9695,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_PLDX04_MISS",
+      "id": "TC_514",
       "desc": "未命中验证：个人近3个月存在终本记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9514,7 +9714,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_PLDX04_AND0",
+      "id": "TC_515",
       "desc": "AND拆解：个人近3个月存在终本记录企查查 - 仅个人近3个月终本记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9533,7 +9733,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_PLDX04_STRICT0",
+      "id": "TC_516",
       "desc": "严格边界：个人近3个月存在终本记录企查查 - 个人近3个月终本记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9552,7 +9752,7 @@
       "thirdPartyMock": "761(企查查终本案件): 命中数据"
     },
     {
-      "id": "TC_PNGX01_HIT",
+      "id": "TC_517",
       "desc": "命中验证：个人当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9571,7 +9771,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_PNGX01_MISS",
+      "id": "TC_518",
       "desc": "未命中验证：个人当前存在股权冻结企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9590,7 +9790,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_PNGX01_AND0",
+      "id": "TC_519",
       "desc": "AND拆解：个人当前存在股权冻结企查查 - 仅个人当前股权冻结记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9609,7 +9809,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_PNGX01_STRICT0",
+      "id": "TC_520",
       "desc": "严格边界：个人当前存在股权冻结企查查 - 个人当前股权冻结记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9628,7 +9828,7 @@
       "thirdPartyMock": "752(企查查股权冻结): 命中数据"
     },
     {
-      "id": "TC_PNGX02_HIT",
+      "id": "TC_521",
       "desc": "命中验证：个人当前存在股权出质企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9647,7 +9847,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_PNGX02_MISS",
+      "id": "TC_522",
       "desc": "未命中验证：个人当前存在股权出质企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9666,7 +9866,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_PNGX02_AND0",
+      "id": "TC_523",
       "desc": "AND拆解：个人当前存在股权出质企查查 - 仅个人当前股权出质记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9685,7 +9885,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_PNGX02_STRICT0",
+      "id": "TC_524",
       "desc": "严格边界：个人当前存在股权出质企查查 - 个人当前股权出质记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9704,7 +9904,7 @@
       "thirdPartyMock": "751(企查查股权出质): 命中数据"
     },
     {
-      "id": "TC_ARGS01_HIT",
+      "id": "TC_525",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "正案例",
@@ -9722,7 +9922,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGS01_MISS",
+      "id": "TC_526",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "反案例",
@@ -9740,7 +9940,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGS01_BOUND",
+      "id": "TC_527",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=500万",
       "group": "规则",
       "caseType": "边界案例",
@@ -9758,7 +9958,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGS02_HIT",
+      "id": "TC_528",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -9778,7 +9978,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_MISS",
+      "id": "TC_529",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -9798,7 +9998,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_BOUND",
+      "id": "TC_530",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -9818,7 +10018,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_OR0_HIT",
+      "id": "TC_531",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9838,7 +10038,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_OR0_BOUND",
+      "id": "TC_532",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -9858,7 +10058,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_OR1_HIT",
+      "id": "TC_533",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9878,7 +10078,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_OR1_BOUND",
+      "id": "TC_534",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -9898,7 +10098,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGS02_OR_MISS",
+      "id": "TC_535",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9918,7 +10118,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP01_HIT",
+      "id": "TC_536",
       "desc": "命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -9937,7 +10137,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARGP01_MISS",
+      "id": "TC_537",
       "desc": "未命中验证：企业近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -9956,7 +10156,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARGP01_AND0",
+      "id": "TC_538",
       "desc": "AND拆解：企业近3个月存在失信记录企查查 - 仅企业近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -9975,7 +10175,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARGP01_STRICT0",
+      "id": "TC_539",
       "desc": "严格边界：企业近3个月存在失信记录企查查 - 企业近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -9994,7 +10194,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARGP02_HIT",
+      "id": "TC_540",
       "desc": "命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10013,7 +10213,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ARGP02_MISS",
+      "id": "TC_541",
       "desc": "未命中验证：企业近3个月存在限制高消费记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10032,7 +10232,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ARGP02_AND0",
+      "id": "TC_542",
       "desc": "AND拆解：企业近3个月存在限制高消费记录企查查 - 仅企业近3个月限制高消费记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10051,7 +10251,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ARGP02_STRICT0",
+      "id": "TC_543",
       "desc": "严格边界：企业近3个月存在限制高消费记录企查查 - 企业近3个月限制高消费记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10070,7 +10270,7 @@
       "thirdPartyMock": "742(企查查限制高消费): 命中数据"
     },
     {
-      "id": "TC_ARGP03_HIT",
+      "id": "TC_544",
       "desc": "命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10089,7 +10289,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ARGP03_MISS",
+      "id": "TC_545",
       "desc": "未命中验证：企业近3个月存在被执行记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10108,7 +10308,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ARGP03_AND0",
+      "id": "TC_546",
       "desc": "AND拆解：企业近3个月存在被执行记录企查查 - 仅企业近3个月被执行记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10127,7 +10327,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ARGP03_STRICT0",
+      "id": "TC_547",
       "desc": "严格边界：企业近3个月存在被执行记录企查查 - 企业近3个月被执行记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10146,7 +10346,7 @@
       "thirdPartyMock": "741(企查查被执行人记录): 命中数据"
     },
     {
-      "id": "TC_ARGP04_HIT",
+      "id": "TC_548",
       "desc": "命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10165,7 +10365,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP04_MISS",
+      "id": "TC_549",
       "desc": "未命中验证：企业近3个月存在被保全记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10184,7 +10384,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP04_AND0",
+      "id": "TC_550",
       "desc": "AND拆解：企业近3个月存在被保全记录企查查 - 仅企业近3个月被保全记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10203,7 +10403,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP04_STRICT0",
+      "id": "TC_551",
       "desc": "严格边界：企业近3个月存在被保全记录企查查 - 企业近3个月被保全记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10222,7 +10422,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP05_HIT",
+      "id": "TC_552",
       "desc": "命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "正案例",
@@ -10240,7 +10440,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP05_MISS",
+      "id": "TC_553",
       "desc": "未命中验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "反案例",
@@ -10258,7 +10458,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP05_BOUND",
+      "id": "TC_554",
       "desc": "边界值验证：企业近3个月为被告的案件累计涉案金额企查查>=300万",
       "group": "规则",
       "caseType": "边界案例",
@@ -10276,7 +10476,7 @@
       "thirdPartyMock": "887(企查查司法案件): 命中数据"
     },
     {
-      "id": "TC_ARGP06_HIT",
+      "id": "TC_555",
       "desc": "命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "正案例",
@@ -10296,7 +10496,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_MISS",
+      "id": "TC_556",
       "desc": "未命中验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "反案例",
@@ -10316,7 +10516,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_BOUND",
+      "id": "TC_557",
       "desc": "边界值验证：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
       "group": "规则",
       "caseType": "边界案例",
@@ -10336,7 +10536,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_OR0_HIT",
+      "id": "TC_558",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10356,7 +10556,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_OR0_BOUND",
+      "id": "TC_559",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件笔数企查查、企业近3个月自诉（原告）案件笔数详情企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -10376,7 +10576,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_OR1_HIT",
+      "id": "TC_560",
       "desc": "OR分支命中：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 仅满足企业近3个月自诉（原告）案件单笔涉案金额企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10396,7 +10596,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_OR1_BOUND",
+      "id": "TC_561",
       "desc": "OR分支边界：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 企业近3个月自诉（原告）案件单笔涉案金额企查查在阈值上",
       "group": "规则",
       "caseType": "边界案例",
@@ -10416,7 +10616,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP06_OR_MISS",
+      "id": "TC_562",
       "desc": "OR全不满足：企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万 - 所有分支均不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10436,7 +10636,7 @@
       "thirdPartyMock": "887(企查查司法案件) - 原告: 命中数据"
     },
     {
-      "id": "TC_ARGP07_HIT",
+      "id": "TC_563",
       "desc": "命中验证：关联企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10455,7 +10655,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_ARGP07_MISS",
+      "id": "TC_564",
       "desc": "未命中验证：关联企业近3个月存在注销信息记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10474,7 +10674,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_ARGP07_AND0",
+      "id": "TC_565",
       "desc": "AND拆解：关联企业近3个月存在注销信息记录企查查 - 仅关联企业近3个月注销吊销信息数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10493,7 +10693,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_ARGP07_STRICT0",
+      "id": "TC_566",
       "desc": "严格边界：关联企业近3个月存在注销信息记录企查查 - 关联企业近3个月注销吊销信息数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10512,7 +10712,7 @@
       "thirdPartyMock": "2003(企查查客户身份识别) - CancelInfo: 命中数据"
     },
     {
-      "id": "TC_ARMP01_HIT",
+      "id": "TC_567",
       "desc": "命中验证：持股超20%的股东公司近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10531,7 +10731,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据; 2003(企查查客户身份识别) - MajorShareholder: 命中数据"
     },
     {
-      "id": "TC_ARMP01_MISS",
+      "id": "TC_568",
       "desc": "未命中验证：持股超20%的股东公司近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10550,7 +10750,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据; 2003(企查查客户身份识别) - MajorShareholder: 命中数据"
     },
     {
-      "id": "TC_ARMP01_AND0",
+      "id": "TC_569",
       "desc": "AND拆解：持股超20%的股东公司近3个月存在失信记录企查查 - 仅持股超20%的股东公司近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10569,7 +10769,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据; 2003(企查查客户身份识别) - MajorShareholder: 命中数据"
     },
     {
-      "id": "TC_ARMP01_STRICT0",
+      "id": "TC_570",
       "desc": "严格边界：持股超20%的股东公司近3个月存在失信记录企查查 - 持股超20%的股东公司近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10588,7 +10788,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据; 2003(企查查客户身份识别) - MajorShareholder: 命中数据"
     },
     {
-      "id": "TC_ARMP02_HIT",
+      "id": "TC_571",
       "desc": "命中验证：对外投资持股超20%的被投资公司近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "正案例",
@@ -10607,7 +10807,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARMP02_MISS",
+      "id": "TC_572",
       "desc": "未命中验证：对外投资持股超20%的被投资公司近3个月存在失信记录企查查",
       "group": "规则",
       "caseType": "反案例",
@@ -10626,7 +10826,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARMP02_AND0",
+      "id": "TC_573",
       "desc": "AND拆解：对外投资持股超20%的被投资公司近3个月存在失信记录企查查 - 仅对外投资持股超20%的被投资公司近3个月失信记录数量企查查不满足",
       "group": "规则",
       "caseType": "反案例",
@@ -10645,7 +10845,7 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_ARMP02_STRICT0",
+      "id": "TC_574",
       "desc": "严格边界：对外投资持股超20%的被投资公司近3个月存在失信记录企查查 - 对外投资持股超20%的被投资公司近3个月失信记录数量企查查=0（>不含等于）",
       "group": "规则",
       "caseType": "边界案例",
@@ -10664,8 +10864,8 @@
       "thirdPartyMock": "740(企查查失信记录): 命中数据"
     },
     {
-      "id": "TC_FUNC_001",
-      "desc": "初始化函数：正案例",
+      "id": "TC_575",
+      "desc": "初始化函数：传入有效 AppKey 和 SecretKey，验证企查查接",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "传入有效 AppKey 和 SecretKey，验证企查查接口可正常调用",
@@ -10679,8 +10879,8 @@
       "targetFunction": "初始化函数"
     },
     {
-      "id": "TC_FUNC_002",
-      "desc": "初始化函数：反案例",
+      "id": "TC_576",
+      "desc": "初始化函数：传入空 AppKey，验证初始化异常处理",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "传入空 AppKey，验证初始化异常处理",
@@ -10694,8 +10894,8 @@
       "targetFunction": "初始化函数"
     },
     {
-      "id": "TC_FUNC_003",
-      "desc": "预警等级计算：正案例",
+      "id": "TC_577",
+      "desc": "预警等级计算：高风险命中条数=1，中风险命中条数=2，低风险命中条数=3",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "高风险命中条数=1，中风险命中条数=2，低风险命中条数=3",
@@ -10709,8 +10909,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_004",
-      "desc": "预警等级计算：正案例",
+      "id": "TC_578",
+      "desc": "预警等级计算：所有等级命中条数均为0",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "所有等级命中条数均为0",
@@ -10724,8 +10924,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_005",
-      "desc": "预警等级计算：边界案例",
+      "id": "TC_579",
+      "desc": "预警等级计算：中风险命中条数=3（触发红色预警阈值）",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "中风险命中条数=3（触发红色预警阈值）",
@@ -10739,8 +10939,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_006",
-      "desc": "预警等级计算：边界案例",
+      "id": "TC_580",
+      "desc": "预警等级计算：中风险命中条数=2（未达红色预警阈值，应为黄色预警）",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "中风险命中条数=2（未达红色预警阈值，应为黄色预警）",
@@ -10754,8 +10954,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_007",
-      "desc": "预警等级计算：正案例",
+      "id": "TC_581",
+      "desc": "预警等级计算：HIGH=4, MED=2, LOW=0, EXTREME=",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "HIGH=4, MED=2, LOW=0, EXTREME=0 混合计数验证",
@@ -10769,8 +10969,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_008",
-      "desc": "预警等级计算：正案例",
+      "id": "TC_582",
+      "desc": "预警等级计算：HIGH=9, MED=7, LOW=0, EXTREME=",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "HIGH=9, MED=7, LOW=0, EXTREME=0 大量混合计数验证",
@@ -10784,8 +10984,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_009",
-      "desc": "预警等级计算：边界案例",
+      "id": "TC_583",
+      "desc": "预警等级计算：空字符串输入(所有四级计数=0)",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "空字符串输入(所有四级计数=0)",
@@ -10799,8 +10999,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_010",
-      "desc": "预警等级计算：正案例",
+      "id": "TC_584",
+      "desc": "预警等级计算：极高风险>0(EBNP08资质已过期触发极高风险预警)",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "极高风险>0(EBNP08资质已过期触发极高风险预警)",
@@ -10814,8 +11014,8 @@
       "targetFunction": "预警等级计算"
     },
     {
-      "id": "TC_FUNC_011",
-      "desc": "股东公司循环函数：正案例",
+      "id": "TC_585",
+      "desc": "股东公司循环函数：持股超20%股东公司3家，循环下标从0开始递增",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "持股超20%股东公司3家，循环下标从0开始递增",
@@ -10829,8 +11029,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_012",
-      "desc": "股东公司循环函数：边界案例",
+      "id": "TC_586",
+      "desc": "股东公司循环函数：循环下标=公司列表长度，验证循环终止",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "循环下标=公司列表长度，验证循环终止",
@@ -10844,8 +11044,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_013",
-      "desc": "股东公司循环函数：反案例",
+      "id": "TC_587",
+      "desc": "股东公司循环函数：持股超20%股东公司列表为空",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "持股超20%股东公司列表为空",
@@ -10859,8 +11059,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_014",
-      "desc": "股东公司循环函数：正案例",
+      "id": "TC_588",
+      "desc": "股东公司循环函数：多公司(JSON数组格式)[\"COMP_A\",\"COMP_B",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(JSON数组格式)[\"COMP_A\",\"COMP_B\",\"COMP_C\"]",
@@ -10874,8 +11074,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_015",
-      "desc": "股东公司循环函数：正案例",
+      "id": "TC_589",
+      "desc": "股东公司循环函数：多公司(英文逗号分隔)COMP_A,COMP_B,COMP_",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(英文逗号分隔)COMP_A,COMP_B,COMP_C",
@@ -10889,8 +11089,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_016",
-      "desc": "股东公司循环函数：正案例",
+      "id": "TC_590",
+      "desc": "股东公司循环函数：多公司(中文逗号分隔)COMP_A，COMP_B，COMP_",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(中文逗号分隔)COMP_A，COMP_B，COMP_C 格式兼容性",
@@ -10904,8 +11104,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_017",
-      "desc": "股东公司循环函数：正案例",
+      "id": "TC_591",
+      "desc": "股东公司循环函数：单公司(1个keyno)单次迭代后结束",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "单公司(1个keyno)单次迭代后结束",
@@ -10919,8 +11119,8 @@
       "targetFunction": "股东公司循环函数"
     },
     {
-      "id": "TC_FUNC_018",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_592",
+      "desc": "持股公司循环函数：对外投资持股超20%公司2家，循环下标递增",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "对外投资持股超20%公司2家，循环下标递增",
@@ -10934,8 +11134,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_019",
-      "desc": "持股公司循环函数：边界案例",
+      "id": "TC_593",
+      "desc": "持股公司循环函数：循环下标=公司列表长度，验证循环终止",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "循环下标=公司列表长度，验证循环终止",
@@ -10949,8 +11149,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_020",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_594",
+      "desc": "持股公司循环函数：多公司(JSON数组格式)[\"COMP_A\",\"COMP_B",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(JSON数组格式)[\"COMP_A\",\"COMP_B\",\"COMP_C\"]",
@@ -10964,8 +11164,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_021",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_595",
+      "desc": "持股公司循环函数：多公司(英文逗号分隔)COMP_A,COMP_B,COMP_",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(英文逗号分隔)COMP_A,COMP_B,COMP_C",
@@ -10979,8 +11179,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_022",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_596",
+      "desc": "持股公司循环函数：多公司(中文逗号分隔)COMP_A，COMP_B，COMP_",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多公司(中文逗号分隔)COMP_A，COMP_B，COMP_C 格式兼容性",
@@ -10994,8 +11194,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_023",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_597",
+      "desc": "持股公司循环函数：单公司(1个keyno)单次迭代后结束",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "单公司(1个keyno)单次迭代后结束",
@@ -11009,8 +11209,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_024",
-      "desc": "持股公司循环函数：正案例",
+      "id": "TC_598",
+      "desc": "持股公司循环函数：跨迭代失信计数累加(2+3=5)和详情合并",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "跨迭代失信计数累加(2+3=5)和详情合并",
@@ -11024,8 +11224,8 @@
       "targetFunction": "持股公司循环函数"
     },
     {
-      "id": "TC_FUNC_025",
-      "desc": "股东公司数据合并：正案例",
+      "id": "TC_599",
+      "desc": "股东公司数据合并：3家股东公司各有失信记录，验证数据合并结果",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "3家股东公司各有失信记录，验证数据合并结果",
@@ -11039,8 +11239,8 @@
       "targetFunction": "股东公司数据合并"
     },
     {
-      "id": "TC_FUNC_026",
-      "desc": "股东公司数据合并：反案例",
+      "id": "TC_600",
+      "desc": "股东公司数据合并：所有股东公司均无失信记录",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "所有股东公司均无失信记录",
@@ -11054,8 +11254,8 @@
       "targetFunction": "股东公司数据合并"
     },
     {
-      "id": "TC_FUNC_027",
-      "desc": "股东公司数据合并：正案例",
+      "id": "TC_601",
+      "desc": "股东公司数据合并：首次迭代初始累加(0+2=2)和详情写入",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "首次迭代初始累加(0+2=2)和详情写入",
@@ -11069,8 +11269,8 @@
       "targetFunction": "股东公司数据合并"
     },
     {
-      "id": "TC_FUNC_028",
-      "desc": "股东公司数据合并：正案例",
+      "id": "TC_602",
+      "desc": "股东公司数据合并：跨迭代累加(2+3=5)和详情数组合并",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "跨迭代累加(2+3=5)和详情数组合并",
@@ -11084,8 +11284,8 @@
       "targetFunction": "股东公司数据合并"
     },
     {
-      "id": "TC_FUNC_029",
-      "desc": "股东公司数据合并：边界案例",
+      "id": "TC_603",
+      "desc": "股东公司数据合并：临时字段为null/空(安全处理不崩溃)",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "临时字段为null/空(安全处理不崩溃)",
@@ -11099,8 +11299,8 @@
       "targetFunction": "股东公司数据合并"
     },
     {
-      "id": "TC_FUNC_030",
-      "desc": "持股公司数据合并：正案例",
+      "id": "TC_604",
+      "desc": "持股公司数据合并：2家持股公司各有失信记录，验证数据合并",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "2家持股公司各有失信记录，验证数据合并",
@@ -11114,8 +11314,8 @@
       "targetFunction": "持股公司数据合并"
     },
     {
-      "id": "TC_FUNC_031",
-      "desc": "持股公司数据合并：反案例",
+      "id": "TC_605",
+      "desc": "持股公司数据合并：持股公司列表为空",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "持股公司列表为空",
@@ -11129,8 +11329,8 @@
       "targetFunction": "持股公司数据合并"
     },
     {
-      "id": "TC_FUNC_032",
-      "desc": "持股公司数据合并：正案例",
+      "id": "TC_606",
+      "desc": "持股公司数据合并：首次迭代初始累加(0+1=1)和详情写入",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "首次迭代初始累加(0+1=1)和详情写入",
@@ -11144,8 +11344,8 @@
       "targetFunction": "持股公司数据合并"
     },
     {
-      "id": "TC_FUNC_033",
-      "desc": "持股公司数据合并：正案例",
+      "id": "TC_607",
+      "desc": "持股公司数据合并：跨迭代累加(2+3=5)和详情数组合并",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "跨迭代累加(2+3=5)和详情数组合并",
@@ -11159,8 +11359,8 @@
       "targetFunction": "持股公司数据合并"
     },
     {
-      "id": "TC_FUNC_034",
-      "desc": "持股公司数据合并：边界案例",
+      "id": "TC_608",
+      "desc": "持股公司数据合并：临时字段为null/空(安全处理不崩溃)",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "临时字段为null/空(安全处理不崩溃)",
@@ -11174,8 +11374,8 @@
       "targetFunction": "持股公司数据合并"
     },
     {
-      "id": "TC_FUNC_035",
-      "desc": "企业信息对象取值：正案例",
+      "id": "TC_609",
+      "desc": "企业信息对象取值：传入有效企业信息对象（含企业名称、统一社会信用代码、企业类型",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "传入有效企业信息对象（含企业名称、统一社会信用代码、企业类型）",
@@ -11189,8 +11389,8 @@
       "targetFunction": "企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_036",
-      "desc": "企业信息对象取值：反案例",
+      "id": "TC_610",
+      "desc": "企业信息对象取值：传入空企业信息对象",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "传入空企业信息对象",
@@ -11204,8 +11404,8 @@
       "targetFunction": "企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_037",
-      "desc": "企业信息对象取值：边界案例",
+      "id": "TC_611",
+      "desc": "企业信息对象取值：C_O_ENTERPRISEINFO空数组[]输入(所有输出",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "C_O_ENTERPRISEINFO空数组[]输入(所有输出字段为空)",
@@ -11219,8 +11419,8 @@
       "targetFunction": "企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_038",
-      "desc": "企业信息对象取值：边界案例",
+      "id": "TC_612",
+      "desc": "企业信息对象取值：C_O_ENTERPRISEINFO=null输入(安全处理",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "C_O_ENTERPRISEINFO=null输入(安全处理,所有输出为空)",
@@ -11234,8 +11434,8 @@
       "targetFunction": "企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_039",
-      "desc": "企业信息对象取值：正案例",
+      "id": "TC_613",
+      "desc": "企业信息对象取值：多对象数组(仅取第一个元素)",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多对象数组(仅取第一个元素)",
@@ -11249,8 +11449,8 @@
       "targetFunction": "企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_040",
-      "desc": "个人信息对象取值：正案例",
+      "id": "TC_614",
+      "desc": "个人信息对象取值：传入有效个人信息对象（含姓名、角色类型）",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "传入有效个人信息对象（含姓名、角色类型）",
@@ -11264,8 +11464,8 @@
       "targetFunction": "个人信息对象取值"
     },
     {
-      "id": "TC_FUNC_041",
-      "desc": "个人信息对象取值：反案例",
+      "id": "TC_615",
+      "desc": "个人信息对象取值：传入空个人信息对象",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "传入空个人信息对象",
@@ -11279,8 +11479,8 @@
       "targetFunction": "个人信息对象取值"
     },
     {
-      "id": "TC_FUNC_042",
-      "desc": "个人信息对象取值：边界案例",
+      "id": "TC_616",
+      "desc": "个人信息对象取值：C_O_PERSONINFO空数组输入不崩溃",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "C_O_PERSONINFO空数组输入不崩溃",
@@ -11294,8 +11494,8 @@
       "targetFunction": "个人信息对象取值"
     },
     {
-      "id": "TC_FUNC_043",
-      "desc": "个人信息对象取值：正案例",
+      "id": "TC_617",
+      "desc": "个人信息对象取值：多对象数组(仅取第一个元素)",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多对象数组(仅取第一个元素)",
@@ -11309,8 +11509,8 @@
       "targetFunction": "个人信息对象取值"
     },
     {
-      "id": "TC_FUNC_044",
-      "desc": "关联企业信息对象取值：正案例",
+      "id": "TC_618",
+      "desc": "关联企业信息对象取值：传入有效关联企业信息对象",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "传入有效关联企业信息对象",
@@ -11324,8 +11524,8 @@
       "targetFunction": "关联企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_045",
-      "desc": "关联企业信息对象取值：反案例",
+      "id": "TC_619",
+      "desc": "关联企业信息对象取值：传入空关联企业信息对象",
       "group": "函数",
       "caseType": "反案例",
       "scenario": "传入空关联企业信息对象",
@@ -11339,8 +11539,8 @@
       "targetFunction": "关联企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_046",
-      "desc": "关联企业信息对象取值：边界案例",
+      "id": "TC_620",
+      "desc": "关联企业信息对象取值：C_O_RELATEDCOMPANYINFO空数组输入不崩溃",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "C_O_RELATEDCOMPANYINFO空数组输入不崩溃",
@@ -11354,8 +11554,8 @@
       "targetFunction": "关联企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_047",
-      "desc": "关联企业信息对象取值：正案例",
+      "id": "TC_621",
+      "desc": "关联企业信息对象取值：多对象数组(仅取第一个元素)",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "多对象数组(仅取第一个元素)",
@@ -11369,8 +11569,8 @@
       "targetFunction": "关联企业信息对象取值"
     },
     {
-      "id": "TC_FUNC_048",
-      "desc": "资质等级计算函数：正案例",
+      "id": "TC_622",
+      "desc": "资质等级计算函数：准入基线=特级，当前资质=一级，验证降级档位=1",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "准入基线=特级，当前资质=一级，验证降级档位=1",
@@ -11384,8 +11584,8 @@
       "targetFunction": "资质等级计算函数"
     },
     {
-      "id": "TC_FUNC_049",
-      "desc": "资质等级计算函数：正案例",
+      "id": "TC_623",
+      "desc": "资质等级计算函数：准入基线=一级，当前资质=特级，验证降级档位=-1（升级）",
       "group": "函数",
       "caseType": "正案例",
       "scenario": "准入基线=一级，当前资质=特级，验证降级档位=-1（升级）",
@@ -11399,8 +11599,8 @@
       "targetFunction": "资质等级计算函数"
     },
     {
-      "id": "TC_FUNC_050",
-      "desc": "资质等级计算函数：边界案例",
+      "id": "TC_624",
+      "desc": "资质等级计算函数：当前资质证书为空（缺失），验证返回-999",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "当前资质证书为空（缺失），验证返回-999",
@@ -11414,8 +11614,8 @@
       "targetFunction": "资质等级计算函数"
     },
     {
-      "id": "TC_FUNC_051",
-      "desc": "资质等级计算函数：边界案例",
+      "id": "TC_625",
+      "desc": "资质等级计算函数：准入基线=当前资质完全匹配，降级档位=0",
       "group": "函数",
       "caseType": "边界案例",
       "scenario": "准入基线=当前资质完全匹配，降级档位=0",
@@ -11429,7 +11629,7 @@
       "targetFunction": "资质等级计算函数"
     },
     {
-      "id": "TC_FLOW_001",
+      "id": "TC_626",
       "desc": "路由覆盖：借款×国企",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11455,7 +11655,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_002",
+      "id": "TC_627",
       "desc": "路由覆盖：借款×民营",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11483,7 +11683,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_003",
+      "id": "TC_628",
       "desc": "路由覆盖：债券×国企",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11510,7 +11710,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_004",
+      "id": "TC_629",
       "desc": "路由覆盖：债券×民营",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11537,7 +11737,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_005",
+      "id": "TC_630",
       "desc": "路由覆盖：委贷×国企",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11563,7 +11763,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_006",
+      "id": "TC_631",
       "desc": "路由覆盖：委贷×民营",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11591,7 +11791,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_007",
+      "id": "TC_632",
       "desc": "路由覆盖：投资×国企",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11618,7 +11818,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_008",
+      "id": "TC_633",
       "desc": "路由覆盖：投资×民营",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11646,7 +11846,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_009",
+      "id": "TC_634",
       "desc": "路由覆盖：非融×国企",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11672,7 +11872,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_010",
+      "id": "TC_635",
       "desc": "路由覆盖：非融×民营",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11698,7 +11898,7 @@
       ]
     },
     {
-      "id": "TC_FLOW_011",
+      "id": "TC_636",
       "desc": "路由覆盖：贷前借款（贷前主策略）",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11713,7 +11913,7 @@
       "targetBizType": "贷前借款"
     },
     {
-      "id": "TC_FLOW_012",
+      "id": "TC_637",
       "desc": "路由覆盖：贷前债券（贷前主策略）",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11728,7 +11928,7 @@
       "targetBizType": "贷前债券"
     },
     {
-      "id": "TC_FLOW_013",
+      "id": "TC_638",
       "desc": "无效企业类型(外资) DEFAULT到End",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11744,7 +11944,7 @@
       }
     },
     {
-      "id": "TC_FLOW_014",
+      "id": "TC_639",
       "desc": "未知业务场景走DEFAULT路径",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11760,7 +11960,7 @@
       }
     },
     {
-      "id": "TC_FLOW_015",
+      "id": "TC_640",
       "desc": "投资类×国企×资产管理类特殊分支",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11777,7 +11977,7 @@
       }
     },
     {
-      "id": "TC_FLOW_016",
+      "id": "TC_641",
       "desc": "投资类×民营×资产管理类特殊分支",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11794,7 +11994,7 @@
       }
     },
     {
-      "id": "TC_FLOW_017",
+      "id": "TC_642",
       "desc": "投资类×国企 - 非资管类",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11811,7 +12011,7 @@
       }
     },
     {
-      "id": "TC_FLOW_018",
+      "id": "TC_643",
       "desc": "投资类×民营×非资管类",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11828,7 +12028,7 @@
       }
     },
     {
-      "id": "TC_FLOW_019",
+      "id": "TC_644",
       "desc": "借款类×国企不进入PLEP规则集",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11844,7 +12044,7 @@
       }
     },
     {
-      "id": "TC_FLOW_020",
+      "id": "TC_645",
       "desc": "个人子策略DEFAULT分支",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11860,7 +12060,7 @@
       }
     },
     {
-      "id": "TC_FLOW_021",
+      "id": "TC_646",
       "desc": "委贷类×民营: 持股/股东循环不触发",
       "group": "决策流分支覆盖",
       "caseType": "正案例",
@@ -11876,7 +12076,7 @@
       }
     },
     {
-      "id": "TC_MAIN01_A",
+      "id": "TC_647",
       "desc": "红色预警：极高风险规则命中>0",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -11897,7 +12097,7 @@
       }
     },
     {
-      "id": "TC_MAIN01_B",
+      "id": "TC_648",
       "desc": "红色预警：高风险规则命中>0",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -11918,7 +12118,7 @@
       }
     },
     {
-      "id": "TC_MAIN01_C",
+      "id": "TC_649",
       "desc": "红色预警：中风险规则命中≥3",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -11939,7 +12139,7 @@
       }
     },
     {
-      "id": "TC_MAIN01_BOUND",
+      "id": "TC_650",
       "desc": "红色预警边界：中风险恰好3条",
       "group": "策略预警等级覆盖",
       "caseType": "边界案例",
@@ -11960,7 +12160,7 @@
       }
     },
     {
-      "id": "TC_MAIN02_A",
+      "id": "TC_651",
       "desc": "黄色预警：高风险=0 且 中风险1条",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -11981,7 +12181,7 @@
       }
     },
     {
-      "id": "TC_MAIN02_B",
+      "id": "TC_652",
       "desc": "黄色预警：高风险=0 且 中风险2条",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -12002,7 +12202,7 @@
       }
     },
     {
-      "id": "TC_MAIN02_BOUND",
+      "id": "TC_653",
       "desc": "黄色预警边界：中风险恰好2条（未达3条红色阈值）",
       "group": "策略预警等级覆盖",
       "caseType": "边界案例",
@@ -12023,7 +12223,7 @@
       }
     },
     {
-      "id": "TC_MAIN03_A",
+      "id": "TC_654",
       "desc": "蓝色预警：高风险=0 且 中风险=0 且 低风险>0",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -12044,7 +12244,7 @@
       }
     },
     {
-      "id": "TC_MAIN04_A",
+      "id": "TC_655",
       "desc": "绿色预警：所有等级命中条数=0",
       "group": "策略预警等级覆盖",
       "caseType": "正案例",
@@ -12065,7 +12265,7 @@
       }
     },
     {
-      "id": "TC_MAIN_MISS",
+      "id": "TC_656",
       "desc": "无任何预警（所有规则均不命中）",
       "group": "策略预警等级覆盖",
       "caseType": "反案例",
@@ -12086,9 +12286,9 @@
       }
     },
     {
-      "id": "TC_COMB_001",
+      "id": "TC_657",
       "desc": "综合场景: 借款类国企多规则同时命中",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：借款类×国企，同时命中EBGS01(低风险预警)、ECGX01(高风险预警)、ELLS01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBGS01(低风险预警)、ECGX01(高风险预警)、ELLS01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12111,9 +12311,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_002",
+      "id": "TC_658",
       "desc": "综合场景: 借款类民营多规则同时命中",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：借款类×民营，同时命中EBGP01(中风险预警)、ECGX01(高风险预警)、ELLP01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBGP01(中风险预警)、ECGX01(高风险预警)、ELLP01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12136,9 +12336,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_003",
+      "id": "TC_659",
       "desc": "综合场景: 非融民营资质+中标信息",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：非融类×民营，同时命中EBNP01(高风险预警)、ECGX01(高风险预警)、ELNP01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBNP01(高风险预警)、ECGX01(高风险预警)、ELNP01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12161,9 +12361,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_004",
+      "id": "TC_660",
       "desc": "综合场景: 委贷类国企终本记录",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：委贷类×国企，同时命中EBGS01(低风险预警)、ECGX01(高风险预警)、ELDS01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBGS01(低风险预警)、ECGX01(高风险预警)、ELDS01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12186,9 +12386,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_005",
+      "id": "TC_661",
       "desc": "综合场景: 投资类民营破产清算",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：投资类×民营，同时命中EBGP01(中风险预警)、ECGX01(高风险预警)、ELDP01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBGP01(中风险预警)、ECGX01(高风险预警)、ELDP01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12211,9 +12411,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_006",
+      "id": "TC_662",
       "desc": "综合场景: 债券类民营多规则命中",
-      "group": "规则",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "跨子策略综合：债券类×民营，同时命中EBGP01(中风险预警)、ECGX01(高风险预警)、ELDP01(高风险预警)、PLEP01(高风险预警)",
       "expected": "多规则同时命中：EBGP01(中风险预警)、ECGX01(高风险预警)、ELDP01(高风险预警)、PLEP01(高风险预警)，验证整体预警等级",
@@ -12236,9 +12436,9 @@
       "isCombined": true
     },
     {
-      "id": "TC_COMB_007",
+      "id": "TC_663",
       "desc": "全SAFE基线：借款×国企 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：借款类×国企，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12253,9 +12453,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_008",
+      "id": "TC_664",
       "desc": "全SAFE基线：借款×民营 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：借款类×民营，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12270,9 +12470,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_009",
+      "id": "TC_665",
       "desc": "全SAFE基线：债券×国企 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：债券类×国企，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12287,9 +12487,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_010",
+      "id": "TC_666",
       "desc": "全SAFE基线：债券×民营 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：债券类×民营，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12304,9 +12504,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_011",
+      "id": "TC_667",
       "desc": "全SAFE基线：委贷×国企 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：委贷类×国企，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12321,9 +12521,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_012",
+      "id": "TC_668",
       "desc": "全SAFE基线：委贷×民营 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：委贷类×民营，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12338,9 +12538,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_013",
+      "id": "TC_669",
       "desc": "全SAFE基线：投资×国企 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：投资类×国企，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12355,9 +12555,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_014",
+      "id": "TC_670",
       "desc": "全SAFE基线：投资×民营 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：投资类×民营，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12372,9 +12572,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_015",
+      "id": "TC_671",
       "desc": "全SAFE基线：非融×国企 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：非融类×国企，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
@@ -12389,9 +12589,9 @@
       "isSafeBaseline": true
     },
     {
-      "id": "TC_COMB_016",
+      "id": "TC_672",
       "desc": "全SAFE基线：非融×民营 - 三个子策略均无命中",
-      "group": "决策流分支覆盖",
+      "group": "跨子策略综合",
       "caseType": "正案例",
       "scenario": "全SAFE：非融类×民营，所有参数安全值，验证三个子策略均被调用且不触发任何规则",
       "expected": "企业子策略+个人子策略+关联企业子策略均被调用，无规则命中，最终绿色预警",
