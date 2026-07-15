@@ -1,0 +1,33 @@
+{
+  "policyCode": "DF_PRE_CONC_001",
+  "iterations": [
+    {
+      "round": 1,
+      "cases": 55,
+      "submitted": 55,
+      "all_accept": true,
+      "report_pass": 28,
+      "report_fail": 27,
+      "checker_issues": 57,
+      "severe": 0,
+      "warning": 0,
+      "info": 57,
+      "feedback_actions": 30,
+      "auto_fixable": 0,
+      "keep_as_pair": 49,
+      "investigate": 8,
+      "notes": "生成器参数过简(缺C_F_CREDITLIMITOFF/S_F_LOANBALANCE/C_S_AREACITY等), 所有规则均未触发→全部Accept; checker仅提示级问题"
+    }
+  ],
+  "converged": true,
+  "convergeReason": "checker 0严重+0警告，满足收敛标准(严重=0且警告<10)",
+  "convergeRound": 1,
+  "finalReport": "iteration_3/test_report.xlsx",
+  "keyFindings": [
+    "tiance-testcase-generator v2.4.0 对保前集中度策略的字段映射不完整：parsed_strategy.json 中字段编码为小写短名(creditlimitoff)，未映射为系统编码(C_F_CREDITLIMITOFF)",
+    "DF_PRE_CONC_001 的单户/关联户规则依赖 FunctionServiceNode 查询DB合并余额，虚拟客户号返回0→规则永不触发",
+    "区域规则依赖三方数据 ads_icr_area_conc_realtime 返回区域已用额度，且 ETL 会覆盖 C_F_CONCLIMITSTANDARDOFF(仅重庆80M→75M)",
+    "49条语义重复为设计意图(跨子策略/多业务场景路由覆盖)，不需消除",
+    "Agent Loop 完整执行了 Step1→Step2a→Step2b→Step3→Step4 五步流程"
+  ]
+}
