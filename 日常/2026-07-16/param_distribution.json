@@ -1,0 +1,266 @@
+{
+  "C_N_ADMINPENALTYCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_ATTENTIONLOANCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_BANKRUPTCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_BIZABNORMALCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_BIZSCOPECHANGECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_COURTANNOUNCEMENTCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_COURTNOTICECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_DEFENDANTCASECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_DISHONESTCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_EQUITYFREEZECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_EQUITYPLEDGECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_EXECUTEDCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_HIGHCONSUMECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_JUDICIALAUCTIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_LEGREPPERSONCHANGECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_LIQUIDATIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_LOANDISPUTEDOCCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_NEGATIVEPUBLICOPINIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_OVERDUEGUARANTEECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_OVERDUELOANCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_PRESERVATIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_REGISTCAPIDECAMOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_REGISTCAPIDECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_REGISTCAPIINCAMOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_REGISTCAPIINCCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_SELFPROSECUTIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_SERIOUSVIOLATIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_SHAREHOLDERCHANGECOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_TAXARREARSCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_TAXVIOLATIONCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "C_N_TERMINATEDCOUNT_": {
+    "count": 20,
+    "min": 0.0,
+    "max": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0
+  },
+  "S_E_APIMODEL": {
+    "count": 110,
+    "min": 30.0,
+    "max": 30.0,
+    "p50": 30.0,
+    "p95": 30.0,
+    "mean": 30.0
+  },
+  "S_S_ORGCODE": {
+    "count": 110,
+    "min": 10117.0,
+    "max": 10117.0,
+    "p50": 10117.0,
+    "p95": 10117.0,
+    "mean": 10117.0
+  }
+}
