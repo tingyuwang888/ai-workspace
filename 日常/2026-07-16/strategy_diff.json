@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "added": [],
+    "removed": [],
+    "modified": []
+  },
+  "ruleSets": {
+    "added": [],
+    "removed": []
+  },
+  "functions": {
+    "added": [],
+    "removed": []
+  },
+  "fields": {
+    "added": [],
+    "removed": []
+  },
+  "thirdParty": {
+    "added": [],
+    "removed": []
+  },
+  "summary": {
+    "totalChanges": 0,
+    "rulesChanged": 0,
+    "ruleSetsChanged": 0,
+    "functionsChanged": 0,
+    "fieldsChanged": 0,
+    "thirdPartyChanged": 0
+  }
+}
