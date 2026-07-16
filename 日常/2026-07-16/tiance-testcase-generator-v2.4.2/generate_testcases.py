@@ -1063,6 +1063,44 @@ def generate_strict_boundary_cases(code, name, rs_code, hit_result, conditions):
 
 
 # ---------------------------------------------------------------------------
+# ruleSetCode 自动推导（v2.4.2: 修 parsed_strategy.json 中 ruleSetCode 为空的问题）
+# ---------------------------------------------------------------------------
+
+def _infer_ruleset_codes(rules, rule_sets):
+    """从 ruleSet 名称关键词反推每条 rule 的 ruleSetCode。
+    当 rule.ruleSetCode 为空时，根据 rule.name 中的关键词匹配 ruleSet.name 填充。
+    """
+    if not rule_sets:
+        return
+    # 构建关键词 → ruleSet code 映射
+    keyword_map = {}
+    for rs in rule_sets:
+        rs_name = rs.get("name", "")
+        rs_code = rs.get("code", "")
+        if not rs_code:
+            continue
+        # 提取中文关键词（去掉通用前缀如"保前集中度判断_"）
+        parts = rs_name.replace("_", " ").split()
+        for p in parts:
+            if len(p) >= 2:
+                keyword_map[p] = rs_code
+
+    filled = 0
+    for rule in rules:
+        if rule.get("ruleSetCode", ""):
+            continue  # 已有，跳过
+        rname = rule.get("name", "")
+        # 按关键词长度降序匹配（优先更具体的关键词）
+        for kw in sorted(keyword_map.keys(), key=len, reverse=True):
+            if kw in rname:
+                rule["ruleSetCode"] = keyword_map[kw]
+                filled += 1
+                break
+    if filled:
+        print(f"[ruleSetCode推导] 已填充 {filled}/{len(rules)} 条规则的 ruleSetCode", file=sys.stderr)
+
+
+# ---------------------------------------------------------------------------
 # 规则级用例生成
 # ---------------------------------------------------------------------------
 
@@ -1564,6 +1602,8 @@ def generate_ruleset_cross_matrix(rule_sets, rules, fields_dict):
             "scenario": f"规则集交叉组合：命中[{hit_desc}]，未命中[{miss_desc}]",
             "expected": f"命中：{hit_desc}；未命中：{miss_desc}",
             "params": params, "isCrossMatrix": True,
+            "targetRuleSet": ",".join(rs_codes[i] for i, c in enumerate(combo) if c == "hit"),
+            "targetRule": "",
         })
 
     return test_cases
@@ -2225,6 +2265,9 @@ def generate_all(parsed_json_path, output_path, feedback_path=None):
 
     strategy_code = data.get("strategies", [{}])[0].get("code", "unknown")
     strategy_name = data.get("strategies", [{}])[0].get("name", "未知策略")
+
+    # v2.4.2: 自动推导缺失的 ruleSetCode（修 parsed_strategy.json 数据层面问题）
+    _infer_ruleset_codes(rules, rule_sets)
 
     alert_rules = [r for r in rules if r["ruleSetCode"] == "alertLevelJudgment"]
 
