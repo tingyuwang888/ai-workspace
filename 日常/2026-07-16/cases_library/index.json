@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "description": "策略测试用例模板库索引 — 按策略类型归档可复用的测试模式",
+  "strategy_types": {
+    "concentration_check": {
+      "name": "集中度检查",
+      "description": "保前/保后单户+关联户+区域集中度判断",
+      "template_file": "concentration_check/templates.yaml",
+      "reference_strategies": ["DF_PRE_CONC_001", "DF_POST_CONC_001"],
+      "architecture": "flat",
+      "tags": ["集中度", "区域聚合", "合并余额"]
+    },
+    "credit_scoring": {
+      "name": "信用评分",
+      "description": "信用评分卡策略：评分计算→等级映射→阈值判断",
+      "template_file": "credit_scoring/templates.yaml",
+      "reference_strategies": [],
+      "architecture": "flat",
+      "tags": ["评分", "等级", "阈值"]
+    },
+    "post_inspection": {
+      "name": "保后检查",
+      "description": "三子策略架构(企业/个人/关联企业)保后检查",
+      "template_file": "post_inspection/templates.yaml",
+      "reference_strategies": ["DF_POST_CHECK_001"],
+      "architecture": "tripartite",
+      "tags": ["保后", "三子策略", "预警等级"]
+    }
+  },
+  "auto_detect_rules": [
+    {
+      "pattern": "conc|集中度|CONC",
+      "strategy_type": "concentration_check"
+    },
+    {
+      "pattern": "score|评分|SCORE",
+      "strategy_type": "credit_scoring"
+    },
+    {
+      "pattern": "post_check|保后|POST_CHECK",
+      "strategy_type": "post_inspection"
+    }
+  ]
+}

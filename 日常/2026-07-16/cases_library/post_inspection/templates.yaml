@@ -1,0 +1,41 @@
+# 保后检查策略模板库 (占位)
+# 待填充：当有保后检查策略 parsed_strategy.json 时提取
+# 架构: tripartite (企业/个人/关联企业三子策略)
+
+version: "1.0.0"
+strategy_type: post_inspection
+architecture: tripartite
+
+common_params:
+  S_S_BIZID: "{tc_id}_BIZ"
+  S_S_CUSTNO: "{tc_id}_CUST"
+  S_S_ORGCODE: "010117"
+  S_E_APIMODEL: "30"
+  C_S_BIZSCENARIO: "借款类"
+  S_S_ENTERPRISETYPE: "国企"
+
+# 三子策略路由维度
+routing_dimensions:
+  bizScenarios: [借款类, 非融类]
+  enterpriseType: [国企, 民营, 通用]
+
+rule_patterns:
+  enterprise_rules:
+    description: "企业子策略规则集"
+    routing: { biz: "借款类", ent: "国企" }
+  personal_rules:
+    description: "个人子策略规则集"
+    routing: { biz: "借款类", ent: "" }
+  related_rules:
+    description: "关联企业子策略规则集"
+    routing: { biz: "非融类", ent: "民营" }
+
+function_patterns:
+  预警等级计算:
+    type: calculation
+    description: "综合多维度预警等级"
+    test_cases:
+      - scenario: "高风险"
+        expected: "预警等级 >= 3"
+      - scenario: "低风险"
+        expected: "预警等级 <= 1"

@@ -1,0 +1,30 @@
+# 信用评分策略模板库 (占位)
+# 待填充：当有信用评分卡策略 parsed_strategy.json 时提取
+# 架构: flat
+
+version: "1.0.0"
+strategy_type: credit_scoring
+architecture: flat
+
+common_params:
+  S_S_BIZID: "{tc_id}_BIZ"
+  S_S_CUSTNO: "{tc_id}_CUST"
+  S_S_ORGCODE: "010117"
+  S_E_APIMODEL: "30"
+
+rule_patterns:
+  score_threshold:
+    description: "信用评分 vs 阈值判断"
+    hit_condition: "score < threshold (拒绝)"
+    miss_condition: "score >= threshold (通过)"
+    boundary_condition: "score == threshold"
+
+function_patterns:
+  评分计算:
+    type: calculation
+    description: "特征加权评分"
+    test_cases:
+      - scenario: "高分客户"
+        expected: "通过"
+      - scenario: "低分客户"
+        expected: "拒绝"

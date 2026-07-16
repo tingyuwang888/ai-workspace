@@ -1,0 +1,132 @@
+# 集中度检查策略模板库
+# 参考策略: DF_PRE_CONC_001 (保前集中度判断)
+# 架构: flat (扁平路由，无 bizScenarios × enterpriseType 维度)
+# 提取日期: 2026-07-16
+
+version: "1.0.0"
+strategy_type: concentration_check
+architecture: flat
+
+# 该策略类型的通用参数覆盖
+common_params:
+  S_S_BIZID: "{tc_id}_BIZ"
+  S_S_CUSTNO: "{tc_id}_CUST"
+  S_S_ORGCODE: "010117"
+  S_E_APIMODEL: "30"
+  S_S_IDNO: "500102199001011234"
+  C_F_RANDOMNUM: "0.5"
+
+# 规则级模板 — 集中度策略的典型规则模式
+rule_patterns:
+  # 单户集中度：余额 vs 限额占比
+  single_concentration:
+    description: "单户合并责任余额 vs 集中度限额"
+    hit_condition: "liability_balance > conc_limit * ratio"
+    miss_condition: "liability_balance <= conc_limit * ratio"
+    boundary_condition: "liability_balance == conc_limit * ratio"
+    key_fields:
+      - liabilitybalance
+      - liabilitybalanceoff
+      - conclimitstandard
+      - conclimitstandardoff
+    typical_ratio: 0.10  # 10% 集中度限额
+
+  # 关联户集中度
+  related_concentration:
+    description: "关联户合并责任余额 vs 关联户集中度限额"
+    hit_condition: "related_liability_balance > related_conc_limit * ratio"
+    miss_condition: "related_liability_balance <= related_conc_limit * ratio"
+    key_fields:
+      - relatedliabilitybalance
+      - relatedliabilitybalanceoff
+      - relatedconcresult
+
+  # 区域集中度（地市级 + 区县级）
+  area_concentration:
+    description: "区域已用额度 vs 区域集中度限额"
+    sub_types:
+      - city_level: "地级市区域合并已用额度"
+      - district_level: "区县级区域合并已用额度"
+    hit_condition: "area_used_quota > area_conc_limit"
+    key_fields:
+      - districtusedquota
+      - districtusedquotaoff
+      - areacitycode
+      - areadistrictcode
+      - areaagglevel
+
+# 函数级模板 — 集中度策略的典型计算函数
+function_patterns:
+  单户合并责任余额:
+    type: aggregation
+    description: "查询单户集中度表，合并余额/准备金/担保"
+    input_fields: [S_S_IDNO, S_S_CUSTNO]
+    output_fields: [liabilitybalance, reserveamount, guaranteebalance]
+    test_cases:
+      - scenario: "有历史敞口"
+        params: { mock: "有余额数据" }
+        expected: "返回 > 0 的合并余额"
+      - scenario: "无历史敞口"
+        params: { mock: "虚拟客户号" }
+        expected: "返回 0"
+
+  关联户合并责任余额:
+    type: aggregation
+    description: "查询关联户集中度表"
+    input_fields: [S_S_IDNO, S_S_CUSTNO]
+    output_fields: [relatedliabilitybalance, relatedreserveamount, relatedguaranteebalance]
+
+  区域聚合层级判断:
+    type: mapping
+    description: "将省/区县映射为地级市规则分支"
+    input_fields: [areaprovincecode, areacitycode, areadistrictcode]
+    output_fields: [areaagglevel]
+    test_cases:
+      - scenario: "有区县编码"
+        params: { areadistrictcode: "500101" }
+        expected: "映射到地级市 500100"
+      - scenario: "仅有市级编码"
+        params: { areacitycode: "500100" }
+        expected: "直接使用市级"
+
+  区域合并已用额度:
+    type: aggregation
+    description: "汇总区域内所有敞口"
+    input_fields: [areacitycode, areadistrictcode]
+    output_fields: [districtusedquota, areaguaranteeamount, areareserveamount]
+    region_data:
+      合肥: { used_quota: 26.5, unit: "M" }
+      杭州: { used_quota: 147.3, unit: "M" }
+      福州: { used_quota: 124, unit: "M" }
+      重庆: { used_quota: 171, unit: "M" }
+
+# 三方接口异常模板 — 集中度表查询的异常场景
+third_party_exception_patterns:
+  - interface_pattern: "*集中度表查询*"
+    exceptions:
+      - type: timeout
+        description: "接口超时"
+        mock_config: { S_S_THIRDRESCODE: "99999" }
+      - type: empty_response
+        description: "空返回"
+        mock_config: { S_S_THIRDRESCODE: "10000", response: "{}" }
+      - type: abnormal_value
+        description: "异常值（负数/超大值）"
+        mock_config: { S_S_THIRDRESCODE: "10000", C_F_CONCLIMITSTANDARDOFF: -1 }
+
+# 区域特化模板 — 不同城市的测试数据
+region_templates:
+  high_usage_city:
+    description: "高使用率城市（接近/超过限额）"
+    cities: [重庆, 杭州]
+    test_focus: "区域集中度命中"
+
+  low_usage_city:
+    description: "低使用率城市（远低于限额）"
+    cities: [合肥]
+    test_focus: "区域集中度未命中"
+
+  no_data_city:
+    description: "无历史数据城市"
+    cities: [虚拟城市]
+    test_focus: "默认值/空值处理"
