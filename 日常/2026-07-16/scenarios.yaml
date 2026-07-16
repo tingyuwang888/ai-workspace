@@ -1,0 +1,276 @@
+# scenarios.yaml - 策略测试场景模板库 v1.0
+# 用于数据驱动测试用例生成，替代硬编码模板
+
+version: "1.0"
+
+# -----------------------------------------------------------------------------
+# 规则级测试模板 (Rule-level templates)
+# -----------------------------------------------------------------------------
+rule_templates:
+  hit_case:
+    case_type: "正案例"
+    scenario_template: "构造满足 {code} 全部条件的参数值，验证规则命中 {hit_result}"
+    expected_template: "命中：{code}({name})[{hit_result}]"
+    id_suffix: "HIT"
+    desc_template: "命中验证：{name}"
+    
+  miss_case:
+    case_type: "反案例"
+    scenario_template: "构造不满足 {code} 条件的参数值，验证规则不命中"
+    expected_template: "未命中：{code}({name})"
+    id_suffix: "MISS"
+    desc_template: "未命中验证：{name}"
+    
+  boundary_case:
+    case_type: "边界案例"
+    scenario_template: "使用阈值临界值测试 {code}，验证边界判定"
+    expected_template: "命中：{code}({name})[{hit_result}]"
+    id_suffix: "BOUND"
+    desc_template: "边界值验证：{name}"
+    # 仅当规则包含阈值条件时生成
+    requires_threshold: true
+
+# -----------------------------------------------------------------------------
+# 函数级测试模板库 (Function-level templates)
+# -----------------------------------------------------------------------------
+function_templates:
+  初始化函数:
+    - case_type: "正案例"
+      scenario: "传入有效 AppKey 和 SecretKey，验证企查查接口可正常调用"
+      expected: "函数输出：初始化函数+企查查appKey=有效值，企查查SecretKey=有效值"
+    - case_type: "反案例"
+      scenario: "传入空 AppKey，验证初始化异常处理"
+      expected: "函数输出：初始化函数+初始化失败"
+      
+  预警等级计算:
+    - case_type: "正案例"
+      scenario: "高风险命中条数=1，中风险命中条数=2，低风险命中条数=3"
+      expected: "函数输出：预警等级计算+高风险规则命中条数=1，中风险规则命中条数=2，低风险规则命中条数=3"
+    - case_type: "正案例"
+      scenario: "所有等级命中条数均为0"
+      expected: "函数输出：预警等级计算+极高风险规则命中条数=0，高风险规则命中条数=0，中风险规则命中条数=0，低风险规则命中条数=0"
+    - case_type: "边界案例"
+      scenario: "中风险命中条数=3（触发红色预警阈值）"
+      expected: "函数输出：预警等级计算+中风险规则命中条数=3"
+    - case_type: "边界案例"
+      scenario: "中风险命中条数=2（未达红色预警阈值，应为黄色预警）"
+      expected: "函数输出：预警等级计算+中风险规则命中条数=2"
+    - case_type: "正案例"
+      scenario: "HIGH=4, MED=2, LOW=0, EXTREME=0 混合计数验证"
+      expected: "函数输出：预警等级计算+极高风险规则命中条数=0，高风险规则命中条数=4，中风险规则命中条数=2，低风险规则命中条数=0"
+    - case_type: "正案例"
+      scenario: "HIGH=9, MED=7, LOW=0, EXTREME=0 大量混合计数验证"
+      expected: "函数输出：预警等级计算+极高风险规则命中条数=0，高风险规则命中条数=9，中风险规则命中条数=7，低风险规则命中条数=0"
+    - case_type: "边界案例"
+      scenario: "空字符串输入(所有四级计数=0)"
+      expected: "函数输出：预警等级计算+极高风险规则命中条数=0，高风险规则命中条数=0，中风险规则命中条数=0，低风险规则命中条数=0"
+    - case_type: "正案例"
+      scenario: "极高风险>0(EBNP08资质已过期触发极高风险预警)"
+      expected: "函数输出：预警等级计算+极高风险规则命中条数=1"
+      
+  股东公司循环函数:
+    - case_type: "正案例"
+      scenario: "持股超20%股东公司3家，循环下标从0开始递增"
+      expected: "函数输出：股东公司循环函数+股东公司名称=第N家公司名，股东公司循环函数结束标识=否"
+    - case_type: "边界案例"
+      scenario: "循环下标=公司列表长度，验证循环终止"
+      expected: "函数输出：股东公司循环函数+股东公司循环函数结束标识=是"
+    - case_type: "反案例"
+      scenario: "持股超20%股东公司列表为空"
+      expected: "函数输出：股东公司循环函数+股东公司循环函数结束标识=是"
+    - case_type: "正案例"
+      scenario: "多公司(JSON数组格式)"
+      expected: "函数输出：股东公司循环函数+主要股东公司keyno列表=[COMP_A,COMP_B,COMP_C]，循环索引=3"
+    - case_type: "正案例"
+      scenario: "多公司(英文逗号分隔)"
+      expected: "函数输出：股东公司循环函数+主要股东公司keyno列表=COMP_A,COMP_B,COMP_C，循环索引=3"
+    - case_type: "正案例"
+      scenario: "多公司(中文逗号分隔)"
+      expected: "函数输出：股东公司循环函数+主要股东公司keyno列表=COMP_A，COMP_B，COMP_C，循环索引=3"
+    - case_type: "正案例"
+      scenario: "单公司(1个keyno)单次迭代后结束"
+      expected: "函数输出：股东公司循环函数+主要股东公司keyno列表=COMP_A，循环索引=1，结束标识=是"
+      
+  持股公司循环函数:
+    - case_type: "正案例"
+      scenario: "对外投资持股超20%公司2家，循环下标递增"
+      expected: "函数输出：持股公司循环函数+持股公司名称=第N家公司名，持股公司循环函数结束标识=否"
+    - case_type: "边界案例"
+      scenario: "循环下标=公司列表长度，验证循环终止"
+      expected: "函数输出：持股公司循环函数+持股公司循环函数结束标识=是"
+    - case_type: "正案例"
+      scenario: "多公司(JSON数组格式)"
+      expected: "函数输出：持股公司循环函数+持股公司keyno列表=[COMP_A,COMP_B,COMP_C]，循环索引=3"
+    - case_type: "正案例"
+      scenario: "多公司(英文逗号分隔)"
+      expected: "函数输出：持股公司循环函数+持股公司keyno列表=COMP_A,COMP_B,COMP_C，循环索引=3"
+    - case_type: "正案例"
+      scenario: "多公司(中文逗号分隔)"
+      expected: "函数输出：持股公司循环函数+持股公司keyno列表=COMP_A，COMP_B，COMP_C，循环索引=3"
+    - case_type: "正案例"
+      scenario: "单公司(1个keyno)单次迭代后结束"
+      expected: "函数输出：持股公司循环函数+持股公司keyno列表=COMP_A，循环索引=1，结束标识=是"
+    - case_type: "正案例"
+      scenario: "跨迭代失信计数累加(2+3=5)和详情合并"
+      expected: "函数输出：持股公司循环函数+被投资公司失信记录累加=5，详情数组合并"
+      
+  股东公司数据合并:
+    - case_type: "正案例"
+      scenario: "3家股东公司各有失信记录，验证数据合并结果"
+      expected: "函数输出：股东公司数据合并+合并后失信记录总数=三家之和"
+    - case_type: "反案例"
+      scenario: "所有股东公司均无失信记录"
+      expected: "函数输出：股东公司数据合并+合并后失信记录总数=0"
+    - case_type: "正案例"
+      scenario: "首次迭代初始累加(0+2=2)和详情写入"
+      expected: "函数输出：股东公司数据合并+失信标记=2(循环迭代2次)"
+    - case_type: "正案例"
+      scenario: "跨迭代累加(2+3=5)和详情数组合并"
+      expected: "函数输出：股东公司数据合并+失信标记=5(循环迭代5次)"
+    - case_type: "边界案例"
+      scenario: "临时字段为null/空(安全处理不崩溃)"
+      expected: "函数输出：股东公司数据合并+失信标记=0(null/空安全处理)"
+      
+  持股公司数据合并:
+    - case_type: "正案例"
+      scenario: "2家持股公司各有失信记录，验证数据合并"
+      expected: "函数输出：持股公司数据合并+合并后失信记录总数=两家之和"
+    - case_type: "反案例"
+      scenario: "持股公司列表为空"
+      expected: "函数输出：持股公司数据合并+合并后失信记录总数=0"
+    - case_type: "正案例"
+      scenario: "首次迭代初始累加(0+1=1)和详情写入"
+      expected: "函数输出：持股公司数据合并+失信标记=1(循环迭代1次)"
+    - case_type: "正案例"
+      scenario: "跨迭代累加(2+3=5)和详情数组合并"
+      expected: "函数输出：持股公司数据合并+失信标记=5(循环迭代5次)"
+    - case_type: "边界案例"
+      scenario: "临时字段为null/空(安全处理不崩溃)"
+      expected: "函数输出：持股公司数据合并+失信标记=0(null/空安全处理)"
+      
+  企业信息对象取值:
+    - case_type: "正案例"
+      scenario: "传入有效企业信息对象"
+      expected: "函数输出：企业信息对象取值+企业名称=测试企业，统一社会信用代码=91XXXXXXXX"
+    - case_type: "反案例"
+      scenario: "传入空企业信息对象"
+      expected: "函数输出：企业信息对象取值+企业名称=空"
+    - case_type: "边界案例"
+      scenario: "C_O_ENTERPRISEINFO空数组[]输入"
+      expected: "函数返回空(空数组输入)，企业子策略跳过"
+    - case_type: "边界案例"
+      scenario: "C_O_ENTERPRISEINFO=null输入"
+      expected: "企业子策略跳过(null输入安全处理)"
+    - case_type: "正案例"
+      scenario: "多对象数组(仅取第一个元素)"
+      expected: "函数输出：企业信息对象取值+企业名称=第一企业(仅取第一个元素)"
+      
+  个人信息对象取值:
+    - case_type: "正案例"
+      scenario: "传入有效个人信息对象"
+      expected: "函数输出：个人信息对象取值+企业人员姓名=张三，个人角色类型=法定代表人"
+    - case_type: "反案例"
+      scenario: "传入空个人信息对象"
+      expected: "函数输出：个人信息对象取值+企业人员姓名=空"
+    - case_type: "边界案例"
+      scenario: "C_O_PERSONINFO空数组输入不崩溃"
+      expected: "函数返回空; 个人子策略跳过(不崩溃)"
+    - case_type: "正案例"
+      scenario: "多对象数组(仅取第一个元素)"
+      expected: "函数输出：个人信息对象取值+企业人员姓名=张三(仅取第一个元素)"
+      
+  关联企业信息对象取值:
+    - case_type: "正案例"
+      scenario: "传入有效关联企业信息对象"
+      expected: "函数输出：关联企业信息对象取值+企业名称=关联测试企业"
+    - case_type: "反案例"
+      scenario: "传入空关联企业信息对象"
+      expected: "函数输出：关联企业信息对象取值+企业名称=空"
+    - case_type: "边界案例"
+      scenario: "C_O_RELATEDCOMPANYINFO空数组输入不崩溃"
+      expected: "关联企业子策略跳过; 策略整体不受影响"
+    - case_type: "正案例"
+      scenario: "多对象数组(仅取第一个元素)"
+      expected: "函数输出：关联企业信息对象取值+企业名称=关联A(仅取第一个元素)"
+      
+  资质等级计算函数:
+    - case_type: "正案例"
+      scenario: "准入基线=特级，当前资质=一级，验证降级档位=1"
+      expected: "函数输出：资质等级计算函数+降级档位=1"
+    - case_type: "正案例"
+      scenario: "准入基线=一级，当前资质=特级，验证降级档位=-1"
+      expected: "函数输出：资质等级计算函数+降级档位=-1"
+    - case_type: "边界案例"
+      scenario: "当前资质证书为空（缺失），验证返回-999"
+      expected: "函数输出：资质等级计算函数+降级档位=-999"
+    - case_type: "边界案例"
+      scenario: "准入基线=当前资质完全匹配，降级档位=0"
+      expected: "函数输出：资质等级计算函数+降级档位=0"
+
+# -----------------------------------------------------------------------------
+# 三方接口异常测试模式 (Third-party exception patterns)
+# -----------------------------------------------------------------------------
+third_party_exception_patterns:
+  - type: "timeout"
+    scenario_template: "{interface_name} 接口超时(>10s)，验证降级处理"
+    expected_template: "接口超时降级，使用缓存数据或默认值，策略流程继续"
+    mock_config:
+      timeout_seconds: 15
+      response_delay: 10000
+      
+  - type: "empty_response"
+    scenario_template: "{interface_name} 返回空数据，验证默认值填充"
+    expected_template: "返回空响应，使用默认值，策略流程继续"
+    mock_config:
+      response_body: "{}"
+      
+  - type: "invalid_data"
+    scenario_template: "{interface_name} 返回格式错误的数据，验证异常处理"
+    expected_template: "数据格式错误，使用安全默认值，策略流程继续"
+    mock_config:
+      response_body: '{"error": "invalid format", "code": 500}'
+
+# -----------------------------------------------------------------------------
+# 通用测试参数 (Common parameters)
+# -----------------------------------------------------------------------------
+common_params:
+  S_S_BIZID: "{tc_id}_BIZ"
+  S_S_CUSTNO: "{tc_id}_CUST"
+  S_S_ORGCODE: "010117"
+  S_E_APIMODEL: "30"
+  S_S_IDNO: "500102199001011234"
+  C_F_RANDOMNUM: "0.5"
+
+# -----------------------------------------------------------------------------
+# 策略类型配置 (Strategy type configurations)
+# -----------------------------------------------------------------------------
+strategy_types:
+  concentration_check:  # 集中度检查类策略
+    description: "保前/保后集中度检查策略"
+    features:
+      - rule_hit_miss_boundary: true
+      - function_validation: true
+      - flow_coverage: true
+      - cross_matrix: true
+      - region_templates: true
+      - third_party_exception: true
+    
+  credit_scoring:  # 信用评分类策略
+    description: "信用评分/评级策略"
+    features:
+      - rule_hit_miss_boundary: true
+      - function_validation: true
+      - flow_coverage: true
+      - cross_matrix: false
+      - region_templates: false
+      - third_party_exception: true
+      
+  anti_fraud:  # 反欺诈类策略
+    description: "反欺诈/黑名单检查策略"
+    features:
+      - rule_hit_miss_boundary: true
+      - function_validation: true
+      - flow_coverage: true
+      - cross_matrix: true
+      - region_templates: false
+      - third_party_exception: true
