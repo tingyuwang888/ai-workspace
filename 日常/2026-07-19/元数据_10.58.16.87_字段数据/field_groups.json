@@ -1,0 +1,495 @@
+{
+  "_meta": {
+    "count": 30,
+    "source": "bridgeApi/fieldGroup",
+    "fetchedAt": "2026-07-19T16:43:32.732199"
+  },
+  "groups": [
+    {
+      "uuid": "e646b2ad-dfad-4a2b-ba75-bc89b0dc20ee",
+      "id": 30,
+      "name": "test",
+      "displayName": "测试-分组",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "dc26e847-9ee4-4031-bfb8-65c06af832cb",
+      "id": 28,
+      "name": "COREDATA",
+      "displayName": "机器学习",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "4036dd8b-8fde-4445-90c8-48ef3e2748ae",
+      "id": 29,
+      "name": "DG",
+      "displayName": "对公事中",
+      "standard": 0,
+      "fieldCount": 2
+    },
+    {
+      "uuid": "beb3a4d6-59bf-449e-af32-29bdfc0efbc0",
+      "id": 26,
+      "name": "JDTemplate",
+      "displayName": "尽调信息",
+      "standard": 0,
+      "fieldCount": 4
+    },
+    {
+      "uuid": "2a70e240-1941-4910-9885-b35fbf8d59b6",
+      "id": 27,
+      "name": "thirdData",
+      "displayName": "企业三方数据",
+      "standard": 0,
+      "fieldCount": 12
+    },
+    {
+      "uuid": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+      "id": 20,
+      "name": "xdaimatch",
+      "displayName": "信贷_AI交叉匹配",
+      "standard": 0,
+      "fieldCount": 39
+    },
+    {
+      "uuid": "83ffbf89-75c4-410d-adec-b9e701251022",
+      "id": 21,
+      "name": "ACCTRATING",
+      "displayName": "账户风险评级",
+      "standard": 0,
+      "fieldCount": 35
+    },
+    {
+      "uuid": "006afb35dfe311eca54cf8f21edaf900",
+      "id": 1,
+      "name": "sermodel",
+      "displayName": "服务模板",
+      "standard": 0,
+      "fieldCount": 9
+    },
+    {
+      "uuid": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+      "id": 6,
+      "name": "RISK",
+      "displayName": "风险信息",
+      "standard": 0,
+      "fieldCount": 25
+    },
+    {
+      "uuid": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+      "id": 4,
+      "name": "INDEBT",
+      "displayName": "资产负债",
+      "standard": 0,
+      "fieldCount": 8
+    },
+    {
+      "uuid": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+      "id": 16,
+      "name": "AFFP",
+      "displayName": "关联人信息",
+      "standard": 0,
+      "fieldCount": 30
+    },
+    {
+      "uuid": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+      "id": 17,
+      "name": "SOCIAL",
+      "displayName": "社保信息",
+      "standard": 0,
+      "fieldCount": 13
+    },
+    {
+      "uuid": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+      "id": 11,
+      "name": "FUND",
+      "displayName": "公积金信息",
+      "standard": 0,
+      "fieldCount": 8
+    },
+    {
+      "uuid": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+      "id": 2,
+      "name": "MEDIAS",
+      "displayName": "影像信息",
+      "standard": 0,
+      "fieldCount": 14
+    },
+    {
+      "uuid": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+      "id": 14,
+      "name": "LOANS",
+      "displayName": "贷款信息",
+      "standard": 0,
+      "fieldCount": 20
+    },
+    {
+      "uuid": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+      "id": 9,
+      "name": "DFP",
+      "displayName": "设备指纹",
+      "standard": 1,
+      "fieldCount": 9
+    },
+    {
+      "uuid": "b215e086-0553-4938-a1bc-34766c24b5e3",
+      "id": 12,
+      "name": "ACC",
+      "displayName": "账户信息",
+      "standard": 1,
+      "fieldCount": 41
+    },
+    {
+      "uuid": "b584b229-9459-492f-b61a-a2d63bc669a8",
+      "id": 13,
+      "name": "MER",
+      "displayName": "商户信息",
+      "standard": 1,
+      "fieldCount": 69
+    },
+    {
+      "uuid": "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1",
+      "id": 15,
+      "name": "TR",
+      "displayName": "交易信息",
+      "standard": 1,
+      "fieldCount": 269
+    },
+    {
+      "uuid": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+      "id": 3,
+      "name": "PRD",
+      "displayName": "产品信息",
+      "standard": 0,
+      "fieldCount": 11
+    },
+    {
+      "uuid": "a0692adf-b575-444f-a500-7fed52056d79",
+      "id": 10,
+      "name": "CST",
+      "displayName": "企业信息",
+      "standard": 0,
+      "fieldCount": 70
+    },
+    {
+      "uuid": "7066e21a-d695-421b-8484-9dca5d041737",
+      "id": 7,
+      "name": "PST",
+      "displayName": "个人客户",
+      "standard": 0,
+      "fieldCount": 21
+    },
+    {
+      "uuid": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+      "id": 5,
+      "name": "CNT",
+      "displayName": "合约信息",
+      "standard": 0,
+      "fieldCount": 21
+    },
+    {
+      "uuid": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+      "id": 18,
+      "name": "CRD",
+      "displayName": "银行卡信息",
+      "standard": 0,
+      "fieldCount": 26
+    },
+    {
+      "uuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "id": 8,
+      "name": "CUST",
+      "displayName": "客户信息",
+      "standard": 1,
+      "fieldCount": 89
+    },
+    {
+      "uuid": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+      "id": 19,
+      "name": "SYS",
+      "displayName": "系统内置",
+      "standard": 0,
+      "fieldCount": 65
+    },
+    {
+      "uuid": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+      "id": 25,
+      "name": "O",
+      "displayName": "其他信息",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+      "id": 22,
+      "name": "T",
+      "displayName": "交易信息",
+      "standard": 0,
+      "fieldCount": 107
+    },
+    {
+      "uuid": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+      "id": 24,
+      "name": "C",
+      "displayName": "客户信息",
+      "standard": 0,
+      "fieldCount": 5
+    },
+    {
+      "uuid": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302",
+      "id": 23,
+      "name": "DT",
+      "displayName": "交易系统默认",
+      "standard": 1,
+      "fieldCount": 3
+    }
+  ],
+  "name_to_display": {
+    "test": "测试-分组",
+    "COREDATA": "机器学习",
+    "DG": "对公事中",
+    "JDTemplate": "尽调信息",
+    "thirdData": "企业三方数据",
+    "xdaimatch": "信贷_AI交叉匹配",
+    "ACCTRATING": "账户风险评级",
+    "sermodel": "服务模板",
+    "RISK": "风险信息",
+    "INDEBT": "资产负债",
+    "AFFP": "关联人信息",
+    "SOCIAL": "社保信息",
+    "FUND": "公积金信息",
+    "MEDIAS": "影像信息",
+    "LOANS": "贷款信息",
+    "DFP": "设备指纹",
+    "ACC": "账户信息",
+    "MER": "商户信息",
+    "TR": "交易信息",
+    "PRD": "产品信息",
+    "CST": "企业信息",
+    "PST": "个人客户",
+    "CNT": "合约信息",
+    "CRD": "银行卡信息",
+    "CUST": "客户信息",
+    "SYS": "系统内置",
+    "O": "其他信息",
+    "T": "交易信息",
+    "C": "客户信息",
+    "DT": "交易系统默认"
+  },
+  "display_to_name": {
+    "测试-分组": "test",
+    "机器学习": "COREDATA",
+    "对公事中": "DG",
+    "尽调信息": "JDTemplate",
+    "企业三方数据": "thirdData",
+    "信贷_AI交叉匹配": "xdaimatch",
+    "账户风险评级": "ACCTRATING",
+    "服务模板": "sermodel",
+    "风险信息": "RISK",
+    "资产负债": "INDEBT",
+    "关联人信息": "AFFP",
+    "社保信息": "SOCIAL",
+    "公积金信息": "FUND",
+    "影像信息": "MEDIAS",
+    "贷款信息": "LOANS",
+    "设备指纹": "DFP",
+    "账户信息": "ACC",
+    "商户信息": "MER",
+    "交易信息": "T",
+    "产品信息": "PRD",
+    "企业信息": "CST",
+    "个人客户": "PST",
+    "合约信息": "CNT",
+    "银行卡信息": "CRD",
+    "客户信息": "C",
+    "系统内置": "SYS",
+    "其他信息": "O",
+    "交易系统默认": "DT"
+  },
+  "name_to_uuid": {
+    "test": "e646b2ad-dfad-4a2b-ba75-bc89b0dc20ee",
+    "COREDATA": "dc26e847-9ee4-4031-bfb8-65c06af832cb",
+    "DG": "4036dd8b-8fde-4445-90c8-48ef3e2748ae",
+    "JDTemplate": "beb3a4d6-59bf-449e-af32-29bdfc0efbc0",
+    "thirdData": "2a70e240-1941-4910-9885-b35fbf8d59b6",
+    "xdaimatch": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+    "ACCTRATING": "83ffbf89-75c4-410d-adec-b9e701251022",
+    "sermodel": "006afb35dfe311eca54cf8f21edaf900",
+    "RISK": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+    "INDEBT": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+    "AFFP": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+    "SOCIAL": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+    "FUND": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+    "MEDIAS": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+    "LOANS": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+    "DFP": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+    "ACC": "b215e086-0553-4938-a1bc-34766c24b5e3",
+    "MER": "b584b229-9459-492f-b61a-a2d63bc669a8",
+    "TR": "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1",
+    "PRD": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+    "CST": "a0692adf-b575-444f-a500-7fed52056d79",
+    "PST": "7066e21a-d695-421b-8484-9dca5d041737",
+    "CNT": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+    "CRD": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+    "CUST": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+    "SYS": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+    "O": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+    "T": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+    "C": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+    "DT": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302"
+  },
+  "display_to_uuid": {
+    "测试-分组": "e646b2ad-dfad-4a2b-ba75-bc89b0dc20ee",
+    "机器学习": "dc26e847-9ee4-4031-bfb8-65c06af832cb",
+    "对公事中": "4036dd8b-8fde-4445-90c8-48ef3e2748ae",
+    "尽调信息": "beb3a4d6-59bf-449e-af32-29bdfc0efbc0",
+    "企业三方数据": "2a70e240-1941-4910-9885-b35fbf8d59b6",
+    "信贷_AI交叉匹配": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+    "账户风险评级": "83ffbf89-75c4-410d-adec-b9e701251022",
+    "服务模板": "006afb35dfe311eca54cf8f21edaf900",
+    "风险信息": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+    "资产负债": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+    "关联人信息": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+    "社保信息": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+    "公积金信息": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+    "影像信息": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+    "贷款信息": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+    "设备指纹": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+    "账户信息": "b215e086-0553-4938-a1bc-34766c24b5e3",
+    "商户信息": "b584b229-9459-492f-b61a-a2d63bc669a8",
+    "交易信息": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+    "产品信息": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+    "企业信息": "a0692adf-b575-444f-a500-7fed52056d79",
+    "个人客户": "7066e21a-d695-421b-8484-9dca5d041737",
+    "合约信息": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+    "银行卡信息": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+    "客户信息": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+    "系统内置": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+    "其他信息": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+    "交易系统默认": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302"
+  },
+  "uuid_to_group": {
+    "e646b2ad-dfad-4a2b-ba75-bc89b0dc20ee": {
+      "name": "test",
+      "displayName": "测试-分组"
+    },
+    "dc26e847-9ee4-4031-bfb8-65c06af832cb": {
+      "name": "COREDATA",
+      "displayName": "机器学习"
+    },
+    "4036dd8b-8fde-4445-90c8-48ef3e2748ae": {
+      "name": "DG",
+      "displayName": "对公事中"
+    },
+    "beb3a4d6-59bf-449e-af32-29bdfc0efbc0": {
+      "name": "JDTemplate",
+      "displayName": "尽调信息"
+    },
+    "2a70e240-1941-4910-9885-b35fbf8d59b6": {
+      "name": "thirdData",
+      "displayName": "企业三方数据"
+    },
+    "97caa809-ddb7-4b04-99d5-a91ce30227cd": {
+      "name": "xdaimatch",
+      "displayName": "信贷_AI交叉匹配"
+    },
+    "83ffbf89-75c4-410d-adec-b9e701251022": {
+      "name": "ACCTRATING",
+      "displayName": "账户风险评级"
+    },
+    "006afb35dfe311eca54cf8f21edaf900": {
+      "name": "sermodel",
+      "displayName": "服务模板"
+    },
+    "6eb17e2d-8ca6-4953-92f4-5259a43028ca": {
+      "name": "RISK",
+      "displayName": "风险信息"
+    },
+    "3ff10c04-cf74-40c4-a6f2-7f6d1409517e": {
+      "name": "INDEBT",
+      "displayName": "资产负债"
+    },
+    "d592ba2c-8ed2-49ab-9054-a0ed54a24092": {
+      "name": "AFFP",
+      "displayName": "关联人信息"
+    },
+    "eb5c371c-a82b-4d75-a102-d945bdb3b3ad": {
+      "name": "SOCIAL",
+      "displayName": "社保信息"
+    },
+    "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57": {
+      "name": "FUND",
+      "displayName": "公积金信息"
+    },
+    "0f96904d-5e14-4802-9ff1-9fbf3ea2c486": {
+      "name": "MEDIAS",
+      "displayName": "影像信息"
+    },
+    "c2dfb7d9-999e-4331-b085-483b7d44cf12": {
+      "name": "LOANS",
+      "displayName": "贷款信息"
+    },
+    "9e60f8aa-bb3e-4708-84d2-b42abb50728d": {
+      "name": "DFP",
+      "displayName": "设备指纹"
+    },
+    "b215e086-0553-4938-a1bc-34766c24b5e3": {
+      "name": "ACC",
+      "displayName": "账户信息"
+    },
+    "b584b229-9459-492f-b61a-a2d63bc669a8": {
+      "name": "MER",
+      "displayName": "商户信息"
+    },
+    "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1": {
+      "name": "TR",
+      "displayName": "交易信息"
+    },
+    "23841d17-51b7-48a6-8291-8f11c072a9d7": {
+      "name": "PRD",
+      "displayName": "产品信息"
+    },
+    "a0692adf-b575-444f-a500-7fed52056d79": {
+      "name": "CST",
+      "displayName": "企业信息"
+    },
+    "7066e21a-d695-421b-8484-9dca5d041737": {
+      "name": "PST",
+      "displayName": "个人客户"
+    },
+    "491c4b5d-25d4-45f4-b3a5-0e27cb015b40": {
+      "name": "CNT",
+      "displayName": "合约信息"
+    },
+    "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb": {
+      "name": "CRD",
+      "displayName": "银行卡信息"
+    },
+    "9472efc3-d32f-4ebf-b6ae-839f55bc354a": {
+      "name": "CUST",
+      "displayName": "客户信息"
+    },
+    "5e43f5f4-2264-45e6-a403-f458b5199bb6": {
+      "name": "SYS",
+      "displayName": "系统内置"
+    },
+    "fe5c81bd-8bb8-498d-ad27-29ad052793d5": {
+      "name": "O",
+      "displayName": "其他信息"
+    },
+    "0b07742b-980a-4227-8a5a-0fcf9f51428a": {
+      "name": "T",
+      "displayName": "交易信息"
+    },
+    "e303ab0b-3118-4774-ad5a-4469208e4a03": {
+      "name": "C",
+      "displayName": "客户信息"
+    },
+    "a6ccf22b-3db5-4c14-a84a-5a420ccbe302": {
+      "name": "DT",
+      "displayName": "交易系统默认"
+    }
+  }
+}

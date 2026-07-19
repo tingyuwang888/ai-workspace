@@ -1,0 +1,199 @@
+{
+  "_meta": {
+    "count": 31,
+    "source": "bridgeApi/mainDimension/list",
+    "fetchedAt": "2026-07-19T16:43:32.731430"
+  },
+  "dimensions": [
+    {
+      "name": "S_S_IPADDR",
+      "displayName": "IP Address"
+    },
+    {
+      "name": "C_S_AGENTCERTNO",
+      "displayName": "代办人证件号码"
+    },
+    {
+      "name": "C_S_SFZQ6WPROCESS",
+      "displayName": "身份证号码前6位_加工"
+    },
+    {
+      "name": "C_S_TRADEMOBILE7PROCESS",
+      "displayName": "交易手机号前7位_加工"
+    },
+    {
+      "name": "C_S_DEVCBINPROCESS",
+      "displayName": "移动设备_卡BIN_加工"
+    },
+    {
+      "name": "C_S_CDNMMATIDAMTPROCESS",
+      "displayName": "卡号_机具号_金额_加工"
+    },
+    {
+      "name": "C_S_PAYRECPROCESS",
+      "displayName": "收付款人_加工"
+    },
+    {
+      "name": "C_S_IPCBINPROCESS",
+      "displayName": "IP_卡BIN_加工"
+    },
+    {
+      "name": "C_S_CARDNUMMATIDPROCESS",
+      "displayName": "卡号_机具号_加工"
+    },
+    {
+      "name": "C_S_CARDNUMMATIDTEMP",
+      "displayName": "卡号_机具号_临时"
+    },
+    {
+      "name": "S_S_CUSTREGLOCT",
+      "displayName": "注册地址"
+    },
+    {
+      "name": "S_S_APLTIDNO",
+      "displayName": "经办人证件号码"
+    },
+    {
+      "name": "S_S_CFOIDCODE",
+      "displayName": "财务负责人证件号码"
+    },
+    {
+      "name": "C_S_LEGALCERTNO",
+      "displayName": "法定代表人证件号码"
+    },
+    {
+      "name": "S_S_CERTID",
+      "displayName": "客户证件号码"
+    },
+    {
+      "name": "S_S_MOBINO",
+      "displayName": "手机号"
+    },
+    {
+      "name": "S_S_CARDBIN",
+      "displayName": "银行卡卡bin"
+    },
+    {
+      "name": "C_S_MATID",
+      "displayName": "机具号"
+    },
+    {
+      "name": "S_S_MERNO",
+      "displayName": "商户编号"
+    },
+    {
+      "name": "C_S_ACCTORG",
+      "displayName": "账户机构"
+    },
+    {
+      "name": "S_S_IPCITY",
+      "displayName": "IP归属城市"
+    },
+    {
+      "name": "C_S_TRADEMOBILE",
+      "displayName": "交易手机号"
+    },
+    {
+      "name": "S_S_PAYEEACCTNO",
+      "displayName": "收款方账号"
+    },
+    {
+      "name": "C_S_IDNUMBER",
+      "displayName": "证件号"
+    },
+    {
+      "name": "C_S_IPADDRESS",
+      "displayName": "IP地址"
+    },
+    {
+      "name": "S_S_DEVICEID",
+      "displayName": "设备ID"
+    },
+    {
+      "name": "C_S_CARDNUMBER",
+      "displayName": "卡号"
+    },
+    {
+      "name": "S_S_ACCOUNTLOGIN",
+      "displayName": "登录账号"
+    },
+    {
+      "name": "S_S_ACCTNO",
+      "displayName": "交易账号"
+    },
+    {
+      "name": "S_S_PAYERACCTNO",
+      "displayName": "付款方账号"
+    },
+    {
+      "name": "S_S_CARDNO",
+      "displayName": "银行卡号"
+    }
+  ],
+  "name_to_display": {
+    "S_S_IPADDR": "IP Address",
+    "C_S_AGENTCERTNO": "代办人证件号码",
+    "C_S_SFZQ6WPROCESS": "身份证号码前6位_加工",
+    "C_S_TRADEMOBILE7PROCESS": "交易手机号前7位_加工",
+    "C_S_DEVCBINPROCESS": "移动设备_卡BIN_加工",
+    "C_S_CDNMMATIDAMTPROCESS": "卡号_机具号_金额_加工",
+    "C_S_PAYRECPROCESS": "收付款人_加工",
+    "C_S_IPCBINPROCESS": "IP_卡BIN_加工",
+    "C_S_CARDNUMMATIDPROCESS": "卡号_机具号_加工",
+    "C_S_CARDNUMMATIDTEMP": "卡号_机具号_临时",
+    "S_S_CUSTREGLOCT": "注册地址",
+    "S_S_APLTIDNO": "经办人证件号码",
+    "S_S_CFOIDCODE": "财务负责人证件号码",
+    "C_S_LEGALCERTNO": "法定代表人证件号码",
+    "S_S_CERTID": "客户证件号码",
+    "S_S_MOBINO": "手机号",
+    "S_S_CARDBIN": "银行卡卡bin",
+    "C_S_MATID": "机具号",
+    "S_S_MERNO": "商户编号",
+    "C_S_ACCTORG": "账户机构",
+    "S_S_IPCITY": "IP归属城市",
+    "C_S_TRADEMOBILE": "交易手机号",
+    "S_S_PAYEEACCTNO": "收款方账号",
+    "C_S_IDNUMBER": "证件号",
+    "C_S_IPADDRESS": "IP地址",
+    "S_S_DEVICEID": "设备ID",
+    "C_S_CARDNUMBER": "卡号",
+    "S_S_ACCOUNTLOGIN": "登录账号",
+    "S_S_ACCTNO": "交易账号",
+    "S_S_PAYERACCTNO": "付款方账号",
+    "S_S_CARDNO": "银行卡号"
+  },
+  "display_to_name": {
+    "IP Address": "S_S_IPADDR",
+    "代办人证件号码": "C_S_AGENTCERTNO",
+    "身份证号码前6位_加工": "C_S_SFZQ6WPROCESS",
+    "交易手机号前7位_加工": "C_S_TRADEMOBILE7PROCESS",
+    "移动设备_卡BIN_加工": "C_S_DEVCBINPROCESS",
+    "卡号_机具号_金额_加工": "C_S_CDNMMATIDAMTPROCESS",
+    "收付款人_加工": "C_S_PAYRECPROCESS",
+    "IP_卡BIN_加工": "C_S_IPCBINPROCESS",
+    "卡号_机具号_加工": "C_S_CARDNUMMATIDPROCESS",
+    "卡号_机具号_临时": "C_S_CARDNUMMATIDTEMP",
+    "注册地址": "S_S_CUSTREGLOCT",
+    "经办人证件号码": "S_S_APLTIDNO",
+    "财务负责人证件号码": "S_S_CFOIDCODE",
+    "法定代表人证件号码": "C_S_LEGALCERTNO",
+    "客户证件号码": "S_S_CERTID",
+    "手机号": "S_S_MOBINO",
+    "银行卡卡bin": "S_S_CARDBIN",
+    "机具号": "C_S_MATID",
+    "商户编号": "S_S_MERNO",
+    "账户机构": "C_S_ACCTORG",
+    "IP归属城市": "S_S_IPCITY",
+    "交易手机号": "C_S_TRADEMOBILE",
+    "收款方账号": "S_S_PAYEEACCTNO",
+    "证件号": "C_S_IDNUMBER",
+    "IP地址": "C_S_IPADDRESS",
+    "设备ID": "S_S_DEVICEID",
+    "卡号": "C_S_CARDNUMBER",
+    "登录账号": "S_S_ACCOUNTLOGIN",
+    "交易账号": "S_S_ACCTNO",
+    "付款方账号": "S_S_PAYERACCTNO",
+    "银行卡号": "S_S_CARDNO"
+  }
+}
