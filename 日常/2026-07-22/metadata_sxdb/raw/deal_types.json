@@ -1,0 +1,359 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+    {
+      "name": "HighValue",
+      "dName": "高价值",
+      "enDName": "HighValue",
+      "grade": 850,
+      "uuid": "HighValue",
+      "color": "#fa28ff"
+    },
+    {
+      "name": "MediumToHighValue",
+      "dName": "中高价值",
+      "enDName": "MediumToHighValue",
+      "grade": 700,
+      "uuid": "MediumToHighValue",
+      "color": "#fe9200"
+    },
+    {
+      "name": "MediumValue",
+      "dName": "中价值",
+      "enDName": "MediumValue",
+      "grade": 500,
+      "uuid": "MediumValue",
+      "color": "#fcdc00"
+    },
+    {
+      "name": "LowToMediumValue",
+      "dName": "中低价值",
+      "enDName": "LowToMediumValue",
+      "grade": 400,
+      "uuid": "LowToMediumValue",
+      "color": "#73d8ff"
+    },
+    {
+      "name": "LowValue",
+      "dName": "低价值",
+      "enDName": "LowValue",
+      "grade": 300,
+      "uuid": "LowValue",
+      "color": "#cccccc"
+    },
+    {
+      "name": "redwarnbh",
+      "dName": "红色预警",
+      "enDName": "redwarnbh",
+      "grade": 150,
+      "uuid": "redwarnbh",
+      "color": "#FC746F"
+    },
+    {
+      "name": "yellowwarnbh",
+      "dName": "黄色预警",
+      "enDName": "yellowwarnbh",
+      "grade": 130,
+      "uuid": "yellowwarnbh",
+      "color": "#F7B035"
+    },
+    {
+      "name": "bluewarnbh",
+      "dName": "蓝色预警",
+      "enDName": "bluewarnbh",
+      "grade": 120,
+      "uuid": "bluewarnbh",
+      "color": "#36BFFA"
+    },
+    {
+      "name": "greenwarnbh",
+      "dName": "绿色预警",
+      "enDName": "greenwarnbh",
+      "grade": 111,
+      "uuid": "greenwarnbh",
+      "color": "#07C790"
+    },
+    {
+      "name": "highrisk",
+      "dName": "高风险",
+      "enDName": "highrisk",
+      "grade": 110,
+      "uuid": "highrisk",
+      "color": "#FC746F"
+    },
+    {
+      "name": "mediumtohighrisk",
+      "dName": "中高风险",
+      "enDName": "mediumtohighrisk",
+      "grade": 105,
+      "uuid": "mediumtohighrisk",
+      "color": "#FD853A"
+    },
+    {
+      "name": "extremhighriskbhjc",
+      "dName": "极高风险预警",
+      "enDName": "extremhighriskbhjc",
+      "grade": 98,
+      "uuid": "extremhighriskbhjc",
+      "color": "#FD853A"
+    },
+    {
+      "name": "highriskbhjc",
+      "dName": "高风险预警",
+      "enDName": "highriskbhjc",
+      "grade": 96,
+      "uuid": "highriskbhjc",
+      "color": "#FC746F"
+    },
+    {
+      "name": "lowtomediumrisk",
+      "dName": "中低风险",
+      "enDName": "lowtomediumrisk",
+      "grade": 95,
+      "uuid": "lowtomediumrisk",
+      "color": "#F7B035"
+    },
+    {
+      "name": "mediumriskbhjc",
+      "dName": "中风险预警",
+      "enDName": "mediumriskbhjc",
+      "grade": 94,
+      "uuid": "mediumriskbhjc",
+      "color": "#F7B035"
+    },
+    {
+      "name": "lowriskbhjc",
+      "dName": "低风险预警",
+      "enDName": "lowriskbhjc",
+      "grade": 92,
+      "uuid": "lowriskbhjc",
+      "color": "#07C790"
+    },
+    {
+      "name": "lowrisk",
+      "dName": "低风险",
+      "enDName": "lowrisk",
+      "grade": 90,
+      "uuid": "lowrisk",
+      "color": "#07C790"
+    },
+    {
+      "name": "singleconc",
+      "dName": "单户集中度超限",
+      "enDName": "singleconc",
+      "grade": 88,
+      "uuid": "singleconc",
+      "color": "#FC746F"
+    },
+    {
+      "name": "relatedconc",
+      "dName": "关联户集中度超限",
+      "enDName": "relatedconc",
+      "grade": 86,
+      "uuid": "relatedconc",
+      "color": "#FC746F"
+    },
+    {
+      "name": "areaconc",
+      "dName": "区域集中度超限",
+      "enDName": "areaconc",
+      "grade": 84,
+      "uuid": "areaconc",
+      "color": "#FC746F"
+    },
+    {
+      "name": "Reject",
+      "dName": "拒绝",
+      "enDName": "Reject",
+      "grade": 80,
+      "uuid": "Reject",
+      "color": "#f44e3b"
+    },
+    {
+      "name": "t002",
+      "dName": "t002",
+      "enDName": "t002",
+      "grade": 66,
+      "uuid": "t002",
+      "color": "#FC746F"
+    },
+    {
+      "name": "Review",
+      "dName": "人工审核",
+      "enDName": "Review",
+      "grade": 60,
+      "uuid": "Review",
+      "color": "#fcdc00"
+    },
+    {
+      "name": "risk",
+      "dName": "风险账户",
+      "enDName": "risk",
+      "grade": 50,
+      "uuid": "risk",
+      "color": "#E86452"
+    },
+    {
+      "name": "suspicious",
+      "dName": "可疑账户",
+      "enDName": "suspicious",
+      "grade": 40,
+      "uuid": "suspicious",
+      "color": "#FF9845"
+    },
+    {
+      "name": "a2",
+      "dName": "a2",
+      "enDName": "a2",
+      "grade": 34,
+      "uuid": "a2",
+      "color": "#FC746F"
+    },
+    {
+      "name": "s1234",
+      "dName": "1234",
+      "enDName": "s1234",
+      "grade": 33,
+      "uuid": "s1234",
+      "color": "#FD853A"
+    },
+    {
+      "name": "RedRisktest",
+      "dName": "红色风险test",
+      "enDName": "RedRisktest",
+      "grade": 31,
+      "uuid": "RedRisktest",
+      "color": "#ef4444"
+    },
+    {
+      "name": "concerned",
+      "dName": "关注账户",
+      "enDName": "concerned",
+      "grade": 30,
+      "uuid": "concerned",
+      "color": "#F6BD16"
+    },
+    {
+      "name": "aa1",
+      "dName": "aa1",
+      "enDName": "aa1",
+      "grade": 25,
+      "uuid": "aa1",
+      "color": "#FD853A"
+    },
+    {
+      "name": "yellowalert",
+      "dName": "黄灯",
+      "enDName": "yellowalert",
+      "grade": 24,
+      "uuid": "yellowalert",
+      "color": "#F7B035"
+    },
+    {
+      "name": "test3",
+      "dName": "test3",
+      "enDName": "test3",
+      "grade": 23,
+      "uuid": "test3",
+      "color": "#36BFFA"
+    },
+    {
+      "name": "greenalert",
+      "dName": "绿灯",
+      "enDName": "greenalert",
+      "grade": 22,
+      "uuid": "greenalert",
+      "color": "#07C790"
+    },
+    {
+      "name": "test4",
+      "dName": "test4",
+      "enDName": "test4",
+      "grade": 21,
+      "uuid": "test4",
+      "color": "#F7B035"
+    },
+    {
+      "name": "credible",
+      "dName": "可信账户",
+      "enDName": "credible",
+      "grade": 20,
+      "uuid": "credible",
+      "color": "#5AD8A6"
+    },
+    {
+      "name": "losswjfl",
+      "dName": "损失",
+      "enDName": "losswjfl",
+      "grade": 19,
+      "uuid": "losswjfl",
+      "color": "#FC746F"
+    },
+    {
+      "name": "doubtfulwjfl",
+      "dName": "可疑",
+      "enDName": "doubtfulwjfl",
+      "grade": 18,
+      "uuid": "doubtfulwjfl",
+      "color": "#FD853A"
+    },
+    {
+      "name": "substandardwjfl",
+      "dName": "次级",
+      "enDName": "substandardwjfl",
+      "grade": 16,
+      "uuid": "substandardwjfl",
+      "color": "#F7B035"
+    },
+    {
+      "name": "concernwjfl",
+      "dName": "关注",
+      "enDName": "concernwjfl",
+      "grade": 14,
+      "uuid": "concernwjfl",
+      "color": "#36BFFA"
+    },
+    {
+      "name": "normalwjfl",
+      "dName": "正常",
+      "enDName": "normalwjfl",
+      "grade": 12,
+      "uuid": "normalwjfl",
+      "color": "#07C790"
+    },
+    {
+      "name": "t1",
+      "dName": "t1他",
+      "enDName": "t1",
+      "grade": 11,
+      "uuid": "t1",
+      "color": "#8da10a"
+    },
+    {
+      "name": "ordinary",
+      "dName": "普通账户",
+      "enDName": "ordinary",
+      "grade": 10,
+      "uuid": "ordinary",
+      "color": "#6DC8EC"
+    },
+    {
+      "name": "cwfxxh",
+      "dName": "财务风险信号",
+      "enDName": "cwfxxh",
+      "grade": 2,
+      "uuid": "cwfxxh",
+      "color": "#FC746F"
+    },
+    {
+      "name": "Accept",
+      "dName": "通过",
+      "enDName": "Accept",
+      "grade": 1,
+      "uuid": "Accept",
+      "color": "#05be88"
+    }
+  ]
+}

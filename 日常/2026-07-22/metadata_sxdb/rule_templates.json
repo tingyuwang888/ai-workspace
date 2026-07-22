@@ -1,0 +1,3842 @@
+{
+  "_meta": {
+    "groupCount": 8,
+    "templateCount": 36,
+    "duplicatedNames": {
+      "common/custom": 2
+    },
+    "fetchedAt": "2026-07-22T09:54:29.374779"
+  },
+  "groups": [
+    {
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "templateCount": 3
+    },
+    {
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "templateCount": 4
+    },
+    {
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "templateCount": 3
+    },
+    {
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "templateCount": 3
+    },
+    {
+      "groupName": "time",
+      "groupDisplayName": "时间规则",
+      "groupUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "templateCount": 2
+    },
+    {
+      "groupName": "location",
+      "groupDisplayName": "位置规则",
+      "groupUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "templateCount": 2
+    },
+    {
+      "groupName": "statement",
+      "groupDisplayName": "高级规则",
+      "groupUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "templateCount": 2
+    },
+    {
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "templateCount": 17
+    }
+  ],
+  "templates": [
+    {
+      "uuid": "6f9ae83a096a11ec9f3efa6532887f00",
+      "name": "common/custom",
+      "displayName": "自定义规则",
+      "description": "这是通用模板规则描述",
+      "enDisplayName": "generalRule",
+      "enDescription": "Description of general rules",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9b9fcd096a11ec9f3efa6532887f00",
+      "name": "common/script",
+      "displayName": "脚本规则",
+      "description": "脚本规则",
+      "enDisplayName": "",
+      "enDescription": "",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "脚本规则",
+            "children": [
+              {
+                "componentType": "script",
+                "type": "string",
+                "name": "script"
+              }
+            ],
+            "tipContent": "脚本规则"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "cf1fd3f60ca64673a0a0ad5e800668c3",
+      "name": "common/business",
+      "displayName": "业务规则",
+      "description": "支持伪代码的方式配置规则条件，通过return语句判断条件命中的逻辑，当满足return语法逻辑时规则命中，反之规则通过",
+      "enDisplayName": "Business Rule",
+      "enDescription": "Supports configuring rule conditions in pseudo code, and judges the logic of condition hits through return statements. When the return syntax logic is met, the rule hits, otherwise the rule passes.",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "6f9ba08d023411ec9f3efa6532887r5y",
+      "name": "watchlist/roster",
+      "displayName": "多维度名单规则",
+      "description": "多维度名单规则",
+      "enDisplayName": "multi dimension roster",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "g6uba08d023411ec9f34es65328871a0",
+      "name": "match/addressRosterMatch",
+      "displayName": "多维度名单地址比对",
+      "description": "多维度名单地址比对",
+      "enDisplayName": "roster Address Comparison",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "6f9b7ce4096a11ec9f3efa6532887f00",
+      "name": "evidence/evidence",
+      "displayName": "欺诈证据库",
+      "description": "匹配字段值是否在指定证据库中",
+      "enDisplayName": "evidence library",
+      "enDescription": "Math field value whether or not in the evidence library",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "匹配字段",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "calcField",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "match field",
+            "enTipContent": "",
+            "tipContent": "该属性使用客户的某个属性去比较，比如用客户账号去和证据类型库的账号信息比较",
+            "tipTitle": "匹配字段",
+            "enTipTitle": "match field"
+          },
+          {
+            "labelText": "证据类型",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "evidenceType",
+                "selectType": "service",
+                "selectName": "fraudEvidenceSelect",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string"
+              }
+            ],
+            "enLabelText": "evidence type",
+            "tipTitle": "证据类型",
+            "tipContent": "检测指定的维度值是否存在于欺诈事实中，如IP、账号是否出现在以往积累的欺诈事实记录中",
+            "enTipContent": ""
+          },
+          {
+            "labelText": "是否匹配",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ifMatch",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "是",
+                    "value": "1",
+                    "enName": "yes"
+                  },
+                  {
+                    "name": "否",
+                    "value": "0",
+                    "enName": "no"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "enLabelText": "whether or not math",
+            "tipContent": "若开启，在证据库时命中规则；若关闭，不在证据库时命中规则",
+            "tipTitle": "是否匹配",
+            "enTipContent": ""
+          }
+        ]
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "6f9ba08d096a11ec9f3efa6532887f00",
+      "name": "match/addressMatch",
+      "displayName": "两两地址匹配",
+      "description": "地址两两匹配",
+      "enDisplayName": "Address Pairwise Match",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "地址数据A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "addressA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "请选择地址标签字段",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterTag": [
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "labelText": "地址数据B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "addressB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "请选择地址标签字段",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterTag": [
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "labelText": "相似度阈值大于等于",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "similarity",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "%",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      "sort": 4
+    },
+    {
+      "uuid": "6f9afd32096a11ec9f3efa6532887f00",
+      "name": "pattern/fourCalculation",
+      "displayName": "四则运算",
+      "description": "两个属性值进行运算后和指定值比较",
+      "enDisplayName": "Arithmetic",
+      "enDescription": "Two attribute values are compared with the specified value after operation",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "左变量",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "leftVariable",
+                "selectType": "service",
+                "selectName": "ruleAndIndexFieldList",
+                "selectOption": [],
+                "type": "int",
+                "mapType": "static",
+                "typeFinal": "context",
+                "canEditSecondTimes": true,
+                "filterType": [
+                  "double",
+                  "int"
+                ],
+                "placeholder": ""
+              }
+            ],
+            "tipTitle": "左变量",
+            "tipContent": "四则运算中的左变量",
+            "enLabelText": "Left Variable",
+            "enTipTitle": "Left Variable",
+            "enTipContent": "Left variable in four arithmetic operation."
+          },
+          {
+            "labelText": "运算符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "arithmetic",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "加",
+                    "value": "plus",
+                    "enName": "add"
+                  },
+                  {
+                    "name": "减",
+                    "value": "subtract",
+                    "enName": "subtract"
+                  },
+                  {
+                    "name": "乘",
+                    "value": "multiply",
+                    "enName": "multiply"
+                  },
+                  {
+                    "name": "除",
+                    "value": "divide",
+                    "enName": "divide"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "四则运算符",
+            "tipContent": "加减乘除",
+            "enLabelText": "Operator",
+            "enTipTitle": "Arithmetic Operators",
+            "enTipContent": "add, subtract, multiply and divide"
+          },
+          {
+            "labelText": "右变量",
+            "children": [
+              {
+                "componentType": "variable",
+                "defaultValue": "",
+                "name": "rightVariable",
+                "type": "all",
+                "typeFinal": "int",
+                "filterType": [
+                  "int",
+                  "double"
+                ],
+                "includeIndex": true
+              }
+            ],
+            "tipContent": "四则运算中的右变量",
+            "tipTitle": "右变量",
+            "enLabelText": "Right Variable",
+            "enTipTitle": "Right Variable",
+            "enTipContent": "Right variable in four arithmetic operation."
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "op",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "be equal or greater than"
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than "
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "be equal or less than "
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较操作符",
+            "tipContent": "常见的数值比较操作符",
+            "enLabelText": "Comparison",
+            "enTipTitle": "Comparison Operator",
+            "enTipContent": "Common comparison operators"
+          },
+          {
+            "labelText": "阈值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "value",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "阈值",
+            "tipContent": "四则运算结果与该差值进行比较",
+            "enLabelText": "Threshold",
+            "enTipTitle": "Threshold",
+            "enTipContent": "Compare the threshold with the result of arithmetic operation."
+          }
+        ]
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9afbae096a11ec9f3efa6532887f00",
+      "name": "pattern/regex",
+      "displayName": "正则匹配",
+      "description": "正则表达式",
+      "enDisplayName": "Regular Match",
+      "enDescription": "Regular expression",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "属性",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "property",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "static",
+                "canEditSecondTimes": true,
+                "filterType": []
+              }
+            ],
+            "tipTitle": "属性",
+            "tipContent": "属性是该规则生效需要参考的属性值",
+            "enLabelText": "Attribute",
+            "enTipTitle": "Attribute",
+            "enTipContent": "Attribute is the primary value that needed to consult when this rule takes effect."
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "result",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "匹配",
+                    "value": "1",
+                    "enName": "Match"
+                  },
+                  {
+                    "name": "不匹配",
+                    "value": "0",
+                    "enName": "Mismatch"
+                  }
+                ],
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较",
+            "tipContent": "常见的比较运算符",
+            "enLabelText": "Comparison",
+            "enTipTitle": "Comparison",
+            "enTipContent": "Common comparison operators"
+          },
+          {
+            "labelText": "忽略大小写",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ignoreCase",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "是",
+                    "value": "1",
+                    "enName": "Yes"
+                  },
+                  {
+                    "name": "否",
+                    "value": "0",
+                    "enName": "No"
+                  }
+                ],
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "忽略大小写",
+            "tipContent": "是否忽略大小写",
+            "enLabelText": "Ignore Case",
+            "enTipTitle": "Ignore Case",
+            "enTipContent": "Ignore case or not?"
+          },
+          {
+            "labelText": "正则表达式",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "regex",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "正则表达式",
+            "tipContent": "需要一个正则表达式",
+            "enLabelText": "Regular Expression",
+            "enTipTitle": "Regular Expression",
+            "enTipContent": "A regular expression is needed."
+          }
+        ]
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "f1ceb805ccf041b18adab03fb26b2b39",
+      "name": "pattern/addressFuzzyMatchCalculation",
+      "displayName": "模糊匹配统计",
+      "description": "与历史地址进行模糊匹配并统计个数",
+      "enDisplayName": "AddressFuzzyMatchCalculation",
+      "enDescription": "Perform fuzzy matching with historical addresses and count the occurrences",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "6f9af5e4096a11ec9f3efa6532887f00",
+      "name": "common/custom",
+      "displayName": "IF",
+      "description": "",
+      "enDisplayName": "IF",
+      "enDescription": "Please enter de",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "",
+            "children": [],
+            "enLabelText": "",
+            "enTipContent": "",
+            "enTipTitle": "",
+            "tipContent": ""
+          }
+        ]
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9af776096a11ec9f3efa6532887f00",
+      "name": "pattern/terminated",
+      "displayName": "Terminated",
+      "description": "在满足if规则的条件下，执行中断规则，则后边的规则都将不执行。Terminated与IF绑定使用，单独使用无效。",
+      "enDisplayName": "Terminate",
+      "enDescription": "Execute the terminate rule when if rule was met and rules behind will not be executed.terminated is used in combination with if. It is invalid to use it alone",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "6f9af879096a11ec9f3efa6532887f00",
+      "name": "pattern/ruleSetResult",
+      "displayName": "规则集结果使用",
+      "description": "该规则只能用于使用规则流的规则集中，使用本规则执行前的规则集结果进行决策",
+      "enDisplayName": "RuleSet Result Usage",
+      "enDescription": "This rule can only be used in policy sets that have decision flows. To use the ruleset result before the execution of this rule to make decision",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "规则集",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ruleSet",
+                "selectType": "service",
+                "selectName": "${RuleSetUuid}_ruleSets",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "dynamic",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "规则集",
+            "tipContent": "该规则集执行的结果将用于本次决策",
+            "enLabelText": "RuleSet",
+            "enTipTitle": "RuleSet",
+            "enTipContent": "The result of this ruleSet will be used in this decision."
+          },
+          {
+            "labelText": "比较符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "==",
+                "name": "conditionOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal to"
+                  },
+                  {
+                    "name": "不等于",
+                    "value": "!=",
+                    "enName": "unequal to"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "等于或者不等于",
+            "tipTitle": "比较符",
+            "enTipContent": "equal to or unequal to",
+            "enLabelText": "Comparison operator",
+            "enTipTitle": "Comparison operator"
+          },
+          {
+            "labelText": "比较值",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "conditionValue",
+                "selectType": "service",
+                "selectName": "dealTypeList",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较值",
+            "tipContent": "规则集的结果",
+            "enLabelText": "Comparison Value",
+            "enTipTitle": "Comparison Value",
+            "enTipContent": "Result of the RuleSet."
+          }
+        ]
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "6f9b8128096a11ec9f3efa6532887f00",
+      "name": "time/timediffer",
+      "displayName": "时间差运算",
+      "description": "时间字段的差值运算, 即时间A减去时间B",
+      "enDisplayName": "time difference calculation",
+      "enDescription": "Time field difference operation, time A minus time B",
+      "groupName": "time",
+      "groupDisplayName": "时间规则",
+      "groupUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "时间A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "time A",
+            "tipTitle": "时间A",
+            "enTipTitle": "time A",
+            "tipContent": "时间差运算中的被减数",
+            "enTipContent": "The subtracted number in the operation of time difference"
+          },
+          {
+            "labelText": "时间B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "time B",
+            "enTipTitle": "time B",
+            "tipTitle": "时间B",
+            "tipContent": "时间差运算中的减数",
+            "enTipContent": "Subtraction in time difference operation"
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "equal or greater than"
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than"
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "equal or less than"
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "比较",
+            "tipContent": "常见的数值比较操作符",
+            "enLabelText": "compare",
+            "enTipTitle": "compare",
+            "enTipContent": "Common numerical comparison operators"
+          },
+          {
+            "labelText": "差值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "timeslice",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              },
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeunit",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "秒",
+                    "value": "s",
+                    "enName": "second"
+                  },
+                  {
+                    "name": "分",
+                    "value": "m",
+                    "enName": "minute"
+                  },
+                  {
+                    "name": "时",
+                    "value": "h",
+                    "enName": "hour"
+                  },
+                  {
+                    "name": "天",
+                    "value": "d",
+                    "enName": "day"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "差值",
+            "enLabelText": "difference value",
+            "enTipTitle": "difference value",
+            "tipContent": "时间A与时间B字段的运算结果与该差值进行比较",
+            "enTipContent": "comparisons between the calculated results of time A and time B fields and the difference"
+          }
+        ]
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9b84fd096a11ec9f3efa6532887f00",
+      "name": "time/timePointComparison",
+      "displayName": "时间点比较",
+      "description": "获取日期字段的时间点判断是否在一定范围内。如:下限值为22,上限值为5,单位为小时,则表示所选日期字段的时间范围处于当日22:00和次日凌晨5:00之间。",
+      "enDisplayName": "time point comparison",
+      "enDescription": "Get the time point of the current date field to determine if it is within a certain range",
+      "groupName": "time",
+      "groupDisplayName": "时间规则",
+      "groupUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "日期字段",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "calcField",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "tipContent": "表示时间点的日期字段",
+            "enTipContent": "date fields representing time points",
+            "tipTitle": "日期字段",
+            "enLabelText": "date field",
+            "enTipTitle": "date field"
+          },
+          {
+            "labelText": "日期函数",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeunit",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "获取小时",
+                    "value": "h",
+                    "enName": "get hour"
+                  },
+                  {
+                    "name": "获取天",
+                    "value": "d",
+                    "enName": "get day"
+                  },
+                  {
+                    "name": "获取星期",
+                    "value": "w",
+                    "enName": "get week"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "日期函数",
+            "tipContent": "(1)获取小时的范围是0-24 \n(2)获取天的范围是1-31 \n(3)获取星期的范围是1-7",
+            "enTipContent": "(1) The range of access hours is 0-24 \n (2) The range of acquisition days is 1-31 \n(3) The range of acquisition week is 1-7",
+            "enLabelText": "date function",
+            "enTipTitle": "date function"
+          },
+          {
+            "labelText": "下限值（>=)",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "lowerLimit",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "tipTitle": "下限值（>=)",
+            "tipContent": "如:填写22,则表示>=22",
+            "enTipContent": "For example, if you fill in 22, it means >= 22",
+            "enLabelText": "lower limit value",
+            "enTipTitle": "lower limit value"
+          },
+          {
+            "labelText": "上限值(<=)",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "upperLimit",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "tipTitle": "上限值（<=)",
+            "enLabelText": "upper limit value",
+            "enTipTitle": "upper limit value",
+            "tipContent": "如:填写5,则表示<=5",
+            "enTipContent": "For example, if you fill in 5, it means <= 5"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "6f9af9ab096a11ec9f3efa6532887f00",
+      "name": "location/proxy",
+      "displayName": "代理访问",
+      "description": "判断IP是否为代理访问",
+      "enDisplayName": "Proxy Server",
+      "enDescription": "Judge whether this IP has use proxy server or not",
+      "groupName": "location",
+      "groupDisplayName": "位置规则",
+      "groupUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "代理类型",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "proxyIpType",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "VPN",
+                    "value": "PPTP",
+                    "enName": "VPN"
+                  },
+                  {
+                    "name": "SOCK4",
+                    "value": "SOCK4",
+                    "enName": "SOCK4"
+                  },
+                  {
+                    "name": "SOCK5",
+                    "value": "SOCK5",
+                    "enName": "SOCK5"
+                  },
+                  {
+                    "name": "HTTP",
+                    "value": "HTTP",
+                    "enName": "HTTP"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "代理类型",
+            "tipContent": "",
+            "enLabelText": "Proxy Type",
+            "enTipTitle": "Proxy Type"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "6f9b8a1c096a11ec9f3efa6532887f00",
+      "name": "location/gpsDistance",
+      "displayName": "距离计算",
+      "description": "计算两个gps点的距离是否满足阈值条件",
+      "enDisplayName": "Calculate Distance",
+      "enDescription": "Calculate distance of 2 GPS position match configured threshold conditon or not",
+      "groupName": "location",
+      "groupDisplayName": "位置规则",
+      "groupUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "GPS位置A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "gpsA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "GPS position A",
+            "tipTitle": "GPS位置A",
+            "enTipTitle": "GPS Position A",
+            "tipContent": "经纬度比如：138.6/39.3 或者 138.6,39.3 ",
+            "enTipContent": "lat lng, e.g：138.6/39.3 OR 138.6,39.3 "
+          },
+          {
+            "labelText": "GPS位置B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "gpsB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "GPS Position B",
+            "tipContent": "经纬度比如：138.6/39.3 或者 138.6,39.3 ",
+            "enTipContent": "lat and lng, e.g：138.6/39.3 OR 138.6,39.3 ",
+            "tipTitle": "GPS位置B",
+            "enTipTitle": "GPS Position B"
+          },
+          {
+            "labelText": "逻辑运算符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": ">",
+                "name": "distanceOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "equal or greater than "
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than"
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "equal or less than"
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "logic operator"
+          },
+          {
+            "labelText": "距离阈值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "0",
+                "name": "distanceSlice",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "m",
+                "placeholder": "请填写整数",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "enPlaceholder": "please input integer"
+              }
+            ],
+            "enLabelText": "distance threshold",
+            "tipTitle": "距离阈值",
+            "enTipTitle": "distance threshold",
+            "tipContent": "单位：米（只支持整数），最大不超过1000000000米。\nGPS计算四舍五入保留整数”。",
+            "enTipContent": "unit: meter"
+          }
+        ]
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "3aaf903fa6624e35903a30fa1bfc7f6b",
+      "name": "statement/ifthen",
+      "displayName": "条件规则",
+      "description": "支持IF的多层嵌套使用，即IF...[ElseIF1...(ElseIF2...Else2)...Else1]...Else",
+      "enDisplayName": "ifThenRule",
+      "enDescription": "If then rule",
+      "groupName": "statement",
+      "groupDisplayName": "高级规则",
+      "groupUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "parentUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "163eff4901b24aea8ee74451dad71612",
+      "name": "statement/loop",
+      "displayName": "循环规则",
+      "description": "支持对象型字段的循环调用，进行条件判断、赋值或添加到名单",
+      "enDisplayName": "loopRule",
+      "enDescription": "loop rule",
+      "groupName": "statement",
+      "groupDisplayName": "高级规则",
+      "groupUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "parentUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9affa1096a11ec9f3efa6532887f00",
+      "name": "anomaly/device",
+      "displayName": "设备缺失",
+      "description": "在集成同盾设备指纹技术前提下, 因环境异常导致生成的设备ID为空",
+      "enDisplayName": "Device Missing",
+      "enDescription": "Device ID missing caused by abnormal environment under the premises of integrating with Tongdun's device fingerprint",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "证据中是否存在相应的证据类型",
+        "logicOperator": "&&",
+        "type": "alias",
+        "property": "evidence/evidence",
+        "value": "1",
+        "operator": "==",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "44d9eb41de124384a293a8792fc6dc7c",
+      "name": "anomaly/commonDeviceAbnormal",
+      "displayName": "通用设备指纹规则",
+      "description": "通用设备指纹规则",
+      "enDisplayName": "Device fingerprint rule template",
+      "enDescription": "Check whether the device is in an abnormal state",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    {
+      "uuid": "6f9b03c5096a11ec9f3efa6532887f00",
+      "name": "anomaly/fpException",
+      "displayName": "设备获取异常",
+      "description": "检测用户是否恶意伪造或隐藏设备信息",
+      "enDisplayName": "Device Abnormal Acquisition",
+      "enDescription": "Check whether the user has maliciously forging or hiding device information",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "codes",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "数据伪造",
+                    "value": "074",
+                    "enName": "Data forgery"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "",
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    {
+      "uuid": "6f9b0542096a11ec9f3efa6532887f00",
+      "name": "anomaly/webDeviceStatusAbnormal",
+      "displayName": "web设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "Web Device Status abnormal ",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "Device first appeared"
+                  },
+                  {
+                    "name": "隐身模式",
+                    "value": "INCOGNITO_MODE",
+                    "enName": "Stealth Mode"
+                  },
+                  {
+                    "name": "虚拟浏览器",
+                    "value": "HEADLESS_MODE",
+                    "enName": "Virtual Browser"
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "Debugger"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 3
+    },
+    {
+      "uuid": "6f9b062d096a11ec9f3efa6532887f00",
+      "name": "ios/isCheat",
+      "displayName": "iOS作弊工具识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用作弊工具",
+      "enDisplayName": "iOS Cheating Tools Recognition",
+      "enDescription": "Check whether the user has used cheating tools after integrating iOS SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "property": "evidence/evidence",
+        "params": []
+      },
+      "sort": 4
+    },
+    {
+      "uuid": "6f9b06fb096a11ec9f3efa6532887f00",
+      "name": "ios/isJailBreak",
+      "displayName": "iOS越狱识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用越狱iOS设备",
+      "enDisplayName": "iOS Jailbreak Recognition",
+      "enDescription": "Check whether the user has used jailbroken device after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 5
+    },
+    {
+      "uuid": "6f9b07ca096a11ec9f3efa6532887f00",
+      "name": "ios/useVpn",
+      "displayName": "iOSVPN代理识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用vpn代理",
+      "enDisplayName": "iOS VPN Proxy Recognition",
+      "enDescription": "Check the use of VPN Proxy after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 6
+    },
+    {
+      "uuid": "6f9b087b096a11ec9f3efa6532887f00",
+      "name": "ios/useHttpProxy",
+      "displayName": "iOShttp代理识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用http代理",
+      "enDisplayName": "iOS http Proxy Recognition",
+      "enDescription": "Check the use of http proxy after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 7
+    },
+    {
+      "uuid": "6f9b1093096a11ec9f3efa6532887f00",
+      "name": "ios/notOfficialApp",
+      "displayName": "iOS非官方APP识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户未使用官方APP",
+      "enDisplayName": "iOS Unofficial APP Recognition",
+      "enDescription": "Check the use of unofficial APPs after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "bundleId",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "bundleId",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string"
+              }
+            ],
+            "tipContent": "官方app的bundleId",
+            "tipTitle": "bundleId",
+            "enTipContent": "The bundleId of official APPs.",
+            "enLabelText": "BundleId",
+            "enTipTitle": "BundleId"
+          }
+        ]
+      },
+      "sort": 8
+    },
+    {
+      "uuid": "6f9b1246096a11ec9f3efa6532887f00",
+      "name": "anomaly/iosDeviceStatusAbnormal",
+      "displayName": "iOS设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "iOS Devie Status Abnormal",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "Device first appeared"
+                  },
+                  {
+                    "name": "开机时间过短",
+                    "value": "SHORT_UPTIME",
+                    "enName": "Operation time too short"
+                  },
+                  {
+                    "name": "本机时间异常",
+                    "value": "ABNORMAL_TIME",
+                    "enName": "Time abnormal"
+                  },
+                  {
+                    "name": "网络信息异常",
+                    "value": "ABNORMAL_NETWORK_CONNECTION",
+                    "enName": "Network information abnormal"
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "Debugger"
+                  },
+                  {
+                    "name": "检测到改机工具",
+                    "value": "HOOK_TOOL_DETECTED",
+                    "enName": "Information change tools"
+                  },
+                  {
+                    "name": "路由器厂商未知",
+                    "value": "WIFI_UNKNOWN_MANUFACTURER",
+                    "enName": "Unknown router manufacturers"
+                  },
+                  {
+                    "name": "网卡厂商未知",
+                    "value": "MAC_UNKNOWN_MANUFACTURER",
+                    "enName": "Unknown NIC manufacturers"
+                  },
+                  {
+                    "name": "客户端ID异常",
+                    "value": "ILLEGAL_CLIENTID",
+                    "enName": "Client ID abnormal"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "",
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 9
+    },
+    {
+      "uuid": "6f9b15f0096a11ec9f3efa6532887f00",
+      "name": "android/emulator",
+      "displayName": "安卓模拟器识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用安卓模拟器",
+      "enDisplayName": "Android Simulator Recognition",
+      "enDescription": "Check the use of Android simulator after integrating to Android SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 10
+    },
+    {
+      "uuid": "6f9b16ca096a11ec9f3efa6532887f00",
+      "name": "android/cheatApp",
+      "displayName": "安卓作弊工具识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用作弊软件",
+      "enDisplayName": "Android Cheating Tool Recognition",
+      "enDescription": "Check the use of Android cheating tools after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 11
+    },
+    {
+      "uuid": "6f9b1774096a11ec9f3efa6532887f00",
+      "name": "android/vpn",
+      "displayName": "安卓VPN代理识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用vpn代理",
+      "enDisplayName": "Android VPN Proxy Recognition",
+      "enDescription": "Check the use of Android VPN proxy after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 12
+    },
+    {
+      "uuid": "6f9b182b096a11ec9f3efa6532887f00",
+      "name": "android/http",
+      "displayName": "安卓http代理识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用http代理",
+      "enDisplayName": "Android http Proxy Recognition",
+      "enDescription": "Check the use of Android http proxy after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 13
+    },
+    {
+      "uuid": "6f9b18c7096a11ec9f3efa6532887f00",
+      "name": "android/notOfficialApp",
+      "displayName": "安卓非官方APP识别",
+      "description": "集成Android SDK2.0以上版本后，监测到用户未使用官方APP",
+      "enDisplayName": "Android Unofficial APP Recognition",
+      "enDescription": "Check the use of unofficial apps after integrating to Android SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "packageName",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "packageName",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "官方app的packageName",
+            "tipTitle": "packageName",
+            "enLabelText": "packageName",
+            "enTipTitle": "packageName",
+            "enTipContent": "The package name of the official apps."
+          }
+        ]
+      },
+      "sort": 14
+    },
+    {
+      "uuid": "6f9b1986096a11ec9f3efa6532887f00",
+      "name": "android/root",
+      "displayName": "安卓ROOT识别",
+      "description": "集成安卓SDK后，监测设备是否已ROOT",
+      "enDisplayName": "Android Root Recognition",
+      "enDescription": "Check whether the device has rooted or not after integrating to Android SDK",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 15
+    },
+    {
+      "uuid": "6f9b1b17096a11ec9f3efa6532887f00",
+      "name": "anomaly/androidDeviceStatusAbnormal",
+      "displayName": "安卓设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "Android Device Status Abnormal",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "first appear"
+                  },
+                  {
+                    "name": "疑似刷机",
+                    "value": "SUSPECTED_OF_WIPING_PHONE",
+                    "enName": "suspected reboot"
+                  },
+                  {
+                    "name": "开机时间过短",
+                    "value": "SHORT_UPTIME",
+                    "enName": "boot time too short"
+                  },
+                  {
+                    "name": "本机时间异常",
+                    "value": "ABNORMAL_TIME",
+                    "enName": "time abnormal"
+                  },
+                  {
+                    "name": "运营商异常",
+                    "value": "ABNORMAL_CARRIER_INFO",
+                    "enName": "operator abnormal"
+                  },
+                  {
+                    "name": "网络信息异常",
+                    "value": "ABNORMAL_NETWORK_CONNECTION",
+                    "enName": "internet information abnormal"
+                  },
+                  {
+                    "name": "客户端ID异常",
+                    "value": "ILLEGAL_CLIENTID",
+                    "enName": "client ID abnormal"
+                  },
+                  {
+                    "name": "设备为模拟器",
+                    "value": "ANDROID_EMULATOR",
+                    "enName": "device simulator"
+                  },
+                  {
+                    "name": "多开",
+                    "value": "MULTIPLE_RUNNING",
+                    "enName": "open multiple same application "
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "debugger detected"
+                  },
+                  {
+                    "name": "检测到改机工具",
+                    "value": "HOOK_TOOL_DETECTED",
+                    "enName": "machine information changing detected"
+                  },
+                  {
+                    "name": "设备参数被篡改",
+                    "value": "DEVICE_INFO_TAMPERED",
+                    "enName": "equipment parameter change"
+                  },
+                  {
+                    "name": "疑似模拟定位",
+                    "value": "SUSPECTED_OF_FAKING_LOCATION",
+                    "enName": "suspected simulated position"
+                  },
+                  {
+                    "name": "疑似伪造无线网络信息",
+                    "value": "SUSPECTED_OF_FAKING_WIFI",
+                    "enName": "suspected forge wireless network information"
+                  },
+                  {
+                    "name": "路由器厂商未知",
+                    "value": "WIFI_UNKNOWN_MANUFACTURER",
+                    "enName": "unknown router manufacturers"
+                  },
+                  {
+                    "name": "网卡厂商未知",
+                    "value": "MAC_UNKNOWN_MANUFACTURER",
+                    "enName": "unknown network card manufacturers"
+                  },
+                  {
+                    "name": "IMEI异常",
+                    "value": "ILLEGAL_IMEI",
+                    "enName": "IMEI Abnormal"
+                  }
+                ],
+                "mapType": "static",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": ""
+          }
+        ]
+      },
+      "sort": 16
+    }
+  ],
+  "uuid_to_template": {
+    "6f9ae83a096a11ec9f3efa6532887f00": {
+      "uuid": "6f9ae83a096a11ec9f3efa6532887f00",
+      "name": "common/custom",
+      "displayName": "自定义规则",
+      "description": "这是通用模板规则描述",
+      "enDisplayName": "generalRule",
+      "enDescription": "Description of general rules",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    "6f9b9fcd096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b9fcd096a11ec9f3efa6532887f00",
+      "name": "common/script",
+      "displayName": "脚本规则",
+      "description": "脚本规则",
+      "enDisplayName": "",
+      "enDescription": "",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "脚本规则",
+            "children": [
+              {
+                "componentType": "script",
+                "type": "string",
+                "name": "script"
+              }
+            ],
+            "tipContent": "脚本规则"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    "cf1fd3f60ca64673a0a0ad5e800668c3": {
+      "uuid": "cf1fd3f60ca64673a0a0ad5e800668c3",
+      "name": "common/business",
+      "displayName": "业务规则",
+      "description": "支持伪代码的方式配置规则条件，通过return语句判断条件命中的逻辑，当满足return语法逻辑时规则命中，反之规则通过",
+      "enDisplayName": "Business Rule",
+      "enDescription": "Supports configuring rule conditions in pseudo code, and judges the logic of condition hits through return statements. When the return syntax logic is met, the rule hits, otherwise the rule passes.",
+      "groupName": "common",
+      "groupDisplayName": "通用规则",
+      "groupUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af145096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 3
+    },
+    "6f9ba08d023411ec9f3efa6532887r5y": {
+      "uuid": "6f9ba08d023411ec9f3efa6532887r5y",
+      "name": "watchlist/roster",
+      "displayName": "多维度名单规则",
+      "description": "多维度名单规则",
+      "enDisplayName": "multi dimension roster",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    "g6uba08d023411ec9f34es65328871a0": {
+      "uuid": "g6uba08d023411ec9f34es65328871a0",
+      "name": "match/addressRosterMatch",
+      "displayName": "多维度名单地址比对",
+      "description": "多维度名单地址比对",
+      "enDisplayName": "roster Address Comparison",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 2
+    },
+    "6f9b7ce4096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b7ce4096a11ec9f3efa6532887f00",
+      "name": "evidence/evidence",
+      "displayName": "欺诈证据库",
+      "description": "匹配字段值是否在指定证据库中",
+      "enDisplayName": "evidence library",
+      "enDescription": "Math field value whether or not in the evidence library",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "匹配字段",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "calcField",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "match field",
+            "enTipContent": "",
+            "tipContent": "该属性使用客户的某个属性去比较，比如用客户账号去和证据类型库的账号信息比较",
+            "tipTitle": "匹配字段",
+            "enTipTitle": "match field"
+          },
+          {
+            "labelText": "证据类型",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "evidenceType",
+                "selectType": "service",
+                "selectName": "fraudEvidenceSelect",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string"
+              }
+            ],
+            "enLabelText": "evidence type",
+            "tipTitle": "证据类型",
+            "tipContent": "检测指定的维度值是否存在于欺诈事实中，如IP、账号是否出现在以往积累的欺诈事实记录中",
+            "enTipContent": ""
+          },
+          {
+            "labelText": "是否匹配",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ifMatch",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "是",
+                    "value": "1",
+                    "enName": "yes"
+                  },
+                  {
+                    "name": "否",
+                    "value": "0",
+                    "enName": "no"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "enLabelText": "whether or not math",
+            "tipContent": "若开启，在证据库时命中规则；若关闭，不在证据库时命中规则",
+            "tipTitle": "是否匹配",
+            "enTipContent": ""
+          }
+        ]
+      },
+      "sort": 3
+    },
+    "6f9ba08d096a11ec9f3efa6532887f00": {
+      "uuid": "6f9ba08d096a11ec9f3efa6532887f00",
+      "name": "match/addressMatch",
+      "displayName": "两两地址匹配",
+      "description": "地址两两匹配",
+      "enDisplayName": "Address Pairwise Match",
+      "enDescription": "",
+      "groupName": "watchlist",
+      "groupDisplayName": "名单规则",
+      "groupUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af4ce096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "地址数据A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "addressA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "请选择地址标签字段",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterTag": [
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "labelText": "地址数据B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "addressB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "请选择地址标签字段",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterTag": [
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "labelText": "相似度阈值大于等于",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "similarity",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "%",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      "sort": 4
+    },
+    "6f9afd32096a11ec9f3efa6532887f00": {
+      "uuid": "6f9afd32096a11ec9f3efa6532887f00",
+      "name": "pattern/fourCalculation",
+      "displayName": "四则运算",
+      "description": "两个属性值进行运算后和指定值比较",
+      "enDisplayName": "Arithmetic",
+      "enDescription": "Two attribute values are compared with the specified value after operation",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "左变量",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "leftVariable",
+                "selectType": "service",
+                "selectName": "ruleAndIndexFieldList",
+                "selectOption": [],
+                "type": "int",
+                "mapType": "static",
+                "typeFinal": "context",
+                "canEditSecondTimes": true,
+                "filterType": [
+                  "double",
+                  "int"
+                ],
+                "placeholder": ""
+              }
+            ],
+            "tipTitle": "左变量",
+            "tipContent": "四则运算中的左变量",
+            "enLabelText": "Left Variable",
+            "enTipTitle": "Left Variable",
+            "enTipContent": "Left variable in four arithmetic operation."
+          },
+          {
+            "labelText": "运算符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "arithmetic",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "加",
+                    "value": "plus",
+                    "enName": "add"
+                  },
+                  {
+                    "name": "减",
+                    "value": "subtract",
+                    "enName": "subtract"
+                  },
+                  {
+                    "name": "乘",
+                    "value": "multiply",
+                    "enName": "multiply"
+                  },
+                  {
+                    "name": "除",
+                    "value": "divide",
+                    "enName": "divide"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "四则运算符",
+            "tipContent": "加减乘除",
+            "enLabelText": "Operator",
+            "enTipTitle": "Arithmetic Operators",
+            "enTipContent": "add, subtract, multiply and divide"
+          },
+          {
+            "labelText": "右变量",
+            "children": [
+              {
+                "componentType": "variable",
+                "defaultValue": "",
+                "name": "rightVariable",
+                "type": "all",
+                "typeFinal": "int",
+                "filterType": [
+                  "int",
+                  "double"
+                ],
+                "includeIndex": true
+              }
+            ],
+            "tipContent": "四则运算中的右变量",
+            "tipTitle": "右变量",
+            "enLabelText": "Right Variable",
+            "enTipTitle": "Right Variable",
+            "enTipContent": "Right variable in four arithmetic operation."
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "op",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "be equal or greater than"
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than "
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "be equal or less than "
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较操作符",
+            "tipContent": "常见的数值比较操作符",
+            "enLabelText": "Comparison",
+            "enTipTitle": "Comparison Operator",
+            "enTipContent": "Common comparison operators"
+          },
+          {
+            "labelText": "阈值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "value",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "阈值",
+            "tipContent": "四则运算结果与该差值进行比较",
+            "enLabelText": "Threshold",
+            "enTipTitle": "Threshold",
+            "enTipContent": "Compare the threshold with the result of arithmetic operation."
+          }
+        ]
+      },
+      "sort": 1
+    },
+    "6f9afbae096a11ec9f3efa6532887f00": {
+      "uuid": "6f9afbae096a11ec9f3efa6532887f00",
+      "name": "pattern/regex",
+      "displayName": "正则匹配",
+      "description": "正则表达式",
+      "enDisplayName": "Regular Match",
+      "enDescription": "Regular expression",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "属性",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "property",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "static",
+                "canEditSecondTimes": true,
+                "filterType": []
+              }
+            ],
+            "tipTitle": "属性",
+            "tipContent": "属性是该规则生效需要参考的属性值",
+            "enLabelText": "Attribute",
+            "enTipTitle": "Attribute",
+            "enTipContent": "Attribute is the primary value that needed to consult when this rule takes effect."
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "result",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "匹配",
+                    "value": "1",
+                    "enName": "Match"
+                  },
+                  {
+                    "name": "不匹配",
+                    "value": "0",
+                    "enName": "Mismatch"
+                  }
+                ],
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较",
+            "tipContent": "常见的比较运算符",
+            "enLabelText": "Comparison",
+            "enTipTitle": "Comparison",
+            "enTipContent": "Common comparison operators"
+          },
+          {
+            "labelText": "忽略大小写",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ignoreCase",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "是",
+                    "value": "1",
+                    "enName": "Yes"
+                  },
+                  {
+                    "name": "否",
+                    "value": "0",
+                    "enName": "No"
+                  }
+                ],
+                "type": "int",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "忽略大小写",
+            "tipContent": "是否忽略大小写",
+            "enLabelText": "Ignore Case",
+            "enTipTitle": "Ignore Case",
+            "enTipContent": "Ignore case or not?"
+          },
+          {
+            "labelText": "正则表达式",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "regex",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "正则表达式",
+            "tipContent": "需要一个正则表达式",
+            "enLabelText": "Regular Expression",
+            "enTipTitle": "Regular Expression",
+            "enTipContent": "A regular expression is needed."
+          }
+        ]
+      },
+      "sort": 2
+    },
+    "f1ceb805ccf041b18adab03fb26b2b39": {
+      "uuid": "f1ceb805ccf041b18adab03fb26b2b39",
+      "name": "pattern/addressFuzzyMatchCalculation",
+      "displayName": "模糊匹配统计",
+      "description": "与历史地址进行模糊匹配并统计个数",
+      "enDisplayName": "AddressFuzzyMatchCalculation",
+      "enDescription": "Perform fuzzy matching with historical addresses and count the occurrences",
+      "groupName": "pattern",
+      "groupDisplayName": "统计规则",
+      "groupUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af437096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 3
+    },
+    "6f9af5e4096a11ec9f3efa6532887f00": {
+      "uuid": "6f9af5e4096a11ec9f3efa6532887f00",
+      "name": "common/custom",
+      "displayName": "IF",
+      "description": "",
+      "enDisplayName": "IF",
+      "enDescription": "Please enter de",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "",
+            "children": [],
+            "enLabelText": "",
+            "enTipContent": "",
+            "enTipTitle": "",
+            "tipContent": ""
+          }
+        ]
+      },
+      "sort": 1
+    },
+    "6f9af776096a11ec9f3efa6532887f00": {
+      "uuid": "6f9af776096a11ec9f3efa6532887f00",
+      "name": "pattern/terminated",
+      "displayName": "Terminated",
+      "description": "在满足if规则的条件下，执行中断规则，则后边的规则都将不执行。Terminated与IF绑定使用，单独使用无效。",
+      "enDisplayName": "Terminate",
+      "enDescription": "Execute the terminate rule when if rule was met and rules behind will not be executed.terminated is used in combination with if. It is invalid to use it alone",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 2
+    },
+    "6f9af879096a11ec9f3efa6532887f00": {
+      "uuid": "6f9af879096a11ec9f3efa6532887f00",
+      "name": "pattern/ruleSetResult",
+      "displayName": "规则集结果使用",
+      "description": "该规则只能用于使用规则流的规则集中，使用本规则执行前的规则集结果进行决策",
+      "enDisplayName": "RuleSet Result Usage",
+      "enDescription": "This rule can only be used in policy sets that have decision flows. To use the ruleset result before the execution of this rule to make decision",
+      "groupName": "flowControl",
+      "groupDisplayName": "流程控制",
+      "groupUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af279096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "规则集",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "ruleSet",
+                "selectType": "service",
+                "selectName": "${RuleSetUuid}_ruleSets",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "dynamic",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "规则集",
+            "tipContent": "该规则集执行的结果将用于本次决策",
+            "enLabelText": "RuleSet",
+            "enTipTitle": "RuleSet",
+            "enTipContent": "The result of this ruleSet will be used in this decision."
+          },
+          {
+            "labelText": "比较符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "==",
+                "name": "conditionOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal to"
+                  },
+                  {
+                    "name": "不等于",
+                    "value": "!=",
+                    "enName": "unequal to"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "等于或者不等于",
+            "tipTitle": "比较符",
+            "enTipContent": "equal to or unequal to",
+            "enLabelText": "Comparison operator",
+            "enTipTitle": "Comparison operator"
+          },
+          {
+            "labelText": "比较值",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "conditionValue",
+                "selectType": "service",
+                "selectName": "dealTypeList",
+                "selectOption": [],
+                "type": "string",
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "比较值",
+            "tipContent": "规则集的结果",
+            "enLabelText": "Comparison Value",
+            "enTipTitle": "Comparison Value",
+            "enTipContent": "Result of the RuleSet."
+          }
+        ]
+      },
+      "sort": 3
+    },
+    "6f9b8128096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b8128096a11ec9f3efa6532887f00",
+      "name": "time/timediffer",
+      "displayName": "时间差运算",
+      "description": "时间字段的差值运算, 即时间A减去时间B",
+      "enDisplayName": "time difference calculation",
+      "enDescription": "Time field difference operation, time A minus time B",
+      "groupName": "time",
+      "groupDisplayName": "时间规则",
+      "groupUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "时间A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "time A",
+            "tipTitle": "时间A",
+            "enTipTitle": "time A",
+            "tipContent": "时间差运算中的被减数",
+            "enTipContent": "The subtracted number in the operation of time difference"
+          },
+          {
+            "labelText": "时间B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "time B",
+            "enTipTitle": "time B",
+            "tipTitle": "时间B",
+            "tipContent": "时间差运算中的减数",
+            "enTipContent": "Subtraction in time difference operation"
+          },
+          {
+            "labelText": "比较",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "equal or greater than"
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than"
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "equal or less than"
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "比较",
+            "tipContent": "常见的数值比较操作符",
+            "enLabelText": "compare",
+            "enTipTitle": "compare",
+            "enTipContent": "Common numerical comparison operators"
+          },
+          {
+            "labelText": "差值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "timeslice",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              },
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeunit",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "秒",
+                    "value": "s",
+                    "enName": "second"
+                  },
+                  {
+                    "name": "分",
+                    "value": "m",
+                    "enName": "minute"
+                  },
+                  {
+                    "name": "时",
+                    "value": "h",
+                    "enName": "hour"
+                  },
+                  {
+                    "name": "天",
+                    "value": "d",
+                    "enName": "day"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "差值",
+            "enLabelText": "difference value",
+            "enTipTitle": "difference value",
+            "tipContent": "时间A与时间B字段的运算结果与该差值进行比较",
+            "enTipContent": "comparisons between the calculated results of time A and time B fields and the difference"
+          }
+        ]
+      },
+      "sort": 1
+    },
+    "6f9b84fd096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b84fd096a11ec9f3efa6532887f00",
+      "name": "time/timePointComparison",
+      "displayName": "时间点比较",
+      "description": "获取日期字段的时间点判断是否在一定范围内。如:下限值为22,上限值为5,单位为小时,则表示所选日期字段的时间范围处于当日22:00和次日凌晨5:00之间。",
+      "enDisplayName": "time point comparison",
+      "enDescription": "Get the time point of the current date field to determine if it is within a certain range",
+      "groupName": "time",
+      "groupDisplayName": "时间规则",
+      "groupUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9b75c2096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "日期字段",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "calcField",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "filterType": [
+                  "datetime"
+                ],
+                "typeFinal": "string"
+              }
+            ],
+            "tipContent": "表示时间点的日期字段",
+            "enTipContent": "date fields representing time points",
+            "tipTitle": "日期字段",
+            "enLabelText": "date field",
+            "enTipTitle": "date field"
+          },
+          {
+            "labelText": "日期函数",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "timeunit",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "获取小时",
+                    "value": "h",
+                    "enName": "get hour"
+                  },
+                  {
+                    "name": "获取天",
+                    "value": "d",
+                    "enName": "get day"
+                  },
+                  {
+                    "name": "获取星期",
+                    "value": "w",
+                    "enName": "get week"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "tipTitle": "日期函数",
+            "tipContent": "(1)获取小时的范围是0-24 \n(2)获取天的范围是1-31 \n(3)获取星期的范围是1-7",
+            "enTipContent": "(1) The range of access hours is 0-24 \n (2) The range of acquisition days is 1-31 \n(3) The range of acquisition week is 1-7",
+            "enLabelText": "date function",
+            "enTipTitle": "date function"
+          },
+          {
+            "labelText": "下限值（>=)",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "lowerLimit",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "tipTitle": "下限值（>=)",
+            "tipContent": "如:填写22,则表示>=22",
+            "enTipContent": "For example, if you fill in 22, it means >= 22",
+            "enLabelText": "lower limit value",
+            "enTipTitle": "lower limit value"
+          },
+          {
+            "labelText": "上限值(<=)",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "upperLimit",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "int"
+              }
+            ],
+            "tipTitle": "上限值（<=)",
+            "enLabelText": "upper limit value",
+            "enTipTitle": "upper limit value",
+            "tipContent": "如:填写5,则表示<=5",
+            "enTipContent": "For example, if you fill in 5, it means <= 5"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    "6f9af9ab096a11ec9f3efa6532887f00": {
+      "uuid": "6f9af9ab096a11ec9f3efa6532887f00",
+      "name": "location/proxy",
+      "displayName": "代理访问",
+      "description": "判断IP是否为代理访问",
+      "enDisplayName": "Proxy Server",
+      "enDescription": "Judge whether this IP has use proxy server or not",
+      "groupName": "location",
+      "groupDisplayName": "位置规则",
+      "groupUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "代理类型",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "proxyIpType",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "VPN",
+                    "value": "PPTP",
+                    "enName": "VPN"
+                  },
+                  {
+                    "name": "SOCK4",
+                    "value": "SOCK4",
+                    "enName": "SOCK4"
+                  },
+                  {
+                    "name": "SOCK5",
+                    "value": "SOCK5",
+                    "enName": "SOCK5"
+                  },
+                  {
+                    "name": "HTTP",
+                    "value": "HTTP",
+                    "enName": "HTTP"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipTitle": "代理类型",
+            "tipContent": "",
+            "enLabelText": "Proxy Type",
+            "enTipTitle": "Proxy Type"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    "6f9b8a1c096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b8a1c096a11ec9f3efa6532887f00",
+      "name": "location/gpsDistance",
+      "displayName": "距离计算",
+      "description": "计算两个gps点的距离是否满足阈值条件",
+      "enDisplayName": "Calculate Distance",
+      "enDescription": "Calculate distance of 2 GPS position match configured threshold conditon or not",
+      "groupName": "location",
+      "groupDisplayName": "位置规则",
+      "groupUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af39e096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "GPS位置A",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "gpsA",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "GPS position A",
+            "tipTitle": "GPS位置A",
+            "enTipTitle": "GPS Position A",
+            "tipContent": "经纬度比如：138.6/39.3 或者 138.6,39.3 ",
+            "enTipContent": "lat lng, e.g：138.6/39.3 OR 138.6,39.3 "
+          },
+          {
+            "labelText": "GPS位置B",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": "",
+                "name": "gpsB",
+                "selectType": "service",
+                "selectName": "ruleFieldList",
+                "selectOption": [],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string",
+                "filterType": [
+                  "string"
+                ]
+              }
+            ],
+            "enLabelText": "GPS Position B",
+            "tipContent": "经纬度比如：138.6/39.3 或者 138.6,39.3 ",
+            "enTipContent": "lat and lng, e.g：138.6/39.3 OR 138.6,39.3 ",
+            "tipTitle": "GPS位置B",
+            "enTipTitle": "GPS Position B"
+          },
+          {
+            "labelText": "逻辑运算符",
+            "children": [
+              {
+                "componentType": "select",
+                "defaultValue": ">",
+                "name": "distanceOperator",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "大于",
+                    "value": ">",
+                    "enName": "greater than"
+                  },
+                  {
+                    "name": "大于等于",
+                    "value": ">=",
+                    "enName": "equal or greater than "
+                  },
+                  {
+                    "name": "小于",
+                    "value": "<",
+                    "enName": "less than"
+                  },
+                  {
+                    "name": "小于等于",
+                    "value": "<=",
+                    "enName": "equal or less than"
+                  },
+                  {
+                    "name": "等于",
+                    "value": "==",
+                    "enName": "equal"
+                  }
+                ],
+                "mapType": "static",
+                "placeholder": "",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "typeFinal": "string"
+              }
+            ],
+            "enLabelText": "logic operator"
+          },
+          {
+            "labelText": "距离阈值",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "0",
+                "name": "distanceSlice",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "m",
+                "placeholder": "请填写整数",
+                "canEditSecondTimes": true,
+                "type": "string",
+                "enPlaceholder": "please input integer"
+              }
+            ],
+            "enLabelText": "distance threshold",
+            "tipTitle": "距离阈值",
+            "enTipTitle": "distance threshold",
+            "tipContent": "单位：米（只支持整数），最大不超过1000000000米。\nGPS计算四舍五入保留整数”。",
+            "enTipContent": "unit: meter"
+          }
+        ]
+      },
+      "sort": 3
+    },
+    "3aaf903fa6624e35903a30fa1bfc7f6b": {
+      "uuid": "3aaf903fa6624e35903a30fa1bfc7f6b",
+      "name": "statement/ifthen",
+      "displayName": "条件规则",
+      "description": "支持IF的多层嵌套使用，即IF...[ElseIF1...(ElseIF2...Else2)...Else1]...Else",
+      "enDisplayName": "ifThenRule",
+      "enDescription": "If then rule",
+      "groupName": "statement",
+      "groupDisplayName": "高级规则",
+      "groupUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "parentUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    "163eff4901b24aea8ee74451dad71612": {
+      "uuid": "163eff4901b24aea8ee74451dad71612",
+      "name": "statement/loop",
+      "displayName": "循环规则",
+      "description": "支持对象型字段的循环调用，进行条件判断、赋值或添加到名单",
+      "enDisplayName": "loopRule",
+      "enDescription": "loop rule",
+      "groupName": "statement",
+      "groupDisplayName": "高级规则",
+      "groupUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "parentUuid": "04c5b96ba92a43dcad03099036cdfdf7",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    "6f9affa1096a11ec9f3efa6532887f00": {
+      "uuid": "6f9affa1096a11ec9f3efa6532887f00",
+      "name": "anomaly/device",
+      "displayName": "设备缺失",
+      "description": "在集成同盾设备指纹技术前提下, 因环境异常导致生成的设备ID为空",
+      "enDisplayName": "Device Missing",
+      "enDescription": "Device ID missing caused by abnormal environment under the premises of integrating with Tongdun's device fingerprint",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "证据中是否存在相应的证据类型",
+        "logicOperator": "&&",
+        "type": "alias",
+        "property": "evidence/evidence",
+        "value": "1",
+        "operator": "==",
+        "params": []
+      },
+      "sort": 1
+    },
+    "44d9eb41de124384a293a8792fc6dc7c": {
+      "uuid": "44d9eb41de124384a293a8792fc6dc7c",
+      "name": "anomaly/commonDeviceAbnormal",
+      "displayName": "通用设备指纹规则",
+      "description": "通用设备指纹规则",
+      "enDisplayName": "Device fingerprint rule template",
+      "enDescription": "Check whether the device is in an abnormal state",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 1
+    },
+    "6f9b03c5096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b03c5096a11ec9f3efa6532887f00",
+      "name": "anomaly/fpException",
+      "displayName": "设备获取异常",
+      "description": "检测用户是否恶意伪造或隐藏设备信息",
+      "enDisplayName": "Device Abnormal Acquisition",
+      "enDescription": "Check whether the user has maliciously forging or hiding device information",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "codes",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "数据伪造",
+                    "value": "074",
+                    "enName": "Data forgery"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "",
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 2
+    },
+    "6f9b0542096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b0542096a11ec9f3efa6532887f00",
+      "name": "anomaly/webDeviceStatusAbnormal",
+      "displayName": "web设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "Web Device Status abnormal ",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "Device first appeared"
+                  },
+                  {
+                    "name": "隐身模式",
+                    "value": "INCOGNITO_MODE",
+                    "enName": "Stealth Mode"
+                  },
+                  {
+                    "name": "虚拟浏览器",
+                    "value": "HEADLESS_MODE",
+                    "enName": "Virtual Browser"
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "Debugger"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 3
+    },
+    "6f9b062d096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b062d096a11ec9f3efa6532887f00",
+      "name": "ios/isCheat",
+      "displayName": "iOS作弊工具识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用作弊工具",
+      "enDisplayName": "iOS Cheating Tools Recognition",
+      "enDescription": "Check whether the user has used cheating tools after integrating iOS SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "property": "evidence/evidence",
+        "params": []
+      },
+      "sort": 4
+    },
+    "6f9b06fb096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b06fb096a11ec9f3efa6532887f00",
+      "name": "ios/isJailBreak",
+      "displayName": "iOS越狱识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用越狱iOS设备",
+      "enDisplayName": "iOS Jailbreak Recognition",
+      "enDescription": "Check whether the user has used jailbroken device after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 5
+    },
+    "6f9b07ca096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b07ca096a11ec9f3efa6532887f00",
+      "name": "ios/useVpn",
+      "displayName": "iOSVPN代理识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用vpn代理",
+      "enDisplayName": "iOS VPN Proxy Recognition",
+      "enDescription": "Check the use of VPN Proxy after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 6
+    },
+    "6f9b087b096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b087b096a11ec9f3efa6532887f00",
+      "name": "ios/useHttpProxy",
+      "displayName": "iOShttp代理识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户使用http代理",
+      "enDisplayName": "iOS http Proxy Recognition",
+      "enDescription": "Check the use of http proxy after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 7
+    },
+    "6f9b1093096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b1093096a11ec9f3efa6532887f00",
+      "name": "ios/notOfficialApp",
+      "displayName": "iOS非官方APP识别",
+      "description": "集成iOS SDK2.0以上版本后，监测到用户未使用官方APP",
+      "enDisplayName": "iOS Unofficial APP Recognition",
+      "enDescription": "Check the use of unofficial APPs after integrating to iOS SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "bundleId",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "bundleId",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string"
+              }
+            ],
+            "tipContent": "官方app的bundleId",
+            "tipTitle": "bundleId",
+            "enTipContent": "The bundleId of official APPs.",
+            "enLabelText": "BundleId",
+            "enTipTitle": "BundleId"
+          }
+        ]
+      },
+      "sort": 8
+    },
+    "6f9b1246096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b1246096a11ec9f3efa6532887f00",
+      "name": "anomaly/iosDeviceStatusAbnormal",
+      "displayName": "iOS设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "iOS Devie Status Abnormal",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "Device first appeared"
+                  },
+                  {
+                    "name": "开机时间过短",
+                    "value": "SHORT_UPTIME",
+                    "enName": "Operation time too short"
+                  },
+                  {
+                    "name": "本机时间异常",
+                    "value": "ABNORMAL_TIME",
+                    "enName": "Time abnormal"
+                  },
+                  {
+                    "name": "网络信息异常",
+                    "value": "ABNORMAL_NETWORK_CONNECTION",
+                    "enName": "Network information abnormal"
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "Debugger"
+                  },
+                  {
+                    "name": "检测到改机工具",
+                    "value": "HOOK_TOOL_DETECTED",
+                    "enName": "Information change tools"
+                  },
+                  {
+                    "name": "路由器厂商未知",
+                    "value": "WIFI_UNKNOWN_MANUFACTURER",
+                    "enName": "Unknown router manufacturers"
+                  },
+                  {
+                    "name": "网卡厂商未知",
+                    "value": "MAC_UNKNOWN_MANUFACTURER",
+                    "enName": "Unknown NIC manufacturers"
+                  },
+                  {
+                    "name": "客户端ID异常",
+                    "value": "ILLEGAL_CLIENTID",
+                    "enName": "Client ID abnormal"
+                  }
+                ],
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "",
+            "enLabelText": "Abnormal Type Configuration"
+          }
+        ]
+      },
+      "sort": 9
+    },
+    "6f9b15f0096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b15f0096a11ec9f3efa6532887f00",
+      "name": "android/emulator",
+      "displayName": "安卓模拟器识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用安卓模拟器",
+      "enDisplayName": "Android Simulator Recognition",
+      "enDescription": "Check the use of Android simulator after integrating to Android SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 10
+    },
+    "6f9b16ca096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b16ca096a11ec9f3efa6532887f00",
+      "name": "android/cheatApp",
+      "displayName": "安卓作弊工具识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用作弊软件",
+      "enDisplayName": "Android Cheating Tool Recognition",
+      "enDescription": "Check the use of Android cheating tools after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 11
+    },
+    "6f9b1774096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b1774096a11ec9f3efa6532887f00",
+      "name": "android/vpn",
+      "displayName": "安卓VPN代理识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用vpn代理",
+      "enDisplayName": "Android VPN Proxy Recognition",
+      "enDescription": "Check the use of Android VPN proxy after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 12
+    },
+    "6f9b182b096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b182b096a11ec9f3efa6532887f00",
+      "name": "android/http",
+      "displayName": "安卓http代理识别",
+      "description": "集成安卓SDK2.0以上版本后，监测到用户使用http代理",
+      "enDisplayName": "Android http Proxy Recognition",
+      "enDescription": "Check the use of Android http proxy after integrating to Android SDK2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 13
+    },
+    "6f9b18c7096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b18c7096a11ec9f3efa6532887f00",
+      "name": "android/notOfficialApp",
+      "displayName": "安卓非官方APP识别",
+      "description": "集成Android SDK2.0以上版本后，监测到用户未使用官方APP",
+      "enDisplayName": "Android Unofficial APP Recognition",
+      "enDescription": "Check the use of unofficial apps after integrating to Android SDK 2.0",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "packageName",
+            "children": [
+              {
+                "componentType": "input",
+                "defaultValue": "",
+                "name": "packageName",
+                "selectSourceName": "systemList",
+                "addonBefore": "",
+                "addonAfter": "",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": "官方app的packageName",
+            "tipTitle": "packageName",
+            "enLabelText": "packageName",
+            "enTipTitle": "packageName",
+            "enTipContent": "The package name of the official apps."
+          }
+        ]
+      },
+      "sort": 14
+    },
+    "6f9b1986096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b1986096a11ec9f3efa6532887f00",
+      "name": "android/root",
+      "displayName": "安卓ROOT识别",
+      "description": "集成安卓SDK后，监测设备是否已ROOT",
+      "enDisplayName": "Android Root Recognition",
+      "enDescription": "Check whether the device has rooted or not after integrating to Android SDK",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": []
+      },
+      "sort": 15
+    },
+    "6f9b1b17096a11ec9f3efa6532887f00": {
+      "uuid": "6f9b1b17096a11ec9f3efa6532887f00",
+      "name": "anomaly/androidDeviceStatusAbnormal",
+      "displayName": "安卓设备状态异常",
+      "description": "判断设备是否处于某些异常状态",
+      "enDisplayName": "Android Device Status Abnormal",
+      "enDescription": "Check whether the device is abnormal or not",
+      "groupName": "anomaly",
+      "groupDisplayName": "设备规则集",
+      "groupUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "parentUuid": "6f9af559096a11ec9f3efa6532887f00",
+      "cfgJson": {
+        "description": "",
+        "type": "alias",
+        "params": [
+          {
+            "labelText": "异常类型配置",
+            "children": [
+              {
+                "componentType": "checkbox",
+                "defaultValue": "",
+                "name": "abnormalTags",
+                "selectType": "self",
+                "selectName": null,
+                "selectOption": [
+                  {
+                    "name": "设备首次出现",
+                    "value": "DEVICE_FIRST_SEEN",
+                    "enName": "first appear"
+                  },
+                  {
+                    "name": "疑似刷机",
+                    "value": "SUSPECTED_OF_WIPING_PHONE",
+                    "enName": "suspected reboot"
+                  },
+                  {
+                    "name": "开机时间过短",
+                    "value": "SHORT_UPTIME",
+                    "enName": "boot time too short"
+                  },
+                  {
+                    "name": "本机时间异常",
+                    "value": "ABNORMAL_TIME",
+                    "enName": "time abnormal"
+                  },
+                  {
+                    "name": "运营商异常",
+                    "value": "ABNORMAL_CARRIER_INFO",
+                    "enName": "operator abnormal"
+                  },
+                  {
+                    "name": "网络信息异常",
+                    "value": "ABNORMAL_NETWORK_CONNECTION",
+                    "enName": "internet information abnormal"
+                  },
+                  {
+                    "name": "客户端ID异常",
+                    "value": "ILLEGAL_CLIENTID",
+                    "enName": "client ID abnormal"
+                  },
+                  {
+                    "name": "设备为模拟器",
+                    "value": "ANDROID_EMULATOR",
+                    "enName": "device simulator"
+                  },
+                  {
+                    "name": "多开",
+                    "value": "MULTIPLE_RUNNING",
+                    "enName": "open multiple same application "
+                  },
+                  {
+                    "name": "检测到调试器",
+                    "value": "DEBUGGER_DETECTED",
+                    "enName": "debugger detected"
+                  },
+                  {
+                    "name": "检测到改机工具",
+                    "value": "HOOK_TOOL_DETECTED",
+                    "enName": "machine information changing detected"
+                  },
+                  {
+                    "name": "设备参数被篡改",
+                    "value": "DEVICE_INFO_TAMPERED",
+                    "enName": "equipment parameter change"
+                  },
+                  {
+                    "name": "疑似模拟定位",
+                    "value": "SUSPECTED_OF_FAKING_LOCATION",
+                    "enName": "suspected simulated position"
+                  },
+                  {
+                    "name": "疑似伪造无线网络信息",
+                    "value": "SUSPECTED_OF_FAKING_WIFI",
+                    "enName": "suspected forge wireless network information"
+                  },
+                  {
+                    "name": "路由器厂商未知",
+                    "value": "WIFI_UNKNOWN_MANUFACTURER",
+                    "enName": "unknown router manufacturers"
+                  },
+                  {
+                    "name": "网卡厂商未知",
+                    "value": "MAC_UNKNOWN_MANUFACTURER",
+                    "enName": "unknown network card manufacturers"
+                  },
+                  {
+                    "name": "IMEI异常",
+                    "value": "ILLEGAL_IMEI",
+                    "enName": "IMEI Abnormal"
+                  }
+                ],
+                "mapType": "static",
+                "type": "string",
+                "canEditSecondTimes": true
+              }
+            ],
+            "tipContent": ""
+          }
+        ]
+      },
+      "sort": 16
+    }
+  },
+  "uuid_to_display": {
+    "6f9ae83a096a11ec9f3efa6532887f00": "自定义规则",
+    "6f9b9fcd096a11ec9f3efa6532887f00": "脚本规则",
+    "cf1fd3f60ca64673a0a0ad5e800668c3": "业务规则",
+    "6f9ba08d023411ec9f3efa6532887r5y": "多维度名单规则",
+    "g6uba08d023411ec9f34es65328871a0": "多维度名单地址比对",
+    "6f9b7ce4096a11ec9f3efa6532887f00": "欺诈证据库",
+    "6f9ba08d096a11ec9f3efa6532887f00": "两两地址匹配",
+    "6f9afd32096a11ec9f3efa6532887f00": "四则运算",
+    "6f9afbae096a11ec9f3efa6532887f00": "正则匹配",
+    "f1ceb805ccf041b18adab03fb26b2b39": "模糊匹配统计",
+    "6f9af5e4096a11ec9f3efa6532887f00": "IF",
+    "6f9af776096a11ec9f3efa6532887f00": "Terminated",
+    "6f9af879096a11ec9f3efa6532887f00": "规则集结果使用",
+    "6f9b8128096a11ec9f3efa6532887f00": "时间差运算",
+    "6f9b84fd096a11ec9f3efa6532887f00": "时间点比较",
+    "6f9af9ab096a11ec9f3efa6532887f00": "代理访问",
+    "6f9b8a1c096a11ec9f3efa6532887f00": "距离计算",
+    "3aaf903fa6624e35903a30fa1bfc7f6b": "条件规则",
+    "163eff4901b24aea8ee74451dad71612": "循环规则",
+    "6f9affa1096a11ec9f3efa6532887f00": "设备缺失",
+    "44d9eb41de124384a293a8792fc6dc7c": "通用设备指纹规则",
+    "6f9b03c5096a11ec9f3efa6532887f00": "设备获取异常",
+    "6f9b0542096a11ec9f3efa6532887f00": "web设备状态异常",
+    "6f9b062d096a11ec9f3efa6532887f00": "iOS作弊工具识别",
+    "6f9b06fb096a11ec9f3efa6532887f00": "iOS越狱识别",
+    "6f9b07ca096a11ec9f3efa6532887f00": "iOSVPN代理识别",
+    "6f9b087b096a11ec9f3efa6532887f00": "iOShttp代理识别",
+    "6f9b1093096a11ec9f3efa6532887f00": "iOS非官方APP识别",
+    "6f9b1246096a11ec9f3efa6532887f00": "iOS设备状态异常",
+    "6f9b15f0096a11ec9f3efa6532887f00": "安卓模拟器识别",
+    "6f9b16ca096a11ec9f3efa6532887f00": "安卓作弊工具识别",
+    "6f9b1774096a11ec9f3efa6532887f00": "安卓VPN代理识别",
+    "6f9b182b096a11ec9f3efa6532887f00": "安卓http代理识别",
+    "6f9b18c7096a11ec9f3efa6532887f00": "安卓非官方APP识别",
+    "6f9b1986096a11ec9f3efa6532887f00": "安卓ROOT识别",
+    "6f9b1b17096a11ec9f3efa6532887f00": "安卓设备状态异常"
+  },
+  "display_to_uuid": {
+    "自定义规则": "6f9ae83a096a11ec9f3efa6532887f00",
+    "脚本规则": "6f9b9fcd096a11ec9f3efa6532887f00",
+    "业务规则": "cf1fd3f60ca64673a0a0ad5e800668c3",
+    "多维度名单规则": "6f9ba08d023411ec9f3efa6532887r5y",
+    "多维度名单地址比对": "g6uba08d023411ec9f34es65328871a0",
+    "欺诈证据库": "6f9b7ce4096a11ec9f3efa6532887f00",
+    "两两地址匹配": "6f9ba08d096a11ec9f3efa6532887f00",
+    "四则运算": "6f9afd32096a11ec9f3efa6532887f00",
+    "正则匹配": "6f9afbae096a11ec9f3efa6532887f00",
+    "模糊匹配统计": "f1ceb805ccf041b18adab03fb26b2b39",
+    "IF": "6f9af5e4096a11ec9f3efa6532887f00",
+    "Terminated": "6f9af776096a11ec9f3efa6532887f00",
+    "规则集结果使用": "6f9af879096a11ec9f3efa6532887f00",
+    "时间差运算": "6f9b8128096a11ec9f3efa6532887f00",
+    "时间点比较": "6f9b84fd096a11ec9f3efa6532887f00",
+    "代理访问": "6f9af9ab096a11ec9f3efa6532887f00",
+    "距离计算": "6f9b8a1c096a11ec9f3efa6532887f00",
+    "条件规则": "3aaf903fa6624e35903a30fa1bfc7f6b",
+    "循环规则": "163eff4901b24aea8ee74451dad71612",
+    "设备缺失": "6f9affa1096a11ec9f3efa6532887f00",
+    "通用设备指纹规则": "44d9eb41de124384a293a8792fc6dc7c",
+    "设备获取异常": "6f9b03c5096a11ec9f3efa6532887f00",
+    "web设备状态异常": "6f9b0542096a11ec9f3efa6532887f00",
+    "iOS作弊工具识别": "6f9b062d096a11ec9f3efa6532887f00",
+    "iOS越狱识别": "6f9b06fb096a11ec9f3efa6532887f00",
+    "iOSVPN代理识别": "6f9b07ca096a11ec9f3efa6532887f00",
+    "iOShttp代理识别": "6f9b087b096a11ec9f3efa6532887f00",
+    "iOS非官方APP识别": "6f9b1093096a11ec9f3efa6532887f00",
+    "iOS设备状态异常": "6f9b1246096a11ec9f3efa6532887f00",
+    "安卓模拟器识别": "6f9b15f0096a11ec9f3efa6532887f00",
+    "安卓作弊工具识别": "6f9b16ca096a11ec9f3efa6532887f00",
+    "安卓VPN代理识别": "6f9b1774096a11ec9f3efa6532887f00",
+    "安卓http代理识别": "6f9b182b096a11ec9f3efa6532887f00",
+    "安卓非官方APP识别": "6f9b18c7096a11ec9f3efa6532887f00",
+    "安卓ROOT识别": "6f9b1986096a11ec9f3efa6532887f00",
+    "安卓设备状态异常": "6f9b1b17096a11ec9f3efa6532887f00"
+  },
+  "group_distribution": {
+    "通用规则": 3,
+    "名单规则": 4,
+    "统计规则": 3,
+    "流程控制": 3,
+    "时间规则": 2,
+    "位置规则": 2,
+    "高级规则": 2,
+    "设备规则集": 17
+  }
+}

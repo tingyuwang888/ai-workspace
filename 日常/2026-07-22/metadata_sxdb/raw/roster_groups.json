@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+    {
+      "uuid": "ae14522250e14742ba315291e5307a63",
+      "rosterGroupName": "测试名单",
+      "rosterGroupCode": "test",
+      "orgName": "三峡担保",
+      "createTime": "2026-07-13 14:45:53",
+      "modifyTime": "2026-07-13 14:45:53",
+      "isShare": false,
+      "orgCode": "sxdb"
+    },
+    {
+      "uuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "rosterGroupName": "default_group",
+      "rosterGroupCode": "default_group",
+      "orgName": "同盾科技",
+      "createTime": "2026-05-06 16:48:00",
+      "modifyTime": "2026-05-06 16:48:00",
+      "isShare": false,
+      "orgCode": "TongDun"
+    }
+  ]
+}

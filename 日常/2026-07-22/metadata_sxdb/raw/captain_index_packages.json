@@ -1,0 +1,57 @@
+{
+  "data": {
+    "content": [
+      {
+        "documentTypeUuid": "ddfe068b735f4665aee89f52714e70cf",
+        "name": "aa",
+        "version": 1,
+        "status": "ENABLED",
+        "purpose": "REALTIME",
+        "displayName": "aa",
+        "description": null,
+        "monitorable": 1,
+        "indexs": null,
+        "indexNum": null,
+        "appName": "bhjcqd",
+        "orgCode": "sxdb",
+        "gmtCreate": "2026-05-21 15:56:42",
+        "gmtModify": "2026-05-21 15:57:23",
+        "createBy": "zjh(zjh)",
+        "modifyBy": "zjh(zjh)",
+        "editAble": true,
+        "referencedStrong": false,
+        "gmtOnline": null,
+        "onlineBy": null,
+        "appCode": "bhjcqd",
+        "_documentTypeName": "pboc_enterprise_credit",
+        "_documentTypeDisplayName": "人行二代企业征信"
+      },
+      {
+        "documentTypeUuid": "0679b7733209485baee5b7781f5f7c13",
+        "name": "aametrics",
+        "version": 1,
+        "status": "SAVED",
+        "purpose": "REALTIME",
+        "displayName": "aametrics",
+        "description": null,
+        "monitorable": 1,
+        "indexs": null,
+        "indexNum": null,
+        "appName": "init",
+        "orgCode": "sxdb",
+        "gmtCreate": "2026-05-19 17:04:21",
+        "gmtModify": "2026-05-19 17:04:21",
+        "createBy": "admin(administrator)",
+        "modifyBy": "admin(administrator)",
+        "editAble": true,
+        "referencedStrong": false,
+        "gmtOnline": null,
+        "onlineBy": null,
+        "appCode": "init",
+        "_documentTypeName": "Code_autotest_placeholder",
+        "_documentTypeDisplayName": "自动化测试_autotest_placeholder"
+      }
+    ],
+    "totalElements": 2
+  }
+}

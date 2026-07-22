@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "count": 3,
+    "source": "bridgeApi/mainDimension/list",
+    "fetchedAt": "2026-07-22T09:54:29.381073"
+  },
+  "dimensions": [
+    {
+      "name": "S_S_CUSTNO",
+      "displayName": "客户编号"
+    },
+    {
+      "name": "S_S_CUSTNAME",
+      "displayName": "客户名称"
+    },
+    {
+      "name": "S_S_USERNO",
+      "displayName": "用户编号"
+    }
+  ],
+  "name_to_display": {
+    "S_S_CUSTNO": "客户编号",
+    "S_S_CUSTNAME": "客户名称",
+    "S_S_USERNO": "用户编号"
+  },
+  "display_to_name": {
+    "客户编号": "S_S_CUSTNO",
+    "客户名称": "S_S_CUSTNAME",
+    "用户编号": "S_S_USERNO"
+  }
+}

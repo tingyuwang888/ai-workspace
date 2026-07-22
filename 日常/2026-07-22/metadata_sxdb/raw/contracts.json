@@ -1,0 +1,249 @@
+{
+  "data": {
+    "contents": [
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 16:10:26",
+        "gmtModify": "2026-06-01 16:10:26",
+        "uuid": "1a94a0dee81f48d08632677edad59a4a",
+        "providerUuid": "83baf2cb8fcf425d963c3a5a88bc111f",
+        "code": "YJT2026",
+        "name": "预警通服务合同",
+        "status": "1",
+        "startTime": "2026-05-01 00:00:00",
+        "endTime": "2028-05-01 00:00:00",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "83baf2cb8fcf425d963c3a5a88bc111f",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 16:10:25",
+        "gmtModify": "2026-06-01 16:10:25",
+        "uuid": "327c8a7bf8bd4b5dbac0a0fafa3fdedb",
+        "providerUuid": "70929f858251422ab449fd8d19b8829e",
+        "code": "QYZX2026",
+        "name": "征信系统接入协议",
+        "status": "1",
+        "startTime": "2026-05-01 00:00:00",
+        "endTime": "2028-05-01 00:00:00",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "70929f858251422ab449fd8d19b8829e",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 16:10:24",
+        "gmtModify": "2026-07-03 14:26:28",
+        "uuid": "7c68ade4481945d1b34dca49c1be9e0b",
+        "providerUuid": "3d4f8913ed4941e8acbb4f986d5b15a1",
+        "code": "QCC2026",
+        "name": "企查查服务合同",
+        "status": "1",
+        "startTime": "2025-05-01 00:00:00",
+        "endTime": "2028-05-04 16:00:00",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "7",
+        "contractFileNames": "[]",
+        "_providerUuid": "3d4f8913ed4941e8acbb4f986d5b15a1",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "zjh(zjh)",
+        "gmtCreate": "2026-05-22 10:15:32",
+        "gmtModify": "2026-05-22 10:15:32",
+        "uuid": "ed15e827b08047c7bd9b42c36238b3df",
+        "providerUuid": "ff3b992195bc424ab2a7e3ae94192bca",
+        "code": "test",
+        "name": "test",
+        "status": "1",
+        "startTime": "2026-01-09 00:00:00",
+        "endTime": "2028-01-31 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "ff3b992195bc424ab2a7e3ae94192bca",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-05-14 20:50:21",
+        "gmtModify": "2026-05-14 20:50:21",
+        "uuid": "2695b3446ad648fd942774a2a4e4b3fa",
+        "providerUuid": "f896d2c7de054a319b58c6d72a1d3fec",
+        "code": "",
+        "name": "内部数据表",
+        "status": "1",
+        "startTime": "1970-01-01 08:00:00",
+        "endTime": "2027-05-12 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "f896d2c7de054a319b58c6d72a1d3fec",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-05-14 20:00:06",
+        "gmtModify": "2026-05-14 20:00:06",
+        "uuid": "c9e02b0215984ccdbcfbebc68bc9b117",
+        "providerUuid": "f896d2c7de054a319b58c6d72a1d3fec",
+        "code": "inner001",
+        "name": "内部数据表",
+        "status": "1",
+        "startTime": "2026-05-01 00:00:00",
+        "endTime": "2027-04-30 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "f896d2c7de054a319b58c6d72a1d3fec",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 18:44:21",
+        "gmtModify": "2026-06-01 18:44:21",
+        "uuid": "06b19c0133a34ed58a3f2362dc80cb0a",
+        "providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "code": "QCC2026",
+        "name": "企查查服务合同",
+        "status": "1",
+        "startTime": "2026-05-01 00:00:00",
+        "endTime": "2028-05-01 00:00:00",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "zjh(zjh)",
+        "gmtCreate": "2026-06-01 13:42:07",
+        "gmtModify": "2026-06-01 13:42:07",
+        "uuid": "32fe9fc93fb641a8bbf8da86e2b50c51",
+        "providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "code": "QCC_2026",
+        "name": "企查查服务合同",
+        "status": "1",
+        "startTime": "1970-01-01 08:00:00",
+        "endTime": "2027-05-12 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "zjh(zjh)",
+        "gmtCreate": "2026-05-12 14:51:23",
+        "gmtModify": "2026-05-12 14:51:23",
+        "uuid": "486ae58aa1be4cb0be7f7be629b0e3ec",
+        "providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "code": "plain001",
+        "name": "空白合同001",
+        "status": "1",
+        "startTime": "2026-05-12 00:00:00",
+        "endTime": "2027-05-12 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "1ea0803c57124641992d7a7411210a15",
+        "_providerName": ""
+      },
+      {
+        "canWriter": true,
+        "creator": "hao.bai(hao.bai)",
+        "operator": "hao.bai(hao.bai)",
+        "gmtCreate": "2026-05-12 14:46:49",
+        "gmtModify": "2026-05-12 14:46:49",
+        "uuid": "db765d975e834f618e0250fd0b8c430b",
+        "providerUuid": "f58bb04599f14b6abedc55ba9e3be35d",
+        "code": "wsqd",
+        "name": "wdqdq",
+        "status": "1",
+        "startTime": "2026-05-12 00:00:00",
+        "endTime": "2027-05-12 23:59:59",
+        "chargeType": "noCharge",
+        "chargeConfig": "{\"type\":0}",
+        "masterDimensions": [
+          "dataSourceServiceName"
+        ],
+        "followDimensions": [
+          "S_S_SERIALNUM"
+        ],
+        "version": "1",
+        "contractFileNames": "[]",
+        "_providerUuid": "f58bb04599f14b6abedc55ba9e3be35d",
+        "_providerName": ""
+      }
+    ],
+    "total": 10
+  }
+}

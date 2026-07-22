@@ -1,0 +1,77 @@
+{
+  "data": {
+    "contents": [
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 16:09:48",
+        "gmtModify": "2026-06-01 16:09:48",
+        "uuid": "83baf2cb8fcf425d963c3a5a88bc111f",
+        "displayName": "预警通",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 16:09:47",
+        "gmtModify": "2026-06-01 16:09:47",
+        "uuid": "70929f858251422ab449fd8d19b8829e",
+        "displayName": "二代征信综合查询系统",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-06-01 15:24:41",
+        "gmtModify": "2026-07-03 14:26:28",
+        "uuid": "3d4f8913ed4941e8acbb4f986d5b15a1",
+        "displayName": "企查查",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "zjh(zjh)",
+        "gmtCreate": "2026-05-22 10:15:32",
+        "gmtModify": "2026-05-22 10:15:32",
+        "uuid": "ff3b992195bc424ab2a7e3ae94192bca",
+        "displayName": "百融",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "admin(administrator)",
+        "operator": "admin(administrator)",
+        "gmtCreate": "2026-05-14 19:59:01",
+        "gmtModify": "2026-05-14 19:59:01",
+        "uuid": "f896d2c7de054a319b58c6d72a1d3fec",
+        "displayName": "内部数据",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "zjh(zjh)",
+        "operator": "zjh(zjh)",
+        "gmtCreate": "2026-05-12 14:49:53",
+        "gmtModify": "2026-05-12 14:49:53",
+        "uuid": "1ea0803c57124641992d7a7411210a15",
+        "displayName": "占位合作方",
+        "status": 1
+      },
+      {
+        "canWriter": true,
+        "creator": "yaosh(yaosh)",
+        "operator": "yaosh(yaosh)",
+        "gmtCreate": "2026-04-28 18:06:47",
+        "gmtModify": "2026-04-28 18:06:47",
+        "uuid": "f58bb04599f14b6abedc55ba9e3be35d",
+        "displayName": "自动化测试_计费场景合作方_勿动",
+        "status": 1
+      }
+    ],
+    "total": 7
+  }
+}

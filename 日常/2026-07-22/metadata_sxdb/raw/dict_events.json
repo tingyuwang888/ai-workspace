@@ -1,0 +1,27 @@
+{
+  "code": 200,
+  "message": "成功",
+  "success": true,
+  "data": {
+    "total": 1,
+    "curPage": 1,
+    "dictionaryList": [
+      {
+        "gmtModified": 1653892653000,
+        "defaultFlag": true,
+        "updatedBy": "admin(administrator)",
+        "createdBy": "admin",
+        "description": "事件类型",
+        "groups": [
+          "system"
+        ],
+        "id": 14,
+        "myKey": "EventType",
+        "gmtCreate": 1411631220000,
+        "uuid": "22cd303e0648489184f4988ca9478a02",
+        "myValue": "[{\"dName\":\"登录事件\",\"name\":\"Login\",\"enDName\":\"loginevent\"},{\"dName\":\"注册事件\",\"name\":\"Register\",\"enDName\":\"registerevent\"},{\"dName\":\"申购事件\",\"name\":\"Apply\",\"enDName\":\"applyevent\"},{\"dName\":\"赎回事件\",\"name\":\"Redeem\",\"enDName\":\"redeemevent\"},{\"dName\":\"交易事件\",\"name\":\"Trade\",\"enDName\":\"tradeevent\"},{\"dName\":\"绑卡事件\",\"name\":\"Binding\",\"enDName\":\"bindingevent\"},{\"dName\":\"更换安全卡事件\",\"name\":\"ChangeCard\",\"enDName\":\"changecardevent\"},{\"dName\":\"支付事件\",\"name\":\"Payment\",\"enDName\":\"paymentevent\"},{\"dName\":\"短信验证事件\",\"name\":\"MsnValid\",\"enDName\":\"msnvalidevent\"},{\"dName\":\"借款事件\",\"name\":\"Loan\",\"enDName\":\"loadevent\"},{\"dName\":\"转账事件\",\"name\":\"Transfer\",\"enDName\":\"transferevent\"},{\"dName\":\"提现事件\",\"name\":\"Withdraw\",\"enDName\":\"withdrawevent\"},{\"dName\":\"修改事件\",\"name\":\"Modify\",\"enDName\":\"modifyevent\"},{\"dName\":\"其他事件\",\"name\":\"Other\",\"enDName\":\"otherevent\"},{\"name\":\"Receser\",\"dName\":\"收单事件\",\"enDName\":\"Receserevent\"},{\"name\":\"OpenAcct\",\"dName\":\"开户事件\",\"enDName\":\"OpenAcctevent\"},{\"name\":\"Cance\",\"dName\":\"销户事件\",\"enDName\":\"Canceevent\"},{\"name\":\"IntoAcct\",\"dName\":\"入账事件\",\"enDName\":\"IntoAcctevent\"},{\"name\":\"Deposit\",\"dName\":\"存款事件\",\"enDName\":\"Depositevent\"},{\"name\":\"Finance\",\"dName\":\"理财事件\",\"enDName\":\"financialevent\"},{\"name\":\"Cashout\",\"dName\":\"取款事件\",\"enDName\":\"Cashoutevent\"},{\"name\":\"Consume\",\"dName\":\"消费事件\",\"enDName\":\"Consumeevent\"},{\"name\":\"Charge\",\"dName\":\"缴费事件\",\"enDName\":\"Chargeevent\"},{\"name\":\"Sign\",\"dName\":\"签约事件\",\"enDName\":\"Signevent\"},{\"name\":\"Rescind\",\"dName\":\"解约事件\",\"enDName\":\"Rescindevent\"},{\"name\":\"WdA\",\"dName\":\"提款申请事件\",\"enDName\":\"WdAevent\"},{\"name\":\"LoanA\",\"dName\":\"贷款申请事件\",\"enDName\":\"LoanAevent\"},{\"name\":\"Mappo\",\"dName\":\"预约事件\",\"enDName\":\"Mappoevent\"},{\"name\":\"Market\",\"dName\":\"营销事件\",\"enDName\":\"Marketevent\"},{\"name\":\"Recharge\",\"dName\":\"充值事件\",\"enDName\":\"Rechargeevent\"},{\"name\":\"Loss\",\"dName\":\"挂失事件\",\"enDName\":\"Lossrevent\"},{\"name\":\"Ponb\",\"dName\":\"代付事件\",\"enDName\":\"Ponbevent\"},{\"name\":\"Repay\",\"dName\":\"还款事件\",\"enDName\":\"Repayevent\"}]"
+      }
+    ],
+    "pageSize": 10
+  }
+}

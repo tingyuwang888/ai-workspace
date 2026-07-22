@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "count": 6,
+    "topLevelCount": 3,
+    "source": "indexApi/metricCatalog/listTree",
+    "fetchedAt": "2026-07-22T09:54:29.369050"
+  },
+  "tree": [
+    {
+      "catalogName": "AT{Str(7)}",
+      "uuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "catalogSort": 1,
+      "child": [
+        {
+          "catalogName": "Default11",
+          "uuid": "74e4c37491c245f3a3032bcefc05c753",
+          "catalogSort": 1,
+          "child": []
+        }
+      ]
+    },
+    {
+      "catalogName": "借款类",
+      "uuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "catalogSort": 1,
+      "child": [
+        {
+          "catalogName": "企业信用状况",
+          "uuid": "a1719b54e6414d19b9e164c48addd86f",
+          "catalogSort": 1,
+          "child": []
+        }
+      ]
+    },
+    {
+      "catalogName": "1",
+      "uuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "catalogSort": 3,
+      "child": [
+        {
+          "catalogName": "22",
+          "uuid": "a0b558f8fed14514abf15c9ca5ae72f0",
+          "catalogSort": 4,
+          "child": []
+        }
+      ]
+    }
+  ],
+  "catalogs": [
+    {
+      "uuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "catalogName": "AT{Str(7)}",
+      "catalogSort": 1,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    {
+      "uuid": "74e4c37491c245f3a3032bcefc05c753",
+      "catalogName": "Default11",
+      "catalogSort": 1,
+      "parentUuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "childCount": 0
+    },
+    {
+      "uuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "catalogName": "借款类",
+      "catalogSort": 1,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    {
+      "uuid": "a1719b54e6414d19b9e164c48addd86f",
+      "catalogName": "企业信用状况",
+      "catalogSort": 1,
+      "parentUuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "childCount": 0
+    },
+    {
+      "uuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "catalogName": "1",
+      "catalogSort": 3,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    {
+      "uuid": "a0b558f8fed14514abf15c9ca5ae72f0",
+      "catalogName": "22",
+      "catalogSort": 4,
+      "parentUuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "childCount": 0
+    }
+  ],
+  "uuid_to_catalog": {
+    "9450a65d7ec94e3ba4cf4cb0b9cda548": {
+      "uuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "catalogName": "AT{Str(7)}",
+      "catalogSort": 1,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    "74e4c37491c245f3a3032bcefc05c753": {
+      "uuid": "74e4c37491c245f3a3032bcefc05c753",
+      "catalogName": "Default11",
+      "catalogSort": 1,
+      "parentUuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "childCount": 0
+    },
+    "540a5633cfe74955a4d948ab4c70d32e": {
+      "uuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "catalogName": "借款类",
+      "catalogSort": 1,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    "a1719b54e6414d19b9e164c48addd86f": {
+      "uuid": "a1719b54e6414d19b9e164c48addd86f",
+      "catalogName": "企业信用状况",
+      "catalogSort": 1,
+      "parentUuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "childCount": 0
+    },
+    "9d65fbb818cc4f04aa40693b4b6352ee": {
+      "uuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "catalogName": "1",
+      "catalogSort": 3,
+      "parentUuid": null,
+      "childCount": 1
+    },
+    "a0b558f8fed14514abf15c9ca5ae72f0": {
+      "uuid": "a0b558f8fed14514abf15c9ca5ae72f0",
+      "catalogName": "22",
+      "catalogSort": 4,
+      "parentUuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "childCount": 0
+    }
+  },
+  "name_to_uuid": {
+    "AT{Str(7)}": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+    "Default11": "74e4c37491c245f3a3032bcefc05c753",
+    "借款类": "540a5633cfe74955a4d948ab4c70d32e",
+    "企业信用状况": "a1719b54e6414d19b9e164c48addd86f",
+    "1": "9d65fbb818cc4f04aa40693b4b6352ee",
+    "22": "a0b558f8fed14514abf15c9ca5ae72f0"
+  },
+  "parent_map": {
+    "9450a65d7ec94e3ba4cf4cb0b9cda548": null,
+    "74e4c37491c245f3a3032bcefc05c753": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+    "540a5633cfe74955a4d948ab4c70d32e": null,
+    "a1719b54e6414d19b9e164c48addd86f": "540a5633cfe74955a4d948ab4c70d32e",
+    "9d65fbb818cc4f04aa40693b4b6352ee": null,
+    "a0b558f8fed14514abf15c9ca5ae72f0": "9d65fbb818cc4f04aa40693b4b6352ee"
+  }
+}

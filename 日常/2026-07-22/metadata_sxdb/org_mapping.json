@@ -1,0 +1,219 @@
+{
+  "_meta": {
+    "count": 9,
+    "fetchedAt": "2026-07-22T09:54:29.367323"
+  },
+  "tree": [
+    {
+      "id": 3,
+      "uuid": "a8202aea546f48979754bdd45c471b08",
+      "gmtCreate": 1635130131000,
+      "gmtModify": 1761565343000,
+      "code": "TongDun",
+      "level": 1,
+      "name": "同盾科技",
+      "enName": "tongdun",
+      "createBy": "admin",
+      "updateBy": "admin",
+      "orgAttribute": 2,
+      "children": [
+        {
+          "id": 14,
+          "uuid": "e8a45d705f1e4d4484625ae1af24d3f3",
+          "gmtCreate": 1783925885000,
+          "gmtModify": 1783925885000,
+          "code": "zhin",
+          "level": 2,
+          "parentUuid": "a8202aea546f48979754bdd45c471b08",
+          "name": "测试职能",
+          "orgAttribute": 1,
+          "children": []
+        },
+        {
+          "id": 4,
+          "uuid": "127a36c958cf4b71acff6510e5f0b06d",
+          "gmtCreate": 1777370799000,
+          "gmtModify": 1777370799000,
+          "code": "9XV3DmIztNpB9vOG_SubOrg_2026-04-13",
+          "level": 2,
+          "parentUuid": "a8202aea546f48979754bdd45c471b08",
+          "name": "谭方斐_子机构_2026-04-13",
+          "orgAttribute": 2,
+          "children": [
+            {
+              "id": 5,
+              "uuid": "30158f47caca4edf842cea7fa70c83e4",
+              "gmtCreate": 1778231338000,
+              "gmtModify": 1778231338000,
+              "code": "zzjg",
+              "level": 3,
+              "parentUuid": "127a36c958cf4b71acff6510e5f0b06d",
+              "name": "子子机构",
+              "orgAttribute": 2,
+              "children": [
+                {
+                  "id": 6,
+                  "uuid": "cab741e5b1ca4bbba72f7bf65ae42bd2",
+                  "gmtCreate": 1778231349000,
+                  "gmtModify": 1778231349000,
+                  "code": "zzzjg",
+                  "level": 4,
+                  "parentUuid": "30158f47caca4edf842cea7fa70c83e4",
+                  "name": "子子子机构",
+                  "orgAttribute": 2,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "uuid": "2d45a00b7e94461684b28f6274648fef",
+          "gmtCreate": 1782281773000,
+          "gmtModify": 1782281773000,
+          "code": "testOrg",
+          "level": 2,
+          "parentUuid": "a8202aea546f48979754bdd45c471b08",
+          "name": "测试用机构",
+          "orgAttribute": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "uuid": "4dfe5ad6e199416f8998dd4b5c651e41",
+      "gmtCreate": 1778749774000,
+      "gmtModify": 1778749774000,
+      "code": "sxdb",
+      "level": 1,
+      "name": "三峡担保",
+      "orgAttribute": 2,
+      "children": [
+        {
+          "id": 11,
+          "uuid": "6f22ba63ffd444ea8e630b82f5ea94e4",
+          "gmtCreate": 1778749803000,
+          "gmtModify": 1778753447000,
+          "code": "010117",
+          "level": 2,
+          "parentUuid": "4dfe5ad6e199416f8998dd4b5c651e41",
+          "name": "风险管理部",
+          "orgAttribute": 2,
+          "children": []
+        },
+        {
+          "id": 12,
+          "uuid": "b7d15381e99b4895ba9521872d641296",
+          "gmtCreate": 1778753180000,
+          "gmtModify": 1778754045000,
+          "code": "0105",
+          "level": 2,
+          "parentUuid": "4dfe5ad6e199416f8998dd4b5c651e41",
+          "name": "子公司",
+          "createBy": "",
+          "updateBy": "",
+          "orgAttribute": 2,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flat": [
+    {
+      "id": 3,
+      "code": "TongDun",
+      "name": "同盾科技",
+      "enName": "tongdun",
+      "level": 1,
+      "childCount": 3
+    },
+    {
+      "id": 14,
+      "code": "zhin",
+      "name": "测试职能",
+      "enName": "",
+      "level": 2,
+      "childCount": 0
+    },
+    {
+      "id": 4,
+      "code": "9XV3DmIztNpB9vOG_SubOrg_2026-04-13",
+      "name": "谭方斐_子机构_2026-04-13",
+      "enName": "",
+      "level": 2,
+      "childCount": 1
+    },
+    {
+      "id": 5,
+      "code": "zzjg",
+      "name": "子子机构",
+      "enName": "",
+      "level": 3,
+      "childCount": 1
+    },
+    {
+      "id": 6,
+      "code": "zzzjg",
+      "name": "子子子机构",
+      "enName": "",
+      "level": 4,
+      "childCount": 0
+    },
+    {
+      "id": 13,
+      "code": "testOrg",
+      "name": "测试用机构",
+      "enName": "",
+      "level": 2,
+      "childCount": 0
+    },
+    {
+      "id": 10,
+      "code": "sxdb",
+      "name": "三峡担保",
+      "enName": "",
+      "level": 1,
+      "childCount": 2
+    },
+    {
+      "id": 11,
+      "code": "010117",
+      "name": "风险管理部",
+      "enName": "",
+      "level": 2,
+      "childCount": 0
+    },
+    {
+      "id": 12,
+      "code": "0105",
+      "name": "子公司",
+      "enName": "",
+      "level": 2,
+      "childCount": 0
+    }
+  ],
+  "code_to_name": {
+    "TongDun": "同盾科技",
+    "zhin": "测试职能",
+    "9XV3DmIztNpB9vOG_SubOrg_2026-04-13": "谭方斐_子机构_2026-04-13",
+    "zzjg": "子子机构",
+    "zzzjg": "子子子机构",
+    "testOrg": "测试用机构",
+    "sxdb": "三峡担保",
+    "010117": "风险管理部",
+    "0105": "子公司"
+  },
+  "name_to_code": {
+    "同盾科技": "TongDun",
+    "测试职能": "zhin",
+    "谭方斐_子机构_2026-04-13": "9XV3DmIztNpB9vOG_SubOrg_2026-04-13",
+    "子子机构": "zzjg",
+    "子子子机构": "zzzjg",
+    "测试用机构": "testOrg",
+    "三峡担保": "sxdb",
+    "风险管理部": "010117",
+    "子公司": "0105"
+  }
+}

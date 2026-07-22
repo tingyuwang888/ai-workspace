@@ -1,0 +1,6242 @@
+{
+  "_meta": {
+    "serviceTypeCount": 6,
+    "configuredServiceCount": 17,
+    "categoryCount": 1,
+    "typeDistribution": {
+      "creditEngine": 12,
+      "transEngine": 5
+    },
+    "fetchedAt": "2026-07-22T09:54:29.451231"
+  },
+  "categories": [
+    {
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "serviceTypeCount": 6
+    }
+  ],
+  "serviceTypes": [
+    {
+      "serviceType": "creditEngine",
+      "serviceTypeName": "信贷决策",
+      "typeNum": 1,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    },
+    {
+      "serviceType": "transEngine",
+      "serviceTypeName": "交易决策",
+      "typeNum": 5,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    },
+    {
+      "serviceType": "supplement",
+      "serviceTypeName": "决策补充",
+      "typeNum": 2,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    },
+    {
+      "serviceType": "queryResult",
+      "serviceTypeName": "信贷结果查询",
+      "typeNum": 4,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    },
+    {
+      "serviceType": "metricService",
+      "serviceTypeName": "指标服务",
+      "typeNum": 9,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    },
+    {
+      "serviceType": "merchantAccessEngine",
+      "serviceTypeName": "商户准入",
+      "typeNum": 14,
+      "category": "REALTIME",
+      "categoryLabel": "实时服务"
+    }
+  ],
+  "type_to_name": {
+    "creditEngine": "信贷决策",
+    "transEngine": "交易决策",
+    "supplement": "决策补充",
+    "queryResult": "信贷结果查询",
+    "metricService": "指标服务",
+    "merchantAccessEngine": "商户准入"
+  },
+  "name_to_type": {
+    "信贷决策": "creditEngine",
+    "交易决策": "transEngine",
+    "决策补充": "supplement",
+    "信贷结果查询": "queryResult",
+    "指标服务": "metricService",
+    "商户准入": "merchantAccessEngine"
+  },
+  "configuredServices": [
+    {
+      "id": 54,
+      "uuid": "508dbeac2e9747dbb6957fc2c1009ae1",
+      "name": "bhjcjcfw",
+      "displayName": "保后检查决策服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizScene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseInfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personInfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedCompanyInfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareaname",
+          "displayName": "区域名称",
+          "eleName": "C_S_JJAREANAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrqualLevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTypeTz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projStartDate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectClass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectNo",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectName",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "uuid": "a3afd0894ea148d284a38c2f4aa74b40",
+      "name": "bhjcfw02",
+      "displayName": "保后检查决策服务_副本02",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizScene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseInfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personInfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedCompanyInfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrqualLevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTypeTz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectClass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectName",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projStartDate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectNo",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "uuid": "a65a180bc4e34faabc200c0ef64808df",
+      "name": "tc01_credit_min",
+      "displayName": "TC01_信贷决策最小服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNo",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityRatio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "uuid": "4c3a8bbb1e0b4a3687da0624c4a87ead",
+      "name": "tc02_credit_ext",
+      "displayName": "TC02_信贷决策扩展服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "requestBizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "subjectNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "1",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "POST_LOAN",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNo",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "guaranteeBalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "chglegalrepcnt",
+          "displayName": "企业近3个月法定代表人变更记录数量企查查",
+          "eleName": "C_N_CHGLEGALREPCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "chgEquityCnt",
+          "displayName": "企业近3个月存在股权变更记录企查查",
+          "eleName": "C_N_CHGEQUITYCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "chgscopecnt",
+          "displayName": "企业近3个月经营范围变更记录数量企查查",
+          "eleName": "C_N_CHGSCOPECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "revokecnt",
+          "displayName": "企业近3个月注销吊销信息数量企查查",
+          "eleName": "C_N_REVOKECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "paidCapRatio",
+          "displayName": "企业实缴资本占注册资本比例企查查",
+          "eleName": "C_F_PAIDCAPRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "guaranteebalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "uuid": "6b1408b41245421c867ed3c9a41e4325",
+      "name": "tc03_trans_min",
+      "displayName": "TC03_交易决策最小服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "apiModel",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "serialnum",
+          "displayName": "业务方流水号",
+          "eleName": "S_S_SERIALNUM",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "uuid": "cd54c7d9c94f4cec9b55919d38e39313",
+      "name": "tc04_trans_ext",
+      "displayName": "TC04_交易决策扩展服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "transBizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "transTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "bizabnormalflag",
+          "displayName": "企业当前经营异常且未移出记录数量企查查",
+          "eleName": "C_N_BIZABNORMALFLAG",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "dishonestCnt",
+          "displayName": "企业近3个月失信记录数量企查查",
+          "eleName": "C_N_DISHONESTCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "executedcnt",
+          "displayName": "企业近3个月被执行记录数量企查查",
+          "eleName": "C_N_EXECUTEDCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "highConsumeCnt",
+          "displayName": "企业近3个月限制高消费记录数量企查查",
+          "eleName": "C_N_HIGHCONSUMECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "envpenaltycnt",
+          "displayName": "企业近3个月环保处罚记录数量企查查",
+          "eleName": "C_N_ENVPENALTYCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "uuid": "a0a4c0fb5eb24096ab93ef35f276c51b",
+      "name": "tc05_credit_incomplete",
+      "displayName": "TC05_信贷决策缺省默认字段服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "uuid": "0bd2ca70eac446e796d04ed4c77980d6",
+      "name": "tc06_trans_incomplete",
+      "displayName": "TC06_交易决策缺省默认字段服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "apimodel",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "judicialauctioncnt",
+          "displayName": "企业近3个月司法拍卖记录数量企查查",
+          "eleName": "C_N_JUDICIALAUCTIONCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "preservCnt",
+          "displayName": "企业近3个月被保全记录数量企查查",
+          "eleName": "C_N_PRESERVCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "uuid": "69c89fccadc24bada0abe9ebccdd1715",
+      "name": "tc08_trans_mixed_order",
+      "displayName": "TC08_交易决策乱序混合字段服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCodeOverride",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dishonestCnt",
+          "displayName": "企业近3个月失信记录数量企查查",
+          "eleName": "C_N_DISHONESTCNT",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "judicialauctioncnt",
+          "displayName": "企业近3个月司法拍卖记录数量企查查",
+          "eleName": "C_N_JUDICIALAUCTIONCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "preservCnt",
+          "displayName": "企业近3个月被保全记录数量企查查",
+          "eleName": "C_N_PRESERVCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "uuid": "71bb7954d56d45d1a4cbb17cd9ecd5aa",
+      "name": "tc07_credit_mixed_order",
+      "displayName": "TC07_信贷决策乱序混合字段服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizIdOverride",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "POST_LOAN",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custTypeOverride",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNoOverride",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "guaranteeBalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "uuid": "9318d15d8e234c6fb5d5dec623071f7e",
+      "name": "tc09_trans_value_semantics",
+      "displayName": "TC09_交易决策平台赋值语义服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "dynamictable",
+          "displayName": "动态表名",
+          "eleName": "S_S_DYNAMICTABLENAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "123",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "serialnum",
+          "displayName": "业务方流水号",
+          "eleName": "S_S_SERIALNUM",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "uuid": "5a30dfbbd0924841a3868a5ecd6ac31b",
+      "name": "jzdssmxfw",
+      "displayName": "集中度实时模型服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "tokenid",
+          "displayName": "风控唯一标识",
+          "eleName": "S_S_TOKENID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custuscode",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areaprovince",
+          "displayName": "客户区域_省",
+          "eleName": "C_S_AREAPROVINCE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areacity",
+          "displayName": "客户区域_市",
+          "eleName": "C_S_AREACITY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areadistrict",
+          "displayName": "客户区域_区",
+          "eleName": "C_S_AREADISTRICT",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areaprovincecode",
+          "displayName": "客户区域_省代码",
+          "eleName": "C_S_AREAPROVINCECODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areacitycode",
+          "displayName": "客户区域_市代码",
+          "eleName": "C_S_AREACITYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areadistrictcode",
+          "displayName": "客户区域_区代码",
+          "eleName": "C_S_AREADISTRICTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "singleconcresult",
+          "displayName": "单户集中度判断结果",
+          "eleName": "C_S_SINGLECONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "relatedconcresult",
+          "displayName": "关联户集中度判断结果",
+          "eleName": "C_S_RELATEDCONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "areaconcresult",
+          "displayName": "区域集中度判断结果",
+          "eleName": "C_S_AREACONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "preconcoverallresult",
+          "displayName": "保前集中度综合判断结果",
+          "eleName": "C_S_PRECONCOVERALLRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "presinglemergedliability",
+          "displayName": "单户合并责任余额",
+          "eleName": "C_F_PRESINGLEMERGEDLIABILITY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "prerelatedmergedliability",
+          "displayName": "关联户合并责任余额",
+          "eleName": "C_F_PRERELATEDMERGEDLIABILITY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "preareamergedusedquota",
+          "displayName": "区域合并已用额度",
+          "eleName": "C_F_PREAREAMERGEDUSEDQUOTA",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "areaagglevel",
+          "displayName": "区域聚合层级",
+          "eleName": "C_S_AREAAGGLEVEL",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "uuid": "54c5422fb0954435aba2ff7f233e3da3",
+      "name": "test01",
+      "displayName": "保后检查决策服务_副本",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizscene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseinfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personinfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedcompanyinfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareaname",
+          "displayName": "区域名称",
+          "eleName": "C_S_JJAREANAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrquallevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztypetz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectclass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectname",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projstartdate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectno",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "uuid": "49d1aa80f83443e9baa4317b944ae996",
+      "name": "credit_auto_test",
+      "displayName": "信贷决策_自动化测试用",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mobino",
+          "displayName": "手机号",
+          "eleName": "S_S_MOBINO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certaddr",
+          "displayName": "证件地址",
+          "eleName": "S_S_CERTADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "age",
+          "displayName": "年龄",
+          "eleName": "S_N_AGE",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "sex",
+          "displayName": "性别",
+          "eleName": "S_E_SEX",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "marriage",
+          "displayName": "婚姻状况",
+          "eleName": "S_S_MARRIAGE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diploma",
+          "displayName": "学历",
+          "eleName": "S_S_DIPLOMA",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "flowtype",
+          "displayName": "流程类型",
+          "eleName": "C_S_FLOWTYPE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "homeaddress",
+          "displayName": "居住地址",
+          "eleName": "S_S_HOMEADDRESS",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "monthlytime",
+          "displayName": "每月限笔",
+          "eleName": "S_N_MONTHLYTIME",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "weeklyamt",
+          "displayName": "每周限额",
+          "eleName": "S_F_WEEKLYAMT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "companyaddress",
+          "displayName": "单位地址",
+          "eleName": "S_S_COMPANYADDRESS",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "cardno",
+          "displayName": "银行卡号",
+          "eleName": "S_S_CARDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "receaddr",
+          "displayName": "收货地址",
+          "eleName": "S_S_RECEADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "contaddr",
+          "displayName": "联系地址",
+          "eleName": "S_S_CONTADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "doublemultiaddress",
+          "displayName": "复杂对象_二层嵌套_N个地址",
+          "eleName": "C_O_DOUBLEMULTIADDRESS",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "multiaddress",
+          "displayName": "复杂对象_N个地址",
+          "eleName": "C_O_MULTIADDRESS",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "subflowrin01",
+          "displayName": "子策略入参01",
+          "eleName": "C_O_SUBFLOWRIN01",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "subflowrin02",
+          "displayName": "子策略入参02",
+          "eleName": "C_O_SUBFLOWRIN02",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "finaldealtype",
+          "displayName": "处置方式",
+          "eleName": "S_S_FINALDEALTYPE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "uuid": "39d7de4c30f843b9abadae025a5e70fc",
+      "name": "credit_auto_test_2601",
+      "displayName": "信贷决策_自动化测试用_auto",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "single_conc_result",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "uuid": "cd606023ba11438baa9ee6d4aaa10efc",
+      "name": "credit_auto_test_advanced_new",
+      "displayName": "信贷决策_自动化测试用_验证高级规则调用new",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "mername",
+          "displayName": "商户名称",
+          "eleName": "S_S_MERNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "pensionreceive",
+          "displayName": "是否领取养老金",
+          "eleName": "S_B_PENSIONRECEIVE",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applicationdate",
+          "displayName": "申请日期",
+          "eleName": "C_D_APPLICATIONDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "debugmodel",
+          "displayName": "是否debug模式",
+          "eleName": "S_N_DEBUGMODEL",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "customersize",
+          "displayName": "客户规模",
+          "eleName": "S_E_CUSTOMERSIZE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "isagent",
+          "displayName": "是否代理人办理",
+          "eleName": "S_E_ISAGENT",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "isipabroad",
+          "displayName": "是否国外IP",
+          "eleName": "S_E_ISIPABROAD",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "loanbalance",
+          "displayName": "贷款余额",
+          "eleName": "S_F_LOANBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diyierceng1",
+          "displayName": "对象字段_第一二层_非循环_auto",
+          "eleName": "C_O_DIYIERCENG1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applyloanterm",
+          "displayName": "借款期限",
+          "eleName": "S_N_APPLYLOANTERM",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mpsubid",
+          "displayName": "微信子商户号",
+          "eleName": "S_S_MPSUBID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dqyqje",
+          "displayName": "当前逾期金额",
+          "eleName": "C_F_DQYQJE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mobino",
+          "displayName": "手机号",
+          "eleName": "S_S_MOBINO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "yctradetype",
+          "displayName": "交易商户类型",
+          "eleName": "C_E_YCTRADETYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applyloanamount",
+          "displayName": "借款申请金额",
+          "eleName": "S_F_APPLYLOANAMOUNT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "brchclosetime",
+          "displayName": "机构关机时间",
+          "eleName": "S_D_BRCHCLOSETIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "abnormaltaxact",
+          "displayName": "是否纳税非正常户",
+          "eleName": "S_B_ABNORMALTAXACT",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "cardmediatype",
+          "displayName": "介质类型",
+          "eleName": "S_E_CARDMEDIATYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "sqrzcczbs",
+          "displayName": "近60个月申请人资产处置笔数",
+          "eleName": "C_N_SQRZCCZBS",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bankorgcity",
+          "displayName": "银行机构归属城市",
+          "eleName": "S_S_BANKORGCITY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bankstaff",
+          "displayName": "是否本行员工",
+          "eleName": "S_B_BANKSTAFF",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "enterpriseexecution",
+          "displayName": "是否企业被执行",
+          "eleName": "S_B_ENTERPRISEEXECUTION",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "tratime",
+          "displayName": "转账时间",
+          "eleName": "C_D_TRATIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "overdue",
+          "displayName": "贷款是否逾期",
+          "eleName": "C_E_OVERDUE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "periods",
+          "displayName": "申请期数",
+          "eleName": "C_N_PERIODS",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "amount",
+          "displayName": "交易金额",
+          "eleName": "S_F_AMOUNT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "weeklytime",
+          "displayName": "每周限笔",
+          "eleName": "S_N_WEEKLYTIME",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applydate",
+          "displayName": "借款申请日期",
+          "eleName": "S_D_APPLYDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "eventoccurtime",
+          "displayName": "事件发生时间",
+          "eleName": "S_D_EVENTOCCURTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "disancengfeixunhuannew1",
+          "displayName": "对象字段_第三层_非循环_auto",
+          "eleName": "C_O_DISANCENGFEIXUNHUANNEW1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "feixunhuanzhutin1",
+          "displayName": "对象字段_7个类型_非循环_主体配置_二层嵌套_auto",
+          "eleName": "C_O_FEIXUNHUANZHUTIN1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "手机号前3位",
+          "eleName": "C_S_MOBINO3",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "手机号前7位",
+          "eleName": "C_S_MOBINO7",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "根据身份证计算年龄",
+          "eleName": "C_N_IDNOAGE",
+          "eleType": "scriptField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_整数型",
+          "eleName": "C_N_AUTOSCRIPTINT",
+          "eleType": "scriptField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_小数型",
+          "eleName": "C_F_AUTOSCRIPTFLOAT",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_日期型",
+          "eleName": "C_D_AUTOSCRIPTDATA",
+          "eleType": "scriptField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_字符型",
+          "eleName": "C_S_AUTOSCRIPTSTR",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_索引表_动态字段",
+          "eleName": "C_S_AUTOINDEX",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_类集_动态字段",
+          "eleName": "C_S_AUTOCLASS",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diwucengquanliang1",
+          "displayName": "对象字段_别改_第五层_循环_非循环_auto",
+          "eleName": "C_O_DIWUCENGQUANLIANG1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "finaldealtype",
+          "displayName": "处置方式",
+          "eleName": "S_S_FINALDEALTYPE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "uuid": "b590c00cd3bc44f58567bc598c29d91f",
+      "name": "auto_atreus_fger",
+      "displayName": "自动化测试_信贷决策_YmfY",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "单笔最低",
+          "eleName": "S_F_SINGLEMIN",
+          "eleType": "",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "lrb字符A",
+          "eleName": "C_S_LRBZIFUA",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    }
+  ],
+  "service_by_name": {
+    "bhjcjcfw": {
+      "id": 54,
+      "uuid": "508dbeac2e9747dbb6957fc2c1009ae1",
+      "name": "bhjcjcfw",
+      "displayName": "保后检查决策服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizScene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseInfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personInfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedCompanyInfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareaname",
+          "displayName": "区域名称",
+          "eleName": "C_S_JJAREANAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrqualLevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTypeTz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projStartDate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectClass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectNo",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectName",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "bhjcfw02": {
+      "id": 53,
+      "uuid": "a3afd0894ea148d284a38c2f4aa74b40",
+      "name": "bhjcfw02",
+      "displayName": "保后检查决策服务_副本02",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizScene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseInfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personInfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedCompanyInfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrqualLevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTypeTz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectClass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectName",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projStartDate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectNo",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "tc01_credit_min": {
+      "id": 44,
+      "uuid": "a65a180bc4e34faabc200c0ef64808df",
+      "name": "tc01_credit_min",
+      "displayName": "TC01_信贷决策最小服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runType",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productCode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNo",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityRatio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "tc02_credit_ext": {
+      "id": 45,
+      "uuid": "4c3a8bbb1e0b4a3687da0624c4a87ead",
+      "name": "tc02_credit_ext",
+      "displayName": "TC02_信贷决策扩展服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "requestBizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "subjectNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "1",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "POST_LOAN",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNo",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "guaranteeBalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "chglegalrepcnt",
+          "displayName": "企业近3个月法定代表人变更记录数量企查查",
+          "eleName": "C_N_CHGLEGALREPCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "chgEquityCnt",
+          "displayName": "企业近3个月存在股权变更记录企查查",
+          "eleName": "C_N_CHGEQUITYCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "chgscopecnt",
+          "displayName": "企业近3个月经营范围变更记录数量企查查",
+          "eleName": "C_N_CHGSCOPECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "revokecnt",
+          "displayName": "企业近3个月注销吊销信息数量企查查",
+          "eleName": "C_N_REVOKECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "paidCapRatio",
+          "displayName": "企业实缴资本占注册资本比例企查查",
+          "eleName": "C_F_PAIDCAPRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "guaranteebalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "tc03_trans_min": {
+      "id": 46,
+      "uuid": "6b1408b41245421c867ed3c9a41e4325",
+      "name": "tc03_trans_min",
+      "displayName": "TC03_交易决策最小服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "apiModel",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "serialnum",
+          "displayName": "业务方流水号",
+          "eleName": "S_S_SERIALNUM",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "tc04_trans_ext": {
+      "id": 47,
+      "uuid": "cd54c7d9c94f4cec9b55919d38e39313",
+      "name": "tc04_trans_ext",
+      "displayName": "TC04_交易决策扩展服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "transBizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "transTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policyCode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "bizabnormalflag",
+          "displayName": "企业当前经营异常且未移出记录数量企查查",
+          "eleName": "C_N_BIZABNORMALFLAG",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "dishonestCnt",
+          "displayName": "企业近3个月失信记录数量企查查",
+          "eleName": "C_N_DISHONESTCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "executedcnt",
+          "displayName": "企业近3个月被执行记录数量企查查",
+          "eleName": "C_N_EXECUTEDCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "highConsumeCnt",
+          "displayName": "企业近3个月限制高消费记录数量企查查",
+          "eleName": "C_N_HIGHCONSUMECNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "envpenaltycnt",
+          "displayName": "企业近3个月环保处罚记录数量企查查",
+          "eleName": "C_N_ENVPENALTYCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    "tc05_credit_incomplete": {
+      "id": 48,
+      "uuid": "a0a4c0fb5eb24096ab93ef35f276c51b",
+      "name": "tc05_credit_incomplete",
+      "displayName": "TC05_信贷决策缺省默认字段服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appCode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizTime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "tc06_trans_incomplete": {
+      "id": 49,
+      "uuid": "0bd2ca70eac446e796d04ed4c77980d6",
+      "name": "tc06_trans_incomplete",
+      "displayName": "TC06_交易决策缺省默认字段服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "apimodel",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizId",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "judicialauctioncnt",
+          "displayName": "企业近3个月司法拍卖记录数量企查查",
+          "eleName": "C_N_JUDICIALAUCTIONCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "preservCnt",
+          "displayName": "企业近3个月被保全记录数量企查查",
+          "eleName": "C_N_PRESERVCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    "tc08_trans_mixed_order": {
+      "id": 51,
+      "uuid": "69c89fccadc24bada0abe9ebccdd1715",
+      "name": "tc08_trans_mixed_order",
+      "displayName": "TC08_交易决策乱序混合字段服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgCodeOverride",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custNo",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custType",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dishonestCnt",
+          "displayName": "企业近3个月失信记录数量企查查",
+          "eleName": "C_N_DISHONESTCNT",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "judicialauctioncnt",
+          "displayName": "企业近3个月司法拍卖记录数量企查查",
+          "eleName": "C_N_JUDICIALAUCTIONCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        },
+        {
+          "serviceParam": "preservCnt",
+          "displayName": "企业近3个月被保全记录数量企查查",
+          "eleName": "C_N_PRESERVCNT",
+          "eleType": "systemField",
+          "dataType": 2
+        }
+      ]
+    },
+    "tc07_credit_mixed_order": {
+      "id": 50,
+      "uuid": "71bb7954d56d45d1a4cbb17cd9ecd5aa",
+      "name": "tc07_credit_mixed_order",
+      "displayName": "TC07_信贷决策乱序混合字段服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizIdOverride",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "POST_LOAN",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custTypeOverride",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idNoOverride",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "guaranteeBalance",
+          "displayName": "在保余额_实时单户集中度",
+          "eleName": "C_F_GUARANTEEBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityBalance",
+          "displayName": "责任余额_实时单户集中度",
+          "eleName": "C_F_LIABILITYBALANCE",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "tc09_trans_value_semantics": {
+      "id": 52,
+      "uuid": "9318d15d8e234c6fb5d5dec623071f7e",
+      "name": "tc09_trans_value_semantics",
+      "displayName": "TC09_交易决策平台赋值语义服务",
+      "interfaceType": "transEngine",
+      "interfaceTypeName": "交易决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "10",
+          "displayName": "调用类型",
+          "eleName": "S_E_APIMODEL",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "kratos",
+          "displayName": "合作方",
+          "eleName": "S_S_PARTNERCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "dynamictable",
+          "displayName": "动态表名",
+          "eleName": "S_S_DYNAMICTABLENAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "123",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "serialnum",
+          "displayName": "业务方流水号",
+          "eleName": "S_S_SERIALNUM",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "jzdssmxfw": {
+      "id": 6,
+      "uuid": "5a30dfbbd0924841a3868a5ecd6ac31b",
+      "name": "jzdssmxfw",
+      "displayName": "集中度实时模型服务",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "tokenid",
+          "displayName": "风控唯一标识",
+          "eleName": "S_S_TOKENID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custuscode",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areaprovince",
+          "displayName": "客户区域_省",
+          "eleName": "C_S_AREAPROVINCE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areacity",
+          "displayName": "客户区域_市",
+          "eleName": "C_S_AREACITY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areadistrict",
+          "displayName": "客户区域_区",
+          "eleName": "C_S_AREADISTRICT",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areaprovincecode",
+          "displayName": "客户区域_省代码",
+          "eleName": "C_S_AREAPROVINCECODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areacitycode",
+          "displayName": "客户区域_市代码",
+          "eleName": "C_S_AREACITYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "areadistrictcode",
+          "displayName": "客户区域_区代码",
+          "eleName": "C_S_AREADISTRICTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "singleconcresult",
+          "displayName": "单户集中度判断结果",
+          "eleName": "C_S_SINGLECONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "relatedconcresult",
+          "displayName": "关联户集中度判断结果",
+          "eleName": "C_S_RELATEDCONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "areaconcresult",
+          "displayName": "区域集中度判断结果",
+          "eleName": "C_S_AREACONCRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "preconcoverallresult",
+          "displayName": "保前集中度综合判断结果",
+          "eleName": "C_S_PRECONCOVERALLRESULT",
+          "eleType": "systemField",
+          "dataType": 1
+        },
+        {
+          "serviceParam": "presinglemergedliability",
+          "displayName": "单户合并责任余额",
+          "eleName": "C_F_PRESINGLEMERGEDLIABILITY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "prerelatedmergedliability",
+          "displayName": "关联户合并责任余额",
+          "eleName": "C_F_PRERELATEDMERGEDLIABILITY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "preareamergedusedquota",
+          "displayName": "区域合并已用额度",
+          "eleName": "C_F_PREAREAMERGEDUSEDQUOTA",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "areaagglevel",
+          "displayName": "区域聚合层级",
+          "eleName": "C_S_AREAAGGLEVEL",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "test01": {
+      "id": 10,
+      "uuid": "54c5422fb0954435aba2ff7f233e3da3",
+      "name": "test01",
+      "displayName": "保后检查决策服务_副本",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 1,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "bizscene",
+          "displayName": "业务场景",
+          "eleName": "C_S_BIZSCENARIO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "enterpriseinfo",
+          "displayName": "企业信息",
+          "eleName": "C_O_ENTERPRISEINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "personinfo",
+          "displayName": "人员信息",
+          "eleName": "C_O_PERSONINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "relatedcompanyinfo",
+          "displayName": "关联企业信息",
+          "eleName": "C_O_RELATEDCOMPANYINFO",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareaname",
+          "displayName": "区域名称",
+          "eleName": "C_S_JJAREANAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "jjareacode",
+          "displayName": "区域代码",
+          "eleName": "C_S_JJAREACODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchquardate",
+          "displayName": "查询季度日期",
+          "eleName": "C_S_SEARCHQUARDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "searchmonthdate",
+          "displayName": "查询月度日期",
+          "eleName": "C_S_SEARCHMONTHDATE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dbzrquallevel",
+          "displayName": "担保准入时工程资质基线等级",
+          "eleName": "C_S_DBZRQUALLEVEL",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztypetz",
+          "displayName": "业务类型",
+          "eleName": "S_S_SVTYP",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectclass",
+          "displayName": "项目分类",
+          "eleName": "C_S_PROJECTCATEGORY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectname",
+          "displayName": "项目名称",
+          "eleName": "C_S_PROJECTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projstartdate",
+          "displayName": "项目起始日期",
+          "eleName": "C_D_PROJSTARTDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "projectno",
+          "displayName": "项目编号",
+          "eleName": "C_S_PROJECTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "fiscalselfsufficiencyrate",
+          "displayName": "地方政府财政自给率预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYRATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "liabilityratio",
+          "displayName": "地方政府负债率预警通",
+          "eleName": "C_F_LIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broadliabilityratio",
+          "displayName": "地方政府宽口径负债率预警通",
+          "eleName": "C_F_BROADLIABILITYRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtratio",
+          "displayName": "地方政府债务率预警通",
+          "eleName": "C_F_DEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "broaddebtratio",
+          "displayName": "地方政府宽口径债务率预警通",
+          "eleName": "C_F_BROADDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "debtlimitusagerate",
+          "displayName": "地方政府债务限额使用率预警通",
+          "eleName": "C_F_DEBTLIMITUSAGERATE",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "lgfvdebtratio",
+          "displayName": "地方政府城投债务占比预警通",
+          "eleName": "C_F_LGFVDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "comprehensivedebtratio",
+          "displayName": "地方政府综合债务率预警通",
+          "eleName": "C_F_COMPREHENSIVEDEBTRATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "taxrevenueratio",
+          "displayName": "地方政府税收占比预警通",
+          "eleName": "C_F_TAXREVENUERATIO",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsaledependency",
+          "displayName": "地方政府土地出让收入依赖度预警通",
+          "eleName": "C_F_LANDSALEDEPENDENCY",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "landsalerevenuemom",
+          "displayName": "地方政府土地出让收入环比预警通",
+          "eleName": "C_F_LANDSALEREVENUEMOM",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencycurrentmonth",
+          "displayName": "地方政府财政自给率本月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYCURRENTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        },
+        {
+          "serviceParam": "fiscalselfsufficiencylastmonth",
+          "displayName": "地方政府财政自给率上月预警通",
+          "eleName": "C_F_FISCALSELFSUFFICIENCYLASTMONTH",
+          "eleType": "systemField",
+          "dataType": 3
+        }
+      ]
+    },
+    "credit_auto_test": {
+      "id": 1,
+      "uuid": "49d1aa80f83443e9baa4317b944ae996",
+      "name": "credit_auto_test",
+      "displayName": "信贷决策_自动化测试用",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mobino",
+          "displayName": "手机号",
+          "eleName": "S_S_MOBINO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certaddr",
+          "displayName": "证件地址",
+          "eleName": "S_S_CERTADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "age",
+          "displayName": "年龄",
+          "eleName": "S_N_AGE",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "sex",
+          "displayName": "性别",
+          "eleName": "S_E_SEX",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "marriage",
+          "displayName": "婚姻状况",
+          "eleName": "S_S_MARRIAGE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diploma",
+          "displayName": "学历",
+          "eleName": "S_S_DIPLOMA",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "flowtype",
+          "displayName": "流程类型",
+          "eleName": "C_S_FLOWTYPE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "homeaddress",
+          "displayName": "居住地址",
+          "eleName": "S_S_HOMEADDRESS",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "monthlytime",
+          "displayName": "每月限笔",
+          "eleName": "S_N_MONTHLYTIME",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "weeklyamt",
+          "displayName": "每周限额",
+          "eleName": "S_F_WEEKLYAMT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "companyaddress",
+          "displayName": "单位地址",
+          "eleName": "S_S_COMPANYADDRESS",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "cardno",
+          "displayName": "银行卡号",
+          "eleName": "S_S_CARDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "receaddr",
+          "displayName": "收货地址",
+          "eleName": "S_S_RECEADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "contaddr",
+          "displayName": "联系地址",
+          "eleName": "S_S_CONTADDR",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "doublemultiaddress",
+          "displayName": "复杂对象_二层嵌套_N个地址",
+          "eleName": "C_O_DOUBLEMULTIADDRESS",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "multiaddress",
+          "displayName": "复杂对象_N个地址",
+          "eleName": "C_O_MULTIADDRESS",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "subflowrin01",
+          "displayName": "子策略入参01",
+          "eleName": "C_O_SUBFLOWRIN01",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "subflowrin02",
+          "displayName": "子策略入参02",
+          "eleName": "C_O_SUBFLOWRIN02",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "finaldealtype",
+          "displayName": "处置方式",
+          "eleName": "S_S_FINALDEALTYPE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "credit_auto_test_2601": {
+      "id": 4,
+      "uuid": "39d7de4c30f843b9abadae025a5e70fc",
+      "name": "credit_auto_test_2601",
+      "displayName": "信贷决策_自动化测试用_auto",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "randomnum",
+          "displayName": "随机进件码",
+          "eleName": "C_F_RANDOMNUM",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "idno",
+          "displayName": "身份证号码",
+          "eleName": "S_S_IDNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "single_conc_result",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "credit_auto_test_advanced_new": {
+      "id": 3,
+      "uuid": "cd606023ba11438baa9ee6d4aaa10efc",
+      "name": "credit_auto_test_advanced_new",
+      "displayName": "信贷决策_自动化测试用_验证高级规则调用new",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "bizid",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custno",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "policycode",
+          "displayName": "策略编码",
+          "eleName": "S_S_POLICYCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "appcode",
+          "displayName": "渠道标识",
+          "eleName": "S_S_APPCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "runtype",
+          "displayName": "运行模式",
+          "eleName": "S_E_RUNTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "productcode",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "custtype",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "mername",
+          "displayName": "商户名称",
+          "eleName": "S_S_MERNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "pensionreceive",
+          "displayName": "是否领取养老金",
+          "eleName": "S_B_PENSIONRECEIVE",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applicationdate",
+          "displayName": "申请日期",
+          "eleName": "C_D_APPLICATIONDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "debugmodel",
+          "displayName": "是否debug模式",
+          "eleName": "S_N_DEBUGMODEL",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "customersize",
+          "displayName": "客户规模",
+          "eleName": "S_E_CUSTOMERSIZE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "isagent",
+          "displayName": "是否代理人办理",
+          "eleName": "S_E_ISAGENT",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "isipabroad",
+          "displayName": "是否国外IP",
+          "eleName": "S_E_ISIPABROAD",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "biztime",
+          "displayName": "业务发生时间",
+          "eleName": "S_D_BIZTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "loanbalance",
+          "displayName": "贷款余额",
+          "eleName": "S_F_LOANBALANCE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diyierceng1",
+          "displayName": "对象字段_第一二层_非循环_auto",
+          "eleName": "C_O_DIYIERCENG1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "certid",
+          "displayName": "客户证件号码",
+          "eleName": "S_S_CERTID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applyloanterm",
+          "displayName": "借款期限",
+          "eleName": "S_N_APPLYLOANTERM",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mpsubid",
+          "displayName": "微信子商户号",
+          "eleName": "S_S_MPSUBID",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "dqyqje",
+          "displayName": "当前逾期金额",
+          "eleName": "C_F_DQYQJE",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "mobino",
+          "displayName": "手机号",
+          "eleName": "S_S_MOBINO",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "yctradetype",
+          "displayName": "交易商户类型",
+          "eleName": "C_E_YCTRADETYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applyloanamount",
+          "displayName": "借款申请金额",
+          "eleName": "S_F_APPLYLOANAMOUNT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "custname",
+          "displayName": "客户名称",
+          "eleName": "S_S_CUSTNAME",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "brchclosetime",
+          "displayName": "机构关机时间",
+          "eleName": "S_D_BRCHCLOSETIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "abnormaltaxact",
+          "displayName": "是否纳税非正常户",
+          "eleName": "S_B_ABNORMALTAXACT",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "cardmediatype",
+          "displayName": "介质类型",
+          "eleName": "S_E_CARDMEDIATYPE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "sqrzcczbs",
+          "displayName": "近60个月申请人资产处置笔数",
+          "eleName": "C_N_SQRZCCZBS",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bankorgcity",
+          "displayName": "银行机构归属城市",
+          "eleName": "S_S_BANKORGCITY",
+          "eleType": "systemField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "bankstaff",
+          "displayName": "是否本行员工",
+          "eleName": "S_B_BANKSTAFF",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "enterpriseexecution",
+          "displayName": "是否企业被执行",
+          "eleName": "S_B_ENTERPRISEEXECUTION",
+          "eleType": "systemField",
+          "dataType": 6,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "tratime",
+          "displayName": "转账时间",
+          "eleName": "C_D_TRATIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "overdue",
+          "displayName": "贷款是否逾期",
+          "eleName": "C_E_OVERDUE",
+          "eleType": "systemField",
+          "dataType": 5,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "periods",
+          "displayName": "申请期数",
+          "eleName": "C_N_PERIODS",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "amount",
+          "displayName": "交易金额",
+          "eleName": "S_F_AMOUNT",
+          "eleType": "systemField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "weeklytime",
+          "displayName": "每周限笔",
+          "eleName": "S_N_WEEKLYTIME",
+          "eleType": "systemField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "applydate",
+          "displayName": "借款申请日期",
+          "eleName": "S_D_APPLYDATE",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "eventoccurtime",
+          "displayName": "事件发生时间",
+          "eleName": "S_D_EVENTOCCURTIME",
+          "eleType": "systemField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "disancengfeixunhuannew1",
+          "displayName": "对象字段_第三层_非循环_auto",
+          "eleName": "C_O_DISANCENGFEIXUNHUANNEW1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "feixunhuanzhutin1",
+          "displayName": "对象字段_7个类型_非循环_主体配置_二层嵌套_auto",
+          "eleName": "C_O_FEIXUNHUANZHUTIN1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "手机号前3位",
+          "eleName": "C_S_MOBINO3",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "手机号前7位",
+          "eleName": "C_S_MOBINO7",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "根据身份证计算年龄",
+          "eleName": "C_N_IDNOAGE",
+          "eleType": "scriptField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_整数型",
+          "eleName": "C_N_AUTOSCRIPTINT",
+          "eleType": "scriptField",
+          "dataType": 2,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_小数型",
+          "eleName": "C_F_AUTOSCRIPTFLOAT",
+          "eleType": "scriptField",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_日期型",
+          "eleName": "C_D_AUTOSCRIPTDATA",
+          "eleType": "scriptField",
+          "dataType": 4,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_动态字段_字符型",
+          "eleName": "C_S_AUTOSCRIPTSTR",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_索引表_动态字段",
+          "eleName": "C_S_AUTOINDEX",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "自动化_类集_动态字段",
+          "eleName": "C_S_AUTOCLASS",
+          "eleType": "scriptField",
+          "dataType": 1,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "diwucengquanliang1",
+          "displayName": "对象字段_别改_第五层_循环_非循环_auto",
+          "eleName": "C_O_DIWUCENGQUANLIANG1",
+          "eleType": "systemField",
+          "dataType": 9,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "finaldealtype",
+          "displayName": "处置方式",
+          "eleName": "S_S_FINALDEALTYPE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    },
+    "auto_atreus_fger": {
+      "id": 2,
+      "uuid": "b590c00cd3bc44f58567bc598c29d91f",
+      "name": "auto_atreus_fger",
+      "displayName": "自动化测试_信贷决策_YmfY",
+      "interfaceType": "creditEngine",
+      "interfaceTypeName": "信贷决策",
+      "categoryValue": "REALTIME",
+      "categoryLabel": "实时服务",
+      "status": 0,
+      "partition": false,
+      "inputParams": [
+        {
+          "serviceParam": "",
+          "displayName": "业务流水号",
+          "eleName": "S_S_BIZID",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "客户编号",
+          "eleName": "S_S_CUSTNO",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "产品编码",
+          "eleName": "S_S_PRODUCTCODE",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "客户类型",
+          "eleName": "S_E_CUSTTYPE",
+          "eleType": "",
+          "dataType": 5,
+          "mustInput": true
+        },
+        {
+          "serviceParam": "",
+          "displayName": "单笔最低",
+          "eleName": "S_F_SINGLEMIN",
+          "eleType": "",
+          "dataType": 3,
+          "mustInput": false
+        },
+        {
+          "serviceParam": "",
+          "displayName": "lrb字符A",
+          "eleName": "C_S_LRBZIFUA",
+          "eleType": "",
+          "dataType": 1,
+          "mustInput": false
+        }
+      ],
+      "outputParams": [
+        {
+          "serviceParam": "orgcode",
+          "displayName": "机构编号",
+          "eleName": "S_S_ORGCODE",
+          "eleType": "systemField",
+          "dataType": 1
+        }
+      ]
+    }
+  },
+  "service_by_type": {
+    "creditEngine": [
+      "保后检查决策服务",
+      "保后检查决策服务_副本02",
+      "TC01_信贷决策最小服务",
+      "TC02_信贷决策扩展服务",
+      "TC05_信贷决策缺省默认字段服务",
+      "TC07_信贷决策乱序混合字段服务",
+      "集中度实时模型服务",
+      "保后检查决策服务_副本",
+      "信贷决策_自动化测试用",
+      "信贷决策_自动化测试用_auto",
+      "信贷决策_自动化测试用_验证高级规则调用new",
+      "自动化测试_信贷决策_YmfY"
+    ],
+    "transEngine": [
+      "TC03_交易决策最小服务",
+      "TC04_交易决策扩展服务",
+      "TC06_交易决策缺省默认字段服务",
+      "TC08_交易决策乱序混合字段服务",
+      "TC09_交易决策平台赋值语义服务"
+    ]
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": {
+    "maxParallelNodes": 5,
+    "maxParallelBranchs": 5,
+    "decisionFlowNodeConfig": {
+      "compare": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "子策略",
+          "type": "ChildFlowNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "布尔表达式",
+          "type": "PolicyPluginServiceNode"
+        },
+        {
+          "name": "AI大模型",
+          "type": "AiNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "冠军挑战者",
+          "type": "ChampionServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "继续补充",
+          "type": "SuspendFlowNode"
+        },
+        {
+          "name": "动作",
+          "type": "ActionServiceNode"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "1": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "子策略",
+          "type": "ChildFlowNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "布尔表达式",
+          "type": "PolicyPluginServiceNode"
+        },
+        {
+          "name": "AI大模型",
+          "type": "AiNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "冠军挑战者",
+          "type": "ChampionServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "继续补充",
+          "type": "SuspendFlowNode"
+        },
+        {
+          "name": "动作",
+          "type": "ActionServiceNode"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "2": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "default": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "布尔表达式",
+          "type": "PolicyPluginServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "冠军挑战者",
+          "type": "ChampionServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "继续补充",
+          "type": "SuspendFlowNode"
+        },
+        {
+          "name": "动作",
+          "type": "ActionServiceNode"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "3": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "冠军挑战者",
+          "type": "ChampionServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "1-childrenFlow": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "冠军挑战者",
+          "type": "ChampionServiceNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "4": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "子策略",
+          "type": "ChildFlowNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "5": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "4-childrenFlow": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "6": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "7": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "规则集",
+          "type": "RuleSetServiceNode"
+        },
+        {
+          "name": "函数",
+          "type": "FunctionServiceNode"
+        },
+        {
+          "name": "决策工具",
+          "type": "DecisionToolServiceNode"
+        },
+        {
+          "name": "评分卡",
+          "type": "ScoreCardServiceNode"
+        },
+        {
+          "name": "模型",
+          "type": "ModelServiceNode"
+        },
+        {
+          "name": "三方服务",
+          "type": "FeatureServiceNode"
+        },
+        {
+          "name": "并行",
+          "type": "ParallelGateway"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "9": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "评级结果认定",
+          "type": "RateResultFlowNode"
+        },
+        {
+          "name": "尽调管理",
+          "type": "OutoftuneFlowNode"
+        },
+        {
+          "name": "管控措施",
+          "type": "ControlsFlowNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ],
+      "10": [
+        {
+          "name": "开始",
+          "type": "StartFlowNode"
+        },
+        {
+          "name": "管控措施",
+          "type": "ControlsFlowNode"
+        },
+        {
+          "name": "判断",
+          "type": "ExclusiveGateway"
+        },
+        {
+          "name": "结束",
+          "type": "EndFlowNode"
+        }
+      ]
+    },
+    "decisionFlowNodeTypes": {
+      "SubDecisionFlowNode": "流程模板节点",
+      "SuspendFlowNode": "继续补充节点",
+      "ChildFlowNode": "子策略节点",
+      "ActionServiceNode": "动作节点",
+      "ChampionServiceNode": "冠军挑战者节点",
+      "ScoreCardServiceNode": "评分卡节点",
+      "DecisionToolServiceNode": "决策工具节点",
+      "ExclusiveGateway": "判断节点",
+      "ModelServiceNode": "模型服务节点",
+      "PolicyPluginServiceNode": "策略插件节点",
+      "StartFlowNode": "开始节点",
+      "ParallelGateway": "并行节点",
+      "EndFlowNode": "结束节点",
+      "FunctionServiceNode": "函数节点",
+      "RuleSetServiceNode": "规则集节点",
+      "ThirdServiceNode": "三方服务节点",
+      "AiNode": "AI大模型节点",
+      "FeatureServiceNode": "三方服务节点"
+    },
+    "maxNodes": 300,
+    "maxConditionBranchs": 10
+  }
+}

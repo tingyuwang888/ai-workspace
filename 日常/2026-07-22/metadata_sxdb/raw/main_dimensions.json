@@ -1,0 +1,37 @@
+{
+  "data": {
+    "contents": [
+      {
+        "id": 3,
+        "uuid": "a492334cbd814a95a3958a651f77f999",
+        "name": "S_S_CUSTNO",
+        "displayName": "客户编号",
+        "dataType": 1,
+        "range": "INDEX",
+        "gmtModify": 1778127246000,
+        "operator": "yaosh"
+      },
+      {
+        "id": 2,
+        "uuid": "c250e17f79654420a4a3116880bb6a2d",
+        "name": "S_S_CUSTNAME",
+        "displayName": "客户名称",
+        "dataType": 1,
+        "range": "INDEX",
+        "gmtModify": 1778126958000,
+        "operator": "yaosh"
+      },
+      {
+        "id": 1,
+        "uuid": "dccdcd64d1de4fba8f0bcd9dc68ab2c8",
+        "name": "S_S_USERNO",
+        "displayName": "用户编号",
+        "dataType": 1,
+        "range": "INDEX",
+        "gmtModify": 1777017833000,
+        "operator": "yaosh"
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,1213 @@
+{
+  "data": {
+    "contents": [
+      {
+        "id": 174,
+        "uuid": "c49fa4cd3c1d47e38c7161c8fb8b15f5",
+        "ruleSetName": "四则运算全量回归测试",
+        "ruleSetCode": "fourCalculationRegression",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "appCode": "init",
+        "appName": "初始应用",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "import_wait_commit",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "init"
+        ],
+        "appNames": [
+          "初始应用"
+        ],
+        "gmtCreate": "2026-07-21 14:22:17",
+        "gmtModify": "2026-07-21 14:22:19",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "0": 14,
+          "1": 13,
+          "2": 13
+        },
+        "ruleSetInfo": "766c6c5db0e642cc9e3dc4f92cc511fe"
+      },
+      {
+        "id": 169,
+        "uuid": "2aba1d965091408c856f82c62555dd3f",
+        "ruleSetName": "12",
+        "ruleSetCode": "12",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "appCode": "init",
+        "appName": "初始应用",
+        "riskType": "AccountEmbezzle",
+        "riskTypeName": "账户盗用",
+        "exeMode": "Weighted",
+        "riskThresholds": [
+          {
+            "score": "12",
+            "dealType": "HighValue",
+            "isCreateCase": false
+          },
+          {
+            "score": "16",
+            "dealType": "MediumToHighValue",
+            "isCreateCase": false
+          },
+          {
+            "score": "99",
+            "dealType": "redwarnbh",
+            "isCreateCase": false
+          }
+        ],
+        "status": "wait_commit",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "init"
+        ],
+        "appNames": [
+          "初始应用"
+        ],
+        "gmtCreate": "2026-07-08 16:28:19",
+        "gmtModify": "2026-07-08 16:28:19",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {}
+      },
+      {
+        "id": 168,
+        "uuid": "151859d544514cef8f245b75eaeb42a4",
+        "ruleSetName": "11",
+        "ruleSetCode": "11",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "appCode": "init",
+        "appName": "初始应用",
+        "riskType": "AccountEmbezzle",
+        "riskTypeName": "账户盗用",
+        "exeMode": "WorstMatch",
+        "status": "wait_commit",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "init"
+        ],
+        "appNames": [
+          "初始应用"
+        ],
+        "gmtCreate": "2026-07-08 14:45:30",
+        "gmtModify": "2026-07-21 11:30:54",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "0": 2,
+          "1": 1,
+          "2": 1
+        },
+        "ruleSetInfo": "63c28ef8f86b92bec2582eb2eb886b36"
+      },
+      {
+        "id": 160,
+        "uuid": "19e86c1abf5f4f43aa23a754c50fe9cf",
+        "ruleSetName": "五级分类自动评级规则集",
+        "ruleSetCode": "five_level_classification",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "wjflqd",
+        "appName": "五级分类",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "wjflqd"
+        ],
+        "appNames": [
+          "五级分类"
+        ],
+        "gmtCreate": "2026-06-05 18:59:21",
+        "gmtModify": "2026-06-05 19:30:50",
+        "createBy": "zjh",
+        "updateBy": "zjh",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "4ece668a17ee3a2ea39c6e26e6285908"
+      },
+      {
+        "id": 159,
+        "uuid": "8580e9fdd0bf48178eab742022997fac",
+        "ruleSetName": "企业基本信息融资类国企",
+        "ruleSetCode": "bhjcEntBasicFinancingSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntBasicInfo",
+        "riskTypeName": "企业基本信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 8,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:28:14",
+        "gmtModify": "2026-06-29 16:43:02",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 11
+        },
+        "ruleSetInfo": "e3635c52f1d87f3b0ae76b99a16a130b"
+      },
+      {
+        "id": 158,
+        "uuid": "9d3fd87369d54db2907052e98affee1b",
+        "ruleSetName": "企业基本信息融资类民营",
+        "ruleSetCode": "bhjcEntBasicFinancingPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntBasicInfo",
+        "riskTypeName": "企业基本信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 7,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:28:12",
+        "gmtModify": "2026-06-29 16:44:18",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 11
+        },
+        "ruleSetInfo": "3f9ab7aa18f486f6160bb1b3f9fc19f7"
+      },
+      {
+        "id": 157,
+        "uuid": "3decd6934b074ca797a39f09ec71b637",
+        "ruleSetName": "关联企业风险融资类国企",
+        "ruleSetCode": "bhjcRelatedRiskFinancingSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "RelatedEntRisk",
+        "riskTypeName": "关联企业风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:23",
+        "gmtModify": "2026-06-11 22:44:33",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "0e049aa2d7c86c005690a6d0fe156aa1"
+      },
+      {
+        "id": 156,
+        "uuid": "cf9bf2f2511140ba8fa400b6c5c8c088",
+        "ruleSetName": "关联企业风险融资类民营",
+        "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "RelatedEntRisk",
+        "riskTypeName": "关联企业风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:22",
+        "gmtModify": "2026-07-01 09:54:38",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 7
+        },
+        "ruleSetInfo": "3fb617f7005cfefc3101dc25cf6d88c4"
+      },
+      {
+        "id": 155,
+        "uuid": "738bb48e3d3b41eeb1e167db871efd3c",
+        "ruleSetName": "关联企业借款人法人反担保民营",
+        "ruleSetCode": "bhjcPrivateCounterGuarantee",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "RelatedEntRisk",
+        "riskTypeName": "关联企业风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:21",
+        "gmtModify": "2026-06-04 01:30:08",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "a65c35c02fba2a74dda4df1341dca39b"
+      },
+      {
+        "id": 154,
+        "uuid": "1330a087a5a0410e9e58c58c22af78b3",
+        "ruleSetName": "个人负面信息通用",
+        "ruleSetCode": "bhjcPerNegativeAll",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "PerNegative",
+        "riskTypeName": "个人负面信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:20",
+        "gmtModify": "2026-06-04 01:30:09",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "8ad23815d26ba981bd880ed2eaddb26e"
+      },
+      {
+        "id": 153,
+        "uuid": "bbe3797976a64337888a66da3d24344e",
+        "ruleSetName": "个人司法涉诉借款委贷民营",
+        "ruleSetCode": "bhjcPerLawsuitLoanEntrustPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "PerLawsuit",
+        "riskTypeName": "个人司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:19",
+        "gmtModify": "2026-06-12 09:59:38",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 3
+        },
+        "ruleSetInfo": "31d1b87a4ac07eafab6c59e27eb31f5c"
+      },
+      {
+        "id": 152,
+        "uuid": "7a70796f34334d6c8f5e1999d3c8e70e",
+        "ruleSetName": "个人司法涉诉债券非融投资通用",
+        "ruleSetCode": "bhjcPerLawsuitBni",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "PerLawsuit",
+        "riskTypeName": "个人司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "all"
+        ],
+        "orgNames": [
+          "全局"
+        ],
+        "appCodes": [
+          "all"
+        ],
+        "appNames": [
+          "全局"
+        ],
+        "gmtCreate": "2026-06-04 01:17:18",
+        "gmtModify": "2026-06-04 01:30:08",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 4
+        },
+        "ruleSetInfo": "a711d423864d3b1df16ef2005c830087"
+      },
+      {
+        "id": 151,
+        "uuid": "a23ec77ad7eb439cbfd2cbc8fed16024",
+        "ruleSetName": "企业负面信息借款通用",
+        "ruleSetCode": "bhjcEntNegativeLoan",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntNegative",
+        "riskTypeName": "企业负面信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:16",
+        "gmtModify": "2026-06-04 01:30:10",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 11
+        },
+        "ruleSetInfo": "74f298f95e98cd733d72fdfb2318ce1c"
+      },
+      {
+        "id": 150,
+        "uuid": "586cc45fa0cb44568c1cf33bc7c7168e",
+        "ruleSetName": "企业负面信息债券委贷非融投资通用",
+        "ruleSetCode": "bhjcEntNegativeBelni",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntNegative",
+        "riskTypeName": "企业负面信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:15",
+        "gmtModify": "2026-06-16 22:40:48",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 13
+        },
+        "ruleSetInfo": "6c44bcdf878eb0a515d417ba10870adb"
+      },
+      {
+        "id": 149,
+        "uuid": "5f2b4c74579e41d4b1ca33a9936257ed",
+        "ruleSetName": "企业司法涉诉非融国企",
+        "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:13",
+        "gmtModify": "2026-06-23 10:01:13",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 10
+        },
+        "ruleSetInfo": "68445f58a7937a79111363ad7c05fab3"
+      },
+      {
+        "id": 148,
+        "uuid": "320aa5ff911649889b5221e825661734",
+        "ruleSetName": "企业司法涉诉非融民营",
+        "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:12",
+        "gmtModify": "2026-06-23 10:01:49",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 10
+        },
+        "ruleSetInfo": "3dd1fb1cecd61ad79cead593f35725b3"
+      },
+      {
+        "id": 147,
+        "uuid": "d4ecd43a508b43ea9fe6c22f36ff5738",
+        "ruleSetName": "企业司法涉诉借款国企",
+        "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 4,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:10",
+        "gmtModify": "2026-06-16 22:48:52",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 9
+        },
+        "ruleSetInfo": "08c5127191c4bc7856bf264a78c13912"
+      },
+      {
+        "id": 146,
+        "uuid": "0b01a0e22a9b48fcab83cdb91725fe6b",
+        "ruleSetName": "企业司法涉诉借款民营",
+        "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 4,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:09",
+        "gmtModify": "2026-06-16 22:49:09",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 9
+        },
+        "ruleSetInfo": "f2350edfb921ab230200ad1f411d5c9f"
+      },
+      {
+        "id": 145,
+        "uuid": "479affff2c054157b9e247491ec4e7cb",
+        "ruleSetName": "企业司法涉诉债券委贷投资国企",
+        "ruleSetCode": "bhjcEntLawsuitBelSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:07",
+        "gmtModify": "2026-06-23 10:02:37",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 10
+        },
+        "ruleSetInfo": "fd52169b7d11f093f825f345e006d6ea"
+      },
+      {
+        "id": 144,
+        "uuid": "06c77195b3eb44bca8b107803bee3548",
+        "ruleSetName": "企业司法涉诉债券委贷投资民营",
+        "ruleSetCode": "bhjcEntLawsuitBelPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntLawsuit",
+        "riskTypeName": "企业司法涉诉",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:06",
+        "gmtModify": "2026-06-23 10:03:45",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 10
+        },
+        "ruleSetInfo": "4ba32a2e266fdcb4c184e2d57133084a"
+      },
+      {
+        "id": 143,
+        "uuid": "7210287fa6a54142b1227eace8ffa50c",
+        "ruleSetName": "企业信用状况通用",
+        "ruleSetCode": "bhjcEntCreditAll",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntCredit",
+        "riskTypeName": "企业信用状况",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:05",
+        "gmtModify": "2026-06-27 17:02:04",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 7
+        },
+        "ruleSetInfo": "c50d30c2f5ac90ac6dc480db1d11164a"
+      },
+      {
+        "id": 142,
+        "uuid": "6a6fe27278a349a895116f1a08df2b3c",
+        "ruleSetName": "企业基本信息非融类国企",
+        "ruleSetCode": "bhjcEntBasicNonfinancingSoe",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntBasicInfo",
+        "riskTypeName": "企业基本信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:03",
+        "gmtModify": "2026-06-04 01:30:06",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 4
+        },
+        "ruleSetInfo": "10353d45694ad11d762932fab47045c5"
+      },
+      {
+        "id": 141,
+        "uuid": "39998158a90f4c7c9a6ace829054d417",
+        "ruleSetName": "企业基本信息非融类民营",
+        "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "EntBasicInfo",
+        "riskTypeName": "企业基本信息",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 3,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:17:01",
+        "gmtModify": "2026-06-27 10:44:14",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 12
+        },
+        "ruleSetInfo": "bb8cf6ae1535d109df3626dfcdef9739"
+      },
+      {
+        "id": 138,
+        "uuid": "13cfc57ddb4c4724bf2373883f314714",
+        "ruleSetName": "预警等级判定",
+        "ruleSetCode": "alertLevelJudgment",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "bhjcqd",
+        "appName": "保后检查",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 9,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "bhjcqd"
+        ],
+        "appNames": [
+          "保后检查"
+        ],
+        "gmtCreate": "2026-06-04 01:16:56",
+        "gmtModify": "2026-06-27 10:40:25",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 4
+        },
+        "ruleSetInfo": "b5e09d65afd2883e5446ef3b25cb6413"
+      },
+      {
+        "id": 57,
+        "uuid": "1cc5781f952843ebb875ab616d921ec1",
+        "ruleSetName": "保前集中度判断_区域_副本",
+        "ruleSetCode": "aa",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "appCode": "init",
+        "appName": "初始应用",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "sxdb",
+          "010117"
+        ],
+        "orgNames": [
+          "三峡担保",
+          "风险管理部"
+        ],
+        "appCodes": [
+          "init",
+          "jzdqd"
+        ],
+        "appNames": [
+          "初始应用",
+          "集中度"
+        ],
+        "gmtCreate": "2026-06-01 19:53:05",
+        "gmtModify": "2026-06-03 23:16:55",
+        "createBy": "dj",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "e51630dc11ca8d0665d305d020f5e939"
+      },
+      {
+        "id": 46,
+        "uuid": "e133e7f3512f47f2a3c17b4807bae17d",
+        "ruleSetName": "集团预警等级判定规则集",
+        "ruleSetCode": "Group_Warning_Level_Rule_Set",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "appCode": "jtyjqd",
+        "appName": "集团预警",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 1,
+        "deleted": false,
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "jtyjqd"
+        ],
+        "appNames": [
+          "集团预警"
+        ],
+        "gmtCreate": "2026-05-14 23:03:06",
+        "gmtModify": "2026-05-14 23:03:23",
+        "createBy": "admin",
+        "updateBy": "admin",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 4
+        },
+        "ruleSetInfo": "72883ca25baec8703d09244ed73df5c8"
+      },
+      {
+        "id": 45,
+        "uuid": "cf10b8ed79a24085b52aa209d25a41f2",
+        "ruleSetName": "保后集中度判断_区域",
+        "ruleSetCode": "areaConcPost",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 21:56:29",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "14abbd1c99843cdfe23d32f0306da181"
+      },
+      {
+        "id": 44,
+        "uuid": "6f626d8e03f74f629af376a5aff81b3d",
+        "ruleSetName": "保后集中度判断_关联户",
+        "ruleSetCode": "relatedConcPost",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 21:56:20",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 1
+        },
+        "ruleSetInfo": "dd2449698e1b408f80aa0effb0975ef4"
+      },
+      {
+        "id": 43,
+        "uuid": "fd4e530682164090ab35903befc5f800",
+        "ruleSetName": "保后集中度判断_单户",
+        "ruleSetCode": "singleConcPost",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 21:56:10",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 1
+        },
+        "ruleSetInfo": "b184099db8b9ca5276a986800a7bf160"
+      },
+      {
+        "id": 42,
+        "uuid": "e0e66ac5c1fc443e9c6ad681cb1061db",
+        "ruleSetName": "保前集中度判断_区域",
+        "ruleSetCode": "areaConcPre",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 19:51:34",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 2
+        },
+        "ruleSetInfo": "5597fc33803e34eb476c44fdb22d5f2a"
+      },
+      {
+        "id": 41,
+        "uuid": "6d49293f6aa5468abb11546a692126f8",
+        "ruleSetName": "保前集中度判断_关联户",
+        "ruleSetCode": "relatedConcPre",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 19:51:24",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 1
+        },
+        "ruleSetInfo": "a42c8c34da1f28147ec236fba63978e9"
+      },
+      {
+        "id": 40,
+        "uuid": "0d4b8516020940509bdd4e11c259d7da",
+        "ruleSetName": "保前集中度判断_单户",
+        "ruleSetCode": "singleConcPre",
+        "orgCode": "010117",
+        "orgName": "风险管理部",
+        "appCode": "jzdqd",
+        "appName": "集中度",
+        "riskType": "Other",
+        "riskTypeName": "其他风险",
+        "exeMode": "WorstMatch",
+        "status": "online",
+        "ruleSetVersion": 2,
+        "deleted": false,
+        "orgCodes": [
+          "010117"
+        ],
+        "orgNames": [
+          "风险管理部"
+        ],
+        "appCodes": [
+          "jzdqd"
+        ],
+        "appNames": [
+          "集中度"
+        ],
+        "gmtCreate": "2026-05-14 19:51:12",
+        "gmtModify": "2026-06-22 10:59:39",
+        "createBy": "admin",
+        "updateBy": "molei.you",
+        "canWriter": true,
+        "ruleStats": {
+          "1": 1
+        },
+        "ruleSetInfo": "3b2c979c4fd5404b0f6902767dfdca84"
+      }
+    ],
+    "total": 32
+  }
+}

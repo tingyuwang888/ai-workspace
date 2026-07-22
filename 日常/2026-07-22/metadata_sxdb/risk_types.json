@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "count": 23,
+    "source": "dictionary/RiskType",
+    "fetchedAt": "2026-07-22T09:54:29.369868"
+  },
+  "riskTypes": [
+    {
+      "name": "AccountEmbezzle",
+      "displayName": "账户盗用"
+    },
+    {
+      "name": "Fraud",
+      "displayName": "欺诈风险"
+    },
+    {
+      "name": "Login",
+      "displayName": "登录风险"
+    },
+    {
+      "name": "Register",
+      "displayName": "注册风险"
+    },
+    {
+      "name": "Apply",
+      "displayName": "申购风险"
+    },
+    {
+      "name": "Redeem",
+      "displayName": "赎回风险"
+    },
+    {
+      "name": "Trade",
+      "displayName": "交易风险"
+    },
+    {
+      "name": "Binding",
+      "displayName": "绑卡风险"
+    },
+    {
+      "name": "ChangeCard",
+      "displayName": "更换卡风险"
+    },
+    {
+      "name": "Payment",
+      "displayName": "支付风险"
+    },
+    {
+      "name": "Loan",
+      "displayName": "借款风险"
+    },
+    {
+      "name": "Transfer",
+      "displayName": "转账风险"
+    },
+    {
+      "name": "Withdraw",
+      "displayName": "提现风险"
+    },
+    {
+      "name": "Modify",
+      "displayName": "修改风险"
+    },
+    {
+      "name": "Other",
+      "displayName": "其他风险"
+    },
+    {
+      "name": "AbnormalLoan",
+      "displayName": "AbnormalLoan"
+    },
+    {
+      "name": "EntBasicInfo",
+      "displayName": "企业基本信息"
+    },
+    {
+      "name": "EntCredit",
+      "displayName": "企业信用状况"
+    },
+    {
+      "name": "EntLawsuit",
+      "displayName": "企业司法涉诉"
+    },
+    {
+      "name": "EntNegative",
+      "displayName": "企业负面信息"
+    },
+    {
+      "name": "PerLawsuit",
+      "displayName": "个人司法涉诉"
+    },
+    {
+      "name": "PerNegative",
+      "displayName": "个人负面信息"
+    },
+    {
+      "name": "RelatedEntRisk",
+      "displayName": "关联企业风险"
+    }
+  ],
+  "name_to_display": {
+    "AccountEmbezzle": "账户盗用",
+    "Fraud": "欺诈风险",
+    "Login": "登录风险",
+    "Register": "注册风险",
+    "Apply": "申购风险",
+    "Redeem": "赎回风险",
+    "Trade": "交易风险",
+    "Binding": "绑卡风险",
+    "ChangeCard": "更换卡风险",
+    "Payment": "支付风险",
+    "Loan": "借款风险",
+    "Transfer": "转账风险",
+    "Withdraw": "提现风险",
+    "Modify": "修改风险",
+    "Other": "其他风险",
+    "AbnormalLoan": "AbnormalLoan",
+    "EntBasicInfo": "企业基本信息",
+    "EntCredit": "企业信用状况",
+    "EntLawsuit": "企业司法涉诉",
+    "EntNegative": "企业负面信息",
+    "PerLawsuit": "个人司法涉诉",
+    "PerNegative": "个人负面信息",
+    "RelatedEntRisk": "关联企业风险"
+  },
+  "display_to_name": {
+    "账户盗用": "AccountEmbezzle",
+    "欺诈风险": "Fraud",
+    "登录风险": "Login",
+    "注册风险": "Register",
+    "申购风险": "Apply",
+    "赎回风险": "Redeem",
+    "交易风险": "Trade",
+    "绑卡风险": "Binding",
+    "更换卡风险": "ChangeCard",
+    "支付风险": "Payment",
+    "借款风险": "Loan",
+    "转账风险": "Transfer",
+    "提现风险": "Withdraw",
+    "修改风险": "Modify",
+    "其他风险": "Other",
+    "AbnormalLoan": "AbnormalLoan",
+    "企业基本信息": "EntBasicInfo",
+    "企业信用状况": "EntCredit",
+    "企业司法涉诉": "EntLawsuit",
+    "企业负面信息": "EntNegative",
+    "个人司法涉诉": "PerLawsuit",
+    "个人负面信息": "PerNegative",
+    "关联企业风险": "RelatedEntRisk"
+  }
+}

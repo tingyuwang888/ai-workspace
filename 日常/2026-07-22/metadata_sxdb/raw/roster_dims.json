@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+    {
+      "uuid": "fb3ef0ff51484e749a6a2118a24e30ae",
+      "dimensionName": "PageDim",
+      "dimensionCode": "pgDim1778061097895",
+      "dimensionType": 2,
+      "status": 1,
+      "operator": "yaosh",
+      "modifyTime": "2026-05-06 17:51:38",
+      "autoCreate": false
+    },
+    {
+      "uuid": "1a7c820a9dc14e5abcf1e99fd863fa23",
+      "dimensionName": "default_dimension",
+      "dimensionCode": "default_dimension",
+      "dimensionType": 1,
+      "status": 1,
+      "operator": "yaosh",
+      "modifyTime": "2026-05-06 16:48:00",
+      "autoCreate": false
+    },
+    {
+      "uuid": "14051429425a4d98a1fee0f7cc6ef659",
+      "dimensionName": "自动化测试维度_1778056430002",
+      "dimensionCode": "AutoDim_1778056430002",
+      "dimensionType": 1,
+      "status": 1,
+      "operator": "yaosh",
+      "modifyTime": "2026-05-06 16:33:51",
+      "description": "自动化测试",
+      "autoCreate": false
+    },
+    {
+      "uuid": "84a0a6b27ea14050bf89b74de4777f7a",
+      "dimensionName": "手机号",
+      "dimensionCode": "mobile",
+      "dimensionType": 2,
+      "status": 1,
+      "operator": "yaosh",
+      "modifyTime": "2026-04-24 18:07:16",
+      "autoCreate": false
+    },
+    {
+      "uuid": "cc81843ac4f34d2e953f83a3233b4f88",
+      "dimensionName": "身份证号码",
+      "dimensionCode": "cert_id",
+      "dimensionType": 1,
+      "status": 1,
+      "operator": "yaosh",
+      "modifyTime": "2026-04-24 17:53:13",
+      "autoCreate": false
+    }
+  ]
+}

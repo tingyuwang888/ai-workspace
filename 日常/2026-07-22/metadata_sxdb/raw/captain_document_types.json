@@ -1,0 +1,55 @@
+{
+  "data": {
+    "content": [
+      {
+        "uuid": "ddfe068b735f4665aee89f52714e70cf",
+        "name": "pboc_enterprise_credit",
+        "displayName": "人行二代企业征信",
+        "contentType": "APPLICATION_XML",
+        "status": "ENABLED",
+        "gmtModify": "2026-05-19 18:59:48",
+        "gmtCreate": "2026-05-19 18:59:48",
+        "createBy": "admin(administrator)",
+        "modifyBy": "admin(administrator)",
+        "sample": null
+      },
+      {
+        "uuid": "7c68a3a1f15e4fc09694b593baee8e52",
+        "name": "test_perm_doc",
+        "displayName": "test_perm",
+        "contentType": "APPLICATION_XML",
+        "status": "ENABLED",
+        "gmtModify": "2026-05-19 18:59:09",
+        "gmtCreate": "2026-05-19 18:59:09",
+        "createBy": "admin(administrator)",
+        "modifyBy": "admin(administrator)",
+        "sample": null
+      },
+      {
+        "uuid": "c62ee3a91dc14c5aaabfc00dccf7c746",
+        "name": "tongdun_loan_info",
+        "displayName": "贷款信息",
+        "contentType": "APPLICATION_JSON",
+        "status": null,
+        "gmtModify": "2026-05-14 13:45:23",
+        "gmtCreate": "2026-05-14 13:45:23",
+        "createBy": "hao.bai(hao.bai)",
+        "modifyBy": "hao.bai(hao.bai)",
+        "sample": null
+      },
+      {
+        "uuid": "0679b7733209485baee5b7781f5f7c13",
+        "name": "Code_autotest_placeholder",
+        "displayName": "自动化测试_autotest_placeholder",
+        "contentType": "APPLICATION_JSON",
+        "status": "ENABLED",
+        "gmtModify": "2026-04-29 06:27:06",
+        "gmtCreate": "2026-04-29 06:27:06",
+        "createBy": "yaosh(yaosh)",
+        "modifyBy": "yaosh(yaosh)",
+        "sample": null
+      }
+    ],
+    "totalElements": 4
+  }
+}

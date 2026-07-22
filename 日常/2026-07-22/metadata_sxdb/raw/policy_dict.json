@@ -1,0 +1,92 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": {
+    "businessScene": [
+      {
+        "childrenFlow": 1,
+        "scenario": 0,
+        "businessType": 1
+      },
+      {
+        "childrenFlow": 0,
+        "scenario": 1,
+        "businessType": 2
+      },
+      {
+        "childrenFlow": 0,
+        "scenario": 0,
+        "businessType": 3
+      },
+      {
+        "childrenFlow": 1,
+        "scenario": 1,
+        "businessType": 4
+      },
+      {
+        "childrenFlow": 0,
+        "scenario": 1,
+        "businessType": 5
+      },
+      {
+        "childrenFlow": 0,
+        "scenario": 1,
+        "businessType": 6
+      },
+      {
+        "childrenFlow": 0,
+        "scenario": 0,
+        "businessType": 7
+      }
+    ],
+    "policyVersionStatus": {
+      "1": "已暂存",
+      "2": "已保存",
+      "3": "待审核",
+      "5": "已上线",
+      "6": "已下线"
+    },
+    "policyVersionUpdateType": {
+      "1": "暂存",
+      "2": "保存"
+    },
+    "policyPublishConfig": {
+      "1": "普通模式",
+      "2": "分流模式",
+      "3": "旁路模式"
+    },
+    "policyAreaType": {
+      "1": "编辑区",
+      "2": "运行区"
+    },
+    "policyBusinessType": {
+      "1": "贷前",
+      "2": "账户",
+      "3": "交易",
+      "4": "贷中",
+      "5": "客户价值",
+      "6": "商户行为评级",
+      "7": "商户准入"
+    },
+    "policyStatus": {
+      "0": "",
+      "1": "待发布",
+      "2": "待审核",
+      "4": "已发布"
+    },
+    "serviceBusinessScene": {
+      "3": [
+        "batchTransEngine"
+      ],
+      "4": [
+        "atreusLoanEngine"
+      ]
+    },
+    "policyModeType": {
+      "0": "",
+      "1": "简易模式",
+      "2": "流模式"
+    }
+  }
+}

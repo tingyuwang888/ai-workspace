@@ -1,0 +1,1018 @@
+{
+  "_meta": {
+    "groupCount": 2,
+    "rosterCount": 17,
+    "dimensionCount": 5,
+    "rostersWithSubDimension": 0,
+    "rosterTypeDistribution": {
+      "黑名单": 13,
+      "白名单": 4
+    },
+    "dataEntryCount": 36,
+    "rostersWithData": 7,
+    "fetchedAt": "2026-07-22T09:54:29.371303"
+  },
+  "groups": [
+    {
+      "uuid": "ae14522250e14742ba315291e5307a63",
+      "groupName": "测试名单",
+      "groupCode": "test",
+      "orgCode": "sxdb"
+    },
+    {
+      "uuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "groupName": "default_group",
+      "groupCode": "default_group",
+      "orgCode": "TongDun"
+    }
+  ],
+  "rosters": [
+    {
+      "uuid": "b35b6f01bb2741428da6e30953838103",
+      "rosterName": "12",
+      "rosterCode": "121",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "测试名单",
+      "groupUuid": "ae14522250e14742ba315291e5307a63",
+      "appCode": "all",
+      "orgCode": "sxdb",
+      "mainDimension": {
+        "code": "cert_id",
+        "name": "身份证号码"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "fb98c393d8454d3993b84eb84d3662af",
+      "rosterName": "手机号黑名单",
+      "rosterCode": "67cb7e5ae137965fdf7682b147657aa7",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "14e22322478d43609f14d0bc801b767c",
+      "rosterName": "手机黑名单",
+      "rosterCode": "697de38eab4836cb474648f7d74bbd26",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "b25b7c3f6ff34b71b67a65d07360f566",
+      "rosterName": "直销银行用户名黑名单",
+      "rosterCode": "77511bf9f34cbabc6ac9c27f4466d882",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebdt",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "656456a627f845ca85200e63b626f5e3",
+      "rosterName": "IP黑名单",
+      "rosterCode": "7ce9abb1815ce9a4c6d8c64a9db3c88f",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "8aa64e534017456b96c2161d3e769463",
+      "rosterName": "全渠道白名单",
+      "rosterCode": "92f14d83d7c4f85dfdd7f3b5329397f4",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "1267a9b5f50e49078abbe9ba16eeaa33",
+      "rosterName": "用户名",
+      "rosterCode": "961671d68dde586879c882cdd918138a",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "e60e0522cef549d2861cc170648c75c2",
+      "rosterName": "IP白名单",
+      "rosterCode": "c4ff1c9a4bf514ddbbc5ca29a547f249",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "02ed1ef6d58740d8bc0a9de538459c83",
+      "rosterName": "企业网银用户名黑名单",
+      "rosterCode": "df7af85f9f8cc668945328d538e86369",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebep",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "25c8ac85feed4bfdb83e66716cf312e9",
+      "rosterName": "超柜渠道白名单",
+      "rosterCode": "e585fb99a3354b3dce13699ac335a4a6",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "cg",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "747b60a8f1284d3f89f3ac18f9f98aaa",
+      "rosterName": "客户号黑名单",
+      "rosterCode": "fee41bad34a1e56d4d244a921df1247f",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "1fbdd6cee0d449a585b3d8e5b1895166",
+      "rosterName": "卡号黑名单",
+      "rosterCode": "2674917bae79599b1fac88de5ec67357",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "8803694887cc4f2293bab9d5fd6a7012",
+      "rosterName": "设备白名单",
+      "rosterCode": "41621cb3af774bdd297bcced92eceb5c",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "6deaaf1c261341a5967bcc90956c2889",
+      "rosterName": "证件号码黑名单",
+      "rosterCode": "51b13e77e115d2aa754b57626bd8586b",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "4571506faa254421994a9348c2c7492c",
+      "rosterName": "个人网银用户名黑名单",
+      "rosterCode": "527dc6f1d86939a422cf86faf642ce21",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebcp",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "897c0b01e23c43e9a308453e5d0f1de5",
+      "rosterName": "设备黑名单",
+      "rosterCode": "5a3c9a6c18b23b182b3a9c71dabe485b",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    {
+      "uuid": "e577fbe10ec141a5b1040f1324cbbde9",
+      "rosterName": "个人手机银行用户名黑名单",
+      "rosterCode": "1f6dc2498d482261e29e151893717c36",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebpmp",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    }
+  ],
+  "dimensions": [
+    {
+      "uuid": "fb3ef0ff51484e749a6a2118a24e30ae",
+      "dimensionName": "PageDim",
+      "dimensionCode": "pgDim1778061097895",
+      "dimensionType": 2,
+      "dimensionTypeName": "子维度",
+      "status": 1
+    },
+    {
+      "uuid": "1a7c820a9dc14e5abcf1e99fd863fa23",
+      "dimensionName": "default_dimension",
+      "dimensionCode": "default_dimension",
+      "dimensionType": 1,
+      "dimensionTypeName": "主维度",
+      "status": 1
+    },
+    {
+      "uuid": "14051429425a4d98a1fee0f7cc6ef659",
+      "dimensionName": "自动化测试维度_1778056430002",
+      "dimensionCode": "AutoDim_1778056430002",
+      "dimensionType": 1,
+      "dimensionTypeName": "主维度",
+      "status": 1
+    },
+    {
+      "uuid": "84a0a6b27ea14050bf89b74de4777f7a",
+      "dimensionName": "手机号",
+      "dimensionCode": "mobile",
+      "dimensionType": 2,
+      "dimensionTypeName": "子维度",
+      "status": 1
+    },
+    {
+      "uuid": "cc81843ac4f34d2e953f83a3233b4f88",
+      "dimensionName": "身份证号码",
+      "dimensionCode": "cert_id",
+      "dimensionType": 1,
+      "dimensionTypeName": "主维度",
+      "status": 1
+    }
+  ],
+  "roster_data": {
+    "121": [
+      {
+        "dataId": "79ee602650f299b4a7006cbd15f3c201",
+        "mainDimensionValue": "1231231",
+        "mainDimensionCode": "cert_id",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-07-13 14:46:22",
+        "expireTime": "2026-07-25 14:46:22",
+        "expireType": "1"
+      }
+    ],
+    "67cb7e5ae137965fdf7682b147657aa7": [
+      {
+        "dataId": "73f411050722c001d0c30c64a7d392c2",
+        "mainDimensionValue": "18030748888",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ],
+    "697de38eab4836cb474648f7d74bbd26": [
+      {
+        "dataId": "22e583cb5550cc7f27fb349ff983d5fb",
+        "mainDimensionValue": "13000000000",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:47",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ],
+    "77511bf9f34cbabc6ac9c27f4466d882": [
+      {
+        "dataId": "c9b98b5da1579158f89666308f538b2c",
+        "mainDimensionValue": "18622278888",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:47",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ],
+    "7ce9abb1815ce9a4c6d8c64a9db3c88f": [
+      {
+        "dataId": "792e68ada650c47d773e21ad335c0a58",
+        "mainDimensionValue": "120.70.201.3",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:47",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ],
+    "5a3c9a6c18b23b182b3a9c71dabe485b": [
+      {
+        "dataId": "84e92d44410bbfe9ace18a0671b2a8d4",
+        "mainDimensionValue": "7",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "913a97d3ed9c2ca9891e17bff4d7b14b",
+        "mainDimensionValue": "4",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "0fc2bc0dc32df3235f72b2655c7972da",
+        "mainDimensionValue": "b875b75e2646c85fca3d270813e1fad0-16ed47bdc0a",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "24ecefa6f16b9c91065b1114d00abb1f",
+        "mainDimensionValue": "32",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "60d67dc8b8b54b91142eb6f7e461232f",
+        "mainDimensionValue": "9",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "2cce812d8e1e7724d3815d6edf8b30d4",
+        "mainDimensionValue": "27",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "695c3bf7750e9ed40eba9f0ae8ce9251",
+        "mainDimensionValue": "10",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "eaf49dfb6cd4167e12ea3d40a6a030f0",
+        "mainDimensionValue": "31",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "dc7bbe3d08581235802e21f5e8d5e30d",
+        "mainDimensionValue": "36",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "da1e267b8e0d039c66b61e58a97bbfa3",
+        "mainDimensionValue": "512587",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "db8ae55dffdc3fc8e35f00a9bee7b947",
+        "mainDimensionValue": "12",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "3a13e7e82cce4064a2fdff4699c08519",
+        "mainDimensionValue": "5",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "5c609a4d446346812aa2724aae613e47",
+        "mainDimensionValue": "25",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "c24c72174ffcc8c8be826988d7a9ce04",
+        "mainDimensionValue": "28",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "b3c6004d8a6149f8aa626edf88e6cc63",
+        "mainDimensionValue": "33",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "055486d199169ffaa58a87fde6f9d134",
+        "mainDimensionValue": "6",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "3be631d91c9762dc1819688fa06366e7",
+        "mainDimensionValue": "11",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "f6d83c3d26b387e215238aaf95fb4725",
+        "mainDimensionValue": "37",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "b9b96d60dd9905a0033a7eb572a95a9a",
+        "mainDimensionValue": "8",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "d83eeca6136c30486f2a0fab6563a392",
+        "mainDimensionValue": "1",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "9752bc7d1e10764a42ff0171dff5acfd",
+        "mainDimensionValue": "3",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "de4f95eb89ac60e3e76d61123f60eb5e",
+        "mainDimensionValue": "38",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "05186cb22bdc9e1e720abc313e355a17",
+        "mainDimensionValue": "2",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "51e7b24576a593faca173670f17d0d8d",
+        "mainDimensionValue": "26",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "12005d913ff15e3c20b41bf3233c98d5",
+        "mainDimensionValue": "35",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "6652fc13fcf39039456c0d5f253e3e6a",
+        "mainDimensionValue": "223c6efc7b4fddd772164f8e3965e1b2-17195ae7548",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "2026-09-30 23:59:59",
+        "expireType": "2"
+      },
+      {
+        "dataId": "06a52ce8826630b33e18a62572fbae61",
+        "mainDimensionValue": "17",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "9f0df86f026e766fa5992b10b24fc965",
+        "mainDimensionValue": "30",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "e64e1f354a66102370b1d469db7c559f",
+        "mainDimensionValue": "29",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      },
+      {
+        "dataId": "08d2aebf8a40454beba538c42c76fc9f",
+        "mainDimensionValue": "34",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:46",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ],
+    "1f6dc2498d482261e29e151893717c36": [
+      {
+        "dataId": "3df17ba65eec148d9e1d394102dfe4cc",
+        "mainDimensionValue": "18622278888",
+        "mainDimensionCode": "default_dimension",
+        "subDimensionValues": [],
+        "status": 1,
+        "effectiveTime": "2026-05-25 11:22:45",
+        "expireTime": "",
+        "expireType": "0"
+      }
+    ]
+  },
+  "group_to_rosters": {
+    "测试名单": [
+      "121"
+    ],
+    "default_group": [
+      "67cb7e5ae137965fdf7682b147657aa7",
+      "697de38eab4836cb474648f7d74bbd26",
+      "77511bf9f34cbabc6ac9c27f4466d882",
+      "7ce9abb1815ce9a4c6d8c64a9db3c88f",
+      "92f14d83d7c4f85dfdd7f3b5329397f4",
+      "961671d68dde586879c882cdd918138a",
+      "c4ff1c9a4bf514ddbbc5ca29a547f249",
+      "df7af85f9f8cc668945328d538e86369",
+      "e585fb99a3354b3dce13699ac335a4a6",
+      "fee41bad34a1e56d4d244a921df1247f",
+      "2674917bae79599b1fac88de5ec67357",
+      "41621cb3af774bdd297bcced92eceb5c",
+      "51b13e77e115d2aa754b57626bd8586b",
+      "527dc6f1d86939a422cf86faf642ce21",
+      "5a3c9a6c18b23b182b3a9c71dabe485b",
+      "1f6dc2498d482261e29e151893717c36"
+    ]
+  },
+  "roster_by_code": {
+    "121": {
+      "uuid": "b35b6f01bb2741428da6e30953838103",
+      "rosterName": "12",
+      "rosterCode": "121",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "测试名单",
+      "groupUuid": "ae14522250e14742ba315291e5307a63",
+      "appCode": "all",
+      "orgCode": "sxdb",
+      "mainDimension": {
+        "code": "cert_id",
+        "name": "身份证号码"
+      },
+      "subDimensions": []
+    },
+    "67cb7e5ae137965fdf7682b147657aa7": {
+      "uuid": "fb98c393d8454d3993b84eb84d3662af",
+      "rosterName": "手机号黑名单",
+      "rosterCode": "67cb7e5ae137965fdf7682b147657aa7",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "697de38eab4836cb474648f7d74bbd26": {
+      "uuid": "14e22322478d43609f14d0bc801b767c",
+      "rosterName": "手机黑名单",
+      "rosterCode": "697de38eab4836cb474648f7d74bbd26",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "77511bf9f34cbabc6ac9c27f4466d882": {
+      "uuid": "b25b7c3f6ff34b71b67a65d07360f566",
+      "rosterName": "直销银行用户名黑名单",
+      "rosterCode": "77511bf9f34cbabc6ac9c27f4466d882",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebdt",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "7ce9abb1815ce9a4c6d8c64a9db3c88f": {
+      "uuid": "656456a627f845ca85200e63b626f5e3",
+      "rosterName": "IP黑名单",
+      "rosterCode": "7ce9abb1815ce9a4c6d8c64a9db3c88f",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "92f14d83d7c4f85dfdd7f3b5329397f4": {
+      "uuid": "8aa64e534017456b96c2161d3e769463",
+      "rosterName": "全渠道白名单",
+      "rosterCode": "92f14d83d7c4f85dfdd7f3b5329397f4",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "961671d68dde586879c882cdd918138a": {
+      "uuid": "1267a9b5f50e49078abbe9ba16eeaa33",
+      "rosterName": "用户名",
+      "rosterCode": "961671d68dde586879c882cdd918138a",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "c4ff1c9a4bf514ddbbc5ca29a547f249": {
+      "uuid": "e60e0522cef549d2861cc170648c75c2",
+      "rosterName": "IP白名单",
+      "rosterCode": "c4ff1c9a4bf514ddbbc5ca29a547f249",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "df7af85f9f8cc668945328d538e86369": {
+      "uuid": "02ed1ef6d58740d8bc0a9de538459c83",
+      "rosterName": "企业网银用户名黑名单",
+      "rosterCode": "df7af85f9f8cc668945328d538e86369",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebep",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "e585fb99a3354b3dce13699ac335a4a6": {
+      "uuid": "25c8ac85feed4bfdb83e66716cf312e9",
+      "rosterName": "超柜渠道白名单",
+      "rosterCode": "e585fb99a3354b3dce13699ac335a4a6",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "cg",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "fee41bad34a1e56d4d244a921df1247f": {
+      "uuid": "747b60a8f1284d3f89f3ac18f9f98aaa",
+      "rosterName": "客户号黑名单",
+      "rosterCode": "fee41bad34a1e56d4d244a921df1247f",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "2674917bae79599b1fac88de5ec67357": {
+      "uuid": "1fbdd6cee0d449a585b3d8e5b1895166",
+      "rosterName": "卡号黑名单",
+      "rosterCode": "2674917bae79599b1fac88de5ec67357",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "41621cb3af774bdd297bcced92eceb5c": {
+      "uuid": "8803694887cc4f2293bab9d5fd6a7012",
+      "rosterName": "设备白名单",
+      "rosterCode": "41621cb3af774bdd297bcced92eceb5c",
+      "rosterType": 1,
+      "rosterTypeName": "白名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "51b13e77e115d2aa754b57626bd8586b": {
+      "uuid": "6deaaf1c261341a5967bcc90956c2889",
+      "rosterName": "证件号码黑名单",
+      "rosterCode": "51b13e77e115d2aa754b57626bd8586b",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "527dc6f1d86939a422cf86faf642ce21": {
+      "uuid": "4571506faa254421994a9348c2c7492c",
+      "rosterName": "个人网银用户名黑名单",
+      "rosterCode": "527dc6f1d86939a422cf86faf642ce21",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebcp",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "5a3c9a6c18b23b182b3a9c71dabe485b": {
+      "uuid": "897c0b01e23c43e9a308453e5d0f1de5",
+      "rosterName": "设备黑名单",
+      "rosterCode": "5a3c9a6c18b23b182b3a9c71dabe485b",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "all",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    },
+    "1f6dc2498d482261e29e151893717c36": {
+      "uuid": "e577fbe10ec141a5b1040f1324cbbde9",
+      "rosterName": "个人手机银行用户名黑名单",
+      "rosterCode": "1f6dc2498d482261e29e151893717c36",
+      "rosterType": 0,
+      "rosterTypeName": "黑名单",
+      "groupName": "default_group",
+      "groupUuid": "6bb63499b8c0454c99b51a83b330cffb",
+      "appCode": "ebpmp",
+      "orgCode": "TongDun",
+      "mainDimension": {
+        "code": "default_dimension",
+        "name": "default_dimension"
+      },
+      "subDimensions": []
+    }
+  }
+}

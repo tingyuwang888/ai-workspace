@@ -1,0 +1,86 @@
+{
+  "data": {
+    "contents": [
+      {
+        "decisionToolUuid": "d4ea3b39114d4bce8e8b211a1288e967",
+        "decisionToolName": "g4",
+        "decisionToolCode": "METRIC26061715321945626",
+        "decisionToolType": "D_MATRIX",
+        "decisionToolTypeName": "决策矩阵",
+        "decisionToolStatus": 1,
+        "decisionToolStatusName": "待提交",
+        "appCode": "ebcp",
+        "appName": "个人网银",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "decisionToolVersionUuid": "a33265006e154542abc3368520689573",
+        "version": 1,
+        "status": 3,
+        "statusName": "导入待提交",
+        "content": "{\"data\":[[\"10000\",\"100\",\"1000\"],[\"20000\",\"100\",\"2000\"]],\"axis\":{\"X\":[{\"conditionsGroup\":[{\"conditionsDesc\":\"≥ 10000\",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareValue\":\"10000\",\"compareKey\":\">=\",\"leftKey\":\"C_F_SALARY909\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"DOUBLE\"}]},{\"conditionsDesc\":\"< 100\",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareValue\":\"100\",\"compareKey\":\"<\",\"leftKey\":\"C_F_SALARY909\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"DOUBLE\"}]},{\"conditionsDesc\":\"≥ 100 && < 10000\",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareValue\":\"100\",\"compareKey\":\">=\",\"leftKey\":\"C_F_SALARY909\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"DOUBLE\"},{\"compareValue\":\"10000\",\"compareKey\":\"<\",\"leftKey\":\"C_F_SALARY909\",\"rightValueType\":\"context\",\"priority\":2,\"leftKeyType\":\"DOUBLE\"}]}],\"systemField\":true,\"bizType\":\"field\",\"dataType\":\"double\",\"name\":\"C_F_SALARY909\",\"count\":1,\"dName\":\"个人月收入909\",\"index\":0,\"selectType\":\"FIELD_SYSTEM\",\"type\":\"field\",\"fieldInfo\":\"\",\"complexField\":false},{\"conditionsGroup\":[{\"conditionsDesc\":\"不为空 \",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareKey\":\"notnull\",\"leftKey\":\"C_F_SALARY908\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"DOUBLE\"}]}],\"systemField\":true,\"bizType\":\"field\",\"dataType\":\"double\",\"name\":\"C_F_SALARY908\",\"count\":3,\"dName\":\"个人月收入908\",\"index\":0,\"selectType\":\"FIELD_SYSTEM\",\"type\":\"field\",\"fieldInfo\":\"\",\"complexField\":false}],\"Y\":[{\"conditionsGroup\":[{\"conditionsDesc\":\"= 通过\",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareValue\":\"通过\",\"compareKey\":\"==\",\"leftKey\":\"C_S_YWDLFXQ\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"STRING\"}]},{\"conditionsDesc\":\"= 拒绝\",\"connector\":\"all\",\"autoCreate\":true,\"type\":\"context\",\"conditions\":[{\"compareValue\":\"拒绝\",\"compareKey\":\"==\",\"leftKey\":\"C_S_YWDLFXQ\",\"rightValueType\":\"context\",\"priority\":1,\"leftKeyType\":\"STRING\"}]}],\"bizType\":\"field\",\"appendix\":\"{}\",\"dataType\":\"string\",\"count\":3,\"dName\":\"业务代理人反洗钱评级\",\"index\":0,\"type\":\"field\",\"enumTypeValues\":[],\"systemField\":true,\"name\":\"C_S_YWDLFXQ\",\"selectType\":\"FIELD_SYSTEM\",\"bizTag\":\"\",\"complexField\":false}]}}",
+        "inputData": "[{\"bizType\":\"field\",\"displayName\":\"个人月收入909\",\"dataType\":\"double\",\"name\":\"C_F_SALARY909\",\"type\":\"field\",\"axis\":\"X\"},{\"bizType\":\"field\",\"displayName\":\"个人月收入908\",\"dataType\":\"double\",\"name\":\"C_F_SALARY908\",\"type\":\"field\",\"axis\":\"X\"},{\"bizType\":\"field\",\"displayName\":\"业务代理人反洗钱评级\",\"dataType\":\"string\",\"name\":\"C_S_YWDLFXQ\",\"type\":\"field\",\"axis\":\"Y\"}]",
+        "outputData": "[{\"bizType\":\"field\",\"fieldName\":\"C_F_SALARY919\",\"displayName\":\"个人月收入919\",\"dataType\":\"double\",\"name\":\"C_F_SALARY919\",\"description\":\"个人月收入919\",\"operatorType\":\"operationType\",\"type\":\"double\",\"fieldType\":\"SYSTEM_FIELD\",\"value\":0}]",
+        "defaultDecisions": "[{\"bizType\":\"field\",\"fieldType\":\"SYSTEM_FIELD\",\"dataType\":\"double\",\"type\":\"double\",\"operatorType\":\"operationType\",\"fieldName\":\"C_F_SALARY919\",\"displayName\":\"个人月收入919\",\"name\":\"C_F_SALARY919\",\"description\":\"个人月收入919\",\"value\":0,\"dName\":\"个人月收入919\"}]",
+        "gmtCreate": "2026-07-15 09:46:16",
+        "gmtModify": "2026-07-15 09:46:16",
+        "createBy": "administrator",
+        "updateBy": "administrator",
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "ebcp"
+        ],
+        "appNames": [
+          "个人网银"
+        ],
+        "canWriter": true,
+        "isDelete": false
+      },
+      {
+        "decisionToolUuid": "d3ea33dac09647a6a2816a8fe675af58",
+        "decisionToolName": "还款能力测算gf2",
+        "decisionToolCode": "TABLE26062310321945640",
+        "decisionToolType": "D_TABLE",
+        "decisionToolTypeName": "决策表",
+        "decisionToolStatus": 4,
+        "decisionToolStatusName": "已发布",
+        "appCode": "init",
+        "appName": "初始应用",
+        "orgCode": "sxdb",
+        "orgName": "三峡担保",
+        "decisionToolVersionUuid": "be0d9140d50a41a0a22876fcac0fff9d",
+        "version": 1,
+        "status": 4,
+        "statusName": "已上线",
+        "content": "{\"type\":\"root\",\"childNodes\":[{\"key\":\"C_F_GEXX0043\",\"bizType\":\"field\",\"fieldType\":\"field\",\"type\":\"child\",\"dName\":\"评分卡评分\",\"conditionsGroup\":{\"connector\":\"all\",\"conditions\":[{\"compareKey\":\"<=\",\"compareValue\":\"6\"}],\"conditionsDesc\":\"≤ 6\"},\"childNodes\":[{\"type\":\"decision\",\"decisions\":[{\"operatorType\":\"operationType\",\"fieldType\":\"SYSTEM_FIELD\",\"fieldName\":\"C_F_OUTLENDINGRATE\",\"value\":\"7\",\"valueType\":\"constant\"}]}]},{\"key\":\"C_F_GEXX0043\",\"bizType\":\"field\",\"fieldType\":\"field\",\"type\":\"child\",\"dName\":\"评分卡评分\",\"conditionsGroup\":{\"connector\":\"all\",\"conditions\":[{\"compareKey\":\">\",\"compareValue\":\"6\"}],\"conditionsDesc\":\"> 6\"},\"childNodes\":[{\"type\":\"decision\",\"decisions\":[{\"operatorType\":\"operationType\",\"fieldType\":\"SYSTEM_FIELD\",\"fieldName\":\"C_F_OUTLENDINGRATE\",\"value\":\"4\",\"valueType\":\"constant\"}]}]},{\"key\":\"C_F_GEXX0043\",\"bizType\":\"field\",\"fieldType\":\"field\",\"type\":\"child\",\"dName\":\"评分卡评分\",\"conditionsGroup\":{\"connector\":\"all\",\"conditions\":[{\"compareKey\":\"isnull\"}],\"conditionsDesc\":\"为空\"},\"childNodes\":[{\"type\":\"decision\",\"decisions\":[{\"operatorType\":\"operationType\",\"fieldType\":\"SYSTEM_FIELD\",\"fieldName\":\"C_F_OUTLENDINGRATE\",\"value\":\"0.3\",\"valueType\":\"constant\"}]}]}]}",
+        "inputData": "[{\"bizType\":\"field\",\"displayName\":\"评分卡评分\",\"dataType\":\"double\",\"name\":\"C_F_GEXX0043\",\"type\":\"field\"}]",
+        "outputData": "[{\"sourceKey\":\"FIELD\",\"bizType\":\"field\",\"level\":2,\"displayName\":\"贷款利率\",\"dataType\":\"double\",\"sourceKey_sub\":\"FIELD_SYSTEM\",\"index\":0,\"type\":\"field\",\"fieldInfo\":\"\",\"systemField\":true,\"sourceName_sub\":\"系统字段\",\"name\":\"C_F_OUTLENDINGRATE\",\"selectType\":\"FIELD_SYSTEM\",\"sourceName\":\"字段\",\"showSub\":true,\"complexField\":false}]",
+        "defaultDecisions": "[{\"operatorType\":\"operationType\",\"fieldType\":\"SYSTEM_FIELD\",\"fieldName\":\"C_F_OUTLENDINGRATE\",\"value\":\"0.25\",\"valueType\":\"constant\"}]",
+        "publishDesc": "1",
+        "gmtCreate": "2026-07-15 09:44:37",
+        "gmtModify": "2026-07-15 09:44:50",
+        "createBy": "administrator",
+        "updateBy": "administrator",
+        "orgCodes": [
+          "sxdb"
+        ],
+        "orgNames": [
+          "三峡担保"
+        ],
+        "appCodes": [
+          "init"
+        ],
+        "appNames": [
+          "初始应用"
+        ],
+        "canWriter": true,
+        "isDelete": false
+      }
+    ],
+    "total": 2
+  }
+}

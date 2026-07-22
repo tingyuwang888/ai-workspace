@@ -1,0 +1,46 @@
+{
+  "code": 20000,
+  "success": true,
+  "message": "成功",
+  "data": [
+    {
+      "catalogName": "AT{Str(7)}",
+      "uuid": "9450a65d7ec94e3ba4cf4cb0b9cda548",
+      "catalogSort": 1,
+      "child": [
+        {
+          "catalogName": "Default11",
+          "uuid": "74e4c37491c245f3a3032bcefc05c753",
+          "catalogSort": 1,
+          "child": []
+        }
+      ]
+    },
+    {
+      "catalogName": "借款类",
+      "uuid": "540a5633cfe74955a4d948ab4c70d32e",
+      "catalogSort": 1,
+      "child": [
+        {
+          "catalogName": "企业信用状况",
+          "uuid": "a1719b54e6414d19b9e164c48addd86f",
+          "catalogSort": 1,
+          "child": []
+        }
+      ]
+    },
+    {
+      "catalogName": "1",
+      "uuid": "9d65fbb818cc4f04aa40693b4b6352ee",
+      "catalogSort": 3,
+      "child": [
+        {
+          "catalogName": "22",
+          "uuid": "a0b558f8fed14514abf15c9ca5ae72f0",
+          "catalogSort": 4,
+          "child": []
+        }
+      ]
+    }
+  ]
+}

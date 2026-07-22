@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "count": 17,
+    "fetchedAt": "2026-07-22T09:54:29.367038"
+  },
+  "apps": [
+    {
+      "id": 3,
+      "name": "init",
+      "displayName": "初始应用",
+      "description": "初始应用"
+    },
+    {
+      "id": 4,
+      "name": "ebcp",
+      "displayName": "个人网银",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "name": "ebep",
+      "displayName": "企业网银",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "name": "ebpmp",
+      "displayName": "个人手机银行",
+      "description": ""
+    },
+    {
+      "id": 7,
+      "name": "ebemp",
+      "displayName": "企业手机银行",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "name": "ebdt",
+      "displayName": "直销银行",
+      "description": ""
+    },
+    {
+      "id": 9,
+      "name": "selfservice",
+      "displayName": "自助设备",
+      "description": ""
+    },
+    {
+      "id": 10,
+      "name": "ebwe",
+      "displayName": "微信银行",
+      "description": ""
+    },
+    {
+      "id": 11,
+      "name": "gm",
+      "displayName": "柜面",
+      "description": ""
+    },
+    {
+      "id": 12,
+      "name": "cg",
+      "displayName": "超柜",
+      "description": ""
+    },
+    {
+      "id": 13,
+      "name": "ylqz",
+      "displayName": "银联前置",
+      "description": ""
+    },
+    {
+      "id": 14,
+      "name": "wlqz",
+      "displayName": "网联",
+      "description": ""
+    },
+    {
+      "id": 15,
+      "name": "jzdqd",
+      "displayName": "集中度",
+      "description": ""
+    },
+    {
+      "id": 17,
+      "name": "bhjcqd",
+      "displayName": "保后检查",
+      "description": ""
+    },
+    {
+      "id": 18,
+      "name": "jtyjqd",
+      "displayName": "集团预警",
+      "description": ""
+    },
+    {
+      "id": 19,
+      "name": "wjflqd",
+      "displayName": "五级分类",
+      "description": ""
+    },
+    {
+      "id": 20,
+      "name": "0208_hkd",
+      "displayName": "0208_好客贷",
+      "description": ""
+    }
+  ],
+  "name_to_display": {
+    "init": "初始应用",
+    "ebcp": "个人网银",
+    "ebep": "企业网银",
+    "ebpmp": "个人手机银行",
+    "ebemp": "企业手机银行",
+    "ebdt": "直销银行",
+    "selfservice": "自助设备",
+    "ebwe": "微信银行",
+    "gm": "柜面",
+    "cg": "超柜",
+    "ylqz": "银联前置",
+    "wlqz": "网联",
+    "jzdqd": "集中度",
+    "bhjcqd": "保后检查",
+    "jtyjqd": "集团预警",
+    "wjflqd": "五级分类",
+    "0208_hkd": "0208_好客贷"
+  },
+  "display_to_name": {
+    "初始应用": "init",
+    "个人网银": "ebcp",
+    "企业网银": "ebep",
+    "个人手机银行": "ebpmp",
+    "企业手机银行": "ebemp",
+    "直销银行": "ebdt",
+    "自助设备": "selfservice",
+    "微信银行": "ebwe",
+    "柜面": "gm",
+    "超柜": "cg",
+    "银联前置": "ylqz",
+    "网联": "wlqz",
+    "集中度": "jzdqd",
+    "保后检查": "bhjcqd",
+    "集团预警": "jtyjqd",
+    "五级分类": "wjflqd",
+    "0208_好客贷": "0208_hkd"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "code": 200,
+  "message": "成功",
+  "success": true,
+  "data": {
+    "total": 1,
+    "curPage": 1,
+    "dictionaryList": [
+      {
+        "gmtModified": 1780504645000,
+        "defaultFlag": true,
+        "updatedBy": "admin(administrator)",
+        "createdBy": "hjt",
+        "description": "规则集风险类型下拉框",
+        "groups": [
+          "system"
+        ],
+        "id": 49,
+        "myKey": "RiskType",
+        "gmtCreate": 1639972891000,
+        "uuid": "0b0041bf7db3479bb7fae39f94479725",
+        "myValue": "[{\"name\":\"AccountEmbezzle\",\"dName\":\"账户盗用\"},{\"name\":\"Fraud\",\"dName\":\"欺诈风险\"},{\"name\":\"Login\",\"dName\":\"登录风险\"},{\"name\":\"Register\",\"dName\":\"注册风险\"},{\"name\":\"Apply\",\"dName\":\"申购风险\"},{\"name\":\"Redeem\",\"dName\":\"赎回风险\"},{\"name\":\"Trade\",\"dName\":\"交易风险\"},{\"name\":\"Binding\",\"dName\":\"绑卡风险\"},{\"name\":\"ChangeCard\",\"dName\":\"更换卡风险\"},{\"name\":\"Payment\",\"dName\":\"支付风险\"},{\"name\":\"Loan\",\"dName\":\"借款风险\"},{\"name\":\"Transfer\",\"dName\":\"转账风险\"},{\"name\":\"Withdraw\",\"dName\":\"提现风险\"},{\"name\":\"Modify\",\"dName\":\"修改风险\"},{\"name\":\"Other\",\"dName\":\"其他风险\"},{\"name\":\"AbnormalLoan\",\"dName\":\"AbnormalLoan\"},{\"name\":\"EntBasicInfo\",\"dName\":\"企业基本信息\"},{\"name\":\"EntCredit\",\"dName\":\"企业信用状况\"},{\"name\":\"EntLawsuit\",\"dName\":\"企业司法涉诉\"},{\"name\":\"EntNegative\",\"dName\":\"企业负面信息\"},{\"name\":\"PerLawsuit\",\"dName\":\"个人司法涉诉\"},{\"name\":\"PerNegative\",\"dName\":\"个人负面信息\"},{\"name\":\"RelatedEntRisk\",\"dName\":\"关联企业风险\"}]"
+      }
+    ],
+    "pageSize": 10
+  }
+}

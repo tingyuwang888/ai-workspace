@@ -1,0 +1,291 @@
+{
+  "_meta": {
+    "count": 14,
+    "fetchedAt": "2026-07-22T09:54:29.380102"
+  },
+  "templates": [
+    {
+      "templateCode": "COUNT",
+      "templateName": "次数类模板",
+      "templateDesc": "一段时间内某属性某行为发生的次数",
+      "additionalDesc": "【默认值：0】【结果类型：整数型】",
+      "templateDemo": "同一客户最近30分钟累计交易失败的次数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 200,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "COUNT": 1000,
+          "ACTIVE_DAY_COUNT": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "STATISTICS",
+      "templateName": "金额类模板",
+      "templateDesc": "用于简单的统计类指标的计算，支持求和、平均值、最大值、最小值、方差、标准差等计算函数",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一客户最近30天的平均交易金额",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 190,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "SUM": 1000,
+          "MAX": 1000,
+          "MIN": 1000,
+          "AVG": 1000,
+          "STD": 1000,
+          "VAR": 1000,
+          "CENTRAL_MOMENT3": 1000,
+          "CENTRAL_MOMENT4": 1000,
+          "COV": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "SET",
+      "templateName": "关联类模板",
+      "templateDesc": "一段时间内某属性关联其他属性的去重数量",
+      "additionalDesc": "【默认值：0】【结果类型：整数型】",
+      "templateDemo": "同一设备最近10分钟登陆账户的个数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 180,
+      "constraintConfig": {
+        "availableReturnTypes": [
+          "INT",
+          "ARRAY"
+        ],
+        "timeSliceMaxCount": {
+          "SET": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "RATIO",
+      "templateName": "占比类模板",
+      "templateDesc": "一段时间内一个数值在总数中所占的比例",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一账户，最近1天失败交易占比",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 175,
+      "constraintConfig": {
+        "distinctCountLimit": {
+          "default": 100,
+          "combinationMax": 10000
+        },
+        "timeSliceMaxCount": {
+          "RATIO": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "FORMULA",
+      "templateName": "公式类模板",
+      "templateDesc": "通过书写公式的形式对字段或指标进行再次计算",
+      "additionalDesc": "【默认值：null】【结果类型：指定类型】",
+      "templateDemo": "同一客户最近1个月的交易金额之和占过去1年交易总额的百分比",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 170,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "FORMULA": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "TIME_GAP",
+      "templateName": "时间差模板",
+      "templateDesc": "一段时间内的时间间隔或者指定事件的时间间隔",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一设备最近1小时登录操作的平均间隔秒数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 160,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "EVENT_TIME_DIFF": 1000,
+          "TIME_INTERVAL": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "CONCENTRATION",
+      "templateName": "集中度模板",
+      "templateDesc": "一段时间内某属性在时间跨度内满足集中度阈值的天数",
+      "additionalDesc": "【默认值：false或0】【结果类型：布尔型或整数型】",
+      "templateDemo": "同一账户最近7天90%的交易集中在任意1小时完成的天数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 150,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "CONCENTRATION_DAYTIME": 1000,
+          "CONCENTRATION_FEATURE": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "CONSECUTIVE",
+      "templateName": "连续类模板",
+      "templateDesc": "一段时间内某属性满足连续条件的最大次数或最大累计个数",
+      "additionalDesc": "【默认值：0】【结果类型：整数型】",
+      "templateDemo": "同一账户最近10分钟登陆失败的最大连续次数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 130,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "CONSECUTIVE_AGG": 1000,
+          "CONSECUTIVE_COUNT": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "TREND",
+      "templateName": "趋势类模板",
+      "templateDesc": "一段时间内某属性满足趋势条件的最大次数或最大累计个数",
+      "additionalDesc": "【默认值：0】【结果类型：整数型】",
+      "templateDemo": "同一账户最近10分钟交易金额减少幅度超过10%的最大连续次数",
+      "dataType": "INT",
+      "metricType": "REALTIME",
+      "templateSort": 120,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "TREND": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "TOP_N",
+      "templateName": "排行类模板",
+      "templateDesc": "一段时间内某属性的当前某个字段是否在历史top排行列表内",
+      "additionalDesc": "【默认值：false】【结果类型：布尔型】",
+      "templateDemo": "同一账号登录使用的设备是否在近3个月设备TOP10榜单中",
+      "dataType": "BOOLEAN",
+      "metricType": "REALTIME",
+      "templateSort": 110,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "TOP_N": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "HISTORY_VALUE",
+      "templateName": "历史取值模板",
+      "templateDesc": "在历史数据中获取指定字段的值",
+      "additionalDesc": "【默认值：null】【结果类型：取值字段的类型】",
+      "templateDemo": "同一银行卡最近7天上一笔成功交易的国家",
+      "dataType": "STRING",
+      "metricType": "REALTIME",
+      "templateSort": 100,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "HIS_VALUE": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "MOVEMENT",
+      "templateName": "移动类模板",
+      "templateDesc": "一段时间内某属性的移动距离或移动速度",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一客户最近30分钟发生交易行为的移动距离（米）",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 90,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "SPEED": 1000,
+          "DISTANCE": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "KURTOSIS",
+      "templateName": "峰度系数模板",
+      "templateDesc": "一段时间内某属性某数值字段的峰度系数（数值波动情况）",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一客户最近1个月交易金额的峰度系数",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 80,
+      "constraintConfig": {
+        "timeSliceMaxCount": {
+          "KURTOSIS": 1000
+        }
+      }
+    },
+    {
+      "templateCode": "SECOND_DEGREE_AGG",
+      "templateName": "二度聚合模板",
+      "templateDesc": "按照时间或者维度字段进行分块计算，基于分块结果二度聚合",
+      "additionalDesc": "【默认值：null】【结果类型：小数型】",
+      "templateDemo": "同一账户，最近30天，按天求次数，再计算最大值",
+      "dataType": "DOUBLE",
+      "metricType": "REALTIME",
+      "templateSort": 70,
+      "constraintConfig": {
+        "distinctCountLimit": {
+          "default": 100,
+          "combinationMax": 10000
+        },
+        "timeSliceMaxCount": {
+          "SECOND_DEGREE_AGG": 1000
+        }
+      }
+    }
+  ],
+  "code_to_name": {
+    "COUNT": "次数类模板",
+    "STATISTICS": "金额类模板",
+    "SET": "关联类模板",
+    "RATIO": "占比类模板",
+    "FORMULA": "公式类模板",
+    "TIME_GAP": "时间差模板",
+    "CONCENTRATION": "集中度模板",
+    "CONSECUTIVE": "连续类模板",
+    "TREND": "趋势类模板",
+    "TOP_N": "排行类模板",
+    "HISTORY_VALUE": "历史取值模板",
+    "MOVEMENT": "移动类模板",
+    "KURTOSIS": "峰度系数模板",
+    "SECOND_DEGREE_AGG": "二度聚合模板"
+  },
+  "name_to_code": {
+    "次数类模板": "COUNT",
+    "金额类模板": "STATISTICS",
+    "关联类模板": "SET",
+    "占比类模板": "RATIO",
+    "公式类模板": "FORMULA",
+    "时间差模板": "TIME_GAP",
+    "集中度模板": "CONCENTRATION",
+    "连续类模板": "CONSECUTIVE",
+    "趋势类模板": "TREND",
+    "排行类模板": "TOP_N",
+    "历史取值模板": "HISTORY_VALUE",
+    "移动类模板": "MOVEMENT",
+    "峰度系数模板": "KURTOSIS",
+    "二度聚合模板": "SECOND_DEGREE_AGG"
+  },
+  "code_to_dataType": {
+    "COUNT": "INT",
+    "STATISTICS": "DOUBLE",
+    "SET": "INT",
+    "RATIO": "DOUBLE",
+    "FORMULA": "DOUBLE",
+    "TIME_GAP": "INT",
+    "CONCENTRATION": "INT",
+    "CONSECUTIVE": "INT",
+    "TREND": "INT",
+    "TOP_N": "BOOLEAN",
+    "HISTORY_VALUE": "STRING",
+    "MOVEMENT": "DOUBLE",
+    "KURTOSIS": "DOUBLE",
+    "SECOND_DEGREE_AGG": "DOUBLE"
+  }
+}

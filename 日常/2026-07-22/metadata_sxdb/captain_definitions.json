@@ -1,0 +1,248 @@
+{
+  "_meta": {
+    "documentTypeCount": 4,
+    "templateCount": 0,
+    "indexCount": 0,
+    "indexPackageCount": 2,
+    "indexTypeDistribution": {},
+    "templateTypeDistribution": {},
+    "packagePurposeDistribution": {
+      "REALTIME": 2
+    },
+    "source": "captainApi",
+    "fetchedAt": "2026-07-22T09:54:29.469152"
+  },
+  "documentTypes": [
+    {
+      "uuid": "ddfe068b735f4665aee89f52714e70cf",
+      "name": "pboc_enterprise_credit",
+      "displayName": "人行二代企业征信",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:48",
+      "gmtModify": "2026-05-19 18:59:48",
+      "createBy": "admin(administrator)"
+    },
+    {
+      "uuid": "7c68a3a1f15e4fc09694b593baee8e52",
+      "name": "test_perm_doc",
+      "displayName": "test_perm",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:09",
+      "gmtModify": "2026-05-19 18:59:09",
+      "createBy": "admin(administrator)"
+    },
+    {
+      "uuid": "c62ee3a91dc14c5aaabfc00dccf7c746",
+      "name": "tongdun_loan_info",
+      "displayName": "贷款信息",
+      "contentType": "APPLICATION_JSON",
+      "status": null,
+      "sample": null,
+      "gmtCreate": "2026-05-14 13:45:23",
+      "gmtModify": "2026-05-14 13:45:23",
+      "createBy": "hao.bai(hao.bai)"
+    },
+    {
+      "uuid": "0679b7733209485baee5b7781f5f7c13",
+      "name": "Code_autotest_placeholder",
+      "displayName": "自动化测试_autotest_placeholder",
+      "contentType": "APPLICATION_JSON",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-04-29 06:27:06",
+      "gmtModify": "2026-04-29 06:27:06",
+      "createBy": "yaosh(yaosh)"
+    }
+  ],
+  "templates": [],
+  "indexes": [],
+  "indexPackages": [
+    {
+      "uuid": "",
+      "name": "aa",
+      "displayName": "aa",
+      "documentTypeUuid": "ddfe068b735f4665aee89f52714e70cf",
+      "documentTypeName": "pboc_enterprise_credit",
+      "documentTypeDisplayName": "人行二代企业征信",
+      "purpose": "REALTIME",
+      "purposeDisplayName": "实时调用",
+      "status": "ENABLED",
+      "version": 1,
+      "description": null,
+      "monitorable": 1,
+      "appCode": "bhjcqd",
+      "orgCode": "sxdb",
+      "gmtCreate": "2026-05-21 15:56:42",
+      "gmtModify": "2026-05-21 15:57:23",
+      "createBy": "zjh(zjh)"
+    },
+    {
+      "uuid": "",
+      "name": "aametrics",
+      "displayName": "aametrics",
+      "documentTypeUuid": "0679b7733209485baee5b7781f5f7c13",
+      "documentTypeName": "Code_autotest_placeholder",
+      "documentTypeDisplayName": "自动化测试_autotest_placeholder",
+      "purpose": "REALTIME",
+      "purposeDisplayName": "实时调用",
+      "status": "SAVED",
+      "version": 1,
+      "description": null,
+      "monitorable": 1,
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "gmtCreate": "2026-05-19 17:04:21",
+      "gmtModify": "2026-05-19 17:04:21",
+      "createBy": "admin(administrator)"
+    }
+  ],
+  "documentType_by_uuid": {
+    "ddfe068b735f4665aee89f52714e70cf": {
+      "uuid": "ddfe068b735f4665aee89f52714e70cf",
+      "name": "pboc_enterprise_credit",
+      "displayName": "人行二代企业征信",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:48",
+      "gmtModify": "2026-05-19 18:59:48",
+      "createBy": "admin(administrator)"
+    },
+    "7c68a3a1f15e4fc09694b593baee8e52": {
+      "uuid": "7c68a3a1f15e4fc09694b593baee8e52",
+      "name": "test_perm_doc",
+      "displayName": "test_perm",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:09",
+      "gmtModify": "2026-05-19 18:59:09",
+      "createBy": "admin(administrator)"
+    },
+    "c62ee3a91dc14c5aaabfc00dccf7c746": {
+      "uuid": "c62ee3a91dc14c5aaabfc00dccf7c746",
+      "name": "tongdun_loan_info",
+      "displayName": "贷款信息",
+      "contentType": "APPLICATION_JSON",
+      "status": null,
+      "sample": null,
+      "gmtCreate": "2026-05-14 13:45:23",
+      "gmtModify": "2026-05-14 13:45:23",
+      "createBy": "hao.bai(hao.bai)"
+    },
+    "0679b7733209485baee5b7781f5f7c13": {
+      "uuid": "0679b7733209485baee5b7781f5f7c13",
+      "name": "Code_autotest_placeholder",
+      "displayName": "自动化测试_autotest_placeholder",
+      "contentType": "APPLICATION_JSON",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-04-29 06:27:06",
+      "gmtModify": "2026-04-29 06:27:06",
+      "createBy": "yaosh(yaosh)"
+    }
+  },
+  "documentType_by_name": {
+    "pboc_enterprise_credit": {
+      "uuid": "ddfe068b735f4665aee89f52714e70cf",
+      "name": "pboc_enterprise_credit",
+      "displayName": "人行二代企业征信",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:48",
+      "gmtModify": "2026-05-19 18:59:48",
+      "createBy": "admin(administrator)"
+    },
+    "test_perm_doc": {
+      "uuid": "7c68a3a1f15e4fc09694b593baee8e52",
+      "name": "test_perm_doc",
+      "displayName": "test_perm",
+      "contentType": "APPLICATION_XML",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-05-19 18:59:09",
+      "gmtModify": "2026-05-19 18:59:09",
+      "createBy": "admin(administrator)"
+    },
+    "tongdun_loan_info": {
+      "uuid": "c62ee3a91dc14c5aaabfc00dccf7c746",
+      "name": "tongdun_loan_info",
+      "displayName": "贷款信息",
+      "contentType": "APPLICATION_JSON",
+      "status": null,
+      "sample": null,
+      "gmtCreate": "2026-05-14 13:45:23",
+      "gmtModify": "2026-05-14 13:45:23",
+      "createBy": "hao.bai(hao.bai)"
+    },
+    "Code_autotest_placeholder": {
+      "uuid": "0679b7733209485baee5b7781f5f7c13",
+      "name": "Code_autotest_placeholder",
+      "displayName": "自动化测试_autotest_placeholder",
+      "contentType": "APPLICATION_JSON",
+      "status": "ENABLED",
+      "sample": null,
+      "gmtCreate": "2026-04-29 06:27:06",
+      "gmtModify": "2026-04-29 06:27:06",
+      "createBy": "yaosh(yaosh)"
+    }
+  },
+  "documentType_to_templates": {},
+  "documentType_to_indexes": {},
+  "documentType_to_packages": {
+    "ddfe068b735f4665aee89f52714e70cf": [
+      "aa"
+    ],
+    "0679b7733209485baee5b7781f5f7c13": [
+      "aametrics"
+    ]
+  },
+  "index_by_uuid": {},
+  "index_by_name": {},
+  "template_by_uuid": {},
+  "package_by_name": {
+    "aa": {
+      "uuid": "",
+      "name": "aa",
+      "displayName": "aa",
+      "documentTypeUuid": "ddfe068b735f4665aee89f52714e70cf",
+      "documentTypeName": "pboc_enterprise_credit",
+      "documentTypeDisplayName": "人行二代企业征信",
+      "purpose": "REALTIME",
+      "purposeDisplayName": "实时调用",
+      "status": "ENABLED",
+      "version": 1,
+      "description": null,
+      "monitorable": 1,
+      "appCode": "bhjcqd",
+      "orgCode": "sxdb",
+      "gmtCreate": "2026-05-21 15:56:42",
+      "gmtModify": "2026-05-21 15:57:23",
+      "createBy": "zjh(zjh)"
+    },
+    "aametrics": {
+      "uuid": "",
+      "name": "aametrics",
+      "displayName": "aametrics",
+      "documentTypeUuid": "0679b7733209485baee5b7781f5f7c13",
+      "documentTypeName": "Code_autotest_placeholder",
+      "documentTypeDisplayName": "自动化测试_autotest_placeholder",
+      "purpose": "REALTIME",
+      "purposeDisplayName": "实时调用",
+      "status": "SAVED",
+      "version": 1,
+      "description": null,
+      "monitorable": 1,
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "gmtCreate": "2026-05-19 17:04:21",
+      "gmtModify": "2026-05-19 17:04:21",
+      "createBy": "admin(administrator)"
+    }
+  }
+}

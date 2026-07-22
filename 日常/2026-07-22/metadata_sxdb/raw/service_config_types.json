@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+    {
+      "value": "REALTIME",
+      "label": "实时服务",
+      "serviceTypeList": [
+        {
+          "uuid": "creditEngine",
+          "displayName": "信贷决策",
+          "type": 1
+        },
+        {
+          "uuid": "transEngine",
+          "displayName": "交易决策",
+          "type": 5
+        },
+        {
+          "uuid": "supplement",
+          "displayName": "决策补充",
+          "type": 2
+        },
+        {
+          "uuid": "queryResult",
+          "displayName": "信贷结果查询",
+          "type": 4
+        },
+        {
+          "uuid": "metricService",
+          "displayName": "指标服务",
+          "type": 9
+        },
+        {
+          "uuid": "merchantAccessEngine",
+          "displayName": "商户准入",
+          "type": 14
+        }
+      ]
+    }
+  ]
+}

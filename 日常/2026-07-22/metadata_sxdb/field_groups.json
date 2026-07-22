@@ -1,0 +1,681 @@
+{
+  "_meta": {
+    "count": 42,
+    "source": "bridgeApi/fieldGroup",
+    "fetchedAt": "2026-07-22T09:54:29.381599"
+  },
+  "groups": [
+    {
+      "uuid": "0b40331b-1469-46d4-97b0-899739fdcf88",
+      "id": 44,
+      "name": "TSXHZC",
+      "displayName": "唐山银行资产",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "151902f3-4e31-4546-a4a3-bb9485a033aa",
+      "id": 45,
+      "name": "loanadjamt",
+      "displayName": "贷中调额",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "7d627648-eae6-4831-a53e-83064804dee2",
+      "id": 46,
+      "name": "LOG",
+      "displayName": "日志信息",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "7c1299bb-0693-4cc2-a667-5d1d81397864",
+      "id": 43,
+      "name": "xddg",
+      "displayName": "信贷对公字段分组",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "80985f43-4b66-4c19-a7b7-fcf7bac3312c",
+      "id": 41,
+      "name": "HYXJ",
+      "displayName": "杭银消金",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "763067a4e3e511edb38afa6532887f00",
+      "id": 42,
+      "name": "XDGRXX",
+      "displayName": "信贷_个人信息",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "7bddb3c3-6d4f-4282-bc80-395553749d03",
+      "id": 36,
+      "name": "POSTCHK",
+      "displayName": "保后检查",
+      "standard": 0,
+      "fieldCount": 210
+    },
+    {
+      "uuid": "4aa9af7f-24de-499d-82a5-59bec2d8dd60",
+      "id": 35,
+      "name": "PROJINFO",
+      "displayName": "项目信息",
+      "standard": 0,
+      "fieldCount": 17
+    },
+    {
+      "uuid": "f12359b46d5d42cfa1ac8964dd1c8406",
+      "id": 33,
+      "name": "Small_and_micro_credit_products",
+      "displayName": "_副本_副本_副本",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "dca35331eec8453f92ece6c41a8ffb9a",
+      "id": 34,
+      "name": "ytbank3",
+      "displayName": "烟台银行申请信息",
+      "standard": 0,
+      "fieldCount": 1
+    },
+    {
+      "uuid": "185e4e3b-7c74-457e-a5ad-c71fa4643a36",
+      "id": 32,
+      "name": "GRPWARN",
+      "displayName": "集团预警",
+      "standard": 0,
+      "fieldCount": 57
+    },
+    {
+      "uuid": "c699eb98-0836-415b-948c-c4b4c3026018",
+      "id": 31,
+      "name": "CONCOUT",
+      "displayName": "集中度出参",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "9aedf9ce-f147-48c2-bd88-bb5679acdbad",
+      "id": 30,
+      "name": "AREACONC",
+      "displayName": "区域集中度",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "55b6663e-8041-4ab0-9856-bc7fdaab6870",
+      "id": 29,
+      "name": "SINGLECONC",
+      "displayName": "单户集中度",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "da6dfd86-3658-4e83-b130-d1fbc686305d",
+      "id": 28,
+      "name": "RELCONC",
+      "displayName": "关联户集中度",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "e39e8985-92a1-4bd1-a155-71e3fa351abe",
+      "id": 27,
+      "name": "test",
+      "displayName": "test",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "",
+      "id": 26,
+      "name": "PRECONC",
+      "displayName": "保前集中度出参",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+      "id": 20,
+      "name": "xdaimatch",
+      "displayName": "信贷_AI交叉匹配",
+      "standard": 0,
+      "fieldCount": 39
+    },
+    {
+      "uuid": "83ffbf89-75c4-410d-adec-b9e701251022",
+      "id": 21,
+      "name": "ACCTRATING",
+      "displayName": "账户风险评级",
+      "standard": 0,
+      "fieldCount": 36
+    },
+    {
+      "uuid": "006afb35dfe311eca54cf8f21edaf900",
+      "id": 1,
+      "name": "sermodel",
+      "displayName": "服务模板",
+      "standard": 0,
+      "fieldCount": 24
+    },
+    {
+      "uuid": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+      "id": 6,
+      "name": "RISK",
+      "displayName": "风险信息",
+      "standard": 0,
+      "fieldCount": 35
+    },
+    {
+      "uuid": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+      "id": 4,
+      "name": "INDEBT",
+      "displayName": "资产负债",
+      "standard": 0,
+      "fieldCount": 11
+    },
+    {
+      "uuid": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+      "id": 16,
+      "name": "AFFP",
+      "displayName": "关联人信息",
+      "standard": 0,
+      "fieldCount": 30
+    },
+    {
+      "uuid": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+      "id": 17,
+      "name": "SOCIAL",
+      "displayName": "社保信息",
+      "standard": 0,
+      "fieldCount": 13
+    },
+    {
+      "uuid": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+      "id": 11,
+      "name": "FUND",
+      "displayName": "公积金信息",
+      "standard": 0,
+      "fieldCount": 8
+    },
+    {
+      "uuid": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+      "id": 2,
+      "name": "MEDIAS",
+      "displayName": "影像信息",
+      "standard": 0,
+      "fieldCount": 14
+    },
+    {
+      "uuid": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+      "id": 14,
+      "name": "LOANS",
+      "displayName": "贷款信息",
+      "standard": 0,
+      "fieldCount": 20
+    },
+    {
+      "uuid": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+      "id": 9,
+      "name": "DFP",
+      "displayName": "设备指纹",
+      "standard": 1,
+      "fieldCount": 9
+    },
+    {
+      "uuid": "b215e086-0553-4938-a1bc-34766c24b5e3",
+      "id": 12,
+      "name": "ACC",
+      "displayName": "账户信息",
+      "standard": 1,
+      "fieldCount": 41
+    },
+    {
+      "uuid": "b584b229-9459-492f-b61a-a2d63bc669a8",
+      "id": 13,
+      "name": "MER",
+      "displayName": "商户信息",
+      "standard": 1,
+      "fieldCount": 69
+    },
+    {
+      "uuid": "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1",
+      "id": 15,
+      "name": "TR",
+      "displayName": "交易信息",
+      "standard": 1,
+      "fieldCount": 160
+    },
+    {
+      "uuid": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+      "id": 3,
+      "name": "PRD",
+      "displayName": "产品信息",
+      "standard": 0,
+      "fieldCount": 10
+    },
+    {
+      "uuid": "a0692adf-b575-444f-a500-7fed52056d79",
+      "id": 10,
+      "name": "CST",
+      "displayName": "企业信息",
+      "standard": 0,
+      "fieldCount": 66
+    },
+    {
+      "uuid": "7066e21a-d695-421b-8484-9dca5d041737",
+      "id": 7,
+      "name": "PST",
+      "displayName": "个人客户",
+      "standard": 0,
+      "fieldCount": 21
+    },
+    {
+      "uuid": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+      "id": 5,
+      "name": "CNT",
+      "displayName": "合约信息",
+      "standard": 0,
+      "fieldCount": 21
+    },
+    {
+      "uuid": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+      "id": 18,
+      "name": "CRD",
+      "displayName": "银行卡信息",
+      "standard": 0,
+      "fieldCount": 25
+    },
+    {
+      "uuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "id": 8,
+      "name": "CUST",
+      "displayName": "客户信息",
+      "standard": 1,
+      "fieldCount": 76
+    },
+    {
+      "uuid": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+      "id": 19,
+      "name": "SYS",
+      "displayName": "系统内置",
+      "standard": 0,
+      "fieldCount": 47
+    },
+    {
+      "uuid": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+      "id": 25,
+      "name": "O",
+      "displayName": "其他信息",
+      "standard": 0,
+      "fieldCount": 0
+    },
+    {
+      "uuid": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+      "id": 22,
+      "name": "T",
+      "displayName": "交易信息",
+      "standard": 0,
+      "fieldCount": 56
+    },
+    {
+      "uuid": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+      "id": 24,
+      "name": "C",
+      "displayName": "客户信息",
+      "standard": 0,
+      "fieldCount": 51
+    },
+    {
+      "uuid": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302",
+      "id": 23,
+      "name": "DT",
+      "displayName": "交易系统默认",
+      "standard": 1,
+      "fieldCount": 25
+    }
+  ],
+  "name_to_display": {
+    "TSXHZC": "唐山银行资产",
+    "loanadjamt": "贷中调额",
+    "LOG": "日志信息",
+    "xddg": "信贷对公字段分组",
+    "HYXJ": "杭银消金",
+    "XDGRXX": "信贷_个人信息",
+    "POSTCHK": "保后检查",
+    "PROJINFO": "项目信息",
+    "Small_and_micro_credit_products": "_副本_副本_副本",
+    "ytbank3": "烟台银行申请信息",
+    "GRPWARN": "集团预警",
+    "CONCOUT": "集中度出参",
+    "AREACONC": "区域集中度",
+    "SINGLECONC": "单户集中度",
+    "RELCONC": "关联户集中度",
+    "test": "test",
+    "PRECONC": "保前集中度出参",
+    "xdaimatch": "信贷_AI交叉匹配",
+    "ACCTRATING": "账户风险评级",
+    "sermodel": "服务模板",
+    "RISK": "风险信息",
+    "INDEBT": "资产负债",
+    "AFFP": "关联人信息",
+    "SOCIAL": "社保信息",
+    "FUND": "公积金信息",
+    "MEDIAS": "影像信息",
+    "LOANS": "贷款信息",
+    "DFP": "设备指纹",
+    "ACC": "账户信息",
+    "MER": "商户信息",
+    "TR": "交易信息",
+    "PRD": "产品信息",
+    "CST": "企业信息",
+    "PST": "个人客户",
+    "CNT": "合约信息",
+    "CRD": "银行卡信息",
+    "CUST": "客户信息",
+    "SYS": "系统内置",
+    "O": "其他信息",
+    "T": "交易信息",
+    "C": "客户信息",
+    "DT": "交易系统默认"
+  },
+  "display_to_name": {
+    "唐山银行资产": "TSXHZC",
+    "贷中调额": "loanadjamt",
+    "日志信息": "LOG",
+    "信贷对公字段分组": "xddg",
+    "杭银消金": "HYXJ",
+    "信贷_个人信息": "XDGRXX",
+    "保后检查": "POSTCHK",
+    "项目信息": "PROJINFO",
+    "_副本_副本_副本": "Small_and_micro_credit_products",
+    "烟台银行申请信息": "ytbank3",
+    "集团预警": "GRPWARN",
+    "集中度出参": "CONCOUT",
+    "区域集中度": "AREACONC",
+    "单户集中度": "SINGLECONC",
+    "关联户集中度": "RELCONC",
+    "test": "test",
+    "保前集中度出参": "PRECONC",
+    "信贷_AI交叉匹配": "xdaimatch",
+    "账户风险评级": "ACCTRATING",
+    "服务模板": "sermodel",
+    "风险信息": "RISK",
+    "资产负债": "INDEBT",
+    "关联人信息": "AFFP",
+    "社保信息": "SOCIAL",
+    "公积金信息": "FUND",
+    "影像信息": "MEDIAS",
+    "贷款信息": "LOANS",
+    "设备指纹": "DFP",
+    "账户信息": "ACC",
+    "商户信息": "MER",
+    "交易信息": "T",
+    "产品信息": "PRD",
+    "企业信息": "CST",
+    "个人客户": "PST",
+    "合约信息": "CNT",
+    "银行卡信息": "CRD",
+    "客户信息": "C",
+    "系统内置": "SYS",
+    "其他信息": "O",
+    "交易系统默认": "DT"
+  },
+  "name_to_uuid": {
+    "TSXHZC": "0b40331b-1469-46d4-97b0-899739fdcf88",
+    "loanadjamt": "151902f3-4e31-4546-a4a3-bb9485a033aa",
+    "LOG": "7d627648-eae6-4831-a53e-83064804dee2",
+    "xddg": "7c1299bb-0693-4cc2-a667-5d1d81397864",
+    "HYXJ": "80985f43-4b66-4c19-a7b7-fcf7bac3312c",
+    "XDGRXX": "763067a4e3e511edb38afa6532887f00",
+    "POSTCHK": "7bddb3c3-6d4f-4282-bc80-395553749d03",
+    "PROJINFO": "4aa9af7f-24de-499d-82a5-59bec2d8dd60",
+    "Small_and_micro_credit_products": "f12359b46d5d42cfa1ac8964dd1c8406",
+    "ytbank3": "dca35331eec8453f92ece6c41a8ffb9a",
+    "GRPWARN": "185e4e3b-7c74-457e-a5ad-c71fa4643a36",
+    "CONCOUT": "c699eb98-0836-415b-948c-c4b4c3026018",
+    "AREACONC": "9aedf9ce-f147-48c2-bd88-bb5679acdbad",
+    "SINGLECONC": "55b6663e-8041-4ab0-9856-bc7fdaab6870",
+    "RELCONC": "da6dfd86-3658-4e83-b130-d1fbc686305d",
+    "test": "e39e8985-92a1-4bd1-a155-71e3fa351abe",
+    "xdaimatch": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+    "ACCTRATING": "83ffbf89-75c4-410d-adec-b9e701251022",
+    "sermodel": "006afb35dfe311eca54cf8f21edaf900",
+    "RISK": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+    "INDEBT": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+    "AFFP": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+    "SOCIAL": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+    "FUND": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+    "MEDIAS": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+    "LOANS": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+    "DFP": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+    "ACC": "b215e086-0553-4938-a1bc-34766c24b5e3",
+    "MER": "b584b229-9459-492f-b61a-a2d63bc669a8",
+    "TR": "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1",
+    "PRD": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+    "CST": "a0692adf-b575-444f-a500-7fed52056d79",
+    "PST": "7066e21a-d695-421b-8484-9dca5d041737",
+    "CNT": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+    "CRD": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+    "CUST": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+    "SYS": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+    "O": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+    "T": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+    "C": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+    "DT": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302"
+  },
+  "display_to_uuid": {
+    "唐山银行资产": "0b40331b-1469-46d4-97b0-899739fdcf88",
+    "贷中调额": "151902f3-4e31-4546-a4a3-bb9485a033aa",
+    "日志信息": "7d627648-eae6-4831-a53e-83064804dee2",
+    "信贷对公字段分组": "7c1299bb-0693-4cc2-a667-5d1d81397864",
+    "杭银消金": "80985f43-4b66-4c19-a7b7-fcf7bac3312c",
+    "信贷_个人信息": "763067a4e3e511edb38afa6532887f00",
+    "保后检查": "7bddb3c3-6d4f-4282-bc80-395553749d03",
+    "项目信息": "4aa9af7f-24de-499d-82a5-59bec2d8dd60",
+    "_副本_副本_副本": "f12359b46d5d42cfa1ac8964dd1c8406",
+    "烟台银行申请信息": "dca35331eec8453f92ece6c41a8ffb9a",
+    "集团预警": "185e4e3b-7c74-457e-a5ad-c71fa4643a36",
+    "集中度出参": "c699eb98-0836-415b-948c-c4b4c3026018",
+    "区域集中度": "9aedf9ce-f147-48c2-bd88-bb5679acdbad",
+    "单户集中度": "55b6663e-8041-4ab0-9856-bc7fdaab6870",
+    "关联户集中度": "da6dfd86-3658-4e83-b130-d1fbc686305d",
+    "test": "e39e8985-92a1-4bd1-a155-71e3fa351abe",
+    "信贷_AI交叉匹配": "97caa809-ddb7-4b04-99d5-a91ce30227cd",
+    "账户风险评级": "83ffbf89-75c4-410d-adec-b9e701251022",
+    "服务模板": "006afb35dfe311eca54cf8f21edaf900",
+    "风险信息": "6eb17e2d-8ca6-4953-92f4-5259a43028ca",
+    "资产负债": "3ff10c04-cf74-40c4-a6f2-7f6d1409517e",
+    "关联人信息": "d592ba2c-8ed2-49ab-9054-a0ed54a24092",
+    "社保信息": "eb5c371c-a82b-4d75-a102-d945bdb3b3ad",
+    "公积金信息": "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57",
+    "影像信息": "0f96904d-5e14-4802-9ff1-9fbf3ea2c486",
+    "贷款信息": "c2dfb7d9-999e-4331-b085-483b7d44cf12",
+    "设备指纹": "9e60f8aa-bb3e-4708-84d2-b42abb50728d",
+    "账户信息": "b215e086-0553-4938-a1bc-34766c24b5e3",
+    "商户信息": "b584b229-9459-492f-b61a-a2d63bc669a8",
+    "交易信息": "0b07742b-980a-4227-8a5a-0fcf9f51428a",
+    "产品信息": "23841d17-51b7-48a6-8291-8f11c072a9d7",
+    "企业信息": "a0692adf-b575-444f-a500-7fed52056d79",
+    "个人客户": "7066e21a-d695-421b-8484-9dca5d041737",
+    "合约信息": "491c4b5d-25d4-45f4-b3a5-0e27cb015b40",
+    "银行卡信息": "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb",
+    "客户信息": "e303ab0b-3118-4774-ad5a-4469208e4a03",
+    "系统内置": "5e43f5f4-2264-45e6-a403-f458b5199bb6",
+    "其他信息": "fe5c81bd-8bb8-498d-ad27-29ad052793d5",
+    "交易系统默认": "a6ccf22b-3db5-4c14-a84a-5a420ccbe302"
+  },
+  "uuid_to_group": {
+    "0b40331b-1469-46d4-97b0-899739fdcf88": {
+      "name": "TSXHZC",
+      "displayName": "唐山银行资产"
+    },
+    "151902f3-4e31-4546-a4a3-bb9485a033aa": {
+      "name": "loanadjamt",
+      "displayName": "贷中调额"
+    },
+    "7d627648-eae6-4831-a53e-83064804dee2": {
+      "name": "LOG",
+      "displayName": "日志信息"
+    },
+    "7c1299bb-0693-4cc2-a667-5d1d81397864": {
+      "name": "xddg",
+      "displayName": "信贷对公字段分组"
+    },
+    "80985f43-4b66-4c19-a7b7-fcf7bac3312c": {
+      "name": "HYXJ",
+      "displayName": "杭银消金"
+    },
+    "763067a4e3e511edb38afa6532887f00": {
+      "name": "XDGRXX",
+      "displayName": "信贷_个人信息"
+    },
+    "7bddb3c3-6d4f-4282-bc80-395553749d03": {
+      "name": "POSTCHK",
+      "displayName": "保后检查"
+    },
+    "4aa9af7f-24de-499d-82a5-59bec2d8dd60": {
+      "name": "PROJINFO",
+      "displayName": "项目信息"
+    },
+    "f12359b46d5d42cfa1ac8964dd1c8406": {
+      "name": "Small_and_micro_credit_products",
+      "displayName": "_副本_副本_副本"
+    },
+    "dca35331eec8453f92ece6c41a8ffb9a": {
+      "name": "ytbank3",
+      "displayName": "烟台银行申请信息"
+    },
+    "185e4e3b-7c74-457e-a5ad-c71fa4643a36": {
+      "name": "GRPWARN",
+      "displayName": "集团预警"
+    },
+    "c699eb98-0836-415b-948c-c4b4c3026018": {
+      "name": "CONCOUT",
+      "displayName": "集中度出参"
+    },
+    "9aedf9ce-f147-48c2-bd88-bb5679acdbad": {
+      "name": "AREACONC",
+      "displayName": "区域集中度"
+    },
+    "55b6663e-8041-4ab0-9856-bc7fdaab6870": {
+      "name": "SINGLECONC",
+      "displayName": "单户集中度"
+    },
+    "da6dfd86-3658-4e83-b130-d1fbc686305d": {
+      "name": "RELCONC",
+      "displayName": "关联户集中度"
+    },
+    "e39e8985-92a1-4bd1-a155-71e3fa351abe": {
+      "name": "test",
+      "displayName": "test"
+    },
+    "97caa809-ddb7-4b04-99d5-a91ce30227cd": {
+      "name": "xdaimatch",
+      "displayName": "信贷_AI交叉匹配"
+    },
+    "83ffbf89-75c4-410d-adec-b9e701251022": {
+      "name": "ACCTRATING",
+      "displayName": "账户风险评级"
+    },
+    "006afb35dfe311eca54cf8f21edaf900": {
+      "name": "sermodel",
+      "displayName": "服务模板"
+    },
+    "6eb17e2d-8ca6-4953-92f4-5259a43028ca": {
+      "name": "RISK",
+      "displayName": "风险信息"
+    },
+    "3ff10c04-cf74-40c4-a6f2-7f6d1409517e": {
+      "name": "INDEBT",
+      "displayName": "资产负债"
+    },
+    "d592ba2c-8ed2-49ab-9054-a0ed54a24092": {
+      "name": "AFFP",
+      "displayName": "关联人信息"
+    },
+    "eb5c371c-a82b-4d75-a102-d945bdb3b3ad": {
+      "name": "SOCIAL",
+      "displayName": "社保信息"
+    },
+    "ad7bf0ff-cca4-4695-84fa-27b7dddb2d57": {
+      "name": "FUND",
+      "displayName": "公积金信息"
+    },
+    "0f96904d-5e14-4802-9ff1-9fbf3ea2c486": {
+      "name": "MEDIAS",
+      "displayName": "影像信息"
+    },
+    "c2dfb7d9-999e-4331-b085-483b7d44cf12": {
+      "name": "LOANS",
+      "displayName": "贷款信息"
+    },
+    "9e60f8aa-bb3e-4708-84d2-b42abb50728d": {
+      "name": "DFP",
+      "displayName": "设备指纹"
+    },
+    "b215e086-0553-4938-a1bc-34766c24b5e3": {
+      "name": "ACC",
+      "displayName": "账户信息"
+    },
+    "b584b229-9459-492f-b61a-a2d63bc669a8": {
+      "name": "MER",
+      "displayName": "商户信息"
+    },
+    "c3e06192-f2c0-4ef5-aca3-9d813dbd87d1": {
+      "name": "TR",
+      "displayName": "交易信息"
+    },
+    "23841d17-51b7-48a6-8291-8f11c072a9d7": {
+      "name": "PRD",
+      "displayName": "产品信息"
+    },
+    "a0692adf-b575-444f-a500-7fed52056d79": {
+      "name": "CST",
+      "displayName": "企业信息"
+    },
+    "7066e21a-d695-421b-8484-9dca5d041737": {
+      "name": "PST",
+      "displayName": "个人客户"
+    },
+    "491c4b5d-25d4-45f4-b3a5-0e27cb015b40": {
+      "name": "CNT",
+      "displayName": "合约信息"
+    },
+    "f2f63cde-723e-4dd8-96ad-fc5e18c68ebb": {
+      "name": "CRD",
+      "displayName": "银行卡信息"
+    },
+    "9472efc3-d32f-4ebf-b6ae-839f55bc354a": {
+      "name": "CUST",
+      "displayName": "客户信息"
+    },
+    "5e43f5f4-2264-45e6-a403-f458b5199bb6": {
+      "name": "SYS",
+      "displayName": "系统内置"
+    },
+    "fe5c81bd-8bb8-498d-ad27-29ad052793d5": {
+      "name": "O",
+      "displayName": "其他信息"
+    },
+    "0b07742b-980a-4227-8a5a-0fcf9f51428a": {
+      "name": "T",
+      "displayName": "交易信息"
+    },
+    "e303ab0b-3118-4774-ad5a-4469208e4a03": {
+      "name": "C",
+      "displayName": "客户信息"
+    },
+    "a6ccf22b-3db5-4c14-a84a-5a420ccbe302": {
+      "name": "DT",
+      "displayName": "交易系统默认"
+    }
+  }
+}

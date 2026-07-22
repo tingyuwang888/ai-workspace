@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+    {
+      "uuid": "fa78135933",
+      "name": "7天内同一银行卡号标准差交易金额",
+      "returnType": "DOUBLE",
+      "app": [
+        "init"
+      ],
+      "org": [
+        "sxdb"
+      ],
+      "enumField": "S_F_AMOUNT",
+      "metricType": "REALTIME",
+      "metricArea": "EDIT",
+      "templateType": "STD",
+      "bizTemplateType": "STATISTICS",
+      "bizTemplateTypeName": "金额类模板",
+      "version": 0,
+      "gmtModify": 1779779827000
+    },
+    {
+      "uuid": "27cbb6c817",
+      "name": "24小时内同一付款方账号累计交易金额_fpbrz",
+      "returnType": "DOUBLE",
+      "app": [
+        "init"
+      ],
+      "org": [
+        "sxdb"
+      ],
+      "enumField": "S_F_AMOUNT",
+      "metricType": "REALTIME",
+      "metricArea": "EDIT",
+      "templateType": "SUM",
+      "bizTemplateType": "STATISTICS",
+      "bizTemplateTypeName": "金额类模板",
+      "version": 0,
+      "gmtModify": 1779779827000
+    },
+    {
+      "uuid": "3fe5a6e743",
+      "name": "24小时内同一收款方账号入账次数",
+      "returnType": "INT",
+      "app": [
+        "init"
+      ],
+      "org": [
+        "sxdb"
+      ],
+      "metricType": "REALTIME",
+      "metricArea": "EDIT",
+      "templateType": "COUNT",
+      "bizTemplateType": "COUNT",
+      "bizTemplateTypeName": "次数类模板",
+      "version": 0,
+      "defaultValue": 0,
+      "gmtModify": 1779779828000
+    },
+    {
+      "uuid": "cb52f511d9",
+      "name": "7天内同一手机号注册次数",
+      "returnType": "INT",
+      "app": [
+        "init"
+      ],
+      "org": [
+        "sxdb"
+      ],
+      "metricType": "REALTIME",
+      "metricArea": "EDIT",
+      "templateType": "COUNT",
+      "bizTemplateType": "COUNT",
+      "bizTemplateTypeName": "次数类模板",
+      "version": 0,
+      "defaultValue": 0,
+      "gmtModify": 1779779828000
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "_meta": {
+    "count": 33,
+    "source": "dictionary",
+    "fetchedAt": "2026-07-22T09:54:29.366562"
+  },
+  "events": {
+    "Login": {
+      "name": "Login",
+      "displayName": "登录事件",
+      "enName": "loginevent"
+    },
+    "Register": {
+      "name": "Register",
+      "displayName": "注册事件",
+      "enName": "registerevent"
+    },
+    "Apply": {
+      "name": "Apply",
+      "displayName": "申购事件",
+      "enName": "applyevent"
+    },
+    "Redeem": {
+      "name": "Redeem",
+      "displayName": "赎回事件",
+      "enName": "redeemevent"
+    },
+    "Trade": {
+      "name": "Trade",
+      "displayName": "交易事件",
+      "enName": "tradeevent"
+    },
+    "Binding": {
+      "name": "Binding",
+      "displayName": "绑卡事件",
+      "enName": "bindingevent"
+    },
+    "ChangeCard": {
+      "name": "ChangeCard",
+      "displayName": "更换安全卡事件",
+      "enName": "changecardevent"
+    },
+    "Payment": {
+      "name": "Payment",
+      "displayName": "支付事件",
+      "enName": "paymentevent"
+    },
+    "MsnValid": {
+      "name": "MsnValid",
+      "displayName": "短信验证事件",
+      "enName": "msnvalidevent"
+    },
+    "Loan": {
+      "name": "Loan",
+      "displayName": "借款事件",
+      "enName": "loadevent"
+    },
+    "Transfer": {
+      "name": "Transfer",
+      "displayName": "转账事件",
+      "enName": "transferevent"
+    },
+    "Withdraw": {
+      "name": "Withdraw",
+      "displayName": "提现事件",
+      "enName": "withdrawevent"
+    },
+    "Modify": {
+      "name": "Modify",
+      "displayName": "修改事件",
+      "enName": "modifyevent"
+    },
+    "Other": {
+      "name": "Other",
+      "displayName": "其他事件",
+      "enName": "otherevent"
+    },
+    "Receser": {
+      "name": "Receser",
+      "displayName": "收单事件",
+      "enName": "Receserevent"
+    },
+    "OpenAcct": {
+      "name": "OpenAcct",
+      "displayName": "开户事件",
+      "enName": "OpenAcctevent"
+    },
+    "Cance": {
+      "name": "Cance",
+      "displayName": "销户事件",
+      "enName": "Canceevent"
+    },
+    "IntoAcct": {
+      "name": "IntoAcct",
+      "displayName": "入账事件",
+      "enName": "IntoAcctevent"
+    },
+    "Deposit": {
+      "name": "Deposit",
+      "displayName": "存款事件",
+      "enName": "Depositevent"
+    },
+    "Finance": {
+      "name": "Finance",
+      "displayName": "理财事件",
+      "enName": "financialevent"
+    },
+    "Cashout": {
+      "name": "Cashout",
+      "displayName": "取款事件",
+      "enName": "Cashoutevent"
+    },
+    "Consume": {
+      "name": "Consume",
+      "displayName": "消费事件",
+      "enName": "Consumeevent"
+    },
+    "Charge": {
+      "name": "Charge",
+      "displayName": "缴费事件",
+      "enName": "Chargeevent"
+    },
+    "Sign": {
+      "name": "Sign",
+      "displayName": "签约事件",
+      "enName": "Signevent"
+    },
+    "Rescind": {
+      "name": "Rescind",
+      "displayName": "解约事件",
+      "enName": "Rescindevent"
+    },
+    "WdA": {
+      "name": "WdA",
+      "displayName": "提款申请事件",
+      "enName": "WdAevent"
+    },
+    "LoanA": {
+      "name": "LoanA",
+      "displayName": "贷款申请事件",
+      "enName": "LoanAevent"
+    },
+    "Mappo": {
+      "name": "Mappo",
+      "displayName": "预约事件",
+      "enName": "Mappoevent"
+    },
+    "Market": {
+      "name": "Market",
+      "displayName": "营销事件",
+      "enName": "Marketevent"
+    },
+    "Recharge": {
+      "name": "Recharge",
+      "displayName": "充值事件",
+      "enName": "Rechargeevent"
+    },
+    "Loss": {
+      "name": "Loss",
+      "displayName": "挂失事件",
+      "enName": "Lossrevent"
+    },
+    "Ponb": {
+      "name": "Ponb",
+      "displayName": "代付事件",
+      "enName": "Ponbevent"
+    },
+    "Repay": {
+      "name": "Repay",
+      "displayName": "还款事件",
+      "enName": "Repayevent"
+    }
+  },
+  "cn_to_code": {
+    "登录事件": "Login",
+    "注册事件": "Register",
+    "申购事件": "Apply",
+    "赎回事件": "Redeem",
+    "交易事件": "Trade",
+    "绑卡事件": "Binding",
+    "更换安全卡事件": "ChangeCard",
+    "支付事件": "Payment",
+    "短信验证事件": "MsnValid",
+    "借款事件": "Loan",
+    "转账事件": "Transfer",
+    "提现事件": "Withdraw",
+    "修改事件": "Modify",
+    "其他事件": "Other",
+    "收单事件": "Receser",
+    "开户事件": "OpenAcct",
+    "销户事件": "Cance",
+    "入账事件": "IntoAcct",
+    "存款事件": "Deposit",
+    "理财事件": "Finance",
+    "取款事件": "Cashout",
+    "消费事件": "Consume",
+    "缴费事件": "Charge",
+    "签约事件": "Sign",
+    "解约事件": "Rescind",
+    "提款申请事件": "WdA",
+    "贷款申请事件": "LoanA",
+    "预约事件": "Mappo",
+    "营销事件": "Market",
+    "充值事件": "Recharge",
+    "挂失事件": "Loss",
+    "代付事件": "Ponb",
+    "还款事件": "Repay"
+  },
+  "code_to_cn": {
+    "Login": "登录事件",
+    "Register": "注册事件",
+    "Apply": "申购事件",
+    "Redeem": "赎回事件",
+    "Trade": "交易事件",
+    "Binding": "绑卡事件",
+    "ChangeCard": "更换安全卡事件",
+    "Payment": "支付事件",
+    "MsnValid": "短信验证事件",
+    "Loan": "借款事件",
+    "Transfer": "转账事件",
+    "Withdraw": "提现事件",
+    "Modify": "修改事件",
+    "Other": "其他事件",
+    "Receser": "收单事件",
+    "OpenAcct": "开户事件",
+    "Cance": "销户事件",
+    "IntoAcct": "入账事件",
+    "Deposit": "存款事件",
+    "Finance": "理财事件",
+    "Cashout": "取款事件",
+    "Consume": "消费事件",
+    "Charge": "缴费事件",
+    "Sign": "签约事件",
+    "Rescind": "解约事件",
+    "WdA": "提款申请事件",
+    "LoanA": "贷款申请事件",
+    "Mappo": "预约事件",
+    "Market": "营销事件",
+    "Recharge": "充值事件",
+    "Loss": "挂失事件",
+    "Ponb": "代付事件",
+    "Repay": "还款事件"
+  }
+}

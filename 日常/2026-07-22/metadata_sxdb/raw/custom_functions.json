@@ -1,0 +1,673 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "操作成功",
+  "data": {
+    "ARRAY": [
+      {
+        "displayName": "Add Element",
+        "format": "#Add Element()",
+        "code": "ADDELEMENT",
+        "description": "介绍：\n    用于往某个数组字段添加一个空（null）元素。\n\n示例：\n    @数组字段[0] = 1000;\n    #Add Element(@数组字段);\n\n结果：\n    @数组字段 => [1000, null]",
+        "trigger": "@数组字段[0] = 1000;\n#Add Element(@数组字段);",
+        "noShow": false
+      },
+      {
+        "displayName": "Clear",
+        "format": "#Clear()",
+        "code": "CLEAR",
+        "description": "介绍：\n    用于将某个数组内所有内容清空。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    #Clear(@数组字段);\n\n结果：\n    @数组字段 => []",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n#Clear(@数组字段);",
+        "noShow": false
+      },
+      {
+        "displayName": "Find",
+        "format": "#Find(,)",
+        "code": "FIND",
+        "description": "介绍：\n    用于根据某些条件查询数组中的某个元素，结果将会返回整数类型。如果元素被寻找到，则返回这个元素在数组中的索引下标，如果元素没有寻找到，则返回默认值 -1。参数3与参数4为选填项，使用方式为 #Find(@数组字段, @某个元素, @符号<选填>, @范围<选填>)。符号可填写 `>`; `>=`; `<`; `<=`; `==`; `!=`，如若参数3符号不填写，则取默认值 `==`。范围代指取数组的前多少位，可以截取数组的元素个数，如若参数4范围不填写，则取默认值 `数组长度`。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @整数字段A = #Find(@数组字段, 2000);\n    @数字字段B = #Find(@数组字段, 2000, >, 2);\n\n结果：\n    @整数字段A => 1\n    @整数字段B => -1",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@整数字段A = #Find(@数组字段, 2000);\n@数字字段B = #Find(@数组字段, 2000, >, 2);",
+        "noShow": false
+      },
+      {
+        "displayName": "Array Max",
+        "format": "#Array Max(,)",
+        "code": "ARRAYMAX",
+        "description": "介绍：\n    用于计算数组的最大值，使用方式为 #Array Max(@数组字段, @范围<选填>)，范围代指取数组的前多少位，可以截取数组的元素个数，如若参数4范围不填写，则取默认值 `数组长度`。结果返回数组元素的实际类型。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @数组字段[2] = 3000;\n    @整数字段A = #Array Max(@数组字段, 2);\n    @整数字段B = #Array Max(@数组字段);\n\n结果：\n    @整数字段A => 2000\n    @整数字段B => 3000",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@数组字段[2] = 3000;\n@整数字段A = #Array Max(@数组字段, 2);\n@整数字段B = #Array Max(@数组字段);",
+        "noShow": false
+      },
+      {
+        "displayName": "Merge",
+        "format": "#Merge(,,,)",
+        "code": "MERGE",
+        "description": "介绍：\n    用于合并两个数组，并将结果赋值给结果数组，使用方式为 #Merge(@数组字段1, @数组字段2, 合并方式, @数组字段3)，该操作将会把 `数组字段1` 和 `数组字段2` 按照 `合并方式` 来进行合并，并将最终结果赋值给 `数组字段3`。合并方式：A 正序，AR 正序并把重复项删除，D倒序，DR 倒序并把重复项删除。\n\n示例：\n    @数组字段A[0] = 1000;\n    @数组字段A[1] = 2000;\n    @数组字段A[2] = 3000;\n    @数组字段B[0] = 1000;\n    @数组字段B[1] = 4000;\n    #Merge(@数组字段A, @数组字段B, \"DR\", @数组字段C);\n\n结果：\n    @整数字段C => [4000, 3000, 2000, 1000]",
+        "trigger": "@数组字段A[0] = 1000;\n@数组字段A[1] = 2000;\n@数组字段A[2] = 3000;\n@数组字段B[0] = 1000;\n@数组字段B[1] = 4000;\n#Merge(@数组字段A, @数组字段B, \"DR\", @数组字段C);",
+        "noShow": false
+      },
+      {
+        "displayName": "Array Min",
+        "format": "#Array Min(,)",
+        "code": "ARRAYMIN",
+        "description": "介绍：\n    用于计算数组的最小值，使用方式为 #Array Min(@数组字段, @范围<选填>)，范围代指取数组的前多少位，可以截取数组的元素个数。结果返回数组元素的实际类型。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @数组字段[2] = 500;\n    @整数字段 = #Array Min(@数组字段, 2);\n\n结果：\n    @整数字段 => 1000",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@数组字段[2] = 500;\n@整数字段 = #Array Min(@数组字段, 2);",
+        "noShow": false
+      },
+      {
+        "displayName": "Size",
+        "format": "#Size()",
+        "code": "SIZE",
+        "description": "介绍：\n    用于计算数组的长度，使用方式为 #Size(@数组字段)。结果返回整数类型。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @数组字段[2] = 3000;\n    @整数字段 = #Size(@数组字段);\n\n结果：\n    @整数字段A => 3",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@数组字段[2] = 3000;\n@整数字段 = #Size(@数组字段);",
+        "noShow": false
+      },
+      {
+        "displayName": "Sort",
+        "format": "#Sort(,,)",
+        "code": "SORT",
+        "description": "介绍：\n    用于将某个数组排序，并将结果赋值给结果数组，使用方式为 #Sort(@数组字段1, 排序方式, @数组字段2)，该操作将会把 `数组字段1` 按照 `排序方式` 来进行排序，并将最终结果赋值给 `数组字段2`。排序方式：A 正序，AR 正序并把重复项删除，D倒序，DR 倒序并把重复项删除。\n\n示例：\n    @数组字段A[0] = 1000;\n    @数组字段A[1] = 2000;\n    @数组字段A[2] = 3000;\n    @数组字段A[3] = 3000;\n    #Sort(@数组字段A, \"DR\", @数组字段B);\n\n结果：\n    @整数字段B => [3000, 2000, 1000]",
+        "trigger": "@数组字段A[0] = 1000;\n@数组字段A[1] = 2000;\n@数组字段A[2] = 3000;\n@数组字段A[3] = 3000;\n#Sort(@数组字段A, \"DR\", @数组字段B);",
+        "noShow": false
+      },
+      {
+        "displayName": "Array Sum",
+        "format": "#Array Sum(,)",
+        "code": "ARRAYSUM",
+        "description": "介绍：\n    计算数组中元素的总和，范围代指取数组的前多少位，可以截取数组的元素个数。\n\n示例：\n    @数组字段[0] = 1;\n    @数组字段[1] = 2;\n    @数组字段[2] = 3;\n    @整数字段 = #Array Sum(@数组字段, 3);\n\n结果：\n    @整数字段 => 6",
+        "trigger": "@数组字段[0] = 1;\n@数组字段[1] = 2;\n@数组字段[2] = 3;\n@整数字段 = #Array Sum(@数组字段, 3);",
+        "noShow": false
+      }
+    ],
+    "DATE": [
+      {
+        "displayName": "Day Of Week",
+        "format": "#Day Of Week()",
+        "code": "dayOfWeek",
+        "description": "介绍：\n    计算入参的时间，对应为周几，结果返回整数类型。\n\n示例：\n    @整数字段 = #Day Of Week(#Now());\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@整数字段 = #Day Of Week(#Now());",
+        "noShow": false
+      },
+      {
+        "displayName": "Days Between",
+        "format": "#Days Between()",
+        "code": "daysBetween",
+        "description": "介绍：\n    计算两个日期之间相隔多少天，结果取绝对值，不需要考虑哪个日期滞后或在前，不满足1天的将会计算为0天，结果返回整数类型。\n\n示例：\n    @时间字段A = #To Datetime(\"2024-09-09 12:00:00\");\n    @时间字段B = #To Datetime(\"2024-09-11 12:00:00\");\n    @整数字段 = #Days Between(@时间字段A, @时间字段B);\n\n结果：\n    @整数字段 => 2",
+        "trigger": "@时间字段A = #To Datetime(\"2024-09-09 12:00:00\");\n@时间字段B = #To Datetime(\"2024-09-11 12:00:00\");\n@整数字段 = #Days Between(@时间字段A, @时间字段B);",
+        "noShow": false
+      },
+      {
+        "displayName": "Get Day",
+        "format": "#Get Day()",
+        "code": "day",
+        "description": "介绍：\n    获取某个时间的天数，结果返回整数类型。\n\n示例：\n    @整数字段 =#Get Day(#Now());\n\n结果：\n    @整数字段 => 9",
+        "trigger": "@整数字段 =#Get Day(#Now());",
+        "noShow": false
+      },
+      {
+        "displayName": "Get Month",
+        "format": "#Get Month()",
+        "code": "month",
+        "description": "介绍：\n    获取某个时间的月份，结果返回整数类型。\n\n示例：\n    @整数字段 =#Get Month(#Now());\n\n结果：\n    @整数字段 => 9",
+        "trigger": "@整数字段 =#Get Month(#Now());",
+        "noShow": false
+      },
+      {
+        "displayName": "Get Year",
+        "format": "#Get Year()",
+        "code": "year",
+        "description": "介绍：\n    获取某个时间的年份，结果返回整数类型。\n\n示例：\n    @整数字段 =#Get Year(#Now());\n\n结果：\n    @整数字段 => 2024",
+        "trigger": "@整数字段 =#Get Year(#Now());",
+        "noShow": false
+      },
+      {
+        "displayName": "Now",
+        "format": "#Now()",
+        "code": "now",
+        "description": "介绍：\n    获取当前的时间，格式为 2024-09-09 16:36:13。\n\n示例：\n    @时间字段 = #Now();\n\n结果：\n    @时间字段 => 2024-09-09 16:36:13",
+        "trigger": "@时间字段 = #Now();",
+        "noShow": false
+      },
+      {
+        "displayName": "Get Current Date",
+        "format": "#Get Current Date()",
+        "code": "currentDate",
+        "description": "介绍：\n    获取系统当前的日期时间，只有年月日，不包含时分秒，格式示例 2024-09-09 00:00:00，时分秒将会使用 00 补齐。\n\n示例：\n    @时间字段 = #Get Current Date();\n\n结果：\n    @时间字段 => 2024-09-09 00:00:00",
+        "trigger": "@时间字段 = #Get Current Date();",
+        "noShow": false
+      }
+    ],
+    "MATH": [
+      {
+        "displayName": "Floor",
+        "format": "#Floor()",
+        "code": "floor",
+        "description": "介绍：\n    向下取整，只选取入参数值整数的部分作为结果进行返回。\n\n示例：\n    @整数字段 = #Floor(1.2);\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@整数字段 = #Floor(1.2);",
+        "noShow": false
+      },
+      {
+        "displayName": "Avg",
+        "format": "#Avg(,,)",
+        "code": "avg",
+        "description": "介绍：\n    多个数值求平均值，可以使用逗号无限拼接数值，最后一位参数代表保留小数点后几位。\n\n示例：\n    @小数字段 = #Avg(1, 2, 2);\n\n结果：\n    @小数字段 => 1.50",
+        "trigger": "@小数字段 = #Avg(1, 2, 2);",
+        "noShow": false
+      },
+      {
+        "displayName": "Max",
+        "format": "#Max(,,)",
+        "code": "max",
+        "description": "介绍：\n    多个数值求最大值，可以使用逗号无限拼接数值。\n\n示例：\n    @整数字段 = #Max(1, 2, 3);\n\n结果：\n    @整数字段 => 3",
+        "trigger": "@整数字段 = #Max(1, 2, 3);",
+        "noShow": false
+      },
+      {
+        "displayName": "Min",
+        "format": "#Min(,)",
+        "code": "min",
+        "description": "介绍：\n    多个数值求最小值，可以使用逗号无限拼接数值。\n\n示例：\n    @整数字段 = #Min(1, 2, 3);\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@整数字段 = #Min(1, 2, 3);",
+        "noShow": false
+      },
+      {
+        "displayName": "Sum",
+        "format": "#Sum(,)",
+        "code": "sum",
+        "description": "介绍：\n    多个数值求和，可以使用逗号无限拼接数值。\n\n示例：\n    @整数字段 = #Sum(1, 2, 3);\n\n结果：\n    @整数字段 => 6",
+        "trigger": "@整数字段 = #Sum(1, 2, 3);",
+        "noShow": false
+      },
+      {
+        "displayName": "Pow",
+        "format": "#Pow(,)",
+        "code": "pow",
+        "description": "介绍：\n    幂函数，一共需要填写两个参数，计算参数1的参数2次方。\n\n示例：\n    @整数字段 = #Pow(2, 4);\n\n结果：\n    @整数字段 => 16",
+        "trigger": "@整数字段 = #Pow(2, 4);",
+        "noShow": false
+      },
+      {
+        "displayName": "Abs",
+        "format": "#Abs()",
+        "code": "abs",
+        "description": "介绍：\n    绝对值，参数可为任意的数值类型字段或结果，如果不是数值类型，系统将会抛出异常。\n\n示例：\n    @整数字段 = #Abs(-1);\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@整数字段 = #Abs(-1);",
+        "noShow": false
+      },
+      {
+        "displayName": "Ceil",
+        "format": "#Ceil()",
+        "code": "ceil",
+        "description": "介绍：\n    向上取整，取比当前数值大的最近一位整数作为结果输出。\n\n示例：\n    @整数字段A = #Ceil(1.2);\n    @整数字段B = #Ceil(1);\n\n结果：\n    @整数字段A => 2\n    @整数字段B => 1",
+        "trigger": "@整数字段A = #Ceil(1.2);\n@整数字段B = #Ceil(1);",
+        "noShow": false
+      },
+      {
+        "displayName": "Round",
+        "format": "#Round()",
+        "code": "round",
+        "description": "介绍：\n    取近似值，参数1为要操作的值，参数2代表要近似到小数点第几位，如果位数最高位数字小于等于4，那么去尾；如果大于等于5，则进位（四舍五入）。\n\n示例：\n    @小数字段A = #Round(1.23, 1);\n    @小数字段B = #Round(1.23, 0);\n\n结果：\n    @小数字段A => 1.2\n    @小数字段B => 1.0",
+        "trigger": "@小数字段A = #Round(1.23, 1);\n@小数字段B = #Round(1.23, 0);",
+        "noShow": false
+      },
+      {
+        "displayName": "Random",
+        "format": "#Random()",
+        "code": "random",
+        "description": "介绍：\n    随机生成一个小数类型的数值，不需要输入参数，自动生成范围0~1的随机小数值。\n\n示例：\n    @小数字段 = #Random();\n\n结果：\n    @小数字段 => 0.1305983189929366",
+        "trigger": "@小数字段 = #Random();",
+        "noShow": false
+      },
+      {
+        "displayName": "Remainder",
+        "format": "#Remainder(,)",
+        "code": "remainder",
+        "description": "介绍：\n    用于计算求余，例如 5 除以 2 等于 2 余 1，1即为结果值。\n\n示例：\n    @整数字段 = #Remainder(5, 2);\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@整数字段 = #Remainder(5, 2);",
+        "noShow": false
+      },
+      {
+        "displayName": "Random Long",
+        "format": "#Random Long()",
+        "code": "randomLong",
+        "description": "介绍：\n    随机生成一个整数类型的数值，参数为范围，如果填写5，将会在0~4中随机取值。\n\n示例：\n    @整数字段 = #Random Long(5);\n\n结果：\n    @整数字段 => 0~4随机任意一个数值",
+        "trigger": "@整数字段 = #Random Long(5);",
+        "noShow": false
+      },
+      {
+        "displayName": "Exp",
+        "format": "#Exp()",
+        "code": "exp",
+        "description": "介绍：\n    用于计算数学指数，以 `e` 为基数的指数。\n\n示例：\n    @小数字段 = #Exp(1);\n\n结果：\n    @小数字段 => 2.718281828459045",
+        "trigger": "@小数字段 = #Exp(1);",
+        "noShow": false
+      },
+      {
+        "displayName": "Ln",
+        "format": "#Ln()",
+        "code": "ln",
+        "description": "介绍：\n    用于计算数学对数，以 `e` 为底进行计算对数，`e` 取值约为 2.718281828459045。\n\n示例：\n    @小数字段 = #Ln(5);\n\n结果：\n    @小数字段 => 1.6094379124341003",
+        "trigger": "@小数字段 = #Ln(5);",
+        "noShow": false
+      },
+      {
+        "displayName": "Log",
+        "format": "#Log()",
+        "code": "log",
+        "description": "介绍：\n    用于计算数学对数，通常有两种使用方式，#Log(@整数字段)，将会使用以 10 为底计算对数；#Log(@整数字段A, 整数字段B)，将会使用计算 #Log(@整数字段A) / #Log(@整数字段B) 的结果。\n\n示例：\n    @整数字段A = #Log(10);\n    @整数字段B = #Log(4, 2);\n\n结果：\n    @整数字段A => 1\n    @整数字段B => 2",
+        "trigger": "@整数字段A = #Log(10);\n@整数字段B = #Log(4, 2);",
+        "noShow": false
+      }
+    ],
+    "OPERATORS": [
+      {
+        "displayName": "Greater Than",
+        "format": ">",
+        "code": ">",
+        "description": "介绍：\n    大于，判断符号 `>`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A > @整数字段B;\n\n结果：\n    @布尔字段 => false",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A > @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "Greater Than And Equal",
+        "format": ">=",
+        "code": ">=",
+        "description": "介绍：\n    大于等于，判断符号 `>=`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A >= @整数字段B;\n\n结果：\n    @布尔字段 => false",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A >= @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "Less Than",
+        "format": "<",
+        "code": "<",
+        "description": "介绍：\n    小于，判断符号 `<`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A < @整数字段B;\n\n结果：\n    @布尔字段 => true",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A < @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "Less Than Or Equal",
+        "format": "<=",
+        "code": "<=",
+        "description": "介绍：\n    小于等于，判断符号 `<=`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A <= @整数字段B;\n\n结果：\n    @布尔字段 => true",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A <= @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "Not Equals",
+        "format": "!=",
+        "code": "!=",
+        "description": "介绍：\n    不等于，判断符号 `!=`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A != @整数字段B;\n\n结果：\n    @布尔字段 => true",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A != @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "To Long",
+        "format": "#To Long()",
+        "code": "toLong",
+        "description": "介绍：\n    类型转换函数，可以将 `字符串类型` 或 `小数类型` 参数或结果转换为整数型。如果入参不符合数值类型规范，系统将会抛出异常。如果入参是小数类型参数或结果，将会舍去小数部分取整数返回。\n\n示例：\n    @整数字段A = #To Long(\"1\");\n    @整数字段B = #To Long(\"2.3\");\n\n结果：\n    @整数字段A => 1\n    @整数字段B => 2",
+        "trigger": "@整数字段A = #To Long(\"1\");\n@整数字段B = #To Long(\"2.3\");",
+        "noShow": false
+      },
+      {
+        "displayName": "To Double",
+        "format": "#To Double()",
+        "code": "toDouble",
+        "description": "介绍：\n    类型转换函数，可以将 `字符串类型` 或 `整数类型` 参数或结果转换为小数型。如果入参不符合数值类型规范，系统将会抛出异常。如果入参是整数类型参数或结果，将会变成小数型结果返回。\n\n示例：\n    @小数字段A = #To Double(\"1\");\n    @小数字段B = #To Double(\"2.3\");\n\n结果：\n    @小数字段A => 1.0\n    @小数字段B => 2.3",
+        "trigger": "@小数字段A = #To Double(\"1\");\n@小数字段B = #To Double(\"2.3\");",
+        "noShow": false
+      },
+      {
+        "displayName": "To Number",
+        "format": "#To Number()",
+        "code": "toNumber",
+        "description": "介绍：\n    类型转换函数，可以将 `字符串类型` 或 `整数类型` 或 `小数类型` 参数或结果转换为数值型。数值型的实际类型会根据数值是否携带小数点来判断是小数还是整数。\n\n示例：\n    @整数字段 = #To Number(\"123\");\n    @小数字段 = #To Number(\"123.4\");\n\n结果：\n    @整数字段 => 123\n    @小数字段 => 123.4",
+        "trigger": "@整数字段 = #To Number(\"123\");\n@小数字段 = #To Number(\"123.4\");",
+        "noShow": false
+      },
+      {
+        "displayName": "To Boolean",
+        "format": "#To Boolean()",
+        "code": "toBoolean",
+        "description": "介绍：\n    类型转换函数，可以将 `字符串类型` 参数或结果转换为布尔类型。入参的值必须是 `true` 或者 `false`，否则系统将会抛出异常。\n\n示例：\n    @布尔字段A = #To Boolean(\"true\");\n    @布尔字段B = #To Boolean(\"false\");\n\n结果：\n    @布尔字段A => true\n    @布尔字段B => false",
+        "trigger": "@布尔字段A = #To Boolean(\"true\");\n@布尔字段B = #To Boolean(\"false\");",
+        "noShow": false
+      },
+      {
+        "displayName": "To Datetime",
+        "format": "#To Datetime()",
+        "code": "toDateTime",
+        "description": "介绍：\n    类型转换函数，可以将 `字符串类型` 参数或结果转换为时间类型。入参的字符串格式必须为：yyyy-MM-dd HH:mm:ss，否则系统将会抛出异常。\n\n示例：\n    @时间字段A = #To Datetime(\"2024-09-09 12:00:00\");\n\n结果：\n    @时间字段A => 2024-09-09 12:00:00",
+        "trigger": "@时间字段A = #To Datetime(\"2024-09-09 12:00:00\");",
+        "noShow": false
+      },
+      {
+        "displayName": "Date Time Diff",
+        "format": "#Date Time Diff(,)",
+        "code": "dateTimeDiff",
+        "description": "介绍：\n    通过传递两个时间参数，计算两个时间间隔多久，一共有三个参数需要编写，参数1和参数2均为时间类型字段或结果，参数3为时间单位，Y代表为年；M代表为月；D代表为日。注意，不足1整个时间单位的将会舍去不足部分。\n\n示例：\n    @时间字段A = #To Datetime(\"2024-09-09 12:00:00\");\n    @时间字段B = #To Datetime(\"2024-09-11 12:00:00\");\n    @时间字段C = #To Datetime(\"2024-09-11 08:00:00\");\n    @整数字段A = #Date Time Diff(@时间字段A, @时间字段B, \"D\");\n    @整数字段B = #Date Time Diff(@时间字段B, @时间字段A, \"D\");\n    @整数字段C = #Date Time Diff(@时间字段B, @时间字段C, \"D\");\n\n结果：\n    @整数字段A => 2\n    @整数字段B => -2\n    @整数字段C => 0",
+        "trigger": "@时间字段A = #To Datetime(\"2024-09-09 12:00:00\");\n@时间字段B = #To Datetime(\"2024-09-11 12:00:00\");\n@时间字段C = #To Datetime(\"2024-09-11 08:00:00\");\n@整数字段A = #Date Time Diff(@时间字段A, @时间字段B, \"D\");\n@整数字段B = #Date Time Diff(@时间字段B, @时间字段A, \"D\");\n@整数字段C = #Date Time Diff(@时间字段B, @时间字段C, \"D\");",
+        "noShow": false
+      },
+      {
+        "displayName": "NVL",
+        "format": "#NVL(,)",
+        "code": "nvl",
+        "description": "介绍：\n    通过传递两个参数，判断第一个参数是否为空值 (null)，如果为空值，将会返回第二个参数结果；如果不为空值，将会返回第一个参数结果。\n\n示例：\n@整数字段A= #NVL(@整数字段C, 10);（如果@整数字段C为空值，则返回10）\n    @整数字段B = #NVL(5, 10);\n\n结果：\n    @整数字段A => 10\n    @整数字段B => 5",
+        "trigger": "@整数字段A = #NVL(null, 10);\n@整数字段B = #NVL(5, 10);",
+        "noShow": false
+      },
+      {
+        "displayName": "Is Null",
+        "format": "#Is Null()",
+        "code": "isNull",
+        "description": "介绍：\n    用于判断参数是否为空值，返回结果为布尔类型，如果为空值，将会返回 `true`，否则返回 `false`。\n\n示例：\n    @布尔字段A = #Is Null(null);\n    @布尔字段B = #Is Not Null(10);\n\n结果：\n    @布尔字段A => true\n    @布尔字段B => false",
+        "trigger": "@布尔字段A = #Is Null(null);\n@布尔字段B = #Is Null(10);",
+        "noShow": false
+      },
+      {
+        "displayName": "Is Not Null",
+        "format": "#Is Not Null()",
+        "code": "isNotNull",
+        "description": "介绍：\n    用于判断参数是否不为空值，返回结果为布尔类型，如果不为空值，将会返回 `true`，否则返回 `false`。\n\n示例：\n    @布尔字段A = #Is Not Null(null);\n    @布尔字段B = #Is Null(10);\n\n结果：\n    @布尔字段A => false\n    @布尔字段B => true",
+        "trigger": "@布尔字段A = #Is Not Null(null);\n@布尔字段B = #Is Not Null(10);",
+        "noShow": false
+      },
+      {
+        "displayName": "If, ElseIf, Else",
+        "format": "#If(){}\n#ElseIf(){}\n#Else{}",
+        "code": "if\n#elseif\n#else",
+        "description": "介绍：\n    条件逻辑控制语法，用于编写实现一些复杂业务场景，通过一些判断，来做某些事情。\n\n示例：\n    @整数字段 = 10;\n    #If (@整数字段 < 3)\n    {\n         @字符字段 = \"幼儿\";\n    }\n    #ElseIf (@整数字段 < 18)\n    {\n         @字符字段 = \"未成年\";\n    }\n    #Else\n    {\n         @字符字段 = \"成年\";\n    }\n\n结果：\n    @字符字段 => \"未成年\"",
+        "trigger": "@整数字段 = 10;\n#If (@整数字段 < 3)\n{\n @字符字段 = \"幼儿\";\n}\n#ElseIf (@整数字段 < 18)\n{\n @字符字段 = \"未成年\";\n}\n#Else\n{\n @字符字段 = \"成年\";\n}",
+        "noShow": false
+      },
+      {
+        "displayName": "If, Then",
+        "format": "#If()\n#Then{}",
+        "code": "if\n#then",
+        "description": "介绍：\n    条件逻辑控制语法，用于编写实现一些复杂业务场景，通过一些判断，来做某些事情。\n\n示例：\n    @整数字段 = 2;\n    #If (@整数字段 < 3)\n    #Then\n    {\n         @字符字段 = \"幼儿\";\n    }\n\n结果：\n    @字符字段 => \"幼儿\"",
+        "trigger": "@整数字段 = 2;\n#If (@整数字段 < 3)\n#Then\n{\n @字符字段 = \"幼儿\";\n}",
+        "noShow": false
+      },
+      {
+        "displayName": "If, Then, Else",
+        "format": "#If()\n#Then{}\n#Else{}",
+        "code": "if\n#then\n#else",
+        "description": "介绍：\n    条件逻辑控制语法，用于编写实现一些复杂业务场景，通过一些判断，来做某些事情。\n\n示例：\n    @整数字段 = 20;\n    #If (@整数字段 < 18)\n    #Then\n    {\n         @字符字段 = \"未成年\";\n    }\n    #Else\n    {\n         @字符字段 = \"成年\";\n    }\n\n结果：\n    @字符字段 => \"成年\"",
+        "trigger": "@整数字段 = 20;\n#If (@整数字段 < 18)\n#Then\n{\n @字符字段 = \"未成年\";\n}\n#Else\n{\n @字符字段 = \"成年\";\n}",
+        "noShow": false
+      },
+      {
+        "displayName": "While...Do",
+        "format": "#While()\n#Do{}\n#Limit 100\n#End_While",
+        "code": "WHILE\n#DO\n#LIMIT\n#END_WHILE",
+        "description": "介绍：\n    条件逻辑循环语法，将会执行类似循环的效果，当 `While` 中满足条件后，执行 `Do` 中的语法块。`Limit` 代指循环最大次数，当循环执行了指定次数后，将会结束该循环，最大为100，如果数值填写大于100，也将会取值为100。下方的示例展示了如何从1一直加到100（1+2+3+...+99+100）。虽然 `While` 条件中被设置成 `整数字段B` <= 200，但是在 `Limit` 中被限制只能做100次循环。\n\n示例：\n    @整数字段A = 0;\n    @整数字段B = 1;\n\n    #While (整数字段B <= 200)\n    #Do\n    {\n        @整数字段A = @整数字段A + @整数字段B;\n        @整数字段B = @整数字段B + 1;\n    }\n    #Limit 100\n    #End_While\n\n结果：\n    @整数字段A => 5050",
+        "trigger": "@整数字段A = 0;\n@整数字段B = 1;\n\n#While (整数字段B <= 200)\n#Do\n{\n@整数字段A = @整数字段A + @整数字段B;\n@整数字段B = @整数字段B + 1;\n}\n#Limit 100\n#End_While",
+        "noShow": false
+      },
+      {
+        "displayName": "Repeat...Until",
+        "format": "#Repeat{}\n#Until()\n#Limit 100\n#End_Repeat",
+        "code": "REPEAT\n#UNTIL\n#LIMIT\n#END_REPEAT",
+        "description": "介绍：\n    条件逻辑循环语法，将会执行类似循环的效果，会一直执行 `Repeat` 中的语法块，一直到 `Until` 中的布尔表达式满足条件。`Limit` 代指循环最大次数，当循环执行了指定次数后，将会结束该循环，最大为100，如果数值填写大于100，也将会取值为100。下方的示例展示了如何从1一直加到100（1+2+3+...+99+100）。\n\n示例：\n    @整数字段A = 0;\n    @整数字段B = 1;\n\n    #Repeat\n    {\n         @整数字段A = @整数字段A + @整数字段B;\n        @整数字段B = @整数字段B + 1;\n    }\n    #Until (@整数字段B >= 101)\n    #Limit 100\n    #End_Repeat\n\n结果：\n    @整数字段A => 5050",
+        "trigger": "@整数字段A = 0;\n@整数字段B = 1;\n\n#Repeat\n{\n @整数字段A = @整数字段A + @整数字段B;\n@整数字段B = @整数字段B + 1;\n}\n#Until (@整数字段B >= 101)\n#Limit 100\n#End_Repeat",
+        "noShow": false
+      },
+      {
+        "displayName": "Evaluate...When",
+        "format": "#Evaluate @\n#When\n#Do{}\n#Other{}\n#End_Evaluate",
+        "code": "EVALUATE\n#WHEN\n#DO\n#OTHER\n#END_EVALUATE",
+        "description": "介绍：\n    条件逻辑控制语法，将会执行类似 `Switch...Case` 代码语法的效果，`Evaluate` 中需要指定一个具体的字段，用于接下来的判断，`When` 要填写操作符和数值，用于形成一个布尔表达式，当满足 `When` 中的条件后，即执行后面 `Do` 中的语法块。当任意一个 `When` 触发并执行 `Do` 语法块后，整个 `Evaluate...When...` 语法都将被终止。\n\n示例：\n    @整数字段 = 15;\n\n    #Evaluate @整数字段\n    #When < 3\n         #Do { @字符字段 = \"幼儿\"; }\n    #When < 18\n         #Do { @字符字段 = \"未成年\"; }\n    #Other { @字符字段 = \"成年\"; }\n    #End_Evaluate\n\n结果：\n    @字符字段 => 未成年",
+        "trigger": "@整数字段 = 15;\n\n#Evaluate @整数字段\n#When < 3\n #Do { @字符字段 = \"幼儿\"; }\n#When < 18\n #Do { @字符字段 = \"未成年\"; }\n#Other { @字符字段 = \"成年\"; }\n#End_Evaluate",
+        "noShow": false
+      },
+      {
+        "displayName": "Exclude",
+        "format": "#Exclude",
+        "code": "EXCLUDE",
+        "description": "介绍：\n    包含，判断符号，通常用于判断某个数组内是否不包含一个元素，结果将会返回布尔类型。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @布尔字段 = @数组字段 #Exclude 2000;\n\n结果：\n    @布尔字段 => false",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@布尔字段 = @数组字段 #Exclude 2000;",
+        "noShow": false
+      },
+      {
+        "displayName": "Include",
+        "format": "#Include",
+        "code": "INCLUDE",
+        "description": "介绍：\n    包含，判断符号，通常用于判断某个数组内是否包含一个元素，结果将会返回布尔类型。\n\n示例：\n    @数组字段[0] = 1000;\n    @数组字段[1] = 2000;\n    @布尔字段 = @数组字段 #Include 2000;\n\n结果：\n    @布尔字段 => true",
+        "trigger": "@数组字段[0] = 1000;\n@数组字段[1] = 2000;\n@布尔字段 = @数组字段 #Include 2000;",
+        "noShow": false
+      },
+      {
+        "displayName": "Not",
+        "format": "#Not",
+        "code": "NOT",
+        "description": "介绍：\n    取反，对一个布尔表达式取反，通常写在布尔表达式前方，结果返回布尔类型。\n\n示例：\n    @布尔字段 = #Not true;\n\n结果：\n    @布尔字段 => false",
+        "trigger": "@布尔字段 = #Not true;",
+        "noShow": false
+      },
+      {
+        "displayName": "In List",
+        "format": "#In List",
+        "code": "INLIST",
+        "description": "介绍：\n    用于判断某个字符类型或数字类型的字段或结果，是否在某个集合中，结果返回布尔类型。\n\n示例：\n    @布尔字段 = 1 #In List {1,2,3};\n\n结果：\n    @布尔字段 => true",
+        "trigger": "@布尔字段 = 1 #In List {1,2,3};",
+        "noShow": false
+      }
+    ],
+    "STATISTICS": [
+      {
+        "displayName": "Mean",
+        "format": "#Mean(,)",
+        "code": "MEAN",
+        "description": "介绍：\n    计算数组中元素的平均值，范围代指取数组的前多少位，可以截取数组的元素个数。\n\n示例：\n    @数组字段[0] = 1;\n    @数组字段[1] = 2;\n    @数组字段[2] = 3;\n    @整数字段 = #Mean(@数组字段, 3);\n\n结果：\n    @整数字段 => 2",
+        "trigger": "@数组字段[0] = 1;\n@数组字段[1] = 2;\n@数组字段[2] = 3;\n@整数字段 = #Mean(@数组字段, 3);",
+        "noShow": false
+      },
+      {
+        "displayName": "Median",
+        "format": "#Median(,)",
+        "code": "MEDIAN",
+        "description": "介绍：\n    计算从小到大排序数组中元素的中间值，如果中间值有两个，那么取这两个值的平均值，如果中间值只有一个，那么直接取这个值，范围代指取数组的前多少位，可以截取数组的元素个数。\n\n示例：\n    @数组字段[0] = 1;\n    @数组字段[1] = 2;\n    @数组字段[2] = 3;\n    @数组字段[3] = 4;\n    @数组字段[4] = 5;\n    @数组字段[5] = 6;\n    @数组字段[6] = 7;\n    @整数字段 = #Median(@数组字段, 7);\n\n结果：\n    @整数字段 => 4",
+        "trigger": "@数组字段[0] = 1;\n@数组字段[1] = 2;\n@数组字段[2] = 3;\n@数组字段[3] = 4;\n@数组字段[4] = 5;\n@数组字段[5] = 6;\n@数组字段[6] = 7;\n@整数字段 = #Median(@数组字段, 7);",
+        "noShow": false
+      },
+      {
+        "displayName": "Mode",
+        "format": "#Mode(,)",
+        "code": "MODE",
+        "description": "介绍：\n    计算数组中元素的出现频率最多的元素，如果有多个元素出现次数都相同，那么判断哪个元素第一个出现。范围代指取数组的前多少位，可以截取数组的元素个数。\n\n示例：\n    @数组字段[0] = 1;\n    @数组字段[1] = 1;\n    @数组字段[2] = 2;\n    @数组字段[3] = 2;\n    @数组字段[4] = 3;\n    @数组字段[5] = 4;\n    @数组字段[6] = 5;\n    @整数字段 = #Mode(@数组字段, 5);\n\n结果：\n    @整数字段 => 1",
+        "trigger": "@数组字段[0] = 1;\n@数组字段[1] = 1;\n@数组字段[2] = 2;\n@数组字段[3] = 2;\n@数组字段[4] = 3;\n@数组字段[5] = 4;\n@数组字段[6] = 5;\n@整数字段 = #Mode(@数组字段, 5);",
+        "noShow": false
+      },
+      {
+        "displayName": "Std",
+        "format": "#Std(,)",
+        "code": "STD",
+        "description": "介绍：\n    计算数组中元素的方差，范围代指取数组的前多少位，可以截取数组的元素个数。\n\n示例：\n    @数组字段[0] = 1;\n    @数组字段[1] = 2;\n    @数组字段[2] = 3;\n    @数组字段[3] = 4;\n    @数组字段[4] = 5;\n    @数组字段[5] = 6;\n    @数组字段[6] = 7;\n    @整数字段 = #Std(@数组字段, 7);\n\n结果：\n    @整数字段 => 2",
+        "trigger": "@数组字段[0] = 1;\n@数组字段[1] = 2;\n@数组字段[2] = 3;\n@数组字段[3] = 4;\n@数组字段[4] = 5;\n@数组字段[5] = 6;\n@数组字段[6] = 7;\n@整数字段 = #Std(@数组字段, 7);",
+        "noShow": false
+      },
+      {
+        "displayName": "Variance",
+        "format": "#Variance(,)",
+        "code": "variance",
+        "description": "介绍：\n    计算多个数值的方差。\n\n示例：\n    @整数字段 = #Variance(1, 2, 3, 4, 5, 6, 7);\n\n结果：\n    @整数字段 => 4",
+        "trigger": "@整数字段 = #Variance(1, 2, 3, 4, 5, 6, 7);",
+        "noShow": false
+      },
+      {
+        "displayName": "Standard Deviation",
+        "format": "#Standard Deviation(,)",
+        "code": "standardDeviation",
+        "description": "介绍：\n    计算多个数值的标准差。\n\n示例：\n    @整数字段 = #Standard Deviation(1, 2, 3, 4, 5, 6, 7);\n\n结果：\n    @整数字段 => 2",
+        "trigger": "@整数字段 = #Standard Deviation(1, 2, 3, 4, 5, 6, 7);",
+        "noShow": false
+      }
+    ],
+    "TEXT": [
+      {
+        "displayName": "Contains",
+        "format": "#Contains(,)",
+        "code": "contains",
+        "description": "介绍：\n    判断字段n中是否包含字段1，字段2...字段n-1，其中的任意一个内容。\n\n示例：\n    @布尔字段A = #Contains(\"1\", \"4\", \"123\");\n    @布尔字段B = #Contains(\"4\", \"123\");\n\n结果：\n    @布尔字段A => true\n    @布尔字段B => false",
+        "trigger": "@布尔字段A = #Contains(\"1\", \"4\", \"123\");\n@布尔字段B = #Contains(\"4\", \"123\");",
+        "noShow": false
+      },
+      {
+        "displayName": "Not Contains",
+        "format": "#Not Contains(,)",
+        "code": "notContains",
+        "description": "介绍：\n    判断字段n中是否不包含字段1，字段2...字段n-1，其中的任意一个内容。\n\n示例：\n    @布尔字段A = #Not Contains(\"1\", \"4\", \"123\");\n    @布尔字段B = #Not Contains(\"4\", \"123\");\n\n结果：\n    @布尔字段A => false\n    @布尔字段B => true",
+        "trigger": "@布尔字段A = #Not Contains(\"1\", \"4\", \"123\");\n@布尔字段B = #Not Contains(\"4\", \"123\");",
+        "noShow": false
+      },
+      {
+        "displayName": "Equal",
+        "format": "==",
+        "code": "==",
+        "description": "介绍：\n    等于，判断符号 `==`，通常用于布尔表达式中。\n\n示例：\n    @整数字段A = 1;\n    @整数字段B = 2;\n    @布尔字段 = @整数字段A == @整数字段B;\n\n结果：\n    @布尔字段 => false",
+        "trigger": "@整数字段A = 1;\n@整数字段B = 2;\n@布尔字段 = @整数字段A == @整数字段B;",
+        "noShow": false
+      },
+      {
+        "displayName": "Concat",
+        "format": "#Concat(,)",
+        "code": "concat",
+        "description": "介绍：\n    拼接两个字符串，结果返回拼接后的结果，字符串类型。\n\n示例：\n    @字符字段 = #Concat(\"1234\", \"567\");\n\n结果：\n    @字符字段 => 1234567",
+        "trigger": "@字符字段 = #Concat(\"1234\", \"567\");",
+        "noShow": false
+      },
+      {
+        "displayName": "Length",
+        "format": "#Length()",
+        "code": "length",
+        "description": "介绍：\n    计算某个字符串的长度，结果返回整数类型。\n\n示例：\n    @整数字段 = #Length(\"1234567\");\n\n结果：\n    @整数字段 => 7",
+        "trigger": "@整数字段 = #Length(\"1234567\");",
+        "noShow": false
+      },
+      {
+        "displayName": "Sub String",
+        "format": "#Sub String(,,)",
+        "code": "substring",
+        "description": "介绍：\n    对某个字符串进行截取操作，一共有3个参数需要填写。参数1为要被截取的字符串，参数2为从第几位开始截取，参数3为截取到第几位。\n\n示例：\n    @字符字段 = #Sub String(\"123456789\", 1, 5);\n\n结果：\n    @字符字段 => 1234",
+        "trigger": "@字符字段 = #Sub String(\"123456789\", 1, 5);",
+        "noShow": false
+      },
+      {
+        "displayName": "Trim",
+        "format": "#Trim()",
+        "code": "trim",
+        "description": "介绍：\n    将某个字符串格式化，去掉头部和尾部多余的空格，无论两端的空格有多少个都会被去掉。\n\n示例：\n    @字符字段 = #Trim(\"  我是一条字符串  \");\n\n结果：\n    @字符字段 => 我是一条字符串",
+        "trigger": "@字符字段 = #Trim(\"  我是一条字符串  \");",
+        "noShow": false
+      },
+      {
+        "displayName": "To String",
+        "format": "#To String()",
+        "code": "toString",
+        "description": "介绍：\n    类型转换函数，可以将整数、小数、布尔、日期、枚举类型的字段或结果，转换为字符类型。如果入参为布尔类型，出参结果为 `true` 或 `false`；如若入参为日期类型，出参结果为 `2024-09-09 12:00:00` 格式的字符串；如若入参为枚举类型，出参结果为枚举值内容。\n\n示例：\n    @字符字段 = #To String(123);\n\n结果：\n    @字符字段 => 123 (字符串)",
+        "trigger": "@字符字段 = #To String(123);",
+        "noShow": false
+      }
+    ],
+    "OTHER": [
+      {
+        "displayName": "Generate UUID",
+        "format": "#Generate UUID()",
+        "code": "uuid",
+        "description": "介绍：\n    从系统随机生成一段唯一标识（UUID），返回结果为字符类型。\n\n示例：\n    @字符字段 = #Generate UUID();\n\n结果：\n    @字符字段 => f678ca06-cc4d-415b-a52b-9897c0d9e897",
+        "trigger": "@字符字段 = #Generate UUID();",
+        "noShow": false
+      }
+    ],
+    "NO_SHOW": [
+      {
+        "displayName": "If",
+        "format": "#If(){}",
+        "code": "if",
+        "noShow": true
+      },
+      {
+        "displayName": "Then",
+        "format": "#Then{}",
+        "code": "then",
+        "noShow": true
+      },
+      {
+        "displayName": "ElseIf",
+        "format": "#ElseIf(){}",
+        "code": "elseif",
+        "noShow": true
+      },
+      {
+        "displayName": "Else",
+        "format": "#Else{}",
+        "code": "else",
+        "noShow": true
+      },
+      {
+        "displayName": "While",
+        "format": "#While()",
+        "code": "WHILE",
+        "noShow": true
+      },
+      {
+        "displayName": "Do",
+        "format": "#Do{}",
+        "code": "DO",
+        "noShow": true
+      },
+      {
+        "displayName": "Repeat",
+        "format": "#Repeat{}",
+        "code": "REPEAT",
+        "noShow": true
+      },
+      {
+        "displayName": "Until",
+        "format": "#Until()",
+        "code": "UNTIL",
+        "noShow": true
+      },
+      {
+        "displayName": "Evaluate",
+        "format": "#Evaluate",
+        "code": "EVALUATE",
+        "noShow": true
+      },
+      {
+        "displayName": "When",
+        "format": "#When",
+        "code": "WHEN",
+        "noShow": true
+      },
+      {
+        "displayName": "Limit",
+        "format": "#Limit",
+        "code": "LIMIT",
+        "noShow": true
+      },
+      {
+        "displayName": "End_While",
+        "format": "#End_While",
+        "code": "END_WHILE",
+        "noShow": true
+      },
+      {
+        "displayName": "End_Evaluate",
+        "format": "#End_Evaluate",
+        "code": "END_EVALUATE",
+        "noShow": true
+      },
+      {
+        "displayName": "End_Repeat",
+        "format": "#End_Repeat",
+        "code": "END_REPEAT",
+        "noShow": true
+      },
+      {
+        "displayName": "Other",
+        "format": "#Other",
+        "code": "OTHER",
+        "noShow": true
+      }
+    ]
+  }
+}

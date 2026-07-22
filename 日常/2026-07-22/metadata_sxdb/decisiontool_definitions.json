@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "toolCount": 2,
+    "appDistribution": {
+      "ebcp": 1,
+      "init": 1
+    },
+    "typeDistribution": {
+      "": 2
+    },
+    "fetchedAt": "2026-07-22T09:54:29.428768"
+  },
+  "tools": [
+    {
+      "uuid": "",
+      "name": "",
+      "toolType": "",
+      "appCode": "ebcp",
+      "appName": "个人网银",
+      "orgCode": "sxdb",
+      "orgName": "三峡担保",
+      "status": 3,
+      "description": "",
+      "gmtCreate": "2026-07-15 09:46:16",
+      "gmtModify": "2026-07-15 09:46:16"
+    },
+    {
+      "uuid": "",
+      "name": "",
+      "toolType": "",
+      "appCode": "init",
+      "appName": "初始应用",
+      "orgCode": "sxdb",
+      "orgName": "三峡担保",
+      "status": 4,
+      "description": "",
+      "gmtCreate": "2026-07-15 09:44:37",
+      "gmtModify": "2026-07-15 09:44:50"
+    }
+  ],
+  "app_to_tools": {
+    "ebcp": [
+      ""
+    ],
+    "init": [
+      ""
+    ]
+  },
+  "type_to_tools": {},
+  "uuid_to_tool": {},
+  "name_to_tool": {}
+}

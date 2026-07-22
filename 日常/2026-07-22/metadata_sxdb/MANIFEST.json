@@ -1,0 +1,577 @@
+{
+  "_about": "天策平台元数据目录索引 — 由 fetch_metadata.py 自动生成",
+  "_usage": "files 中每个条目包含 category（类别）、description（用途）、recordCount（主记录数）、meta（完整统计）和 topLevelKeys（数据结构概览）",
+  "generatedAt": "2026-07-22T09:54:29",
+  "rawDir": "/Users/td/.qoderwork/workspace/mrub4m3iuizra207/outputs/metadata_20260722/raw",
+  "outputDir": "/Users/td/.qoderwork/workspace/mrub4m3iuizra207/outputs/metadata_20260722",
+  "totalFiles": 25,
+  "totalRecords": 1902,
+  "categoryGuide": {
+    "A-基础": "渠道、字段、机构、事件类型、决策类型、风险类型等基础枚举与映射",
+    "B-字段/指标": "指标完整定义、维度字段、字段分组",
+    "C-名单": "名单组、名单、维度定义与数据值",
+    "D-模板": "规则模板与指标模板",
+    "E-规则": "规则定义（含条件树）与规则集定义",
+    "F-策略": "策略定义（含规则集编排）",
+    "G-决策工具": "评分卡、决策表、决策树等决策工具",
+    "H-平台工具": "函数库与自定义函数",
+    "I-接口服务": "接口服务类型映射与已配置服务列表",
+    "J-决策流": "决策流节点字典（节点类型映射、流程类型节点配置、限制参数）",
+    "K-三方数据": "ETL处理器、数据源服务接口、合作方及合同",
+    "L-预警信号": "预警信号（业务分类→分组→信号，galaxyApi，部分环境可能未部署）",
+    "M-外数指标": "外数指标体系（captainApi）：报文结构、指标模板、指标（CUSTOM/TEMPLATE/VAR）、指标集"
+  },
+  "files": {
+    "field_metadata.json": {
+      "category": "A-基础",
+      "description": "字段元数据。顶层 key 为字段名（如 S_S_EVENTTYPE），值为字段完整定义，含类型/枚举值/分组/来源。",
+      "recordCount": 1198,
+      "meta": {
+        "source": "tiance-metadata-scout",
+        "systemFieldCount": 1178,
+        "scriptFieldCount": 21,
+        "availableFieldCount": 1198,
+        "totalFields": 1198,
+        "enumFieldsWithValues": 73,
+        "legacyFieldsAdded": 0,
+        "legacyEnumAliasesAdded": 0,
+        "fetchedAt": "2026-07-22T09:54:29.354482"
+      },
+      "topLevelKeys": "_meta + 1198 个字段名 key（如 S_S_EVENTTYPE, S_S_APPCODE, ...）"
+    },
+    "event_types.json": {
+      "category": "A-基础",
+      "description": "事件类型枚举。含 events 数组和 code_to_name / name_to_code 双向索引。",
+      "recordCount": 33,
+      "meta": {
+        "count": 33,
+        "source": "dictionary",
+        "fetchedAt": "2026-07-22T09:54:29.366562"
+      },
+      "topLevelKeys": [
+        "cn_to_code",
+        "code_to_cn",
+        "events"
+      ]
+    },
+    "channel_apps.json": {
+      "category": "A-基础",
+      "description": "渠道/应用列表。含 apps 数组和 code_to_app / name_to_app 索引。",
+      "recordCount": 17,
+      "meta": {
+        "count": 17,
+        "fetchedAt": "2026-07-22T09:54:29.367038"
+      },
+      "topLevelKeys": [
+        "apps",
+        "display_to_name",
+        "name_to_display"
+      ]
+    },
+    "org_mapping.json": {
+      "category": "A-基础",
+      "description": "机构树映射。含 orgs 数组和 code_to_org 索引。",
+      "recordCount": 9,
+      "meta": {
+        "count": 9,
+        "fetchedAt": "2026-07-22T09:54:29.367323"
+      },
+      "topLevelKeys": [
+        "code_to_name",
+        "flat",
+        "name_to_code",
+        "tree"
+      ]
+    },
+    "deal_types.json": {
+      "category": "A-基础",
+      "description": "风险决策类型（命中结果）枚举。含 types 数组和 code_to_name / name_to_code 索引。",
+      "recordCount": 44,
+      "meta": {
+        "count": 44,
+        "fetchedAt": "2026-07-22T09:54:29.369367"
+      },
+      "topLevelKeys": [
+        "dealTypes",
+        "name_to_type",
+        "type_to_name"
+      ]
+    },
+    "risk_types.json": {
+      "category": "A-基础",
+      "description": "规则集风险类型枚举。含 types 数组和 code_to_name / name_to_code 索引。",
+      "recordCount": 23,
+      "meta": {
+        "count": 23,
+        "source": "dictionary/RiskType",
+        "fetchedAt": "2026-07-22T09:54:29.369868"
+      },
+      "topLevelKeys": [
+        "display_to_name",
+        "name_to_display",
+        "riskTypes"
+      ]
+    },
+    "metric_definitions.json": {
+      "category": "B-字段/指标",
+      "description": "完整指标配置。含 metrics 数组和 code_to_metric / name_to_metric 索引，以及 template_distribution 分布统计。",
+      "recordCount": 6,
+      "meta": {
+        "count": 6,
+        "withFullConfig": 6,
+        "withoutConfig": 0,
+        "source": "editing:6",
+        "fetchedAt": "2026-07-22T09:54:29.368457"
+      },
+      "topLevelKeys": [
+        "code_to_uuid",
+        "metrics",
+        "name_to_code",
+        "template_distribution"
+      ]
+    },
+    "metric_catalog.json": {
+      "category": "B-字段/指标",
+      "description": "指标分类层级树。含 tree（原始递归树）、catalogs（扁平化列表）、uuid_to_catalog / name_to_uuid / parent_map 索引。",
+      "recordCount": 6,
+      "meta": {
+        "count": 6,
+        "topLevelCount": 3,
+        "source": "indexApi/metricCatalog/listTree",
+        "fetchedAt": "2026-07-22T09:54:29.369050"
+      },
+      "topLevelKeys": [
+        "catalogs",
+        "name_to_uuid",
+        "parent_map",
+        "tree",
+        "uuid_to_catalog"
+      ]
+    },
+    "main_dimensions.json": {
+      "category": "B-字段/指标",
+      "description": "维度字段（主维度）列表。含 dimensions 数组和 name_to_display / display_to_name 双向索引。",
+      "recordCount": 3,
+      "meta": {
+        "count": 3,
+        "source": "bridgeApi/mainDimension/list",
+        "fetchedAt": "2026-07-22T09:54:29.381073"
+      },
+      "topLevelKeys": [
+        "dimensions",
+        "display_to_name",
+        "name_to_display"
+      ]
+    },
+    "field_groups.json": {
+      "category": "B-字段/指标",
+      "description": "字段分组列表。含 groups 数组（含 uuid/id/name/displayName/standard/fieldCount），以及 name_to_display / display_to_name 双向索引、name_to_uuid / display_to_uuid / uuid_to_group 三个 uuid 查询索引。",
+      "recordCount": 42,
+      "meta": {
+        "count": 42,
+        "source": "bridgeApi/fieldGroup",
+        "fetchedAt": "2026-07-22T09:54:29.381599"
+      },
+      "topLevelKeys": [
+        "display_to_name",
+        "display_to_uuid",
+        "groups",
+        "name_to_display",
+        "name_to_uuid",
+        "uuid_to_group"
+      ]
+    },
+    "roster_definitions.json": {
+      "category": "C-名单",
+      "description": "名单组/名单/维度/数据值完整定义。含 groups 数组（嵌套 rosters → dimensions → data）。",
+      "recordCount": 17,
+      "meta": {
+        "groupCount": 2,
+        "rosterCount": 17,
+        "dimensionCount": 5,
+        "rostersWithSubDimension": 0,
+        "rosterTypeDistribution": {
+          "黑名单": 13,
+          "白名单": 4
+        },
+        "dataEntryCount": 36,
+        "rostersWithData": 7,
+        "fetchedAt": "2026-07-22T09:54:29.371303"
+      },
+      "topLevelKeys": [
+        "dimensions",
+        "group_to_rosters",
+        "groups",
+        "roster_by_code",
+        "roster_data",
+        "rosters"
+      ]
+    },
+    "rule_templates.json": {
+      "category": "D-模板",
+      "description": "规则模板（按组分类）。含 groups 数组（嵌套 templates，每个含 cfgJson 配置模板）。",
+      "recordCount": 36,
+      "meta": {
+        "groupCount": 8,
+        "templateCount": 36,
+        "duplicatedNames": {
+          "common/custom": 2
+        },
+        "fetchedAt": "2026-07-22T09:54:29.374779"
+      },
+      "topLevelKeys": [
+        "display_to_uuid",
+        "group_distribution",
+        "groups",
+        "templates",
+        "uuid_to_display",
+        "uuid_to_template"
+      ]
+    },
+    "metric_templates.json": {
+      "category": "D-模板",
+      "description": "指标模板列表。含 templates 数组（每个含约束配置）。",
+      "recordCount": 14,
+      "meta": {
+        "count": 14,
+        "fetchedAt": "2026-07-22T09:54:29.380102"
+      },
+      "topLevelKeys": [
+        "code_to_dataType",
+        "code_to_name",
+        "name_to_code",
+        "templates"
+      ]
+    },
+    "rules_definitions.json": {
+      "category": "E-规则",
+      "description": "规则列表（含完整条件配置树）。含 rules 数组，每条含 conditions/actions 嵌套结构。",
+      "recordCount": 211,
+      "meta": {
+        "ruleCount": 211,
+        "ruleSetCount": 31,
+        "templateDistribution": {
+          "common/custom": 165,
+          "pattern/fourCalculation": 44,
+          "common/script": 2
+        },
+        "validDistribution": {
+          "正式": 181,
+          "草稿": 16,
+          "": 14
+        },
+        "dealTypeDistribution": {
+          "highriskbhjc": 82,
+          "mediumriskbhjc": 51,
+          "HighValue": 44,
+          "lowriskbhjc": 10,
+          "areaconc": 6,
+          "extremhighriskbhjc": 3,
+          "relatedconc": 2,
+          "singleconc": 2,
+          "yellowalert": 1,
+          "greenalert": 1,
+          "Accept": 1,
+          "highrisk": 1,
+          "yellowwarnbh": 1,
+          "bluewarnbh": 1,
+          "greenwarnbh": 1,
+          "redwarnbh": 1,
+          "mediumtohighrisk": 1,
+          "lowtomediumrisk": 1,
+          "lowrisk": 1
+        },
+        "appDistribution": {
+          "bhjcqd": 151,
+          "init": 46,
+          "jzdqd": 8,
+          "jtyjqd": 4,
+          "wjflqd": 2
+        },
+        "fetchedAt": "2026-07-22T09:54:29.393042"
+      },
+      "topLevelKeys": [
+        "app_to_rules",
+        "customId_to_rule",
+        "ruleSet_to_rules",
+        "rules",
+        "uuid_to_rule"
+      ]
+    },
+    "ruleset_definitions.json": {
+      "category": "E-规则",
+      "description": "规则集列表。含 rulesets 数组和 app_to_rulesets / eventType_to_rulesets / uuid_to_ruleset / name_to_ruleset 索引。",
+      "recordCount": 32,
+      "meta": {
+        "ruleSetCount": 32,
+        "appDistribution": {
+          "bhjcqd": 20,
+          "jzdqd": 6,
+          "init": 4,
+          "wjflqd": 1,
+          "jtyjqd": 1
+        },
+        "eventTypeDistribution": {
+          "": 32
+        },
+        "fetchedAt": "2026-07-22T09:54:29.422897"
+      },
+      "topLevelKeys": [
+        "app_to_rulesets",
+        "eventType_to_rulesets",
+        "name_to_ruleset",
+        "ruleSetCode_to_ruleset",
+        "rulesets",
+        "uuid_to_ruleset"
+      ]
+    },
+    "policy_definitions.json": {
+      "category": "F-策略",
+      "description": "策略列表（含规则集编排）。含 policies 数组和 app_to_policies / eventType_to_policies / uuid_to_policy 索引。",
+      "recordCount": 21,
+      "meta": {
+        "policyCount": 21,
+        "appDistribution": {
+          "bhjcqd": 9,
+          "init": 7,
+          "jzdqd": 3,
+          "jtyjqd": 1,
+          "wjflqd": 1
+        },
+        "eventTypeDistribution": {
+          "": 8,
+          "Other": 7,
+          "Login": 6
+        },
+        "fetchedAt": "2026-07-22T09:54:29.426465"
+      },
+      "topLevelKeys": [
+        "app_to_policies",
+        "code_to_policy",
+        "eventType_to_policies",
+        "policies",
+        "uuid_to_policy"
+      ]
+    },
+    "policy_dict.json": {
+      "category": "F-策略",
+      "description": "策略枚举字典。含 policyVersionStatus（版本状态）、policyPublishConfig（发布配置）、policyModeType（流模式）、policyBusinessType（业务类型）、policyAreaType（区域类型）、policyStatus、businessScene、serviceBusinessScene 等枚举映射。",
+      "recordCount": 5,
+      "meta": {
+        "businessSceneCount": 7,
+        "policyVersionStatusCount": 5,
+        "policyBusinessTypeCount": 7,
+        "policyModeTypeCount": 3,
+        "fetchedAt": "2026-07-22T09:54:29.428224"
+      },
+      "topLevelKeys": [
+        "businessScene",
+        "policyAreaType",
+        "policyBusinessType",
+        "policyModeType",
+        "policyPublishConfig",
+        "policyStatus",
+        "policyVersionStatus",
+        "policyVersionUpdateType",
+        "serviceBusinessScene"
+      ]
+    },
+    "decisiontool_definitions.json": {
+      "category": "G-决策工具",
+      "description": "决策工具列表（评分卡/决策表/决策树等）。含 tools 数组和 app_to_tools / type_to_tools / uuid_to_tool / name_to_tool 索引。",
+      "recordCount": 2,
+      "meta": {
+        "toolCount": 2,
+        "appDistribution": {
+          "ebcp": 1,
+          "init": 1
+        },
+        "typeDistribution": {
+          "": 2
+        },
+        "fetchedAt": "2026-07-22T09:54:29.428768"
+      },
+      "topLevelKeys": [
+        "app_to_tools",
+        "name_to_tool",
+        "tools",
+        "type_to_tools",
+        "uuid_to_tool"
+      ]
+    },
+    "function_definitions.json": {
+      "category": "H-平台工具",
+      "description": "函数库列表。含 functions 数组和 type_to_functions / uuid_to_function / name_to_function 索引。",
+      "recordCount": 67,
+      "meta": {
+        "functionCount": 67,
+        "typeDistribution": {
+          "2": 60,
+          "1": 7
+        },
+        "fetchedAt": "2026-07-22T09:54:29.442921"
+      },
+      "topLevelKeys": [
+        "functions",
+        "name_to_function",
+        "type_to_functions",
+        "uuid_to_function"
+      ]
+    },
+    "customfunction_definitions.json": {
+      "category": "H-平台工具",
+      "description": "自定义函数可用列表（按类别分组）。含 functions 数组和 category_to_functions / code_to_function 索引。",
+      "recordCount": 85,
+      "meta": {
+        "totalFunctions": 85,
+        "categoryCount": 8,
+        "categoryDistribution": {
+          "ARRAY": 9,
+          "DATE": 7,
+          "MATH": 15,
+          "OPERATORS": 24,
+          "STATISTICS": 6,
+          "TEXT": 8,
+          "OTHER": 1,
+          "NO_SHOW": 15
+        },
+        "fetchedAt": "2026-07-22T09:54:29.446821"
+      },
+      "topLevelKeys": [
+        "category_to_functions",
+        "code_to_function",
+        "functions"
+      ]
+    },
+    "serviceconfig_definitions.json": {
+      "category": "I-接口服务",
+      "description": "接口服务配置。含 serviceTypes（服务类型列表）和 configuredServices（已配置服务列表），以及 type_to_name / name_to_type 双向映射和 service_by_name / service_by_type 索引。",
+      "recordCount": 6,
+      "meta": {
+        "serviceTypeCount": 6,
+        "configuredServiceCount": 17,
+        "categoryCount": 1,
+        "typeDistribution": {
+          "creditEngine": 12,
+          "transEngine": 5
+        },
+        "fetchedAt": "2026-07-22T09:54:29.451231"
+      },
+      "topLevelKeys": [
+        "categories",
+        "configuredServices",
+        "name_to_type",
+        "serviceTypes",
+        "service_by_name",
+        "service_by_type",
+        "type_to_name"
+      ]
+    },
+    "decisionflow_definitions.json": {
+      "category": "J-决策流",
+      "description": "决策流节点字典。含 nodeTypes（节点类型↔名称映射）、flowTypes（各流程类型可用节点列表）、limits（并行/分支/节点数限制），以及 type_to_name / name_to_type / flowType_to_nodes 索引。",
+      "recordCount": 18,
+      "meta": {
+        "nodeTypeCount": 18,
+        "flowTypeCount": 13,
+        "limits": {
+          "maxParallelNodes": 5,
+          "maxParallelBranchs": 5,
+          "maxNodes": 300,
+          "maxConditionBranchs": 10
+        },
+        "fetchedAt": "2026-07-22T09:54:29.459402"
+      },
+      "topLevelKeys": [
+        "flowType_to_nodes",
+        "flowTypes",
+        "limits",
+        "name_to_type",
+        "nodeTypes",
+        "type_to_name"
+      ]
+    },
+    "thirdparty_definitions.json": {
+      "category": "K-三方数据",
+      "description": "三方数据。含 etlHandlers（ETL处理器列表）、serviceConfigs（数据源服务接口列表）、providers（合作方列表）、contracts（合同列表，含合作方关联），以及 provider_to_contracts / provider_by_uuid / provider_by_name 索引。",
+      "recordCount": 7,
+      "meta": {
+        "etlHandlerCount": 67,
+        "serviceConfigCount": 62,
+        "providerCount": 7,
+        "contractCount": 10,
+        "providersWithContracts": 7,
+        "fetchedAt": "2026-07-22T09:54:29.466573"
+      },
+      "topLevelKeys": [
+        "contracts",
+        "etlHandlers",
+        "provider_by_name",
+        "provider_by_uuid",
+        "provider_to_contracts",
+        "providers",
+        "serviceConfigs"
+      ]
+    },
+    "alarmsignal_definitions.json": {
+      "category": "L-预警信号",
+      "description": "预警信号三层结构（业务分类→分组→信号，galaxyApi）。含 bizCategories（树）、signals（扁平，注入归属）、biz_to_groups / group_to_signals / biz_by_uuid / biz_by_code / group_by_uuid / signal_by_uuid 索引；接口可能未部署，整段失败时 _meta 全 0。",
+      "recordCount": 0,
+      "meta": {
+        "bizCategoryCount": 0,
+        "groupCount": 0,
+        "subGroupCount": 0,
+        "signalCount": 0,
+        "errorCount": 0,
+        "source": "none",
+        "fetchedAt": "2026-07-22T09:54:29.468638"
+      },
+      "topLevelKeys": [
+        "_errors",
+        "bizCategories",
+        "biz_by_code",
+        "biz_by_uuid",
+        "biz_to_groups",
+        "group_by_uuid",
+        "group_to_subgroups",
+        "signal_by_uuid",
+        "signals",
+        "subgroup_by_uuid",
+        "subgroup_to_signals"
+      ]
+    },
+    "captain_definitions.json": {
+      "category": "M-外数指标",
+      "description": "外数指标完整定义（captainApi）。含 documentTypes（报文结构，APPLICATION_JSON/XML）、templates（指标模板，VISUAL/JAVASSIST/PYTHON/JSONLOGIC，含 form/content/javassist 原始数据）、indexes（指标，CUSTOM/TEMPLATE/VAR，含 paramMap/content）、indexPackages（指标集，REALTIME/OFFLINE），以及 documentType_by_uuid / documentType_to_templates / documentType_to_indexes / documentType_to_packages / index_by_name / template_by_uuid / package_by_name 索引。",
+      "recordCount": 0,
+      "meta": {
+        "documentTypeCount": 4,
+        "templateCount": 0,
+        "indexCount": 0,
+        "indexPackageCount": 2,
+        "indexTypeDistribution": {},
+        "templateTypeDistribution": {},
+        "packagePurposeDistribution": {
+          "REALTIME": 2
+        },
+        "source": "captainApi",
+        "fetchedAt": "2026-07-22T09:54:29.469152"
+      },
+      "topLevelKeys": [
+        "documentType_by_name",
+        "documentType_by_uuid",
+        "documentType_to_indexes",
+        "documentType_to_packages",
+        "documentType_to_templates",
+        "documentTypes",
+        "indexPackages",
+        "index_by_name",
+        "index_by_uuid",
+        "indexes",
+        "package_by_name",
+        "template_by_uuid",
+        "templates"
+      ]
+    }
+  }
+}

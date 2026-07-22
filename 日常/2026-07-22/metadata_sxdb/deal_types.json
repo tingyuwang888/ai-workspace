@@ -1,0 +1,364 @@
+{
+  "_meta": {
+    "count": 44,
+    "fetchedAt": "2026-07-22T09:54:29.369367"
+  },
+  "dealTypes": [
+    {
+      "dealType": "HighValue",
+      "dealName": "高价值",
+      "grade": 850,
+      "color": "#fa28ff"
+    },
+    {
+      "dealType": "MediumToHighValue",
+      "dealName": "中高价值",
+      "grade": 700,
+      "color": "#fe9200"
+    },
+    {
+      "dealType": "MediumValue",
+      "dealName": "中价值",
+      "grade": 500,
+      "color": "#fcdc00"
+    },
+    {
+      "dealType": "LowToMediumValue",
+      "dealName": "中低价值",
+      "grade": 400,
+      "color": "#73d8ff"
+    },
+    {
+      "dealType": "LowValue",
+      "dealName": "低价值",
+      "grade": 300,
+      "color": "#cccccc"
+    },
+    {
+      "dealType": "redwarnbh",
+      "dealName": "红色预警",
+      "grade": 150,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "yellowwarnbh",
+      "dealName": "黄色预警",
+      "grade": 130,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "bluewarnbh",
+      "dealName": "蓝色预警",
+      "grade": 120,
+      "color": "#36BFFA"
+    },
+    {
+      "dealType": "greenwarnbh",
+      "dealName": "绿色预警",
+      "grade": 111,
+      "color": "#07C790"
+    },
+    {
+      "dealType": "highrisk",
+      "dealName": "高风险",
+      "grade": 110,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "mediumtohighrisk",
+      "dealName": "中高风险",
+      "grade": 105,
+      "color": "#FD853A"
+    },
+    {
+      "dealType": "extremhighriskbhjc",
+      "dealName": "极高风险预警",
+      "grade": 98,
+      "color": "#FD853A"
+    },
+    {
+      "dealType": "highriskbhjc",
+      "dealName": "高风险预警",
+      "grade": 96,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "lowtomediumrisk",
+      "dealName": "中低风险",
+      "grade": 95,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "mediumriskbhjc",
+      "dealName": "中风险预警",
+      "grade": 94,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "lowriskbhjc",
+      "dealName": "低风险预警",
+      "grade": 92,
+      "color": "#07C790"
+    },
+    {
+      "dealType": "lowrisk",
+      "dealName": "低风险",
+      "grade": 90,
+      "color": "#07C790"
+    },
+    {
+      "dealType": "singleconc",
+      "dealName": "单户集中度超限",
+      "grade": 88,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "relatedconc",
+      "dealName": "关联户集中度超限",
+      "grade": 86,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "areaconc",
+      "dealName": "区域集中度超限",
+      "grade": 84,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "Reject",
+      "dealName": "拒绝",
+      "grade": 80,
+      "color": "#f44e3b"
+    },
+    {
+      "dealType": "t002",
+      "dealName": "t002",
+      "grade": 66,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "Review",
+      "dealName": "人工审核",
+      "grade": 60,
+      "color": "#fcdc00"
+    },
+    {
+      "dealType": "risk",
+      "dealName": "风险账户",
+      "grade": 50,
+      "color": "#E86452"
+    },
+    {
+      "dealType": "suspicious",
+      "dealName": "可疑账户",
+      "grade": 40,
+      "color": "#FF9845"
+    },
+    {
+      "dealType": "a2",
+      "dealName": "a2",
+      "grade": 34,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "s1234",
+      "dealName": "1234",
+      "grade": 33,
+      "color": "#FD853A"
+    },
+    {
+      "dealType": "RedRisktest",
+      "dealName": "红色风险test",
+      "grade": 31,
+      "color": "#ef4444"
+    },
+    {
+      "dealType": "concerned",
+      "dealName": "关注账户",
+      "grade": 30,
+      "color": "#F6BD16"
+    },
+    {
+      "dealType": "aa1",
+      "dealName": "aa1",
+      "grade": 25,
+      "color": "#FD853A"
+    },
+    {
+      "dealType": "yellowalert",
+      "dealName": "黄灯",
+      "grade": 24,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "test3",
+      "dealName": "test3",
+      "grade": 23,
+      "color": "#36BFFA"
+    },
+    {
+      "dealType": "greenalert",
+      "dealName": "绿灯",
+      "grade": 22,
+      "color": "#07C790"
+    },
+    {
+      "dealType": "test4",
+      "dealName": "test4",
+      "grade": 21,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "credible",
+      "dealName": "可信账户",
+      "grade": 20,
+      "color": "#5AD8A6"
+    },
+    {
+      "dealType": "losswjfl",
+      "dealName": "损失",
+      "grade": 19,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "doubtfulwjfl",
+      "dealName": "可疑",
+      "grade": 18,
+      "color": "#FD853A"
+    },
+    {
+      "dealType": "substandardwjfl",
+      "dealName": "次级",
+      "grade": 16,
+      "color": "#F7B035"
+    },
+    {
+      "dealType": "concernwjfl",
+      "dealName": "关注",
+      "grade": 14,
+      "color": "#36BFFA"
+    },
+    {
+      "dealType": "normalwjfl",
+      "dealName": "正常",
+      "grade": 12,
+      "color": "#07C790"
+    },
+    {
+      "dealType": "t1",
+      "dealName": "t1他",
+      "grade": 11,
+      "color": "#8da10a"
+    },
+    {
+      "dealType": "ordinary",
+      "dealName": "普通账户",
+      "grade": 10,
+      "color": "#6DC8EC"
+    },
+    {
+      "dealType": "cwfxxh",
+      "dealName": "财务风险信号",
+      "grade": 2,
+      "color": "#FC746F"
+    },
+    {
+      "dealType": "Accept",
+      "dealName": "通过",
+      "grade": 1,
+      "color": "#05be88"
+    }
+  ],
+  "type_to_name": {
+    "HighValue": "高价值",
+    "MediumToHighValue": "中高价值",
+    "MediumValue": "中价值",
+    "LowToMediumValue": "中低价值",
+    "LowValue": "低价值",
+    "redwarnbh": "红色预警",
+    "yellowwarnbh": "黄色预警",
+    "bluewarnbh": "蓝色预警",
+    "greenwarnbh": "绿色预警",
+    "highrisk": "高风险",
+    "mediumtohighrisk": "中高风险",
+    "extremhighriskbhjc": "极高风险预警",
+    "highriskbhjc": "高风险预警",
+    "lowtomediumrisk": "中低风险",
+    "mediumriskbhjc": "中风险预警",
+    "lowriskbhjc": "低风险预警",
+    "lowrisk": "低风险",
+    "singleconc": "单户集中度超限",
+    "relatedconc": "关联户集中度超限",
+    "areaconc": "区域集中度超限",
+    "Reject": "拒绝",
+    "t002": "t002",
+    "Review": "人工审核",
+    "risk": "风险账户",
+    "suspicious": "可疑账户",
+    "a2": "a2",
+    "s1234": "1234",
+    "RedRisktest": "红色风险test",
+    "concerned": "关注账户",
+    "aa1": "aa1",
+    "yellowalert": "黄灯",
+    "test3": "test3",
+    "greenalert": "绿灯",
+    "test4": "test4",
+    "credible": "可信账户",
+    "losswjfl": "损失",
+    "doubtfulwjfl": "可疑",
+    "substandardwjfl": "次级",
+    "concernwjfl": "关注",
+    "normalwjfl": "正常",
+    "t1": "t1他",
+    "ordinary": "普通账户",
+    "cwfxxh": "财务风险信号",
+    "Accept": "通过"
+  },
+  "name_to_type": {
+    "高价值": "HighValue",
+    "中高价值": "MediumToHighValue",
+    "中价值": "MediumValue",
+    "中低价值": "LowToMediumValue",
+    "低价值": "LowValue",
+    "红色预警": "redwarnbh",
+    "黄色预警": "yellowwarnbh",
+    "蓝色预警": "bluewarnbh",
+    "绿色预警": "greenwarnbh",
+    "高风险": "highrisk",
+    "中高风险": "mediumtohighrisk",
+    "极高风险预警": "extremhighriskbhjc",
+    "高风险预警": "highriskbhjc",
+    "中低风险": "lowtomediumrisk",
+    "中风险预警": "mediumriskbhjc",
+    "低风险预警": "lowriskbhjc",
+    "低风险": "lowrisk",
+    "单户集中度超限": "singleconc",
+    "关联户集中度超限": "relatedconc",
+    "区域集中度超限": "areaconc",
+    "拒绝": "Reject",
+    "t002": "t002",
+    "人工审核": "Review",
+    "风险账户": "risk",
+    "可疑账户": "suspicious",
+    "a2": "a2",
+    "1234": "s1234",
+    "红色风险test": "RedRisktest",
+    "关注账户": "concerned",
+    "aa1": "aa1",
+    "黄灯": "yellowalert",
+    "test3": "test3",
+    "绿灯": "greenalert",
+    "test4": "test4",
+    "可信账户": "credible",
+    "损失": "losswjfl",
+    "可疑": "doubtfulwjfl",
+    "次级": "substandardwjfl",
+    "关注": "concernwjfl",
+    "正常": "normalwjfl",
+    "t1他": "t1",
+    "普通账户": "ordinary",
+    "财务风险信号": "cwfxxh",
+    "通过": "Accept"
+  }
+}

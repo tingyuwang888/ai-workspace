@@ -1,0 +1,419 @@
+{
+  "data": {
+    "list": [
+      {
+        "uuid": "373bf567c6f54f6a9e08a0b4043d633e",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "b0341314a5",
+        "metricName": "30天内同一客户编号提现次数",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "30天内同一客户编号提现次数",
+        "metricStatus": "STOPPED",
+        "metricVersion": 1,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "INT",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "COUNT",
+        "templateConfig": {
+          "calcMethod": "COUNT",
+          "dimFieldCode": "S_S_CUSTNO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 30,
+            "timeUnit": "DAY",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "aggregateByDay": false,
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Withdraw"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": []
+        },
+        "publishComment": "1",
+        "onlineTime": "2026-05-26T07:18:04.000+00:00",
+        "isEditing": true,
+        "binName": "count0",
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:18:33.000+00:00",
+        "canFullUpdate": false
+      },
+      {
+        "uuid": "9bb87871072349b2a4b12dd424ad95f9",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "c8c8050eed",
+        "metricName": "30天内同一客户编号平均交易金额",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "30天内同一客户编号平均交易金额",
+        "metricStatus": "STOPPED",
+        "metricVersion": 1,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "DOUBLE",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "STATISTICS",
+        "templateConfig": {
+          "calcMethod": "AVG",
+          "percentileValue": null,
+          "calcFieldCode": "S_F_AMOUNT",
+          "calcFieldCode2": null,
+          "dimFieldCode": "S_S_CUSTNO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 30,
+            "timeUnit": "DAY",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Transfer"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": []
+        },
+        "publishComment": "1",
+        "onlineTime": "2026-05-26T07:18:04.000+00:00",
+        "isEditing": true,
+        "binName": "avg0",
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:18:26.000+00:00",
+        "canFullUpdate": false
+      },
+      {
+        "uuid": "276625e0c0a84262ae7e5f028c0f1e89",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "3fe5a6e743",
+        "metricName": "24小时内同一收款方账号入账次数",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "24小时内同一收款方账号入账次数",
+        "metricStatus": "IMPORTED",
+        "metricVersion": 0,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "INT",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "COUNT",
+        "templateConfig": {
+          "calcMethod": "COUNT",
+          "dimFieldCode": "S_S_PAYEEACCTNO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 24,
+            "timeUnit": "HOUR",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "aggregateByDay": false,
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Transfer"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": []
+        },
+        "publishComment": null,
+        "onlineTime": null,
+        "isEditing": true,
+        "binName": null,
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:17:08.000+00:00",
+        "canFullUpdate": true
+      },
+      {
+        "uuid": "b13867d50b824269ae213cf615ccaf9b",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "cb52f511d9",
+        "metricName": "7天内同一手机号注册次数",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "7天内同一手机号注册次数",
+        "metricStatus": "IMPORTED",
+        "metricVersion": 0,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "INT",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "COUNT",
+        "templateConfig": {
+          "calcMethod": "COUNT",
+          "dimFieldCode": "S_S_MOBINO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 7,
+            "timeUnit": "DAY",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "aggregateByDay": false,
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Register"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": []
+        },
+        "publishComment": null,
+        "onlineTime": null,
+        "isEditing": true,
+        "binName": null,
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:17:08.000+00:00",
+        "canFullUpdate": true
+      },
+      {
+        "uuid": "7ac80332f13547c28642fa1d9ae7286c",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "fa78135933",
+        "metricName": "7天内同一银行卡号标准差交易金额",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "7天内同一银行卡号标准差交易金额",
+        "metricStatus": "IMPORTED",
+        "metricVersion": 0,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "DOUBLE",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "STATISTICS",
+        "templateConfig": {
+          "calcMethod": "STD",
+          "percentileValue": null,
+          "calcFieldCode": "S_F_AMOUNT",
+          "calcFieldCode2": null,
+          "dimFieldCode": "S_S_CARDNO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 7,
+            "timeUnit": "DAY",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Transfer"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": []
+        },
+        "publishComment": null,
+        "onlineTime": null,
+        "isEditing": true,
+        "binName": null,
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:17:07.000+00:00",
+        "canFullUpdate": true
+      },
+      {
+        "uuid": "2a6f74591dea43559020428db17c450e",
+        "appCode": "init",
+        "appName": null,
+        "readableAppCodeList": [],
+        "orgCode": "sxdb",
+        "orgName": null,
+        "readableOrgCodeList": [],
+        "metricCode": "27cbb6c817",
+        "metricName": "24小时内同一付款方账号累计交易金额_fpbrz",
+        "useGeneratedName": false,
+        "useGeneratedCode": false,
+        "metricDesc": "24小时内同一付款方账号累计交易金额",
+        "metricStatus": "IMPORTED",
+        "metricVersion": 0,
+        "metricTags": [],
+        "metricType": "REALTIME",
+        "metricDataType": "DOUBLE",
+        "catalogUuid": "a1719b54e6414d19b9e164c48addd86f",
+        "catalogName": "企业信用状况",
+        "catalogPath": [
+          "540a5633cfe74955a4d948ab4c70d32e",
+          "a1719b54e6414d19b9e164c48addd86f"
+        ],
+        "templateCode": "STATISTICS",
+        "templateConfig": {
+          "calcMethod": "SUM",
+          "percentileValue": null,
+          "calcFieldCode": "S_F_AMOUNT",
+          "calcFieldCode2": null,
+          "dimFieldCode": "S_S_PAYERACCTNO",
+          "readCurrentField": false,
+          "timeSlice": {
+            "count": 24,
+            "timeUnit": "HOUR",
+            "selfIncluded": false,
+            "recentExcluded": false,
+            "recentCount": null
+          },
+          "autoNameMap": "autoname",
+          "subDimFields": []
+        },
+        "sceneCondition": {
+          "sceneFieldCode": "S_S_EVENTTYPE",
+          "sceneType": "事件类型",
+          "sceneTypeName": "事件类型",
+          "sceneLogic": "EQ",
+          "sceneList": [
+            "Transfer"
+          ],
+          "sceneItemList": []
+        },
+        "fieldCondition": {
+          "filterLogic": "ALL",
+          "conditions": [
+            {
+              "groupLogic": null,
+              "conditions": [],
+              "fieldCode": "C_N_TXNHOUR",
+              "dataType": "INT",
+              "logic": "LESS_THAN",
+              "refType": "CONSTANT",
+              "refValue": "7"
+            }
+          ]
+        },
+        "publishComment": null,
+        "onlineTime": null,
+        "isEditing": true,
+        "binName": null,
+        "dataGroup": 1,
+        "metricSource": "CREATE",
+        "createdBy": null,
+        "gmtCreate": "2026-05-26T07:17:07.000+00:00",
+        "updatedBy": "zjh(zjh)",
+        "gmtModify": "2026-05-26T07:17:07.000+00:00",
+        "canFullUpdate": true
+      }
+    ],
+    "total": 6
+  }
+}

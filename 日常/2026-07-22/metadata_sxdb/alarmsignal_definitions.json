@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "bizCategoryCount": 0,
+    "groupCount": 0,
+    "subGroupCount": 0,
+    "signalCount": 0,
+    "errorCount": 0,
+    "source": "none",
+    "fetchedAt": "2026-07-22T09:54:29.468638"
+  },
+  "bizCategories": [],
+  "signals": [],
+  "biz_to_groups": {},
+  "group_to_subgroups": {},
+  "subgroup_to_signals": {},
+  "biz_by_uuid": {},
+  "biz_by_code": {},
+  "group_by_uuid": {},
+  "subgroup_by_uuid": {},
+  "signal_by_uuid": {},
+  "_errors": []
+}

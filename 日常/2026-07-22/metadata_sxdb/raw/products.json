@@ -1,0 +1,32 @@
+{
+  "data": {
+    "contents": [
+      {
+        "id": 2,
+        "uuid": "7cef59f785f34c9a9518f842a054cda9",
+        "productCode": "autoTest",
+        "productName": "自动化测试",
+        "productStatus": 1,
+        "productDesc": "自动化测试",
+        "gmtCreate": 1777452543000,
+        "createdBy": "yaosh",
+        "isDelete": 0,
+        "gmtModify": 1777454203000,
+        "updatedBy": "yaosh"
+      },
+      {
+        "id": 1,
+        "uuid": "ac8337fa81a34779a612c69f58d9c2ed",
+        "productCode": "TianceSp",
+        "productName": "TianceSp",
+        "productStatus": 1,
+        "gmtCreate": 1777370790000,
+        "createdBy": "yaosh",
+        "isDelete": 0,
+        "gmtModify": 1777370790000,
+        "updatedBy": "yaosh"
+      }
+    ],
+    "total": 2
+  }
+}

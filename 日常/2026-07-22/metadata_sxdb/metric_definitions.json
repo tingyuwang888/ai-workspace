@@ -1,0 +1,287 @@
+{
+  "_meta": {
+    "count": 6,
+    "withFullConfig": 6,
+    "withoutConfig": 0,
+    "source": "editing:6",
+    "fetchedAt": "2026-07-22T09:54:29.368457"
+  },
+  "metrics": [
+    {
+      "metricCode": "b0341314a5",
+      "metricName": "30天内同一客户编号提现次数",
+      "metricDataType": "INT",
+      "templateCode": "COUNT",
+      "templateConfig": {
+        "calcMethod": "COUNT",
+        "dimFieldCode": "S_S_CUSTNO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 30,
+          "timeUnit": "DAY",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "aggregateByDay": false,
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Withdraw"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": []
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "STOPPED",
+      "metricType": "REALTIME",
+      "uuid": "373bf567c6f54f6a9e08a0b4043d633e"
+    },
+    {
+      "metricCode": "c8c8050eed",
+      "metricName": "30天内同一客户编号平均交易金额",
+      "metricDataType": "DOUBLE",
+      "templateCode": "STATISTICS",
+      "templateConfig": {
+        "calcMethod": "AVG",
+        "percentileValue": null,
+        "calcFieldCode": "S_F_AMOUNT",
+        "calcFieldCode2": null,
+        "dimFieldCode": "S_S_CUSTNO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 30,
+          "timeUnit": "DAY",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Transfer"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": []
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "STOPPED",
+      "metricType": "REALTIME",
+      "uuid": "9bb87871072349b2a4b12dd424ad95f9"
+    },
+    {
+      "metricCode": "3fe5a6e743",
+      "metricName": "24小时内同一收款方账号入账次数",
+      "metricDataType": "INT",
+      "templateCode": "COUNT",
+      "templateConfig": {
+        "calcMethod": "COUNT",
+        "dimFieldCode": "S_S_PAYEEACCTNO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 24,
+          "timeUnit": "HOUR",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "aggregateByDay": false,
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Transfer"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": []
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "IMPORTED",
+      "metricType": "REALTIME",
+      "uuid": "276625e0c0a84262ae7e5f028c0f1e89"
+    },
+    {
+      "metricCode": "cb52f511d9",
+      "metricName": "7天内同一手机号注册次数",
+      "metricDataType": "INT",
+      "templateCode": "COUNT",
+      "templateConfig": {
+        "calcMethod": "COUNT",
+        "dimFieldCode": "S_S_MOBINO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 7,
+          "timeUnit": "DAY",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "aggregateByDay": false,
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Register"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": []
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "IMPORTED",
+      "metricType": "REALTIME",
+      "uuid": "b13867d50b824269ae213cf615ccaf9b"
+    },
+    {
+      "metricCode": "fa78135933",
+      "metricName": "7天内同一银行卡号标准差交易金额",
+      "metricDataType": "DOUBLE",
+      "templateCode": "STATISTICS",
+      "templateConfig": {
+        "calcMethod": "STD",
+        "percentileValue": null,
+        "calcFieldCode": "S_F_AMOUNT",
+        "calcFieldCode2": null,
+        "dimFieldCode": "S_S_CARDNO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 7,
+          "timeUnit": "DAY",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Transfer"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": []
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "IMPORTED",
+      "metricType": "REALTIME",
+      "uuid": "7ac80332f13547c28642fa1d9ae7286c"
+    },
+    {
+      "metricCode": "27cbb6c817",
+      "metricName": "24小时内同一付款方账号累计交易金额_fpbrz",
+      "metricDataType": "DOUBLE",
+      "templateCode": "STATISTICS",
+      "templateConfig": {
+        "calcMethod": "SUM",
+        "percentileValue": null,
+        "calcFieldCode": "S_F_AMOUNT",
+        "calcFieldCode2": null,
+        "dimFieldCode": "S_S_PAYERACCTNO",
+        "readCurrentField": false,
+        "timeSlice": {
+          "count": 24,
+          "timeUnit": "HOUR",
+          "selfIncluded": false,
+          "recentExcluded": false,
+          "recentCount": null
+        },
+        "autoNameMap": "autoname",
+        "subDimFields": []
+      },
+      "sceneCondition": {
+        "sceneFieldCode": "S_S_EVENTTYPE",
+        "sceneType": "事件类型",
+        "sceneTypeName": "事件类型",
+        "sceneLogic": "EQ",
+        "sceneList": [
+          "Transfer"
+        ],
+        "sceneItemList": []
+      },
+      "fieldCondition": {
+        "filterLogic": "ALL",
+        "conditions": [
+          {
+            "groupLogic": null,
+            "conditions": [],
+            "fieldCode": "C_N_TXNHOUR",
+            "dataType": "INT",
+            "logic": "LESS_THAN",
+            "refType": "CONSTANT",
+            "refValue": "7"
+          }
+        ]
+      },
+      "appCode": "init",
+      "orgCode": "sxdb",
+      "metricStatus": "IMPORTED",
+      "metricType": "REALTIME",
+      "uuid": "2a6f74591dea43559020428db17c450e"
+    }
+  ],
+  "code_to_uuid": {
+    "b0341314a5": "373bf567c6f54f6a9e08a0b4043d633e",
+    "c8c8050eed": "9bb87871072349b2a4b12dd424ad95f9",
+    "3fe5a6e743": "276625e0c0a84262ae7e5f028c0f1e89",
+    "cb52f511d9": "b13867d50b824269ae213cf615ccaf9b",
+    "fa78135933": "7ac80332f13547c28642fa1d9ae7286c",
+    "27cbb6c817": "2a6f74591dea43559020428db17c450e"
+  },
+  "name_to_code": {
+    "30天内同一客户编号提现次数": "b0341314a5",
+    "30天内同一客户编号平均交易金额": "c8c8050eed",
+    "24小时内同一收款方账号入账次数": "3fe5a6e743",
+    "7天内同一手机号注册次数": "cb52f511d9",
+    "7天内同一银行卡号标准差交易金额": "fa78135933",
+    "24小时内同一付款方账号累计交易金额_fpbrz": "27cbb6c817"
+  },
+  "template_distribution": {
+    "COUNT": 3,
+    "STATISTICS": 3
+  }
+}
