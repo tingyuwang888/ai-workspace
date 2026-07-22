@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "formulaExportData": [
+    {
+      "appName": "0208_hkd",
+      "authorizationApps": [
+        "all"
+      ],
+      "authorizationOrgs": [
+        "all"
+      ],
+      "code": "FHKD000001",
+      "name": "自动化配置测试1_v2",
+      "description": "根据三方分数打标",
+      "formulaTemplate": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "input": [
+        "C_N_ZZXSCORE"
+      ],
+      "output": [
+        "C_S_AUTOLABEL"
+      ],
+      "orgCode": "TongDun",
+      "status": 4,
+      "type": 1,
+      "versionUuid": null
+    },
+    {
+      "appName": "0208_hkd",
+      "authorizationApps": [
+        "all"
+      ],
+      "authorizationOrgs": [
+        "all"
+      ],
+      "code": "SHKD000002",
+      "name": "自动化配置测试2_v2",
+      "description": "计算好客贷最近一次用款申请距今天数：当前日期减去申请日期(yyyymmdd格式)，日期为0时按19990101处理",
+      "formulaTemplate": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String todayStr = (String) inputMap.get(\"C_S_TODAY\");\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n\n    if (todayStr == null || \"\".equals(todayStr.trim())) {\n        return outputMap;\n    }\n    if (applyDateStr == null || \"\".equals(applyDateStr.trim())) {\n        return outputMap;\n    }\n\n    if (\"0\".equals(applyDateStr.trim())) {\n        applyDateStr = \"19990101\";\n    }\n\n    try {\n        SimpleDateFormat sdf = new SimpleDateFormat(\"yyyyMMdd\");\n        sdf.setLenient(false);\n\n        Date todayDate;\n        if (todayStr.contains(\"-\")) {\n            SimpleDateFormat sdf2 = new SimpleDateFormat(\"yyyy-MM-dd\");\n            sdf2.setLenient(false);\n            todayDate = sdf2.parse(todayStr.trim());\n        } else {\n            todayDate = sdf.parse(todayStr.trim());\n        }\n\n        Date applyDate = sdf.parse(applyDateStr.trim());\n\n        long diffMillis = todayDate.getTime() - applyDate.getTime();\n        long diffDays = diffMillis / (1000L * 60 * 60 * 24);\n\n        outputMap.put(\"C_N_HKDLATESTAPPLYDAYS\", diffDays);\n    } catch (Exception e) {\n        // ignore parse errors\n    }\n\n    return outputMap;\n}",
+      "input": [
+        "C_S_TODAY",
+        "C_S_HKDLATESTAPPLYDATE"
+      ],
+      "output": [
+        "C_N_HKDLATESTAPPLYDAYS"
+      ],
+      "orgCode": "TongDun",
+      "status": 4,
+      "type": 2,
+      "versionUuid": null
+    },
+    {
+      "appName": "0208_hkd",
+      "authorizationApps": [
+        "all"
+      ],
+      "authorizationOrgs": [
+        "all"
+      ],
+      "code": "SHKD000003",
+      "name": "自动化配置测试3_v2",
+      "description": "根据用款申请距今天数、自动化配置标签和中征信数字解读分计算审批额度，含条件分支、随机数和百位取整逻辑",
+      "formulaTemplate": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n    Object scoreObj = inputMap.get(\"C_N_ZZXSCORE\");\n    String autoLabel = (String) inputMap.get(\"C_S_AUTOLABEL\");\n\n    double zxScore = 0;\n    if (scoreObj != null) {\n        if (scoreObj instanceof Number) {\n            zxScore = ((Number) scoreObj).doubleValue();\n        } else {\n            try {\n                zxScore = Double.valueOf(scoreObj.toString().trim());\n            } catch (Exception e) {\n                // parse error -> 0\n            }\n        }\n    }\n\n    double applyDateVal = 0;\n    if (applyDateStr != null && !\"\".equals(applyDateStr.trim())) {\n        try {\n            applyDateVal = Double.valueOf(applyDateStr.trim());\n        } catch (Exception e) {\n            // parse error -> 0\n        }\n    }\n\n    double approvalAmount = 1000.0;\n\n    if (applyDateVal > 30 && (autoLabel == null || !\"A04\".equals(autoLabel))) {\n        double raw = Math.max(1000.0 * zxScore, 10000.0);\n        BigDecimal bd = new BigDecimal(raw);\n        bd = bd.divide(new BigDecimal(\"100\"), 0, RoundingMode.FLOOR).multiply(new BigDecimal(\"100\"));\n        approvalAmount = bd.doubleValue();\n    }\n\n    if (approvalAmount > 10 && approvalAmount <= 30) {\n        double randomVal = Math.random() * 1000.0;\n        double capped = Math.min(randomVal, 20000.0);\n        BigDecimal bd2 = new BigDecimal(capped);\n        bd2 = bd2.setScale(2, RoundingMode.HALF_UP);\n        approvalAmount = bd2.doubleValue();\n    }\n\n    outputMap.put(\"C_F_AUDITM\", approvalAmount);\n\n    return outputMap;\n}",
+      "input": [
+        "C_S_HKDLATESTAPPLYDATE",
+        "C_N_ZZXSCORE",
+        "C_S_AUTOLABEL"
+      ],
+      "output": [
+        "C_F_AUDITM"
+      ],
+      "orgCode": "TongDun",
+      "status": 4,
+      "type": 2,
+      "versionUuid": null
+    }
+  ],
+  "systemFieldExportData": [
+    {
+      "dataType": 2,
+      "depth": 0,
+      "description": "中征信数字解读分",
+      "displayName": "中征信数字解读分",
+      "fieldInfo": "",
+      "funcType": 1,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_N_ZZXSCORE",
+      "standard": 0,
+      "suffixName": "ZZXSCORE",
+      "uuid": ""
+    },
+    {
+      "dataType": 1,
+      "depth": 0,
+      "description": "自动化配置标签",
+      "displayName": "自动化配置标签",
+      "fieldInfo": "",
+      "funcType": 2,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_S_AUTOLABEL",
+      "standard": 0,
+      "suffixName": "AUTOLABEL",
+      "uuid": ""
+    },
+    {
+      "dataType": 1,
+      "depth": 0,
+      "description": "当前日期",
+      "displayName": "当前日期",
+      "fieldInfo": "",
+      "funcType": 1,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_S_TODAY",
+      "standard": 0,
+      "suffixName": "TODAY",
+      "uuid": ""
+    },
+    {
+      "dataType": 1,
+      "depth": 0,
+      "description": "好客贷最近一次用款申请日期(yyyymmdd)",
+      "displayName": "好客贷_最近一次用款申请日期",
+      "fieldInfo": "",
+      "funcType": 1,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_S_HKDLATESTAPPLYDATE",
+      "standard": 0,
+      "suffixName": "HKDLATESTAPPLYDATE",
+      "uuid": ""
+    },
+    {
+      "dataType": 2,
+      "depth": 0,
+      "description": "好客贷最近一次用款申请距今天数",
+      "displayName": "好客贷_最近一次用款申请距今天数",
+      "fieldInfo": "",
+      "funcType": 2,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_N_HKDLATESTAPPLYDAYS",
+      "standard": 0,
+      "suffixName": "HKDLATESTAPPLYDAYS",
+      "uuid": ""
+    },
+    {
+      "dataType": 3,
+      "depth": 0,
+      "description": "审批额度",
+      "displayName": "审批额度",
+      "fieldInfo": "",
+      "funcType": 2,
+      "groupDisplayName": "客户信息",
+      "groupName": "CUST",
+      "groupUuid": "9472efc3-d32f-4ebf-b6ae-839f55bc354a",
+      "index": 0,
+      "name": "C_F_AUDITM",
+      "standard": 0,
+      "suffixName": "AUDITM",
+      "uuid": ""
+    }
+  ],
+  "scriptFieldExportData": []
+}

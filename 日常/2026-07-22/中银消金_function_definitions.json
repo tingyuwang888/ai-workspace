@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "projectName": "中银消金",
+    "source": "tiance-function-forge",
+    "functionCount": 3,
+    "typeDistribution": {
+      "1": 1,
+      "2": 2
+    },
+    "generatedAt": "2026-07-22T13:59:56.207769",
+    "sourceExcel": "/Users/td/.qoderwork/workspace/mrub4m3iuizra207/outputs/指标规则智能配置-中银消金风险部v3_function_forge.xlsx",
+    "funFile": "/Users/td/.qoderwork/workspace/mrub4m3iuizra207/outputs/中银消金_函数.fun"
+  },
+  "functions": [
+    {
+      "uuid": "FHKD000001",
+      "name": "自动化配置测试1_v2",
+      "functionType": 1,
+      "returnType": "STRING",
+      "script": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据三方分数打标",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "FHKD000001",
+      "formulaTemplate": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "input": [
+        "C_N_ZZXSCORE"
+      ],
+      "output": [
+        "C_S_AUTOLABEL"
+      ],
+      "_source": "skill-generated"
+    },
+    {
+      "uuid": "SHKD000002",
+      "name": "自动化配置测试2_v2",
+      "functionType": 2,
+      "returnType": "LONG",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String todayStr = (String) inputMap.get(\"C_S_TODAY\");\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n\n    if (todayStr == null || \"\".equals(todayStr.trim())) {\n        return outputMap;\n    }\n    if (applyDateStr == null || \"\".equals(applyDateStr.trim())) {\n        return outputMap;\n    }\n\n    if (\"0\".equals(applyDateStr.trim())) {\n        applyDateStr = \"19990101\";\n    }\n\n    try {\n        SimpleDateFormat sdf = new SimpleDateFormat(\"yyyyMMdd\");\n        sdf.setLenient(false);\n\n        Date todayDate;\n        if (todayStr.contains(\"-\")) {\n            SimpleDateFormat sdf2 = new SimpleDateFormat(\"yyyy-MM-dd\");\n            sdf2.setLenient(false);\n            todayDate = sdf2.parse(todayStr.trim());\n        } else {\n            todayDate = sdf.parse(todayStr.trim());\n        }\n\n        Date applyDate = sdf.parse(applyDateStr.trim());\n\n        long diffMillis = todayDate.getTime() - applyDate.getTime();\n        long diffDays = diffMillis / (1000L * 60 * 60 * 24);\n\n        outputMap.put(\"C_N_HKDLATESTAPPLYDAYS\", diffDays);\n    } catch (Exception e) {\n        // ignore parse errors\n    }\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "计算好客贷最近一次用款申请距今天数：当前日期减去申请日期(yyyymmdd格式)，日期为0时按19990101处理",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000002",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_TODAY",
+        "C_S_HKDLATESTAPPLYDATE"
+      ],
+      "output": [
+        "C_N_HKDLATESTAPPLYDAYS"
+      ],
+      "_source": "skill-generated"
+    },
+    {
+      "uuid": "SHKD000003",
+      "name": "自动化配置测试3_v2",
+      "functionType": 2,
+      "returnType": "DOUBLE",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n    Object scoreObj = inputMap.get(\"C_N_ZZXSCORE\");\n    String autoLabel = (String) inputMap.get(\"C_S_AUTOLABEL\");\n\n    double zxScore = 0;\n    if (scoreObj != null) {\n        if (scoreObj instanceof Number) {\n            zxScore = ((Number) scoreObj).doubleValue();\n        } else {\n            try {\n                zxScore = Double.valueOf(scoreObj.toString().trim());\n            } catch (Exception e) {\n                // parse error -> 0\n            }\n        }\n    }\n\n    double applyDateVal = 0;\n    if (applyDateStr != null && !\"\".equals(applyDateStr.trim())) {\n        try {\n            applyDateVal = Double.valueOf(applyDateStr.trim());\n        } catch (Exception e) {\n            // parse error -> 0\n        }\n    }\n\n    double approvalAmount = 1000.0;\n\n    if (applyDateVal > 30 && (autoLabel == null || !\"A04\".equals(autoLabel))) {\n        double raw = Math.max(1000.0 * zxScore, 10000.0);\n        BigDecimal bd = new BigDecimal(raw);\n        bd = bd.divide(new BigDecimal(\"100\"), 0, RoundingMode.FLOOR).multiply(new BigDecimal(\"100\"));\n        approvalAmount = bd.doubleValue();\n    }\n\n    if (approvalAmount > 10 && approvalAmount <= 30) {\n        double randomVal = Math.random() * 1000.0;\n        double capped = Math.min(randomVal, 20000.0);\n        BigDecimal bd2 = new BigDecimal(capped);\n        bd2 = bd2.setScale(2, RoundingMode.HALF_UP);\n        approvalAmount = bd2.doubleValue();\n    }\n\n    outputMap.put(\"C_F_AUDITM\", approvalAmount);\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据用款申请距今天数、自动化配置标签和中征信数字解读分计算审批额度，含条件分支、随机数和百位取整逻辑",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000003",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_HKDLATESTAPPLYDATE",
+        "C_N_ZZXSCORE",
+        "C_S_AUTOLABEL"
+      ],
+      "output": [
+        "C_F_AUDITM"
+      ],
+      "_source": "skill-generated"
+    }
+  ],
+  "type_to_functions": {
+    "1": [
+      "自动化配置测试1_v2"
+    ],
+    "2": [
+      "自动化配置测试2_v2",
+      "自动化配置测试3_v2"
+    ]
+  },
+  "uuid_to_function": {
+    "FHKD000001": {
+      "uuid": "FHKD000001",
+      "name": "自动化配置测试1_v2",
+      "functionType": 1,
+      "returnType": "STRING",
+      "script": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据三方分数打标",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "FHKD000001",
+      "formulaTemplate": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "input": [
+        "C_N_ZZXSCORE"
+      ],
+      "output": [
+        "C_S_AUTOLABEL"
+      ],
+      "_source": "skill-generated"
+    },
+    "SHKD000002": {
+      "uuid": "SHKD000002",
+      "name": "自动化配置测试2_v2",
+      "functionType": 2,
+      "returnType": "LONG",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String todayStr = (String) inputMap.get(\"C_S_TODAY\");\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n\n    if (todayStr == null || \"\".equals(todayStr.trim())) {\n        return outputMap;\n    }\n    if (applyDateStr == null || \"\".equals(applyDateStr.trim())) {\n        return outputMap;\n    }\n\n    if (\"0\".equals(applyDateStr.trim())) {\n        applyDateStr = \"19990101\";\n    }\n\n    try {\n        SimpleDateFormat sdf = new SimpleDateFormat(\"yyyyMMdd\");\n        sdf.setLenient(false);\n\n        Date todayDate;\n        if (todayStr.contains(\"-\")) {\n            SimpleDateFormat sdf2 = new SimpleDateFormat(\"yyyy-MM-dd\");\n            sdf2.setLenient(false);\n            todayDate = sdf2.parse(todayStr.trim());\n        } else {\n            todayDate = sdf.parse(todayStr.trim());\n        }\n\n        Date applyDate = sdf.parse(applyDateStr.trim());\n\n        long diffMillis = todayDate.getTime() - applyDate.getTime();\n        long diffDays = diffMillis / (1000L * 60 * 60 * 24);\n\n        outputMap.put(\"C_N_HKDLATESTAPPLYDAYS\", diffDays);\n    } catch (Exception e) {\n        // ignore parse errors\n    }\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "计算好客贷最近一次用款申请距今天数：当前日期减去申请日期(yyyymmdd格式)，日期为0时按19990101处理",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000002",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_TODAY",
+        "C_S_HKDLATESTAPPLYDATE"
+      ],
+      "output": [
+        "C_N_HKDLATESTAPPLYDAYS"
+      ],
+      "_source": "skill-generated"
+    },
+    "SHKD000003": {
+      "uuid": "SHKD000003",
+      "name": "自动化配置测试3_v2",
+      "functionType": 2,
+      "returnType": "DOUBLE",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n    Object scoreObj = inputMap.get(\"C_N_ZZXSCORE\");\n    String autoLabel = (String) inputMap.get(\"C_S_AUTOLABEL\");\n\n    double zxScore = 0;\n    if (scoreObj != null) {\n        if (scoreObj instanceof Number) {\n            zxScore = ((Number) scoreObj).doubleValue();\n        } else {\n            try {\n                zxScore = Double.valueOf(scoreObj.toString().trim());\n            } catch (Exception e) {\n                // parse error -> 0\n            }\n        }\n    }\n\n    double applyDateVal = 0;\n    if (applyDateStr != null && !\"\".equals(applyDateStr.trim())) {\n        try {\n            applyDateVal = Double.valueOf(applyDateStr.trim());\n        } catch (Exception e) {\n            // parse error -> 0\n        }\n    }\n\n    double approvalAmount = 1000.0;\n\n    if (applyDateVal > 30 && (autoLabel == null || !\"A04\".equals(autoLabel))) {\n        double raw = Math.max(1000.0 * zxScore, 10000.0);\n        BigDecimal bd = new BigDecimal(raw);\n        bd = bd.divide(new BigDecimal(\"100\"), 0, RoundingMode.FLOOR).multiply(new BigDecimal(\"100\"));\n        approvalAmount = bd.doubleValue();\n    }\n\n    if (approvalAmount > 10 && approvalAmount <= 30) {\n        double randomVal = Math.random() * 1000.0;\n        double capped = Math.min(randomVal, 20000.0);\n        BigDecimal bd2 = new BigDecimal(capped);\n        bd2 = bd2.setScale(2, RoundingMode.HALF_UP);\n        approvalAmount = bd2.doubleValue();\n    }\n\n    outputMap.put(\"C_F_AUDITM\", approvalAmount);\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据用款申请距今天数、自动化配置标签和中征信数字解读分计算审批额度，含条件分支、随机数和百位取整逻辑",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000003",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_HKDLATESTAPPLYDATE",
+        "C_N_ZZXSCORE",
+        "C_S_AUTOLABEL"
+      ],
+      "output": [
+        "C_F_AUDITM"
+      ],
+      "_source": "skill-generated"
+    }
+  },
+  "name_to_function": {
+    "自动化配置测试1_v2": {
+      "uuid": "FHKD000001",
+      "name": "自动化配置测试1_v2",
+      "functionType": 1,
+      "returnType": "STRING",
+      "script": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据三方分数打标",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "FHKD000001",
+      "formulaTemplate": "#if (#isNull(αLONG@C_N_ZZXSCORE))\n#then\n{\n  αSTRING@C_S_AUTOLABEL = \"A01\";\n}\n#else\n{\n  #if (αLONG@C_N_ZZXSCORE > 0 && αLONG@C_N_ZZXSCORE < 100)\n  #then\n  {\n    αSTRING@C_S_AUTOLABEL = \"A02\";\n  }\n  #else\n  {\n    #if (αLONG@C_N_ZZXSCORE >= 100 && αLONG@C_N_ZZXSCORE <= 200)\n    #then\n    {\n      αSTRING@C_S_AUTOLABEL = \"A03\";\n    }\n    #else\n    {\n      αSTRING@C_S_AUTOLABEL = \"A04\";\n    }\n  }\n}",
+      "input": [
+        "C_N_ZZXSCORE"
+      ],
+      "output": [
+        "C_S_AUTOLABEL"
+      ],
+      "_source": "skill-generated"
+    },
+    "自动化配置测试2_v2": {
+      "uuid": "SHKD000002",
+      "name": "自动化配置测试2_v2",
+      "functionType": 2,
+      "returnType": "LONG",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String todayStr = (String) inputMap.get(\"C_S_TODAY\");\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n\n    if (todayStr == null || \"\".equals(todayStr.trim())) {\n        return outputMap;\n    }\n    if (applyDateStr == null || \"\".equals(applyDateStr.trim())) {\n        return outputMap;\n    }\n\n    if (\"0\".equals(applyDateStr.trim())) {\n        applyDateStr = \"19990101\";\n    }\n\n    try {\n        SimpleDateFormat sdf = new SimpleDateFormat(\"yyyyMMdd\");\n        sdf.setLenient(false);\n\n        Date todayDate;\n        if (todayStr.contains(\"-\")) {\n            SimpleDateFormat sdf2 = new SimpleDateFormat(\"yyyy-MM-dd\");\n            sdf2.setLenient(false);\n            todayDate = sdf2.parse(todayStr.trim());\n        } else {\n            todayDate = sdf.parse(todayStr.trim());\n        }\n\n        Date applyDate = sdf.parse(applyDateStr.trim());\n\n        long diffMillis = todayDate.getTime() - applyDate.getTime();\n        long diffDays = diffMillis / (1000L * 60 * 60 * 24);\n\n        outputMap.put(\"C_N_HKDLATESTAPPLYDAYS\", diffDays);\n    } catch (Exception e) {\n        // ignore parse errors\n    }\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "计算好客贷最近一次用款申请距今天数：当前日期减去申请日期(yyyymmdd格式)，日期为0时按19990101处理",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000002",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_TODAY",
+        "C_S_HKDLATESTAPPLYDATE"
+      ],
+      "output": [
+        "C_N_HKDLATESTAPPLYDAYS"
+      ],
+      "_source": "skill-generated"
+    },
+    "自动化配置测试3_v2": {
+      "uuid": "SHKD000003",
+      "name": "自动化配置测试3_v2",
+      "functionType": 2,
+      "returnType": "DOUBLE",
+      "script": "import com.alibaba.fastjson.*;\nimport org.apache.commons.lang3.*;\nimport java.text.SimpleDateFormat;\nimport java.util.*;\nimport static cn.tongdun.atreus.engine.function.run.component.DecisionComponentUtils.*;\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\n\npublic Map run(Map inputMap) {\n    Map outputMap = new HashMap();\n\n    String applyDateStr = (String) inputMap.get(\"C_S_HKDLATESTAPPLYDATE\");\n    Object scoreObj = inputMap.get(\"C_N_ZZXSCORE\");\n    String autoLabel = (String) inputMap.get(\"C_S_AUTOLABEL\");\n\n    double zxScore = 0;\n    if (scoreObj != null) {\n        if (scoreObj instanceof Number) {\n            zxScore = ((Number) scoreObj).doubleValue();\n        } else {\n            try {\n                zxScore = Double.valueOf(scoreObj.toString().trim());\n            } catch (Exception e) {\n                // parse error -> 0\n            }\n        }\n    }\n\n    double applyDateVal = 0;\n    if (applyDateStr != null && !\"\".equals(applyDateStr.trim())) {\n        try {\n            applyDateVal = Double.valueOf(applyDateStr.trim());\n        } catch (Exception e) {\n            // parse error -> 0\n        }\n    }\n\n    double approvalAmount = 1000.0;\n\n    if (applyDateVal > 30 && (autoLabel == null || !\"A04\".equals(autoLabel))) {\n        double raw = Math.max(1000.0 * zxScore, 10000.0);\n        BigDecimal bd = new BigDecimal(raw);\n        bd = bd.divide(new BigDecimal(\"100\"), 0, RoundingMode.FLOOR).multiply(new BigDecimal(\"100\"));\n        approvalAmount = bd.doubleValue();\n    }\n\n    if (approvalAmount > 10 && approvalAmount <= 30) {\n        double randomVal = Math.random() * 1000.0;\n        double capped = Math.min(randomVal, 20000.0);\n        BigDecimal bd2 = new BigDecimal(capped);\n        bd2 = bd2.setScale(2, RoundingMode.HALF_UP);\n        approvalAmount = bd2.doubleValue();\n    }\n\n    outputMap.put(\"C_F_AUDITM\", approvalAmount);\n\n    return outputMap;\n}",
+      "appCode": "0208_hkd",
+      "appName": "",
+      "orgCode": "TongDun",
+      "orgName": "",
+      "areaType": null,
+      "status": 4,
+      "description": "根据用款申请距今天数、自动化配置标签和中征信数字解读分计算审批额度，含条件分支、随机数和百位取整逻辑",
+      "gmtCreate": "2026-07-22 13:59:56",
+      "gmtModify": "",
+      "code": "SHKD000003",
+      "formulaTemplate": "",
+      "input": [
+        "C_S_HKDLATESTAPPLYDATE",
+        "C_N_ZZXSCORE",
+        "C_S_AUTOLABEL"
+      ],
+      "output": [
+        "C_F_AUDITM"
+      ],
+      "_source": "skill-generated"
+    }
+  }
+}
