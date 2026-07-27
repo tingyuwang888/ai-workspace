@@ -328,7 +328,7 @@ MCP 返回值须尽可能确定，避免让调用方解析自然语言。统一�
 
 第一期不必一次覆盖所有能力，建议先实现：
 
-1. bifrost 身份上下文和 capability 权限（含 `tiance.policy.test` 权限）。
+1. bifrost 身份上下文和 capability 权限（含 tiance.policy.test 权限）。
 2. 元数据搜索、解析、详情、Schema 和依赖查询。
 3. 配置草稿校验和引用解析。
 4. 组件查询、导出、导入的计划与执行。
