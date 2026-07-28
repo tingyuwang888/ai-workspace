@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>AI Agent 工作介绍 — 策略测试 & TdAlly 多Agent协作</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f8fafc; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #1e293b; padding: 40px 48px; }
+  .page { max-width: 880px; margin: 0 auto; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid #e2e8f0; }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .header .meta { font-size: 13px; color: #94a3b8; }
+
+  /* Section */
+  .section { margin-bottom: 48px; }
+  .section-title { font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+  .section-title .badge { font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 4px; }
+  .badge.mature { background: #dcfce7; color: #16a34a; }
+  .badge.iterate { background: #fef3c7; color: #d97706; }
+  .badge.explore { background: #ede9fe; color: #7c3aed; }
+  .section-desc { font-size: 13px; color: #64748b; margin-bottom: 20px; }
+
+  /* Flowchart image */
+  .flowchart-wrap { text-align: center; margin: 20px 0 12px; }
+  .flowchart-wrap img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .img-caption { font-size: 11px; color: #94a3b8; margin-top: 8px; }
+
+  /* Stats row */
+  .stats { display: flex; gap: 16px; margin: 16px 0 8px; }
+  .stat { flex: 1; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center; }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .num.blue { color: #0ea5e9; }
+  .stat .num.green { color: #10b981; }
+  .stat .num.purple { color: #8b5cf6; }
+  .stat .label { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+
+  /* Screenshot card */
+  .screenshot-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+  .screenshot-card .card-header { padding: 14px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f1f5f9; }
+  .screenshot-card .card-num { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .screenshot-card .card-title { font-size: 14px; font-weight: 600; }
+  .screenshot-card .card-body { padding: 16px 20px; }
+  .screenshot-card .card-text { font-size: 13px; color: #475569; line-height: 1.8; }
+  .screenshot-card .card-img { padding: 0 16px 16px; }
+  .screenshot-card .card-img img { width: 100%; border-radius: 6px; border: 1px solid #e2e8f0; }
+
+  .bg-blue { background: #0ea5e9; }
+  .bg-green { background: #10b981; }
+  .bg-purple { background: #8b5cf6; }
+
+  /* Comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+  .compare-table th { background: #f1f5f9; padding: 10px 14px; text-align: left; font-weight: 600; border-bottom: 2px solid #e2e8f0; }
+  .compare-table td { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  /* Footer */
+  .footer { text-align: center; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #cbd5e1; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>AI Agent 工作介绍</h1>
+    <div class="meta">策略测试自动化 & TdAlly 多Agent协作 &nbsp;|&nbsp; 2026年6月 ~ 7月</div>
+  </div>
+
+  <!-- Part 1: Strategy Testing -->
+  <div class="section">
+    <div class="section-title">
+      一、策略测试自动化
+      <span class="badge mature">已生产验证</span>
+    </div>
+    <div class="section-desc">给 AI 一份策略配置 Excel，自动完成用例设计 → 天策平台批量提交 → 结果验证 → 报告生成的全流程闭环。</div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="num blue">249</div>
+        <div class="label">测试用例（三峡项目）</div>
+      </div>
+      <div class="stat">
+        <div class="num green">96%</div>
+        <div class="label">通过率</div>
+      </div>
+      <div class="stat">
+        <div class="num purple">8-10x</div>
+        <div class="label">提效倍数</div>
+      </div>
+    </div>
+
+    <!-- Flowchart -->
+    <div class="flowchart-wrap">
+      <img src="/Users/td/.qoderwork/workspace/ms401phg4dyx7l1i/outputs/agent-loop-flowchart.png" alt="Agent Loop 流程图">
+    </div>
+    <div class="img-caption">Agent Loop 自动化闭环流程图 — 三个 Skill 串联，最多 4 轮反馈优化</div>
+  </div>
+
+  <!-- Part 2: TdAlly -->
+  <div class="section">
+    <div class="section-title">
+      二、TdAlly 多Agent协作探索
+      <span class="badge explore">方案验证中</span>
+    </div>
+    <div class="section-desc">TdAlly（v0.0.1b7）是公司自研的本地化 AI Agent 桌面平台，基于 Tauri 构建。探索用其 Loop Team 编排多个 Agent 协作完成天策策略配置全流程。</div>
+
+    <!-- Screenshot 1: Agent Management -->
+    <div class="screenshot-card">
+      <div class="card-header">
+        <div class="card-num bg-purple">1</div>
+        <div class="card-title">智能体配置 — Leader-Worker 角色分工</div>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          配置了 6 个智能体组成策略配置流水线：Leader（天策配置编排助手）不挂 Skill 只负责调度；Worker 各挂一个 Skill（数据助手负责元数据、函数配置助手生成 .fun、规则配置助手生成 .rss）。通过共享工作区 ~/tiance_workspace/ 按文件交接数据。
+        </div>
+      </div>
+      <div class="card-img">
+        <img src="/Users/td/.qoderwork/workspace/ms401phg4dyx7l1i/uploads/image_1785219677956_ziiltsg.png" alt="智能体管理页面">
+      </div>
+    </div>
+
+    <!-- Screenshot 2: Loop Task Config -->
+    <div class="screenshot-card">
+      <div class="card-header">
+        <div class="card-num bg-blue">2</div>
+        <div class="card-title">Loop 任务发起 — 自动确认目标与边界</div>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          用户发送 /loop 指令后，Leader 自动解析任务目标，确认 Excel 路径、执行流程（拉取元数据 → 生成 .fun）、目标平台地址、成功标准和停止边界，然后开始调度 Worker 执行。
+        </div>
+      </div>
+      <div class="card-img">
+        <img src="/Users/td/.qoderwork/workspace/ms401phg4dyx7l1i/uploads/image_1785219677956_oj9u3a5.png" alt="Loop 任务配置">
+      </div>
+    </div>
+
+    <!-- Screenshot 3: Execution Report -->
+    <div class="screenshot-card">
+      <div class="card-header">
+        <div class="card-num bg-green">3</div>
+        <div class="card-title">执行报告 — 多 Agent 协作成果汇总</div>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          三峡项目函数配置任务完成，3 步流程全部通过：元数据确认（数据助手判断无需重新拉取）→ 函数生成（函数配置助手输出 .fun 文件并验证通过）→ 汇总。产出 3,880B 的平台导入文件和 11,735B 的 JSON 参考。
+        </div>
+      </div>
+      <div class="card-img">
+        <img src="/Users/td/.qoderwork/workspace/ms401phg4dyx7l1i/uploads/image_1785219677956_qx0jm6k.png" alt="执行报告">
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison -->
+  <div class="section">
+    <div class="section-title">
+      三、两个平台的对比
+    </div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width:130px;">维度</th>
+          <th>QoderWork（当前主力）</th>
+          <th>TdAlly（探索中）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>认证方式</td>
+          <td>搭浏览器已登录会话便车，无需额外登录</td>
+          <td>独立 Playwright 实例，Skill 须自行完成登录</td>
+        </tr>
+        <tr>
+          <td>多Agent编排</td>
+          <td>Subagent 分治，主会话内调度</td>
+          <td>Loop Team，UI 配置 Leader-Worker 关系</td>
+        </tr>
+        <tr>
+          <td>Skill 生态</td>
+          <td>20+ 个 tiance-* Skill 生产验证中</td>
+          <td>Skill 已迁移（ZIP 上传），斜杠命令触发</td>
+        </tr>
+        <tr>
+          <td>成熟度</td>
+          <td>策略测试全链路已跑通两个客户项目</td>
+          <td>函数配置场景跑通，复杂流程受迭代预算限制</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    策略测试自动化已在三峡担保（249 条 / 96%）和哈密银行项目实战验证 &nbsp;·&nbsp; TdAlly 多Agent架构已完成方案验证
+  </div>
+</div>
+</body>
+</html>
