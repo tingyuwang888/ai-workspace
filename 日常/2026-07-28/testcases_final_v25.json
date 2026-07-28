@@ -1,0 +1,1647 @@
+{
+  "strategyCode": "DF_PRE_CONC_001",
+  "strategyName": "保前集中度判断（单户+关联户+区域）",
+  "generatedAt": "2026-07-28T18:45:43.172261",
+  "summary": {
+    "total": 69,
+    "byModule": {
+      "规则": 12,
+      "函数": 16,
+      "决策流分支覆盖": 3,
+      "跨子策略综合": 4,
+      "规则集联动矩阵": 4,
+      "区域特化模板": 6,
+      "三方接口异常": 24
+    },
+    "byCaseType": {
+      "正案例": 34,
+      "反案例": 11,
+      "异常案例": 24
+    }
+  },
+  "testCases": [
+    {
+      "id": "TC_001",
+      "desc": "命中验证：保前单户集中度判断",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "构造满足 R001 全部条件的参数值，验证规则命中 单户集中度超限",
+      "expected": "命中：R001(保前单户集中度判断)[单户集中度超限]",
+      "params": {
+        "S_S_BIZID": "R001_BIZ",
+        "S_S_CUSTNO": "R001_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "liabilitybalance": 1250000,
+        "reserveamount": 1250000,
+        "liabilitybalanceoff": 1250000,
+        "reserveamountoff": 1250000,
+        "creditlimitoff": 1000000
+      },
+      "targetRuleSet": "singleConcPre",
+      "targetRule": "R001",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "creditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_002",
+      "desc": "未命中验证：保前单户集中度判断",
+      "group": "规则",
+      "caseType": "反案例",
+      "scenario": "构造不满足 R001 条件的参数值，验证规则不命中",
+      "expected": "未命中：R001(保前单户集中度判断)",
+      "params": {
+        "S_S_BIZID": "R001_M_BIZ",
+        "S_S_CUSTNO": "R001_M_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "liabilitybalance": 125000,
+        "reserveamount": 125000,
+        "liabilitybalanceoff": 125000,
+        "reserveamountoff": 125000,
+        "creditlimitoff": 100000000
+      },
+      "targetRuleSet": "singleConcPre",
+      "targetRule": "R001",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "creditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_003",
+      "desc": "边界值验证：保前单户集中度判断",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "使用阈值临界值测试 R001，验证边界判定",
+      "expected": "命中：R001(保前单户集中度判断)[单户集中度超限]",
+      "params": {
+        "S_S_BIZID": "R001_B_BIZ",
+        "S_S_CUSTNO": "R001_B_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "liabilitybalance": 250000,
+        "reserveamount": 250000,
+        "liabilitybalanceoff": 250000,
+        "reserveamountoff": 250000,
+        "creditlimitoff": 5000000
+      },
+      "targetRuleSet": "singleConcPre",
+      "targetRule": "R001",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "creditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_004",
+      "desc": "命中验证：保前关联户集中度判断",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "构造满足 R002 全部条件的参数值，验证规则命中 关联户集中度超限",
+      "expected": "命中：R002(保前关联户集中度判断)[关联户集中度超限]",
+      "params": {
+        "S_S_BIZID": "R002_BIZ",
+        "S_S_CUSTNO": "R002_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "relatedliabilitybalance": 1250000,
+        "relatedreserveamount": 1250000,
+        "relatedliabilitybalanceoff": 1250000,
+        "relatedreserveamountoff": 1250000,
+        "relatedcreditlimitoff": 1000000
+      },
+      "targetRuleSet": "relatedConcPre",
+      "targetRule": "R002",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "relatedcreditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_005",
+      "desc": "未命中验证：保前关联户集中度判断",
+      "group": "规则",
+      "caseType": "反案例",
+      "scenario": "构造不满足 R002 条件的参数值，验证规则不命中",
+      "expected": "未命中：R002(保前关联户集中度判断)",
+      "params": {
+        "S_S_BIZID": "R002_M_BIZ",
+        "S_S_CUSTNO": "R002_M_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "relatedliabilitybalance": 125000,
+        "relatedreserveamount": 125000,
+        "relatedliabilitybalanceoff": 125000,
+        "relatedreserveamountoff": 125000,
+        "relatedcreditlimitoff": 100000000
+      },
+      "targetRuleSet": "relatedConcPre",
+      "targetRule": "R002",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "relatedcreditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_006",
+      "desc": "边界值验证：保前关联户集中度判断",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "使用阈值临界值测试 R002，验证边界判定",
+      "expected": "命中：R002(保前关联户集中度判断)[关联户集中度超限]",
+      "params": {
+        "S_S_BIZID": "R002_B_BIZ",
+        "S_S_CUSTNO": "R002_B_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "relatedliabilitybalance": 250000,
+        "relatedreserveamount": 250000,
+        "relatedliabilitybalanceoff": 250000,
+        "relatedreserveamountoff": 250000,
+        "relatedcreditlimitoff": 5000000
+      },
+      "targetRuleSet": "relatedConcPre",
+      "targetRule": "R002",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "relatedcreditlimitoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_007",
+      "desc": "命中验证：保前区域集中度判断_地市级",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "构造满足 R003 全部条件的参数值，验证规则命中 区域集中度超限",
+      "expected": "命中：R003(保前区域集中度判断_地市级)[区域集中度超限]",
+      "params": {
+        "S_S_BIZID": "R003_BIZ",
+        "S_S_CUSTNO": "R003_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 1250000,
+        "areareserveamount": 1250000,
+        "areaguaranteeamountoff": 1250000,
+        "areareserveamountoff": 1250000,
+        "areaprovince": "非四川",
+        "areacity": "非成都",
+        "conclimitstandardoff": 1000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R003",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_008",
+      "desc": "未命中验证：保前区域集中度判断_地市级",
+      "group": "规则",
+      "caseType": "反案例",
+      "scenario": "构造不满足 R003 条件的参数值，验证规则不命中",
+      "expected": "未命中：R003(保前区域集中度判断_地市级)",
+      "params": {
+        "S_S_BIZID": "R003_M_BIZ",
+        "S_S_CUSTNO": "R003_M_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 125000,
+        "areareserveamount": 125000,
+        "areaguaranteeamountoff": 125000,
+        "areareserveamountoff": 125000,
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "conclimitstandardoff": 100000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R003",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_009",
+      "desc": "边界值验证：保前区域集中度判断_地市级",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "使用阈值临界值测试 R003，验证边界判定",
+      "expected": "命中：R003(保前区域集中度判断_地市级)[区域集中度超限]",
+      "params": {
+        "S_S_BIZID": "R003_B_BIZ",
+        "S_S_CUSTNO": "R003_B_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 250000,
+        "areareserveamount": 250000,
+        "areaguaranteeamountoff": 250000,
+        "areareserveamountoff": 250000,
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "conclimitstandardoff": 5000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R003",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_010",
+      "desc": "命中验证：保前区域集中度判断_区县级",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "构造满足 R004 全部条件的参数值，验证规则命中 区域集中度超限",
+      "expected": "命中：R004(保前区域集中度判断_区县级)[区域集中度超限]",
+      "params": {
+        "S_S_BIZID": "R004_BIZ",
+        "S_S_CUSTNO": "R004_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 1250000,
+        "areareserveamount": 1250000,
+        "areaguaranteeamountoff": 1250000,
+        "areareserveamountoff": 1250000,
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "conclimitstandardoff": 1000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R004",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_011",
+      "desc": "未命中验证：保前区域集中度判断_区县级",
+      "group": "规则",
+      "caseType": "反案例",
+      "scenario": "构造不满足 R004 条件的参数值，验证规则不命中",
+      "expected": "未命中：R004(保前区域集中度判断_区县级)",
+      "params": {
+        "S_S_BIZID": "R004_M_BIZ",
+        "S_S_CUSTNO": "R004_M_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 125000,
+        "areareserveamount": 125000,
+        "areaguaranteeamountoff": 125000,
+        "areareserveamountoff": 125000,
+        "areaprovince": "非四川",
+        "areacity": "非成都",
+        "conclimitstandardoff": 100000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R004",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_012",
+      "desc": "边界值验证：保前区域集中度判断_区县级",
+      "group": "规则",
+      "caseType": "正案例",
+      "scenario": "使用阈值临界值测试 R004，验证边界判定",
+      "expected": "命中：R004(保前区域集中度判断_区县级)[区域集中度超限]",
+      "params": {
+        "S_S_BIZID": "R004_B_BIZ",
+        "S_S_CUSTNO": "R004_B_CUST",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5",
+        "areaguaranteeamount": 250000,
+        "areareserveamount": 250000,
+        "areaguaranteeamountoff": 250000,
+        "areareserveamountoff": 250000,
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "conclimitstandardoff": 5000000
+      },
+      "targetRuleSet": "areaConcPre",
+      "targetRule": "R004",
+      "thirdPartyMock": {
+        "interfaces": [],
+        "fields": [
+          "conclimitstandardoff"
+        ],
+        "mockHint": "无三方数据依赖"
+      }
+    },
+    {
+      "id": "TC_013",
+      "desc": "保前单户合并责任余额：保前单户合并责任余额 正常输入（各项 > 0）计算结果正确",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前单户合并责任余额 正常输入（各项 > 0）计算结果正确",
+      "expected": "函数输出：保前单户合并责任余额=各项之和（按 logic 公式计算）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_001",
+        "S_S_CUSTNO": "TC_FUNC_CUST_001",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前单户合并责任余额"
+    },
+    {
+      "id": "TC_014",
+      "desc": "保前单户合并责任余额：保前单户合并责任余额 所有输入项=0，验证零值计算",
+      "group": "函数",
+      "caseType": "反案例",
+      "scenario": "保前单户合并责任余额 所有输入项=0，验证零值计算",
+      "expected": "函数输出：保前单户合并责任余额=0",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_002",
+        "S_S_CUSTNO": "TC_FUNC_CUST_002",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前单户合并责任余额"
+    },
+    {
+      "id": "TC_015",
+      "desc": "保前单户合并责任余额：保前单户合并责任余额 部分输入项为 null/空，验证容错计",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前单户合并责任余额 部分输入项为 null/空，验证容错计算",
+      "expected": "函数输出：保前单户合并责任余额=非空项之和（空值按 0 处理）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_003",
+        "S_S_CUSTNO": "TC_FUNC_CUST_003",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前单户合并责任余额"
+    },
+    {
+      "id": "TC_016",
+      "desc": "保前关联户合并责任余额：保前关联户合并责任余额 正常输入（各项 > 0）计算结果正确",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前关联户合并责任余额 正常输入（各项 > 0）计算结果正确",
+      "expected": "函数输出：保前关联户合并责任余额=各项之和（按 logic 公式计算）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_004",
+        "S_S_CUSTNO": "TC_FUNC_CUST_004",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前关联户合并责任余额"
+    },
+    {
+      "id": "TC_017",
+      "desc": "保前关联户合并责任余额：保前关联户合并责任余额 所有输入项=0，验证零值计算",
+      "group": "函数",
+      "caseType": "反案例",
+      "scenario": "保前关联户合并责任余额 所有输入项=0，验证零值计算",
+      "expected": "函数输出：保前关联户合并责任余额=0",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_005",
+        "S_S_CUSTNO": "TC_FUNC_CUST_005",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前关联户合并责任余额"
+    },
+    {
+      "id": "TC_018",
+      "desc": "保前关联户合并责任余额：保前关联户合并责任余额 部分输入项为 null/空，验证容错",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前关联户合并责任余额 部分输入项为 null/空，验证容错计算",
+      "expected": "函数输出：保前关联户合并责任余额=非空项之和（空值按 0 处理）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_006",
+        "S_S_CUSTNO": "TC_FUNC_CUST_006",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前关联户合并责任余额"
+    },
+    {
+      "id": "TC_019",
+      "desc": "区域聚合层级判断：区域聚合层级判断 满足主条件分支，验证输出",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "区域聚合层级判断 满足主条件分支，验证输出",
+      "expected": "函数输出：区域聚合层级判断=THEN 分支结果",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_007",
+        "S_S_CUSTNO": "TC_FUNC_CUST_007",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "区域聚合层级判断"
+    },
+    {
+      "id": "TC_020",
+      "desc": "区域聚合层级判断：区域聚合层级判断 不满足主条件，走 ELSE 分支",
+      "group": "函数",
+      "caseType": "反案例",
+      "scenario": "区域聚合层级判断 不满足主条件，走 ELSE 分支",
+      "expected": "函数输出：区域聚合层级判断=ELSE 分支结果",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_008",
+        "S_S_CUSTNO": "TC_FUNC_CUST_008",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "区域聚合层级判断"
+    },
+    {
+      "id": "TC_021",
+      "desc": "区域聚合层级判断：区域聚合层级判断 主条件临界值（刚好等于判断阈值）",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "区域聚合层级判断 主条件临界值（刚好等于判断阈值）",
+      "expected": "函数输出：区域聚合层级判断=对应分支结果（临界值处理正确）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_009",
+        "S_S_CUSTNO": "TC_FUNC_CUST_009",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "区域聚合层级判断"
+    },
+    {
+      "id": "TC_022",
+      "desc": "保前区域合并已用额度：保前区域合并已用额度 正常输入（各项 > 0）计算结果正确",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前区域合并已用额度 正常输入（各项 > 0）计算结果正确",
+      "expected": "函数输出：保前区域合并已用额度=各项之和（按 logic 公式计算）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_010",
+        "S_S_CUSTNO": "TC_FUNC_CUST_010",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前区域合并已用额度"
+    },
+    {
+      "id": "TC_023",
+      "desc": "保前区域合并已用额度：保前区域合并已用额度 所有输入项=0，验证零值计算",
+      "group": "函数",
+      "caseType": "反案例",
+      "scenario": "保前区域合并已用额度 所有输入项=0，验证零值计算",
+      "expected": "函数输出：保前区域合并已用额度=0",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_011",
+        "S_S_CUSTNO": "TC_FUNC_CUST_011",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前区域合并已用额度"
+    },
+    {
+      "id": "TC_024",
+      "desc": "保前区域合并已用额度：保前区域合并已用额度 部分输入项为 null/空，验证容错计",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前区域合并已用额度 部分输入项为 null/空，验证容错计算",
+      "expected": "函数输出：保前区域合并已用额度=非空项之和（空值按 0 处理）",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_012",
+        "S_S_CUSTNO": "TC_FUNC_CUST_012",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前区域合并已用额度"
+    },
+    {
+      "id": "TC_025",
+      "desc": "保前集中度综合判断结果汇总：保前集中度综合判断结果汇总 所有子维度均通过",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前集中度综合判断结果汇总 所有子维度均通过",
+      "expected": "函数输出：保前集中度综合判断结果汇总=全部通过",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_013",
+        "S_S_CUSTNO": "TC_FUNC_CUST_013",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前集中度综合判断结果汇总"
+    },
+    {
+      "id": "TC_026",
+      "desc": "保前集中度综合判断结果汇总：保前集中度综合判断结果汇总 部分子维度超限、部分通过",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前集中度综合判断结果汇总 部分子维度超限、部分通过",
+      "expected": "函数输出：保前集中度综合判断结果汇总=部分超限",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_014",
+        "S_S_CUSTNO": "TC_FUNC_CUST_014",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前集中度综合判断结果汇总"
+    },
+    {
+      "id": "TC_027",
+      "desc": "保前集中度综合判断结果汇总：保前集中度综合判断结果汇总 所有子维度均超限",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前集中度综合判断结果汇总 所有子维度均超限",
+      "expected": "函数输出：保前集中度综合判断结果汇总=全部超限",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_015",
+        "S_S_CUSTNO": "TC_FUNC_CUST_015",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前集中度综合判断结果汇总"
+    },
+    {
+      "id": "TC_028",
+      "desc": "保前集中度综合判断结果汇总：保前集中度综合判断结果汇总 仅 1 个子维度超限",
+      "group": "函数",
+      "caseType": "正案例",
+      "scenario": "保前集中度综合判断结果汇总 仅 1 个子维度超限",
+      "expected": "函数输出：保前集中度综合判断结果汇总=部分超限",
+      "params": {
+        "S_S_BIZID": "TC_FUNC_016",
+        "S_S_CUSTNO": "TC_FUNC_CUST_016",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetFunction": "保前集中度综合判断结果汇总"
+    },
+    {
+      "id": "TC_029",
+      "desc": "规则集覆盖：保前集中度判断_单户",
+      "group": "决策流分支覆盖",
+      "caseType": "正案例",
+      "scenario": "验证规则集 singleConcPre 被正确调用",
+      "expected": "规则集保前集中度判断_单户被调用",
+      "params": {
+        "S_S_BIZID": "TC_FLOW_001",
+        "S_S_CUSTNO": "TC_FLOW_CUST_001",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "singleConcPre"
+    },
+    {
+      "id": "TC_030",
+      "desc": "规则集覆盖：保前集中度判断_关联户",
+      "group": "决策流分支覆盖",
+      "caseType": "正案例",
+      "scenario": "验证规则集 relatedConcPre 被正确调用",
+      "expected": "规则集保前集中度判断_关联户被调用",
+      "params": {
+        "S_S_BIZID": "TC_FLOW_002",
+        "S_S_CUSTNO": "TC_FLOW_CUST_002",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "relatedConcPre"
+    },
+    {
+      "id": "TC_031",
+      "desc": "规则集覆盖：保前集中度判断_区域",
+      "group": "决策流分支覆盖",
+      "caseType": "正案例",
+      "scenario": "验证规则集 areaConcPre 被正确调用",
+      "expected": "规则集保前集中度判断_区域被调用",
+      "params": {
+        "S_S_BIZID": "TC_FLOW_003",
+        "S_S_CUSTNO": "TC_FLOW_CUST_003",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre"
+    },
+    {
+      "id": "TC_032",
+      "desc": "综合场景：保前集中度判断_单户规则命中",
+      "group": "跨子策略综合",
+      "caseType": "正案例",
+      "scenario": "验证保前集中度判断_单户规则集正确执行",
+      "expected": "命中：R001(单户集中度超限)",
+      "params": {
+        "S_S_BIZID": "TC_COMB_001",
+        "S_S_CUSTNO": "TC_COMB_CUST_001",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCombined": true
+    },
+    {
+      "id": "TC_033",
+      "desc": "综合场景：保前集中度判断_关联户规则命中",
+      "group": "跨子策略综合",
+      "caseType": "正案例",
+      "scenario": "验证保前集中度判断_关联户规则集正确执行",
+      "expected": "命中：R002(关联户集中度超限)",
+      "params": {
+        "S_S_BIZID": "TC_COMB_002",
+        "S_S_CUSTNO": "TC_COMB_CUST_002",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCombined": true
+    },
+    {
+      "id": "TC_034",
+      "desc": "综合场景：保前集中度判断_区域规则命中",
+      "group": "跨子策略综合",
+      "caseType": "正案例",
+      "scenario": "验证保前集中度判断_区域规则集正确执行",
+      "expected": "命中：R003(区域集中度超限)、R004(区域集中度超限)",
+      "params": {
+        "S_S_BIZID": "TC_COMB_003",
+        "S_S_CUSTNO": "TC_COMB_CUST_003",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCombined": true
+    },
+    {
+      "id": "TC_035",
+      "desc": "全SAFE基线：所有规则集均无命中",
+      "group": "跨子策略综合",
+      "caseType": "正案例",
+      "scenario": "所有参数安全值，验证保前集中度判断_单户、保前集中度判断_关联户、保前集中度判断_区域均不触发",
+      "expected": "保前集中度判断_单户、保前集中度判断_关联户、保前集中度判断_区域均无命中，最终通过",
+      "params": {
+        "S_S_BIZID": "TC_COMB_004",
+        "S_S_CUSTNO": "TC_COMB_CUST_004",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isSafeBaseline": true
+    },
+    {
+      "id": "TC_036",
+      "desc": "联动矩阵：保前集中度判断_单户命中×保前集中度判断_关联户命中×保前集中度判断_区域命中",
+      "group": "规则集联动矩阵",
+      "caseType": "正案例",
+      "scenario": "规则集交叉组合：命中[保前集中度判断_单户+保前集中度判断_关联户+保前集中度判断_区域]，未命中[无]",
+      "expected": "命中：保前集中度判断_单户+保前集中度判断_关联户+保前集中度判断_区域；未命中：无",
+      "params": {
+        "S_S_BIZID": "TC_CROSS_001",
+        "S_S_CUSTNO": "TC_CROSS_CUST_001",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "areaprovince": "广东",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCrossMatrix": true,
+      "targetRuleSet": "singleConcPre,relatedConcPre,areaConcPre",
+      "targetRule": ""
+    },
+    {
+      "id": "TC_037",
+      "desc": "联动矩阵：保前集中度判断_单户命中×保前集中度判断_关联户命中×保前集中度判断_区域未命中",
+      "group": "规则集联动矩阵",
+      "caseType": "正案例",
+      "scenario": "规则集交叉组合：命中[保前集中度判断_单户+保前集中度判断_关联户]，未命中[保前集中度判断_区域]",
+      "expected": "命中：保前集中度判断_单户+保前集中度判断_关联户；未命中：保前集中度判断_区域",
+      "params": {
+        "S_S_BIZID": "TC_CROSS_002",
+        "S_S_CUSTNO": "TC_CROSS_CUST_002",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 100000,
+        "conclimitstandardoff": 1000000,
+        "areaprovince": "广东",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCrossMatrix": true,
+      "targetRuleSet": "singleConcPre,relatedConcPre",
+      "targetRule": ""
+    },
+    {
+      "id": "TC_038",
+      "desc": "联动矩阵：保前集中度判断_单户命中×保前集中度判断_关联户未命中×保前集中度判断_区域命中",
+      "group": "规则集联动矩阵",
+      "caseType": "正案例",
+      "scenario": "规则集交叉组合：命中[保前集中度判断_单户+保前集中度判断_区域]，未命中[保前集中度判断_关联户]",
+      "expected": "命中：保前集中度判断_单户+保前集中度判断_区域；未命中：保前集中度判断_关联户",
+      "params": {
+        "S_S_BIZID": "TC_CROSS_003",
+        "S_S_CUSTNO": "TC_CROSS_CUST_003",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 100000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "areaprovince": "广东",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCrossMatrix": true,
+      "targetRuleSet": "singleConcPre,areaConcPre",
+      "targetRule": ""
+    },
+    {
+      "id": "TC_039",
+      "desc": "联动矩阵：保前集中度判断_单户未命中×保前集中度判断_关联户命中×保前集中度判断_区域命中",
+      "group": "规则集联动矩阵",
+      "caseType": "正案例",
+      "scenario": "规则集交叉组合：命中[保前集中度判断_关联户+保前集中度判断_区域]，未命中[保前集中度判断_单户]",
+      "expected": "命中：保前集中度判断_关联户+保前集中度判断_区域；未命中：保前集中度判断_单户",
+      "params": {
+        "S_S_BIZID": "TC_CROSS_004",
+        "S_S_CUSTNO": "TC_CROSS_CUST_004",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "presinglemergedliability": 100000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "areaprovince": "广东",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "isCrossMatrix": true,
+      "targetRuleSet": "relatedConcPre,areaConcPre",
+      "targetRule": ""
+    },
+    {
+      "id": "TC_040",
+      "desc": "区域模板[重庆]：区域命中",
+      "group": "区域特化模板",
+      "caseType": "正案例",
+      "scenario": "重庆区域模板，区域集中度超限",
+      "expected": "区域集中度超限(R004条件1(省=重庆)触发)",
+      "params": {
+        "S_S_BIZID": "TC_REGION_001",
+        "S_S_CUSTNO": "TC_REGION_CUST_001",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "重庆",
+        "areacity": "重庆",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_041",
+      "desc": "区域模板[重庆]：区域未命中",
+      "group": "区域特化模板",
+      "caseType": "反案例",
+      "scenario": "重庆区域模板，区域集中度安全",
+      "expected": "区域集中度未超限（额度低于阈值）",
+      "params": {
+        "S_S_BIZID": "TC_REGION_002",
+        "S_S_CUSTNO": "TC_REGION_CUST_002",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "重庆",
+        "areacity": "重庆",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 100000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_042",
+      "desc": "区域模板[四川成都]：区域命中",
+      "group": "区域特化模板",
+      "caseType": "正案例",
+      "scenario": "四川成都区域模板，区域集中度超限",
+      "expected": "区域集中度超限(R004条件2(省=四川且市=成都)触发)",
+      "params": {
+        "S_S_BIZID": "TC_REGION_003",
+        "S_S_CUSTNO": "TC_REGION_CUST_003",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_043",
+      "desc": "区域模板[四川成都]：区域未命中",
+      "group": "区域特化模板",
+      "caseType": "反案例",
+      "scenario": "四川成都区域模板，区域集中度安全",
+      "expected": "区域集中度未超限（额度低于阈值）",
+      "params": {
+        "S_S_BIZID": "TC_REGION_004",
+        "S_S_CUSTNO": "TC_REGION_CUST_004",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "四川",
+        "areacity": "成都",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 100000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_044",
+      "desc": "区域模板[广东]：区域命中",
+      "group": "区域特化模板",
+      "caseType": "正案例",
+      "scenario": "其他省区域模板（非重庆、非四川成都），区域集中度超限",
+      "expected": "区域集中度超限(R003触发（省≠重庆，省≠四川）)",
+      "params": {
+        "S_S_BIZID": "TC_REGION_005",
+        "S_S_CUSTNO": "TC_REGION_CUST_005",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "广东",
+        "areacity": "广州",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 5000000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_045",
+      "desc": "区域模板[广东]：区域未命中",
+      "group": "区域特化模板",
+      "caseType": "反案例",
+      "scenario": "其他省区域模板（非重庆、非四川成都），区域集中度安全",
+      "expected": "区域集中度未超限（额度低于阈值）",
+      "params": {
+        "S_S_BIZID": "TC_REGION_006",
+        "S_S_CUSTNO": "TC_REGION_CUST_006",
+        "S_S_ORGCODE": "010117",
+        "S_E_APIMODEL": "30",
+        "areaprovince": "广东",
+        "areacity": "广州",
+        "presinglemergedliability": 5000000,
+        "creditlimitoff": 1000000,
+        "prerelatedmergedliability": 5000000,
+        "relatedcreditlimitoff": 1000000,
+        "preareamergedusedquota": 100000,
+        "conclimitstandardoff": 1000000,
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "areaConcPre",
+      "isRegionTemplate": true
+    },
+    {
+      "id": "TC_046",
+      "desc": "三方接口异常-超时: dhjzdsearch(单户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdsearch(单户集中度表查询_实时)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdsearch(单户集中度表查询_实时) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_047",
+      "desc": "三方接口异常-空返回: dhjzdsearch(单户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdsearch(单户集中度表查询_实时)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdsearch(单户集中度表查询_实时) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_048",
+      "desc": "三方接口异常-异常值: dhjzdsearch(单户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdsearch(单户集中度表查询_实时)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdsearch(单户集中度表查询_实时) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_049",
+      "desc": "三方接口异常-超时: dhjzdoffsearch(单户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdoffsearch(单户集中度表查询_离线)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdoffsearch(单户集中度表查询_离线) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_050",
+      "desc": "三方接口异常-空返回: dhjzdoffsearch(单户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdoffsearch(单户集中度表查询_离线)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdoffsearch(单户集中度表查询_离线) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_051",
+      "desc": "三方接口异常-异常值: dhjzdoffsearch(单户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用dhjzdoffsearch(单户集中度表查询_离线)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "单户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock dhjzdoffsearch(单户集中度表查询_离线) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_052",
+      "desc": "三方接口异常-超时: glhjzdsearch(关联户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdsearch(关联户集中度表查询_实时)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdsearch(关联户集中度表查询_实时) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_053",
+      "desc": "三方接口异常-空返回: glhjzdsearch(关联户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdsearch(关联户集中度表查询_实时)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdsearch(关联户集中度表查询_实时) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_054",
+      "desc": "三方接口异常-异常值: glhjzdsearch(关联户集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdsearch(关联户集中度表查询_实时)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdsearch(关联户集中度表查询_实时) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_055",
+      "desc": "三方接口异常-超时: glhjzdoffsearch(关联户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdoffsearch(关联户集中度表查询_离线)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdoffsearch(关联户集中度表查询_离线) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_056",
+      "desc": "三方接口异常-空返回: glhjzdoffsearch(关联户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdoffsearch(关联户集中度表查询_离线)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdoffsearch(关联户集中度表查询_离线) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_057",
+      "desc": "三方接口异常-异常值: glhjzdoffsearch(关联户集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用glhjzdoffsearch(关联户集中度表查询_离线)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "关联户集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock glhjzdoffsearch(关联户集中度表查询_离线) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_058",
+      "desc": "三方接口异常-超时: sjqyjzdsearch(市级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdsearch(市级区域集中度表查询_实时)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdsearch(市级区域集中度表查询_实时) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_059",
+      "desc": "三方接口异常-空返回: sjqyjzdsearch(市级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdsearch(市级区域集中度表查询_实时)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdsearch(市级区域集中度表查询_实时) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_060",
+      "desc": "三方接口异常-异常值: sjqyjzdsearch(市级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdsearch(市级区域集中度表查询_实时)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdsearch(市级区域集中度表查询_实时) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_061",
+      "desc": "三方接口异常-超时: sjqyjzdoffsearch(市级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdoffsearch(市级区域集中度表查询_离线)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdoffsearch(市级区域集中度表查询_离线) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_062",
+      "desc": "三方接口异常-空返回: sjqyjzdoffsearch(市级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdoffsearch(市级区域集中度表查询_离线)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdoffsearch(市级区域集中度表查询_离线) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_063",
+      "desc": "三方接口异常-异常值: sjqyjzdoffsearch(市级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用sjqyjzdoffsearch(市级区域集中度表查询_离线)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "市级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock sjqyjzdoffsearch(市级区域集中度表查询_离线) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_064",
+      "desc": "三方接口异常-超时: qjqyjzdsearch(区级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdsearch(区级区域集中度表查询_实时)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdsearch(区级区域集中度表查询_实时) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_065",
+      "desc": "三方接口异常-空返回: qjqyjzdsearch(区级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdsearch(区级区域集中度表查询_实时)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdsearch(区级区域集中度表查询_实时) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_066",
+      "desc": "三方接口异常-异常值: qjqyjzdsearch(区级区域集中度表查询_实时)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdsearch(区级区域集中度表查询_实时)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_实时"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdsearch(区级区域集中度表查询_实时) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    },
+    {
+      "id": "TC_067",
+      "desc": "三方接口异常-超时: qjqyjzdoffsearch(区级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdoffsearch(区级区域集中度表查询_离线)超时或返回错误码，验证策略容错处理",
+      "expected": "策略不因接口异常崩溃，走降级逻辑或返回默认值",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdoffsearch(区级区域集中度表查询_离线) 超时或返回错误（如 status=timeout, errCode=500）",
+        "exceptionType": "timeout"
+      }
+    },
+    {
+      "id": "TC_068",
+      "desc": "三方接口异常-空返回: qjqyjzdoffsearch(区级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdoffsearch(区级区域集中度表查询_离线)返回空数据集（空JSON/null），验证策略空值处理",
+      "expected": "策略不因空数据崩溃，相关字段置默认值或跳过计算",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdoffsearch(区级区域集中度表查询_离线) 返回空数据（data=null 或 空数组）",
+        "exceptionType": "emptyResponse"
+      }
+    },
+    {
+      "id": "TC_069",
+      "desc": "三方接口异常-异常值: qjqyjzdoffsearch(区级区域集中度表查询_离线)",
+      "group": "三方接口异常",
+      "caseType": "异常案例",
+      "scenario": "调用qjqyjzdoffsearch(区级区域集中度表查询_离线)返回极端值（负数/超大值/非预期类型），验证策略边界处理",
+      "expected": "策略不因异常值产生错误决策，触发边界保护或默认值兜底",
+      "params": {
+        "S_S_BIZID": "BIZ_TP_EXCEPTION_TEST",
+        "S_S_CUSTNO": "CUST_TP_EXCEPTION",
+        "S_S_ORGCODE": "ORG_DEFAULT",
+        "S_S_IDNO": "500102199001011234",
+        "C_F_RANDOMNUM": "0.5"
+      },
+      "targetRuleSet": "",
+      "targetRule": "",
+      "thirdPartyMock": {
+        "interfaces": [
+          "区级区域集中度表查询_离线"
+        ],
+        "fields": [],
+        "mockHint": "mock qjqyjzdoffsearch(区级区域集中度表查询_离线) 返回异常值（如金额=-1, 数量=999999999, 字段类型错误）",
+        "exceptionType": "abnormalValue"
+      }
+    }
+  ]
+}
