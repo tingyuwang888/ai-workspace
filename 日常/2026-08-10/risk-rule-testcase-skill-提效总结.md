@@ -224,11 +224,11 @@ Phase 1 → Phase 2 → Phase 3
 
 ### 2.3 调度 Skill 创建（v2.1）
 
-为进一步简化用户操作，创建了 `risk-rule-testcase` 调度 skill，自动编排三个子 skill 的执行顺序。
+为进一步简化用户操作，创建了 `risk-rule-testcase-pipeline` 调度 skill，自动编排三个子 skill 的执行顺序。
 
 **调度逻辑**:
 ```
-用户调用 risk-rule-testcase
+用户调用 risk-rule-testcase-pipeline
     ↓
 Phase 1: risk-rule-testcase-design（设计测试用例）
     ↓
@@ -492,7 +492,7 @@ Step 9: 失败分析
 ### 核心提效经验
 
 1. **架构优化**: 从单一 Skill 拆分为 3 个独立 Skill，职责清晰、易于维护
-2. **调度编排**: 创建 risk-rule-testcase 调度 skill，自动编排三个阶段，支持迭代循环
+2. **调度编排**: 创建 risk-rule-testcase-pipeline 调度 skill，自动编排三个阶段，支持迭代循环
 3. **标准化契约**: 15 条核心规范整理为独立文档，不再每次重新粘贴
 4. **项目配置分离**: 项目专属配置独立，支持多项目复用
 5. **自动校验**: 自动检查 8 类数据质量问题，减少人工检查
