@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "runtime-contract-v3",
+  "note": "描述性 Schema：字段名与等式约束为硬合同，类型校验由自检脚本执行",
+  "precheckResult": {
+    "status": "ok | blocked",
+    "blockedBy": ["check_id"],
+    "loginValid": "boolean",
+    "policyPublished": "boolean",
+    "platformVersion": "integer",
+    "bizType": "integer",
+    "snapshotPath": "string",
+    "snapshotAgeSeconds": "integer <= 600"
+  },
+  "platformSnapshotMeta": {
+    "capturedAt": "ISO8601",
+    "source": "api | browser_export",
+    "policyCode": "string",
+    "platformVersion": "integer",
+    "businessType": "integer",
+    "publishStatus": "integer, 4=已发布"
+  },
+  "generationManifest": {
+    "taskId": "string", "attemptId": "integer", "iteration": "integer",
+    "policyCode": "string", "policyVersion": "integer", "bizType": "integer",
+    "generatedCaseCount": "integer",
+    "byModule": {"rule": "int", "function": "int", "flow": "int", "warning": "int"},
+    "testcasesPath": "string", "testcasesXlsxPath": "string",
+    "inputFingerprint": "sha256",
+    "excluded": [{"ruleCode": "string", "reason": "string"}]
+  },
+  "executionManifest": {
+    "taskId": "string", "attemptId": "integer", "runId": "string",
+    "fixtureRunId": "string",
+    "submitted": "integer = 报告中有效UUID数",
+    "passed": "integer", "failed": "integer", "inconclusive": "integer",
+    "skipped": "integer", "executionFailed": "integer",
+    "countingCheck": "五状态之和 == generatedCaseCount",
+    "segments": [{"from": "int", "to": "int", "status": "string"}],
+    "executionResultsPath": "string", "reportPath": "string",
+    "cleanupResultPath": "string",
+    "lateArrivals": [{"caseId": "string", "arrivedAt": "ISO8601"}],
+    "inputFingerprint": "sha256"
+  },
+  "auditManifest": {
+    "taskId": "string", "attemptId": "integer",
+    "totalIssues": "integer",
+    "byLevel": {"严重": "int", "警告": "int", "提示": "int"},
+    "checkedReportPath": "string", "checkResultPath": "string",
+    "coverageSummaryPath": "string | null",
+    "securityViolations": ["string"],
+    "convergeReady": "boolean",
+    "inputFingerprint": "sha256"
+  },
+  "summarySchema": {
+    "status": "completed | error | blocked | waiting_for_human",
+    "phase": "A|B|C|D|E|F|G|H",
+    "counts": {"generatedCaseCount": "int", "submitted": "int", "passed": "int",
+               "failed": "int", "inconclusive": "int", "skipped": "int",
+               "executionFailed": "int"},
+    "artifactPaths": ["string"],
+    "errors": ["string"],
+    "maxBytes": 2048
+  },
+  "convergence": {
+    "policyCode": "string",
+    "iterations": [{"round": "int", "cases": "int", "issues": "int",
+                    "severe": "int", "warning": "int", "info": "int"}],
+    "converged": "boolean", "convergeRound": "int | null",
+    "finalReport": "string"
+  }
+}
