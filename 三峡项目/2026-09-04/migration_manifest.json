@@ -1,0 +1,1928 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-04T14:55:12",
+  "source": [
+    "contracts/rule-contracts.json",
+    "scenarios/registry.json",
+    "legacy_v46_adapter.legacy_rule_codes()"
+  ],
+  "totals": {
+    "native": 1,
+    "legacy": 141,
+    "excluded_inconclusive": 2,
+    "pending": 3
+  },
+  "rules": [
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS01",
+      "ruleName": "企业近3个月法定代表人存在变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS01_HIT",
+        "miss": "BHJC_LG_EBGS01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS02",
+      "ruleName": "企业近3个月存在股权变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS02_HIT",
+        "miss": "BHJC_LG_EBGS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS03",
+      "ruleName": "企业近3个月存在经营范围变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS03_HIT",
+        "miss": "BHJC_LG_EBGS03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS04",
+      "ruleName": "企业近3个月存在注销信息记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS04_HIT",
+        "miss": "BHJC_LG_EBGS04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS05",
+      "ruleName": "企业近3个月注册资本大幅减少企查查1",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS05_HIT",
+        "miss": "BHJC_LG_EBGS05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS06",
+      "ruleName": "企业近3个月注册资本大幅减少企查查2",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS06_HIT",
+        "miss": "BHJC_LG_EBGS06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS07",
+      "ruleName": "企业近3个月存在注册资本减少变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS07_HIT",
+        "miss": "BHJC_LG_EBGS07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS08",
+      "ruleName": "企业近3个月存在注册资本增加变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS08_HIT",
+        "miss": "BHJC_LG_EBGS08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS09",
+      "ruleName": "企业实缴资本占比过低企查查1",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS09_HIT",
+        "miss": "BHJC_LG_EBGS09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS10",
+      "ruleName": "企业实缴资本占比过低企查查2",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS10_HIT",
+        "miss": "BHJC_LG_EBGS10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingSoe",
+      "ruleCode": "EBGS11",
+      "ruleName": "企业注册资本虚高企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGS11_HIT",
+        "miss": "BHJC_LG_EBGS11_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingSoe",
+      "ruleCode": "EBNS01",
+      "ruleName": "企业近3个月法定代表人存在变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNS01_HIT",
+        "miss": "BHJC_LG_EBNS01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingSoe",
+      "ruleCode": "EBNS02",
+      "ruleName": "企业近3个月存在股权变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNS02_HIT",
+        "miss": "BHJC_LG_EBNS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingSoe",
+      "ruleCode": "EBNS03",
+      "ruleName": "企业近3个月存在经营范围变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNS03_HIT",
+        "miss": "BHJC_LG_EBNS03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingSoe",
+      "ruleCode": "EBNS04",
+      "ruleName": "企业近3个月存在注销信息记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNS04_HIT",
+        "miss": "BHJC_LG_EBNS04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP01",
+      "ruleName": "企业近3个月法定代表人存在变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP01_HIT",
+        "miss": "BHJC_LG_EBGP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP02",
+      "ruleName": "企业近3个月存在股权变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP02_HIT",
+        "miss": "BHJC_LG_EBGP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP03",
+      "ruleName": "企业近3个月存在经营范围变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP03_HIT",
+        "miss": "BHJC_LG_EBGP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP04",
+      "ruleName": "企业近3个月存在注销信息记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP04_HIT",
+        "miss": "BHJC_LG_EBGP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP05",
+      "ruleName": "企业近3个月注册资本大幅减少企查查1",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP05_HIT",
+        "miss": "BHJC_LG_EBGP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP06",
+      "ruleName": "企业近3个月注册资本大幅减少企查查2",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP06_HIT",
+        "miss": "BHJC_LG_EBGP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP07",
+      "ruleName": "企业近3个月存在注册资本减少变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP07_HIT",
+        "miss": "BHJC_LG_EBGP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP08",
+      "ruleName": "企业近3个月存在注册资本增加变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP08_HIT",
+        "miss": "BHJC_LG_EBGP08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP09",
+      "ruleName": "企业实缴资本占比过低企查查1",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP09_HIT",
+        "miss": "BHJC_LG_EBGP09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP10",
+      "ruleName": "企业实缴资本占比过低企查查2",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP10_HIT",
+        "miss": "BHJC_LG_EBGP10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicFinancingPriv",
+      "ruleCode": "EBGP11",
+      "ruleName": "企业注册资本虚高企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBGP11_HIT",
+        "miss": "BHJC_LG_EBGP11_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP01",
+      "ruleName": "企业近3个月法定代表人存在变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP01_HIT",
+        "miss": "BHJC_LG_EBNP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP02",
+      "ruleName": "企业近3个月存在股权变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP02_HIT",
+        "miss": "BHJC_LG_EBNP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP03",
+      "ruleName": "企业近3个月存在经营范围变更记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP03_HIT",
+        "miss": "BHJC_LG_EBNP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP04",
+      "ruleName": "企业近3个月存在注销信息记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP04_HIT",
+        "miss": "BHJC_LG_EBNP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP05",
+      "ruleName": "工程资质等级降级_高风险",
+      "contractStatus": "ambiguous_rule_identity",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "合同重复定义(ambiguous_rule_identity)，按 legacy 显式映射去重迁移",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP05_HIT",
+        "miss": "BHJC_LG_EBNP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP05",
+      "ruleName": "工程资质等级降级_极高风险",
+      "contractStatus": "ambiguous_rule_identity",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "合同重复定义(ambiguous_rule_identity)，按 legacy 显式映射去重迁移",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP05_HIT",
+        "miss": "BHJC_LG_EBNP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP06",
+      "ruleName": "核心资质证书到期_中风险",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP06_HIT",
+        "miss": "BHJC_LG_EBNP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP07",
+      "ruleName": "核心资质证书到期_高风险",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP07_HIT",
+        "miss": "BHJC_LG_EBNP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP08",
+      "ruleName": "核心资质证书到期_极高风险",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_EBNP08_HIT",
+        "miss": "BHJC_LG_EBNP08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP09",
+      "ruleName": "资质证书状态异常_极高风险",
+      "contractStatus": "scenario_payload_required",
+      "status": "pending",
+      "provider": null,
+      "reason": "未覆盖，需人工决策",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP09_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP09_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP10",
+      "ruleName": "资质证书状态异常_高风险",
+      "contractStatus": "scenario_payload_required",
+      "status": "pending",
+      "provider": null,
+      "reason": "未覆盖，需人工决策",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP10_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP10_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntBasicNonfinancingPriv",
+      "ruleCode": "EBNP11",
+      "ruleName": "企业中标信息查询企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "pending",
+      "provider": null,
+      "reason": "未覆盖，需人工决策",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP11_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTBASICNONFINANCINGPRIV_EBNP11_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX01",
+      "ruleName": "企业存在未结清逾期借贷账户",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX01_HIT",
+        "miss": "BHJC_LG_ECGX01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX02",
+      "ruleName": "企业存在未结清不良类借贷交易余额",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX02_HIT",
+        "miss": "BHJC_LG_ECGX02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX03",
+      "ruleName": "企业未结清借贷交易账户存在关注记录",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX03_HIT",
+        "miss": "BHJC_LG_ECGX03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX04",
+      "ruleName": "企业存在未结清逾期对外担保账户",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX04_HIT",
+        "miss": "BHJC_LG_ECGX04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX05",
+      "ruleName": "企业存在未结清不良类担保交易余额",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX05_HIT",
+        "miss": "BHJC_LG_ECGX05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX06",
+      "ruleName": "企业未结清担保交易账户存在关注记录",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX06_HIT",
+        "miss": "BHJC_LG_ECGX06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntCreditAll",
+      "ruleCode": "ECGX07",
+      "ruleName": "企业存在未结清欠息记录",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ECGX07_HIT",
+        "miss": "BHJC_LG_ECGX07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "native",
+      "provider": "v2_native",
+      "reason": "V2 原生场景合同已覆盖",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTLAWSUITLOANSOE_ELLS01_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTLAWSUITLOANSOE_ELLS01_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS02_HIT",
+        "miss": "BHJC_LG_ELLS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS03_HIT",
+        "miss": "BHJC_LG_ELLS03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS04_HIT",
+        "miss": "BHJC_LG_ELLS04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=500万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS05_HIT",
+        "miss": "BHJC_LG_ELLS05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS06_HIT",
+        "miss": "BHJC_LG_ELLS06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS07",
+      "ruleName": "企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS07_HIT",
+        "miss": "BHJC_LG_ELLS07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS08",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS08_HIT",
+        "miss": "BHJC_LG_ELLS08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanSoe",
+      "ruleCode": "ELLS09",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLS09_HIT",
+        "miss": "BHJC_LG_ELLS09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS01_HIT",
+        "miss": "BHJC_LG_ELDS01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS02_HIT",
+        "miss": "BHJC_LG_ELDS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS03_HIT",
+        "miss": "BHJC_LG_ELDS03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS04_HIT",
+        "miss": "BHJC_LG_ELDS04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=500万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS05_HIT",
+        "miss": "BHJC_LG_ELDS05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS06_HIT",
+        "miss": "BHJC_LG_ELDS06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS07",
+      "ruleName": "企业近3个月存在为被告的借款合同纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS07_HIT",
+        "miss": "BHJC_LG_ELDS07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS08",
+      "ruleName": "企业近3个月存在终本记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS08_HIT",
+        "miss": "BHJC_LG_ELDS08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS09",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS09_HIT",
+        "miss": "BHJC_LG_ELDS09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelSoe",
+      "ruleCode": "ELDS10",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDS10_HIT",
+        "miss": "BHJC_LG_ELDS10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS01_HIT",
+        "miss": "BHJC_LG_ELNS01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS02_HIT",
+        "miss": "BHJC_LG_ELNS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS03_HIT",
+        "miss": "BHJC_LG_ELNS03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS04_HIT",
+        "miss": "BHJC_LG_ELNS04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=500万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS05_HIT",
+        "miss": "BHJC_LG_ELNS05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS06_HIT",
+        "miss": "BHJC_LG_ELNS06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS07",
+      "ruleName": "企业近3个月存在为被告的借款合同纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS07_HIT",
+        "miss": "BHJC_LG_ELNS07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS08",
+      "ruleName": "企业近3个月存在终本记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS08_HIT",
+        "miss": "BHJC_LG_ELNS08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS09",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS09_HIT",
+        "miss": "BHJC_LG_ELNS09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfSoe",
+      "ruleCode": "ELNS10",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNS10_HIT",
+        "miss": "BHJC_LG_ELNS10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP01_HIT",
+        "miss": "BHJC_LG_ELLP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP02_HIT",
+        "miss": "BHJC_LG_ELLP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP03_HIT",
+        "miss": "BHJC_LG_ELLP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP04_HIT",
+        "miss": "BHJC_LG_ELLP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=300万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP05_HIT",
+        "miss": "BHJC_LG_ELLP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP06_HIT",
+        "miss": "BHJC_LG_ELLP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP07",
+      "ruleName": "企业近3个月存在为被告的借款合同、民间借款、金融借款、票据纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP07_HIT",
+        "miss": "BHJC_LG_ELLP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP08",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP08_HIT",
+        "miss": "BHJC_LG_ELLP08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitLoanPriv",
+      "ruleCode": "ELLP09",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELLP09_HIT",
+        "miss": "BHJC_LG_ELLP09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP01_HIT",
+        "miss": "BHJC_LG_ELDP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP02_HIT",
+        "miss": "BHJC_LG_ELDP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP03_HIT",
+        "miss": "BHJC_LG_ELDP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP04_HIT",
+        "miss": "BHJC_LG_ELDP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=300万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP05_HIT",
+        "miss": "BHJC_LG_ELDP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP06_HIT",
+        "miss": "BHJC_LG_ELDP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP07",
+      "ruleName": "企业近3个月存在为被告的借款合同纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP07_HIT",
+        "miss": "BHJC_LG_ELDP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP08",
+      "ruleName": "企业近3个月存在终本记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP08_HIT",
+        "miss": "BHJC_LG_ELDP08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP09",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP09_HIT",
+        "miss": "BHJC_LG_ELDP09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitBelPriv",
+      "ruleCode": "ELDP10",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELDP10_HIT",
+        "miss": "BHJC_LG_ELDP10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP01_HIT",
+        "miss": "BHJC_LG_ELNP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP02_HIT",
+        "miss": "BHJC_LG_ELNP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP03_HIT",
+        "miss": "BHJC_LG_ELNP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP04_HIT",
+        "miss": "BHJC_LG_ELNP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=300万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP05_HIT",
+        "miss": "BHJC_LG_ELNP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP06_HIT",
+        "miss": "BHJC_LG_ELNP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP07",
+      "ruleName": "企业近3个月存在为被告的借款合同纠纷记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP07_HIT",
+        "miss": "BHJC_LG_ELNP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP08",
+      "ruleName": "企业近3个月存在终本记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP08_HIT",
+        "miss": "BHJC_LG_ELNP08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP09",
+      "ruleName": "企业存在破产记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP09_HIT",
+        "miss": "BHJC_LG_ELNP09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntLawsuitNonfPriv",
+      "ruleCode": "ELNP10",
+      "ruleName": "企业存在清算记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ELNP10_HIT",
+        "miss": "BHJC_LG_ELNP10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX01",
+      "ruleName": "企业当前纳税信用等级为d企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX01_HIT",
+        "miss": "BHJC_LG_ENLX01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX02",
+      "ruleName": "企业近3个月有欠税记录",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX02_HIT",
+        "miss": "BHJC_LG_ENLX02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX03",
+      "ruleName": "企业近3个月存在税收违法记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX03_HIT",
+        "miss": "BHJC_LG_ENLX03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX04",
+      "ruleName": "企业当前存在股权冻结企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX04_HIT",
+        "miss": "BHJC_LG_ENLX04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX05",
+      "ruleName": "企业当前存在严重违法且未移出企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX05_HIT",
+        "miss": "BHJC_LG_ENLX05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX06",
+      "ruleName": "企业近3个月存在司法拍卖记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX06_HIT",
+        "miss": "BHJC_LG_ENLX06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX07",
+      "ruleName": "企业当前存在股权出质企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX07_HIT",
+        "miss": "BHJC_LG_ENLX07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX08",
+      "ruleName": "企业近3个月存在行政处罚企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX08_HIT",
+        "miss": "BHJC_LG_ENLX08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX09",
+      "ruleName": "企业近3个月存在环保处罚企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX09_HIT",
+        "miss": "BHJC_LG_ENLX09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX10",
+      "ruleName": "企业当前存在经营异常且未移出企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENLX10_HIT",
+        "miss": "BHJC_LG_ENLX10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeLoan",
+      "ruleCode": "ENLX11",
+      "ruleName": "企业近3个月内存在负面舆情预警通",
+      "contractStatus": "source_adapter_required",
+      "status": "excluded_inconclusive",
+      "provider": null,
+      "reason": "依赖预警通数据源适配器，保持 inconclusive",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTNEGATIVELOAN_ENLX11_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTNEGATIVELOAN_ENLX11_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX01",
+      "ruleName": "企业当前纳税信用等级为d企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX01_HIT",
+        "miss": "BHJC_LG_ENDX01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX02",
+      "ruleName": "企业近3个月累计欠税金额企查查>10000",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX02_HIT",
+        "miss": "BHJC_LG_ENDX02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX03",
+      "ruleName": "企业近3个月有欠税记录",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX03_HIT",
+        "miss": "BHJC_LG_ENDX03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX04",
+      "ruleName": "企业近3个月存在税收违法记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX04_HIT",
+        "miss": "BHJC_LG_ENDX04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX05",
+      "ruleName": "企业当前存在股权冻结企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX05_HIT",
+        "miss": "BHJC_LG_ENDX05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX06",
+      "ruleName": "企业当前存在严重违法且未移出企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX06_HIT",
+        "miss": "BHJC_LG_ENDX06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX07",
+      "ruleName": "企业近3个月存在司法拍卖记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX07_HIT",
+        "miss": "BHJC_LG_ENDX07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX08",
+      "ruleName": "企业当前存在股权出质企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX08_HIT",
+        "miss": "BHJC_LG_ENDX08_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX09",
+      "ruleName": "企业近3个月存在行政处罚企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX09_HIT",
+        "miss": "BHJC_LG_ENDX09_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX10",
+      "ruleName": "企业近3个月行政处罚累计金额企查查>5万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX10_HIT",
+        "miss": "BHJC_LG_ENDX10_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX11",
+      "ruleName": "企业近3个月存在环保处罚企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX11_HIT",
+        "miss": "BHJC_LG_ENDX11_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX12",
+      "ruleName": "企业当前存在经营异常且未移出企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ENDX12_HIT",
+        "miss": "BHJC_LG_ENDX12_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcEntNegativeBelni",
+      "ruleCode": "ENDX13",
+      "ruleName": "企业近3个月内存在负面舆情预警通",
+      "contractStatus": "source_adapter_required",
+      "status": "excluded_inconclusive",
+      "provider": null,
+      "reason": "依赖预警通数据源适配器，保持 inconclusive",
+      "scenarioTemplates": {
+        "hit": "BHJC_BHJCENTNEGATIVEBELNI_ENDX13_HIT__${RUN_ID}__${CASE_ID}",
+        "miss": "BHJC_BHJCENTNEGATIVEBELNI_ENDX13_MISS__${RUN_ID}__${CASE_ID}"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitLoanEntrustPriv",
+      "ruleCode": "PLEP01",
+      "ruleName": "个人近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLEP01_HIT",
+        "miss": "BHJC_LG_PLEP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitLoanEntrustPriv",
+      "ruleCode": "PLEP02",
+      "ruleName": "个人近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLEP02_HIT",
+        "miss": "BHJC_LG_PLEP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitLoanEntrustPriv",
+      "ruleCode": "PLEP03",
+      "ruleName": "个人近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLEP03_HIT",
+        "miss": "BHJC_LG_PLEP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitBni",
+      "ruleCode": "PLDX01",
+      "ruleName": "个人近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLDX01_HIT",
+        "miss": "BHJC_LG_PLDX01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitBni",
+      "ruleCode": "PLDX02",
+      "ruleName": "个人近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLDX02_HIT",
+        "miss": "BHJC_LG_PLDX02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitBni",
+      "ruleCode": "PLDX03",
+      "ruleName": "个人近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLDX03_HIT",
+        "miss": "BHJC_LG_PLDX03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerLawsuitBni",
+      "ruleCode": "PLDX04",
+      "ruleName": "个人近3个月存在终本记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PLDX04_HIT",
+        "miss": "BHJC_LG_PLDX04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerNegativeAll",
+      "ruleCode": "PNGX01",
+      "ruleName": "个人当前存在股权冻结企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PNGX01_HIT",
+        "miss": "BHJC_LG_PNGX01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPerNegativeAll",
+      "ruleCode": "PNGX02",
+      "ruleName": "个人当前存在股权出质企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_PNGX02_HIT",
+        "miss": "BHJC_LG_PNGX02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingSoe",
+      "ruleCode": "ARGS01",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=500万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGS01_HIT",
+        "miss": "BHJC_LG_ARGS01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingSoe",
+      "ruleCode": "ARGS02",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGS02_HIT",
+        "miss": "BHJC_LG_ARGS02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP01",
+      "ruleName": "企业近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP01_HIT",
+        "miss": "BHJC_LG_ARGP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP02",
+      "ruleName": "企业近3个月存在限制高消费记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP02_HIT",
+        "miss": "BHJC_LG_ARGP02_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP03",
+      "ruleName": "企业近3个月存在被执行记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP03_HIT",
+        "miss": "BHJC_LG_ARGP03_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP04",
+      "ruleName": "企业近3个月存在被保全记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP04_HIT",
+        "miss": "BHJC_LG_ARGP04_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP05",
+      "ruleName": "企业近3个月为被告的案件累计涉案金额企查查>=300万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP05_HIT",
+        "miss": "BHJC_LG_ARGP05_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP06",
+      "ruleName": "企业近3个月自诉（原告）案件累计发生5笔，或单笔涉案金额>=1000万",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP06_HIT",
+        "miss": "BHJC_LG_ARGP06_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcRelatedRiskFinancingPriv",
+      "ruleCode": "ARGP07",
+      "ruleName": "关联企业近3个月存在注销信息记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARGP07_HIT",
+        "miss": "BHJC_LG_ARGP07_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPrivateCounterGuarantee",
+      "ruleCode": "ARMP01",
+      "ruleName": "持股超20%的股东公司近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARMP01_HIT",
+        "miss": "BHJC_LG_ARMP01_MISS"
+      }
+    },
+    {
+      "ruleSetCode": "bhjcPrivateCounterGuarantee",
+      "ruleCode": "ARMP02",
+      "ruleName": "对外投资持股超20%的被投资公司近3个月存在失信记录企查查",
+      "contractStatus": "scenario_payload_required",
+      "status": "legacy",
+      "provider": "legacy_v46",
+      "reason": "legacy 显式规则映射迁入 BHJC_LG_ 场景合同",
+      "scenarioTemplates": {
+        "hit": "BHJC_LG_ARMP02_HIT",
+        "miss": "BHJC_LG_ARMP02_MISS"
+      }
+    }
+  ]
+}
