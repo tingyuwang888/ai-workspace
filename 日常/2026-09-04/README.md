@@ -10,7 +10,7 @@
 | `tiance-policy-test` | 执行引擎 | 用例 JSON → 平台门禁 → 语义预检 → MySQL Fixture 隔离 → API 单笔执行 → 证据比对 → 15 列 Excel 报告（浏览器 UI 仅备用） |
 | `tiance-report-checker` | 报告质检 | 测试报告 Excel → 四维质检（判定矛盾 / 数据缺失 / 语义重复 / 实际结果异常），原表新增"质量检查"Sheet |
 
-三个 skill 可独立使用，也可按 generator → policy-test → checker 顺序串联成完整测试链。自动化编排器 `tiance-agent-loop`（触发检测、Subagent 分治、收敛循环）**不在本包内**，需要者单独向王挺宇索取。
+三个 skill 可独立使用，也可按 generator → policy-test → checker 顺序串联成完整测试链。自动化编排器 `tiance-agent-loop`（触发检测、Subagent 分治、收敛循环）**不在本包内**，需要者单独向技能维护者索取。
 
 ## 二、安装步骤
 
@@ -73,5 +73,5 @@ python3 ~/.qoderwork/skills/tiance-report-checker/scripts/check_report.py "<报�
 - **元数据接口不可用**：从已登录浏览器导出完整 API JSON 响应，用 `python3 scripts/platform_guard.py --config strategies/<code>.json --raw-payload browser_response.json --output platform_snapshot.json` 生成快照后加 `--platform-snapshot` 执行；快照 10 分钟内有效。
 - **报告规范**：15 列、表头 #4472C4 蓝底白字雅黑 9 号；`scripts/update_report.py` 可回写执行结果并校验格式（`--validate-report`）。
 - **Fixture 清理**：正常结束自动清理；中断后手动 `python3 scripts/fixture_manager.py cleanup --config strategies/<code>.json`，避免隔离数据残留污染后续用例。
-- **本包已剔除**：loop_workspace 迭代产物（93MB）、backups 历史版本、__pycache__。需要完整迭代示例或 agent-loop 编排器，找王挺宇。
-- **更新机制**：三个 skill 仍在迭代，以王挺宇处最新版本为准；发现脚本 bug 或门禁误阻断请反馈，不要各自改分支。
+- **本包已剔除**：loop_workspace 迭代产物（93MB）、backups 历史版本、__pycache__。需要完整迭代示例或 agent-loop 编排器，联系技能维护者。
+- **更新机制**：三个 skill 仍在迭代，以维护者发布的最新版本为准；发现脚本 bug 或门禁误阻断请反馈，不要各自改分支。
