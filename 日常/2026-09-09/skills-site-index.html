@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天策 Skill 发布中心</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: #F4F6F8;
+    color: #2C3E50;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Sticky nav */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid #E4E8EC;
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .nav-brand { font-size: 17px; font-weight: 600; color: #1A5276; letter-spacing: 0.3px; }
+  .nav-brand span { color: #7F8C9A; font-weight: 400; margin-left: 8px; font-size: 13px; }
+  .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+  .nav-links a {
+    padding: 6px 14px; border-radius: 6px;
+    font-size: 13px; color: #4A5C6E; transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+  .nav-links a:hover { background: #EEF2F6; color: #1A5276; }
+  .nav-links a .count {
+    display: inline-block; margin-left: 6px;
+    padding: 1px 7px; border-radius: 10px;
+    background: #E4E8EC; color: #6B7A8C; font-size: 11px; font-weight: 500;
+  }
+
+  /* Hero */
+  .hero {
+    max-width: 1240px; margin: 0 auto;
+    padding: 56px 32px 32px;
+  }
+  .hero h1 {
+    font-size: 32px; font-weight: 600; color: #1A2B3C;
+    margin-bottom: 12px; letter-spacing: -0.3px;
+  }
+  .hero p {
+    font-size: 15px; color: #6B7A8C; max-width: 780px;
+  }
+  .hero .meta {
+    margin-top: 20px; display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: 13px; color: #7F8C9A;
+  }
+  .hero .meta b { color: #2C3E50; font-weight: 600; }
+
+  /* Section */
+  .section { max-width: 1240px; margin: 0 auto; padding: 24px 32px 40px; }
+  .section-head {
+    display: flex; align-items: baseline; gap: 12px;
+    margin-bottom: 20px; padding-bottom: 12px;
+    border-bottom: 2px solid;
+  }
+  .section-head h2 { font-size: 20px; font-weight: 600; color: #1A2B3C; }
+  .section-head .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 4px;
+    color: white; font-weight: 500;
+  }
+  .section-head .desc { font-size: 13px; color: #7F8C9A; margin-left: auto; }
+
+  .section-a .section-head { border-color: #16A085; }
+  .section-a .tag { background: #16A085; }
+  .section-b .section-head { border-color: #E67E22; }
+  .section-b .tag { background: #E67E22; }
+  .section-c .section-head { border-color: #8E44AD; }
+  .section-c .tag { background: #8E44AD; }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px;
+  }
+
+  /* Card */
+  .card {
+    background: white;
+    border: 1px solid #E4E8EC;
+    border-radius: 10px;
+    padding: 20px 22px 18px;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: #BDC3C7;
+  }
+  .section-a .card::before { background: #16A085; }
+  .section-b .card::before { background: #E67E22; }
+  .section-c .card::before { background: #8E44AD; }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 43, 60, 0.08);
+    border-color: #CBD3DB;
+  }
+
+  .card-head {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 10px; margin-bottom: 8px;
+  }
+  .card-title {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 15px; font-weight: 600; color: #1A2B3C;
+    word-break: break-all; line-height: 1.4;
+  }
+  .card-badges { display: flex; gap: 6px; flex-shrink: 0; }
+  .badge {
+    font-size: 11px; padding: 2px 8px; border-radius: 4px;
+    font-weight: 500; white-space: nowrap;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+  }
+  .badge-version { background: #EEF2F6; color: #4A5C6E; }
+  .badge-published { background: #D5F0E5; color: #1E7A5A; }
+  .badge-pending { background: #FDEBD3; color: #A85E12; }
+
+  .card-desc {
+    font-size: 13.5px; color: #4A5C6E; line-height: 1.65;
+    margin: 8px 0 14px;
+  }
+
+  .card-section-label {
+    font-size: 11px; color: #95A3B3; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 6px; font-weight: 600;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .chip {
+    font-size: 11.5px; padding: 3px 9px;
+    background: #F4F6F8; color: #5A6C7E;
+    border-radius: 12px; border: 1px solid #E4E8EC;
+  }
+  .deps {
+    font-size: 12.5px; color: #5A6C7E;
+    margin-bottom: 14px; line-height: 1.7;
+  }
+  .deps a {
+    color: #1A5276; font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 11.5px; border-bottom: 1px dashed #A9BDCD;
+  }
+  .deps a:hover { border-bottom-style: solid; }
+  .deps .arrow { color: #95A3B3; margin: 0 4px; }
+
+  .card-footer {
+    margin-top: auto; padding-top: 12px;
+    border-top: 1px solid #F0F2F5;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .btn-gitlab {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px; border-radius: 6px;
+    background: #1A5276; color: white;
+    font-size: 12.5px; font-weight: 500;
+    transition: background 0.15s;
+  }
+  .btn-gitlab:hover { background: #154360; }
+  .btn-gitlab.pending {
+    background: #F4F6F8; color: #95A3B3;
+    border: 1px dashed #CBD3DB; cursor: not-allowed;
+    pointer-events: none;
+  }
+  .btn-gitlab svg { width: 13px; height: 13px; }
+  .install-hint {
+    font-size: 11px; color: #95A3B3;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 1240px; margin: 40px auto 0;
+    padding: 28px 32px 40px;
+    border-top: 1px solid #E4E8EC;
+    color: #7F8C9A; font-size: 12.5px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  footer code {
+    background: #EEF2F6; padding: 2px 6px; border-radius: 3px;
+    font-size: 11.5px; color: #4A5C6E;
+  }
+
+  @media (max-width: 640px) {
+    .nav { padding: 12px 18px; }
+    .hero { padding: 36px 18px 24px; }
+    .hero h1 { font-size: 24px; }
+    .section { padding: 18px 18px 32px; }
+    .grid { grid-template-columns: 1fr; }
+    footer { padding: 24px 18px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">天策 Skill 发布中心 <span>Tiance Skill Hub</span></div>
+  <div class="nav-links">
+    <a href="#section-a">策略配置 <span class="count">8</span></a>
+    <a href="#section-b">策略测试 <span class="count">4</span></a>
+    <a href="#section-c">元数据 <span class="count">1</span></a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>天策风控平台 Skill 分发展示</h1>
+  <p>面向天策（Tiance / Noah / Salaxy / Atreus）决策中台的策略配置生成、策略测试执行、元数据管理三大能力族。所有 Skill 以目录格式发布，安装方式为下载仓库后手动复制到 <code style="background:#EEF2F6;padding:2px 6px;border-radius:3px;font-size:13px;">~/.qoderwork/skills/</code> 或 <code style="background:#EEF2F6;padding:2px 6px;border-radius:3px;font-size:13px;">~/.codex/skills/</code>。</p>
+  <div class="meta">
+    <span><b>13</b> 个 Skill</span>
+    <span><b>9</b> 已发布</span>
+    <span><b>4</b> 待发布</span>
+    <span>托管于 <b>10.57.80.163</b>（内网/VPN 可达）</span>
+  </div>
+</section>
+
+<!-- ==================== 策略配置 A ==================== -->
+<section class="section section-a" id="section-a">
+  <div class="section-head">
+    <span class="tag">A</span>
+    <h2>策略配置生成</h2>
+    <span class="desc">从 Excel / 文档 / 流程图生成平台可导入的组件文件</span>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">tiance-policy-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.2.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从有序规则集清单、Excel、ProcessOn、VSDX、流程图图片或文字描述生成天策简易/流模式策略导入文件 <code>.pls</code>，含 metadata 与授权范围校验。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">策略生成</span><span class="chip">.pls</span><span class="chip">决策流</span><span class="chip">ProcessOn 转策略</span><span class="chip">保后预警</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-metadata-scout">tiance-metadata-scout</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-policy-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-policy-forge</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-rule-forge">
+      <div class="card-head">
+        <div class="card-title">tiance-rule-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v3.8.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从规则描述 Excel 批量生成天策规则集导入文件 <code>.rss</code>，可在 <code>autoCreateMetrics=true</code> 时协调 metric-forge 产出指标 <code>.zb</code>。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">规则集生成</span><span class="chip">.rss</span><span class="chip">Excel 转规则</span><span class="chip">风控规则迁移</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">→</span> <a href="#card-realtime-metric-forge">tiance-realtime-metric-forge</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-rule-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-rule-forge</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-realtime-metric-forge">
+      <div class="card-head">
+        <div class="card-title">tiance-realtime-metric-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.1.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">生成天策 / Salaxy 实时指标配置和 <code>.zb</code> 导入文件，覆盖 COUNT / STATISTICS / SET / FORMULA / HISTORY_VALUE / TIME_GAP / CONSECUTIVE / TREND / MOVEMENT / RATIO 十类模板。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">实时指标</span><span class="chip">.zb</span><span class="chip">指标配置</span><span class="chip">指标清单</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-rule-forge">tiance-rule-forge</a> handoff</div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-realtime-metric-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-realtime-metric-forge</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">tiance-function-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.3.1</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">以权威函数 Excel 为唯一业务来源，独立生成并严格校验天策 / Atreus <code>.fun</code> 函数包或函数测试工作簿。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">函数生成</span><span class="chip">.fun</span><span class="chip">函数包</span><span class="chip">函数测试</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-metadata-scout">tiance-metadata-scout</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-function-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-function-forge</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-datasource-forge">
+      <div class="card-head">
+        <div class="card-title">tiance-datasource-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v3.5.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从任意结构 Excel 三方数据源描述生成天策（Atreus）<code>.ds</code> 数据源接口文件，覆盖字段映射、SQL 自动构造、DES 加密、tar 打包与元数据刷新。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">数据源</span><span class="chip">.ds</span><span class="chip">三方接口</span><span class="chip">Atreus 数据源</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps">
+        <span class="arrow">→</span> <a href="#card-etl-forge">tiance-etl-forge</a><br>
+        <span class="arrow">←</span> <a href="#card-metadata-scout">tiance-metadata-scout</a>
+      </div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-datasource-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-datasource-forge</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">tiance-field-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v1.8.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">将外部参数定义转换为天策系统字段与动态字段（脚本字段），产出 <code>field_mapping.json</code> 与两份导入 xls；动态字段支持自然语言到 Groovy 脚本自动生成。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">字段映射</span><span class="chip">系统字段</span><span class="chip">动态字段</span><span class="chip">Groovy 脚本字段</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-metadata-scout">tiance-metadata-scout</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-field-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-field-forge</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">tiance-service-config-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v1.6.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从 Excel 接口服务配置生成天策 / 天宫 serviceConfig 可导入 CSV，覆盖入参出参映射、固定值、空赋值、信贷与交易决策引擎校验。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">接口服务配置</span><span class="chip">serviceConfig</span><span class="chip">CSV 导入</span><span class="chip">creditEngine</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">→</span> tiance-component-lifecycle（平台导入）</div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-service-config-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-service-config-forge</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-etl-forge">
+      <div class="card-head">
+        <div class="card-title">tiance-etl-forge</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.2.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从 Excel ETL 逻辑描述或 embedded 结构化定义生成天策（Atreus）<code>.etl</code> 处理器文件，覆盖前置 / 后置 / 分页后置 / 公共代码块与 Java/Groovy 代码生成。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">ETL 处理器</span><span class="chip">.etl</span><span class="chip">前置 ETL</span><span class="chip">分页 ETL</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-datasource-forge">tiance-datasource-forge</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-etl-forge" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-etl-forge</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== 策略测试 B ==================== -->
+<section class="section section-b" id="section-b">
+  <div class="section-head">
+    <span class="tag">B</span>
+    <h2>策略测试</h2>
+    <span class="desc">用例生成 · 执行 · 报告质检 · 端到端编排</span>
+  </div>
+  <div class="grid">
+
+    <div class="card" id="card-testcase-generator">
+      <div class="card-head">
+        <div class="card-title">tiance-testcase-generator</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.7.2</span>
+          <span class="badge badge-pending">待发布</span>
+        </div>
+      </div>
+      <div class="card-desc">从天策策略部署落地方案 Excel 自动生成结构化测试用例 JSON，覆盖规则级（命中/未命中/边界值）、函数级、决策流分支、预警等级四大模块。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">生成测试用例</span><span class="chip">落地方案</span><span class="chip">策略测试用例</span><span class="chip">保后检查</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">→</span> <a href="#card-policy-test">tiance-policy-test</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab pending" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          待发布
+        </a>
+        <span class="install-hint">agent-os/tiance-testcase-generator</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-policy-test">
+      <div class="card-head">
+        <div class="card-title">tiance-policy-test</div>
+        <div class="card-badges">
+          <span class="badge badge-version">latest</span>
+          <span class="badge badge-pending">待发布</span>
+        </div>
+      </div>
+      <div class="card-desc">天策（Tiance / Noah）决策平台通用策略测试自动化。支持 API 单笔 / 区间执行与 UI 备用提交，覆盖策略发现 → 语义预检 → 隔离数据 → 提交 → 证据 → Excel 报告全流程。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">策略测试</span><span class="chip">跑用例</span><span class="chip">Noah 测试</span><span class="chip">批量提交</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps">
+        <span class="arrow">←</span> <a href="#card-testcase-generator">tiance-testcase-generator</a><br>
+        <span class="arrow">→</span> <a href="#card-report-checker">tiance-report-checker</a>
+      </div>
+      <div class="card-footer">
+        <a class="btn-gitlab pending" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          待发布
+        </a>
+        <span class="install-hint">agent-os/tiance-policy-test</span>
+      </div>
+    </div>
+
+    <div class="card" id="card-report-checker">
+      <div class="card-head">
+        <div class="card-title">tiance-report-checker</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v1.1.0</span>
+          <span class="badge badge-pending">待发布</span>
+        </div>
+      </div>
+      <div class="card-desc">对已生成的测试报告 Excel 做多维度质量体检，自动检测判定矛盾、数据缺失、语义重复、实际结果异常等问题，在原 Excel 上新增"质量检查" Sheet 并标注每行问题。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">检查测试报告</span><span class="chip">报告质量检查</span><span class="chip">报告体检</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps"><span class="arrow">←</span> <a href="#card-policy-test">tiance-policy-test</a></div>
+      <div class="card-footer">
+        <a class="btn-gitlab pending" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          待发布
+        </a>
+        <span class="install-hint">agent-os/tiance-report-checker</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">tiance-agent-loop</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.0.0</span>
+          <span class="badge badge-pending">待发布</span>
+        </div>
+      </div>
+      <div class="card-desc">天策策略测试分阶段闭环编排器（runtime-contract-v3）。定义 A–H 八阶段闭环与四角色合同，QoderWork 主会话编排与 TdAlly 四 Agent 平台编排共用同一合同。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">Agent Loop</span><span class="chip">端到端测试</span><span class="chip">全自动测试循环</span>
+      </div>
+      <div class="card-section-label">依赖</div>
+      <div class="deps">
+        <span class="arrow">→</span> <a href="#card-testcase-generator">testcase-generator</a> + <a href="#card-policy-test">policy-test</a> + <a href="#card-report-checker">report-checker</a>
+      </div>
+      <div class="card-footer">
+        <a class="btn-gitlab pending" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          待发布
+        </a>
+        <span class="install-hint">agent-os/tiance-agent-loop</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== 元数据 C ==================== -->
+<section class="section section-c" id="section-c">
+  <div class="section-head">
+    <span class="tag">C</span>
+    <h2>元数据</h2>
+    <span class="desc">为策略配置类 Skill 提供平台元数据基线</span>
+  </div>
+  <div class="grid">
+
+    <div class="card" id="card-metadata-scout">
+      <div class="card-head">
+        <div class="card-title">tiance-metadata-scout</div>
+        <div class="card-badges">
+          <span class="badge badge-version">v2.2.0</span>
+          <span class="badge badge-published">已发布</span>
+        </div>
+      </div>
+      <div class="card-desc">获取、刷新、转换和校验天策 / Tiance / Salaxy 平台元数据，生成 <code>metadata_latest</code> 本地 JSON 缓存，供 rule-forge、policy-forge、function-forge、datasource-forge 与生命周期管理类 skill 消费。</div>
+      <div class="card-section-label">触发词</div>
+      <div class="chips">
+        <span class="chip">获取元数据</span><span class="chip">刷新元数据</span><span class="chip">metadata_latest</span><span class="chip">字段查询</span>
+      </div>
+      <div class="card-section-label">下游消费方</div>
+      <div class="deps">
+        <span class="arrow">→</span> policy-forge · rule-forge · function-forge · datasource-forge · field-forge
+      </div>
+      <div class="card-footer">
+        <a class="btn-gitlab" href="https://gitlab.tongdun.cn/agent-os/tiance-metadata-scout" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 4.5L18.5 20h-13L12 6.5z"/></svg>
+          GitLab 仓库
+        </a>
+        <span class="install-hint">agent-os/tiance-metadata-scout</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>
+    维护者：技能维护者 &nbsp;·&nbsp; 更新时间：2026-09-09 &nbsp;·&nbsp; 部署位置：<code>http://10.57.80.163/skills/</code>
+  </div>
+  <div>
+    安装方式：下载仓库 → 复制到 <code>~/.qoderwork/skills/</code> 或 <code>~/.codex/skills/</code>
+  </div>
+</footer>
+
+</body>
+</html>
