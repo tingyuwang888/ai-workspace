@@ -1,0 +1,373 @@
+{
+ "counts": {
+  "失败": 3,
+  "通过": 3,
+  "执行阻塞": 1
+ },
+ "cases": [
+  {
+   "row": 47,
+   "rule_code": "ACQ_RS3_000014",
+   "target_rule_set": "rs_acq_unauthorized",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R47",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "21 days, 1:46:52",
+   "current_biztime": "2026-09-10 16:16:52",
+   "history_sent": 5,
+   "history_success": 5,
+   "current_success": true,
+   "classification": {
+    "status": "失败",
+    "target_rule_hit": false,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_unauthorized",
+     "Target rule ACQ_RS3_000014 hit: false"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_preauth_travel_cnt_2h",
+     "operator": ">=",
+     "value": 5,
+     "actual": 4,
+     "satisfied": false
+    },
+    {
+     "name": "salaxyzb_m_preauth_travel_amt_2h",
+     "operator": ">=",
+     "value": 4999,
+     "actual": "null",
+     "satisfied": false
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:17:07.172173"
+  },
+  {
+   "row": 53,
+   "rule_code": "ACQ_RS3_000016",
+   "target_rule_set": "rs_acq_unauthorized",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R53",
+   "old_token": "SKR4_0821_R53",
+   "rebase_offset": "20 days, 0:47:07",
+   "current_biztime": "2026-09-10 16:17:07",
+   "history_sent": 23,
+   "history_success": 23,
+   "current_success": true,
+   "classification": {
+    "status": "通过",
+    "target_rule_hit": true,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_unauthorized",
+     "Target rule ACQ_RS3_000016 hit: true"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_cardno_distinct_5m",
+     "operator": ">=",
+     "value": 15,
+     "actual": 16,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_consume_cnt_5m",
+     "operator": ">=",
+     "value": 15,
+     "actual": 32,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_decline_cnt_5m",
+     "operator": ">=",
+     "value": 8,
+     "actual": 16,
+     "satisfied": true
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:17:28.640492"
+  },
+  {
+   "row": 59,
+   "rule_code": "ACQ_RS3_000018",
+   "target_rule_set": "rs_acq_unauthorized",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R59",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "21 days, 1:47:28",
+   "current_biztime": "2026-09-10 16:17:28",
+   "history_sent": 3,
+   "history_success": 3,
+   "current_success": true,
+   "classification": {
+    "status": "失败",
+    "target_rule_hit": false,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_unauthorized",
+     "Target rule ACQ_RS3_000018 hit: false"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_card_consume_cnt_5m",
+     "operator": ">=",
+     "value": 3,
+     "actual": 3,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_card_consume_amt_5m",
+     "operator": ">=",
+     "value": 4999,
+     "actual": "null",
+     "satisfied": false
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:17:42.280505"
+  },
+  {
+   "row": 71,
+   "rule_code": "ACQ_RS3_000021",
+   "target_rule_set": "rs_acq_unauthorized",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R71",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "21 days, 1:47:42",
+   "current_biztime": "2026-09-10 16:17:42",
+   "history_sent": 3,
+   "history_success": 3,
+   "current_success": true,
+   "classification": {
+    "status": "通过",
+    "target_rule_hit": true,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_unauthorized",
+     "Target rule ACQ_RS3_000021 hit: true"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_3ds_fail_cnt_30m",
+     "operator": ">=",
+     "value": 3,
+     "actual": 3,
+     "satisfied": true
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:17:56.053710"
+  },
+  {
+   "row": 93,
+   "rule_code": "ACQ_RS3_000028",
+   "target_rule_set": "rs_acq_unauthorized",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R93",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "20 days, 23:47:56",
+   "current_biztime": "2026-09-10 16:17:56",
+   "history_sent": 3,
+   "history_success": 3,
+   "current_success": true,
+   "classification": {
+    "status": "失败",
+    "target_rule_hit": false,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_unauthorized",
+     "Target rule ACQ_RS3_000028 hit: false"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_card_highriskmcc_cnt_1d",
+     "operator": ">=",
+     "value": 3,
+     "actual": 3,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_card_highriskmcc_amt_1d",
+     "operator": ">=",
+     "value": 5000,
+     "actual": "null",
+     "satisfied": false
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:18:10.049426"
+  },
+  {
+   "row": 179,
+   "rule_code": "ACQ_RS4_000010",
+   "target_rule_set": "rs_acq_merchant_abnormal_business",
+   "case_type": "反案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R179",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "21 days, 2:18:15",
+   "current_biztime": "2026-09-10 16:18:10",
+   "history_sent": 9,
+   "history_success": 9,
+   "current_success": true,
+   "classification": {
+    "status": "通过",
+    "target_rule_hit": false,
+    "target_rule_set_executed": true,
+    "executed_rule_sets": [
+     "rs_acq_immunity_global_filter",
+     "Acq_dabiao",
+     "rs_acq_risk_list",
+     "rs_acq_unauthorized",
+     "rs_acq_merchant_abnormal_business"
+    ],
+    "evidence": [
+     "Target rule set executed: rs_acq_merchant_abnormal_business",
+     "Target rule ACQ_RS4_000010 hit: false"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_midbin_sales_count_2h",
+     "operator": ">=",
+     "value": 10,
+     "actual": 10,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_midbin_cards_2h",
+     "operator": "<",
+     "value": 5,
+     "actual": 4,
+     "satisfied": true
+    },
+    {
+     "name": "salaxyzb_m_midbin_merchant_ratio_2h",
+     "operator": ">=",
+     "value": 0.5,
+     "actual": 0.999999,
+     "satisfied": true
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": 12,
+    "finalDecision": "Accept"
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:18:26.113594"
+  },
+  {
+   "row": 268,
+   "rule_code": "ACQ_RS4_000032",
+   "target_rule_set": "rs_acq_merchant_abnormal_business",
+   "case_type": "正案例",
+   "strategy_code": "Acq_Authorization",
+   "new_token": "QWFR_0910_R268",
+   "old_token": "SKR2_0820",
+   "rebase_offset": "21 days, 1:42:11",
+   "current_biztime": "2026-09-10 16:18:26",
+   "history_sent": 3,
+   "history_success": 0,
+   "current_success": false,
+   "classification": {
+    "status": "执行阻塞",
+    "target_rule_hit": null,
+    "target_rule_set_executed": false,
+    "executed_rule_sets": [],
+    "evidence": [
+     "Current request did not complete with a successful platform response"
+    ]
+   },
+   "metric_evidence": [
+    {
+     "name": "salaxyzb_m_merchant_chargeback_count_30d",
+     "operator": ">=",
+     "value": 3,
+     "actual": null,
+     "satisfied": false
+    },
+    {
+     "name": "C_N_MEROPENDAYS",
+     "operator": "<=",
+     "value": 90,
+     "actual": null,
+     "satisfied": false
+    }
+   ],
+   "current_response_summary": {
+    "policyVersion": null,
+    "finalDecision": null
+   },
+   "complete": true,
+   "finishedAt": "2026-09-10T16:18:39.663503"
+  }
+ ]
+}
