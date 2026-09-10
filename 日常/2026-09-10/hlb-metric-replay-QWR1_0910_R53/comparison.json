@@ -1,0 +1,44 @@
+{
+ "runId": "QWR1_0910_R53",
+ "source_checkpoint": "/Users/td/outputs/HLB_Acquiring_Skill全流程最小重跑_20260820_R2/checkpoints/SKR4_0821_R53_53_ACQ_RS3_000016_正案例_confirmed-metric-alignment.json",
+ "rebase_offset": "19 days, 23:37:07",
+ "history_success": true,
+ "current_success": true,
+ "target_rule": "ACQ_RS3_000016",
+ "target_hit": true,
+ "comparison": [
+  {
+   "metric": "salaxyzb_m_cardno_distinct_5m",
+   "历史贡献": 15,
+   "当前笔贡献": 1,
+   "预期最终": 16,
+   "实际": 16,
+   "阈值>=": 15,
+   "算术一致": true,
+   "阈值满足": true
+  },
+  {
+   "metric": "salaxyzb_m_consume_cnt_5m",
+   "历史贡献": 15,
+   "当前笔贡献": 1,
+   "预期最终": 16,
+   "实际": 16,
+   "阈值>=": 15,
+   "算术一致": true,
+   "阈值满足": true
+  },
+  {
+   "metric": "salaxyzb_m_decline_cnt_5m",
+   "历史贡献": 8,
+   "当前笔贡献": 0,
+   "预期最终": 8,
+   "实际": 8,
+   "阈值>=": 8,
+   "算术一致": true,
+   "阈值满足": true
+  }
+ ],
+ "verdict": "通过",
+ "reason": "目标规则命中且三指标三段式算术与阈值全部一致",
+ "finishedAt": "2026-09-10T15:07:13.927360"
+}
