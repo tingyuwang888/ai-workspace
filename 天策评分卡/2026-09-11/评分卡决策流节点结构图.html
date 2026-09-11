@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>天策评分卡决策流节点结构图</title>
+<style>
+  body{margin:0;padding:20px;background:#f5f6f8;font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;}
+  .wrap{max-width:1040px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:18px 20px 8px;}
+  h1{font-size:18px;margin:0 0 2px;color:#1f2937;}
+  .cap{font-size:12.5px;color:#6b7280;margin:0 0 10px;}
+  svg{display:block;width:100%;height:auto;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>评分卡决策流节点结构图（天策 / 流模式策略）</h1>
+  <p class="cap">主干五段：入参事件 → 数据准备 → 前置硬规则 → 评分卡(按客群分流/可串联) → 决策输出。虚线为可选串联复核。</p>
+  <svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+      </marker>
+      <marker id="arwO" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+      </marker>
+    </defs>
+    <style>
+      .box{stroke-width:1.6;rx:9;ry:9;}
+      .t{font-family:inherit;fill:#0f172a;}
+      .title{font-size:15px;font-weight:700;}
+      .sub{font-size:12.5px;fill:#334155;}
+      .lbl{font-size:12px;fill:#64748b;}
+      .ln{stroke:#64748b;stroke-width:1.8;fill:none;marker-end:url(#arw);}
+      .dash{stroke:#94a3b8;stroke-width:1.4;fill:none;stroke-dasharray:5 4;}
+    </style>
+
+    <!-- 1 开始 -->
+    <rect class="box" x="370" y="28" width="260" height="46" fill="#dbeafe" stroke="#3b82f6"/>
+    <text class="t title" x="500" y="57" text-anchor="middle">① 开始 · 业务事件进件</text>
+    <line class="ln" x1="500" y1="74" x2="500" y2="108"/>
+
+    <!-- 2 数据准备 -->
+    <rect class="box" x="295" y="108" width="410" height="58" fill="#ccfbf1" stroke="#14b8a6"/>
+    <text class="t title" x="500" y="131" text-anchor="middle">② 数据准备节点</text>
+    <text class="t sub" x="500" y="151" text-anchor="middle">调征信/实时·离线指标/动态字段，拉齐 年龄·公积金·征信等级·模型分·工商司法指标</text>
+    <line class="ln" x1="500" y1="166" x2="500" y2="200"/>
+
+    <!-- 3 前置硬规则 -->
+    <rect class="box" x="295" y="200" width="410" height="58" fill="#fef3c7" stroke="#f59e0b"/>
+    <text class="t title" x="500" y="223" text-anchor="middle">③ 前置硬规则（评分前 · 一票否决）</text>
+    <text class="t sub" x="500" y="243" text-anchor="middle">黑名单命中 · 反欺诈 · 准入红线(年龄&lt;18/已注销) · 必要字段缺失</text>
+    <!-- 短路 -->
+    <line x1="705" y1="229" x2="762" y2="229" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#arwO)"/>
+    <text class="lbl" x="733" y="222" text-anchor="middle">命中</text>
+    <rect class="box" x="766" y="205" width="214" height="48" fill="#fee2e2" stroke="#ef4444"/>
+    <text class="t title" x="873" y="226" text-anchor="middle" font-size="13">直接拒绝 / 转人工</text>
+    <text class="t sub" x="873" y="244" text-anchor="middle">不进评分卡（短路）</text>
+    <!-- 向下 未命中 -->
+    <line class="ln" x1="500" y1="258" x2="500" y2="292"/>
+    <text class="lbl" x="512" y="280">未命中 / 准入通过</text>
+
+    <!-- 4 路由 -->
+    <rect class="box" x="360" y="292" width="280" height="46" fill="#ede9fe" stroke="#8b5cf6"/>
+    <text class="t title" x="500" y="321" text-anchor="middle">④ 申请类型路由（决策网关节点）</text>
+    <!-- fan out -->
+    <line class="ln" x1="440" y1="338" x2="180" y2="392"/>
+    <line class="ln" x1="500" y1="338" x2="500" y2="392"/>
+    <line class="ln" x1="560" y1="338" x2="820" y2="392"/>
+
+    <!-- branch col1 SC-A -->
+    <rect class="box" x="28" y="392" width="304" height="168" fill="#f0f9ff" stroke="#0ea5e9"/>
+    <text class="t title" x="180" y="416" text-anchor="middle">个人贷款（贷前）</text>
+    <text class="t sub" x="180" y="438" text-anchor="middle">▸ SC-A 个人信贷申请评分卡</text>
+    <text class="t sub" x="180" y="456" text-anchor="middle">（普通模式 · 基础分600）</text>
+    <line x1="52" y1="468" x2="308" y2="468" stroke="#bae6fd" stroke-width="1"/>
+    <text class="t sub" x="180" y="488" text-anchor="middle">≥760 优质 · 自动通过</text>
+    <text class="t sub" x="180" y="507" text-anchor="middle">720–759 正常 · 自动通过</text>
+    <text class="t sub" x="180" y="526" text-anchor="middle">680–719 关注 · 转人工</text>
+    <text class="t sub" x="180" y="545" text-anchor="middle">&lt;680 高风险 · 拒绝</text>
+
+    <!-- branch col2 SC-B -->
+    <rect class="box" x="348" y="392" width="304" height="168" fill="#f0fdf4" stroke="#22c55e"/>
+    <text class="t title" x="500" y="416" text-anchor="middle">对公小微（授信）</text>
+    <text class="t sub" x="500" y="438" text-anchor="middle">▸ SC-B 小微企业经营评分卡</text>
+    <text class="t sub" x="500" y="456" text-anchor="middle">（权重模式 · 百分制）</text>
+    <line x1="372" y1="468" x2="628" y2="468" stroke="#bbf7d0" stroke-width="1"/>
+    <text class="t sub" x="500" y="488" text-anchor="middle">≥80 A 优质 · 通过</text>
+    <text class="t sub" x="500" y="507" text-anchor="middle">65–79 B 正常 · 通过</text>
+    <text class="t sub" x="500" y="526" text-anchor="middle">50–64 C 关注 · 转人工</text>
+    <text class="t sub" x="500" y="545" text-anchor="middle">&lt;50 D · 拒绝</text>
+
+    <!-- branch col3 SC-C -->
+    <rect class="box" x="668" y="392" width="304" height="168" fill="#fff7ed" stroke="#f97316"/>
+    <text class="t title" x="820" y="416" text-anchor="middle">复杂 / 高风险件</text>
+    <text class="t sub" x="820" y="438" text-anchor="middle">▸ SC-C 多维交叉评分卡</text>
+    <text class="t sub" x="820" y="456" text-anchor="middle">（含外部模型分 · 允许负分）</text>
+    <line x1="692" y1="468" x2="948" y2="468" stroke="#fed7aa" stroke-width="1"/>
+    <text class="t sub" x="820" y="488" text-anchor="middle">≥240 A · 通过</text>
+    <text class="t sub" x="820" y="507" text-anchor="middle">150–239 B · 通过</text>
+    <text class="t sub" x="820" y="526" text-anchor="middle">60–149 · 转人工</text>
+    <text class="t sub" x="820" y="545" text-anchor="middle">&lt;60 · 拒绝</text>
+
+    <!-- 可选串联 SC-A -> SC-C -->
+    <path class="dash" d="M332 500 Q500 600 664 500"/>
+    <text class="lbl" x="500" y="612" text-anchor="middle">可选串联：SC-A 落"关注区"(680–719)灰色件 → 追加 SC-C 复核</text>
+
+    <!-- merge to 决策输出 -->
+    <line class="ln" x1="180" y1="560" x2="440" y2="666"/>
+    <line class="ln" x1="500" y1="560" x2="500" y2="666"/>
+    <line class="ln" x1="820" y1="560" x2="560" y2="666"/>
+
+    <!-- 5 决策输出 -->
+    <rect class="box" x="250" y="666" width="500" height="60" fill="#dcfce7" stroke="#16a34a"/>
+    <text class="t title" x="500" y="690" text-anchor="middle">⑤ 决策输出 / 结果节点</text>
+    <text class="t sub" x="500" y="710" text-anchor="middle">通过 / 拒绝 / 转人工 + 总分(C_F_APPLYSCORE) + 原因码 + 命中详情</text>
+    <line class="ln" x1="500" y1="726" x2="500" y2="762"/>
+
+    <!-- 6 结束 -->
+    <rect class="box" x="405" y="762" width="190" height="42" fill="#e5e7eb" stroke="#6b7280"/>
+    <text class="t title" x="500" y="789" text-anchor="middle">⑥ 结束</text>
+
+    <!-- 右侧注解：上线绑定 -->
+    <rect class="box" x="770" y="666" width="210" height="60" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text class="t sub" x="875" y="688" text-anchor="middle">上线前绑定：</text>
+    <text class="t sub" x="875" y="706" text-anchor="middle">场景事件 · 渠道 · 机构 · 版本</text>
+    <line class="dash" x1="750" y1="696" x2="770" y2="696"/>
+  </svg>
+</div>
+</body>
+</html>
