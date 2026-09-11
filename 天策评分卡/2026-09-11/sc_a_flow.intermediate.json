@@ -24,36 +24,66 @@
         { "fieldName": "C_F_APPLYSCORE", "mappingName": "credit_score" }
       ],
       "x": 320,
-      "y": 160
+      "y": 200
     },
     {
       "seq": 2,
       "nodeType": "ExclusiveGateway",
       "name": "评分分档判断",
       "x": 320,
-      "y": 320
+      "y": 360
+    },
+    {
+      "seq": 3,
+      "nodeType": "ActionServiceNode",
+      "name": "通过",
+      "actionType": 2,
+      "finalDecision": "Accept",
+      "x": 120,
+      "y": 520
+    },
+    {
+      "seq": 4,
+      "nodeType": "ActionServiceNode",
+      "name": "转人工",
+      "actionType": 2,
+      "finalDecision": "Review",
+      "x": 320,
+      "y": 520
+    },
+    {
+      "seq": 5,
+      "nodeType": "ActionServiceNode",
+      "name": "拒绝",
+      "actionType": 2,
+      "finalDecision": "Reject",
+      "x": 520,
+      "y": 520
     }
   ],
   "lines": [
     { "source": "start", "target": 1, "lineType": "normal" },
     { "source": 1, "target": 2, "lineType": "normal" },
     {
-      "source": 2, "target": "end", "lineType": "condition",
+      "source": 2, "target": 3, "lineType": "condition",
       "name": "高分通过", "dealType": "Accept", "priority": 1,
       "conditions": [
         { "property": "C_F_APPLYSCORE", "op": ">=", "value": 760, "rightValueType": "input" }
       ]
     },
     {
-      "source": 2, "target": "end", "lineType": "condition",
+      "source": 2, "target": 4, "lineType": "condition",
       "name": "中分转人工", "dealType": "Review", "priority": 2,
       "conditions": [
         { "property": "C_F_APPLYSCORE", "op": ">=", "value": 680, "rightValueType": "input" }
       ]
     },
     {
-      "source": 2, "target": "end", "lineType": "default",
+      "source": 2, "target": 5, "lineType": "default",
       "name": "低分拒绝", "dealType": "Reject", "priority": 3
-    }
+    },
+    { "source": 3, "target": "end", "lineType": "normal" },
+    { "source": 4, "target": "end", "lineType": "normal" },
+    { "source": 5, "target": "end", "lineType": "normal" }
   ]
 }

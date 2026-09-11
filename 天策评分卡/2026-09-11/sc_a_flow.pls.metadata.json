@@ -20,7 +20,7 @@
     "artifactType": "policyIntermediate",
     "producer": "tiance-policy-forge",
     "contractVersion": "legacy-policy-intermediate-v1",
-    "sha256": "65e43e0659de3374702bb0b80179a18cb2b789a1c58eda587e51e6cce5c3266a"
+    "sha256": "a0fa9a68b2b0ac282df665d660f82d458a74613a82694672185083bae467b305"
   },
   "checkpoints": {
     "internalLoop": {},
@@ -28,5 +28,5 @@
   },
   "dependencies": [],
   "outputFile": "/Users/td/.qoderwork/workspace/mttrqawk3qp6mzcs/policy_flow/sc_a_flow.pls",
-  "outputSha256": "d8dd5e0091b7790542e8bfda0ab68c50a884b10cc23c63ef8a8935d49d1d4815"
+  "outputSha256": "da7a40e7b11e7c1bb5a2eecffa84ce57555192af93290af3cc9a74e664551683"
 }
