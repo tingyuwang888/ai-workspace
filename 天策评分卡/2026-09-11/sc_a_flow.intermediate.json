@@ -1,0 +1,93 @@
+{
+  "policy": {
+    "name": "个人贷前评分决策流",
+    "code": "preLoanScoreFlow",
+    "mode": 2,
+    "businessType": 1,
+    "eventType": "Apply",
+    "appCode": "init",
+    "orgCode": "sxdb",
+    "childrenFlow": 0
+  },
+  "nodes": [
+    {
+      "seq": 1,
+      "nodeType": "ScoreCardServiceNode",
+      "name": "个人信贷申请评分卡",
+      "refName": "sc_a_apply",
+      "incomingFields": [
+        "S_N_APPLYLOANTERM", "C_B_ISOVERDUE", "S_E_CREDITLEVEL", "C_N_OPENDAYS",
+        "S_N_SBCONTINUITYMONTH", "S_N_GJJCONTINUITYMONTH", "S_S_MOBINOISP",
+        "S_S_MARRIAGE", "S_S_DIPLOMA", "S_N_AGE"
+      ],
+      "outgoingFields": [
+        { "fieldName": "C_F_APPLYSCORE", "mappingName": "credit_score" }
+      ],
+      "x": 320,
+      "y": 120
+    },
+    {
+      "seq": 2,
+      "nodeType": "ExclusiveGateway",
+      "name": "评分分档判断",
+      "x": 320,
+      "y": 260
+    },
+    {
+      "seq": 3,
+      "nodeType": "ActionServiceNode",
+      "name": "通过",
+      "actionType": 2,
+      "finalDecision": "Accept",
+      "x": 140,
+      "y": 420
+    },
+    {
+      "seq": 4,
+      "nodeType": "ActionServiceNode",
+      "name": "转人工",
+      "actionType": 2,
+      "finalDecision": "Review",
+      "x": 320,
+      "y": 420
+    },
+    {
+      "seq": 5,
+      "nodeType": "ActionServiceNode",
+      "name": "拒绝",
+      "actionType": 2,
+      "finalDecision": "Reject",
+      "x": 500,
+      "y": 420
+    }
+  ],
+  "lines": [
+    { "source": "start", "target": 1, "lineType": "normal" },
+    { "source": 1, "target": 2, "lineType": "normal" },
+    {
+      "source": 2, "target": 3, "lineType": "condition",
+      "name": "高分通过", "dealType": "Accept", "priority": 1,
+      "conditions": [
+        { "property": "C_F_APPLYSCORE", "op": ">=", "value": 760, "rightValueType": "input" }
+      ]
+    },
+    {
+      "source": 2, "target": 4, "lineType": "condition",
+      "name": "中间转人工", "dealType": "Review", "priority": 2,
+      "conditions": [
+        { "property": "C_F_APPLYSCORE", "op": ">=", "value": 680, "rightValueType": "input" },
+        { "property": "C_F_APPLYSCORE", "op": "<", "value": 760, "rightValueType": "input" }
+      ]
+    },
+    {
+      "source": 2, "target": 5, "lineType": "condition",
+      "name": "低分拒绝", "dealType": "Reject", "priority": 3,
+      "conditions": [
+        { "property": "C_F_APPLYSCORE", "op": "<", "value": 680, "rightValueType": "input" }
+      ]
+    },
+    { "source": 3, "target": "end", "lineType": "normal" },
+    { "source": 4, "target": "end", "lineType": "normal" },
+    { "source": 5, "target": "end", "lineType": "normal" }
+  ]
+}

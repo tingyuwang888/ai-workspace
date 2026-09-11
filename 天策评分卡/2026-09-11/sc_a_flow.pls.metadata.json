@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "artifactType": "runtimeGenerationTrace",
+    "producer": "tiance-policy-forge",
+    "purpose": "runtime-generation"
+  },
+  "metadataBase": "/Users/td/.qoderwork/workspace/mttrqawk3qp6mzcs/policy_flow/bundle-231-sc-a-v2",
+  "requiredFiles": [
+    "channel_apps.json",
+    "decisionflow_definitions.json",
+    "field_metadata.json",
+    "indexes/common_name_to_code.json",
+    "org_mapping.json"
+  ],
+  "selectedMetadataSha256": "1c61e43958ebe6046a37e2f00c3c522b3ab8c9ac9232050a4ee8e6df0c84f864",
+  "purpose": "runtime-generation",
+  "selectionPolicy": "verified running only; scoped dependencies require exact app authorization; target organizations inherit grants from descendant organizations",
+  "intermediate": {
+    "path": "/Users/td/.qoderwork/workspace/mttrqawk3qp6mzcs/policy_flow/sc_a_flow.intermediate.json",
+    "artifactType": "policyIntermediate",
+    "producer": "tiance-policy-forge",
+    "contractVersion": "legacy-policy-intermediate-v1",
+    "sha256": "6c8914a1d6fc00a2a64e41bb8296f7d0a66c1ccf00cd3414c90e0d41ca34e835"
+  },
+  "checkpoints": {
+    "internalLoop": {},
+    "detectedInternalLoops": []
+  },
+  "dependencies": [],
+  "outputFile": "/Users/td/.qoderwork/workspace/mttrqawk3qp6mzcs/policy_flow/sc_a_flow.pls",
+  "outputSha256": "d11fd0466f90721f8a1fe00cb3d5cac0e5527548ee21c87b21ed8f05eb1be65b"
+}
