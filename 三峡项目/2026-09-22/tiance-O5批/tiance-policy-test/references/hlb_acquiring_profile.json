@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0",
+  "profile": "HLB acquiring risk-control test profile",
+  "note": "Machine-readable source of truth for the HLB acquiring chain. scripts/validate-test-data.py derives its ENDPOINTS/ENUMS from this file; references/acquiring-hlb-profile.md is the human-facing view. This document is customer-identified (HLB) and is intentionally kept out of any generic publish package.",
+  "fixed_public_fields": {
+    "S_S_APPCODE": "Acquiring",
+    "S_S_PARTNERCODE": "kratos",
+    "S_S_ORGCODE": "hlb_my"
+  },
+  "endpoints": {
+    "AcqAuthorization": {
+      "path": "/riskService/trade/riskDecision/acqAuthorization",
+      "encoding": "application/json",
+      "required": [
+        ["bizid", "S_S_BIZID"],
+        ["biztime", "S_D_BIZTIME"],
+        ["transactionamount", "C_F_TRANSACTIONAMOUNT"],
+        ["merchantid", "C_S_MERCHANTID"]
+      ]
+    },
+    "AcqDecline": {
+      "path": "/riskService/trade/riskDecision/acqDecline",
+      "encoding": "application/json",
+      "required": [
+        ["bizid", "S_S_BIZID"],
+        ["biztime", "S_D_BIZTIME"],
+        ["customeracctnumber", "C_S_CUSTOMERACCTNUMBER"]
+      ]
+    },
+    "AcqModify": {
+      "path": "/indexApi/salaxyService/acqModify/metric",
+      "encoding": "application/x-www-form-urlencoded",
+      "required": [
+        ["bizid", "S_S_BIZID"],
+        ["biztime", "S_D_BIZTIME"],
+        ["merchantid", "customeracctnumber", "C_S_MERCHANTID"]
+      ]
+    },
+    "AcqDisputes": {
+      "path": "/indexApi/salaxyService/acqDisputes/metric",
+      "encoding": "application/x-www-form-urlencoded",
+      "required": [
+        ["bizid", "S_S_BIZID"],
+        ["biztime", "S_D_BIZTIME"],
+        ["merchantid", "customeracctnumber", "C_S_MERCHANTID"]
+      ]
+    }
+  },
+  "enums": [
+    {
+      "aliases": ["userdata02", "C_E_CARDSCHEME"],
+      "valid": ["V", "M"],
+      "invalid_examples": ["VISA", "MasterCard", "VISA_CARD"]
+    },
+    {
+      "aliases": ["userdata03", "C_E_TXNSTATUSCODE"],
+      "valid": ["1", "2"],
+      "invalid_examples": []
+    },
+    {
+      "aliases": ["posentrymode", "C_E_POSENTRYMODE"],
+      "valid": ["C", "K", "E"],
+      "invalid_examples": []
+    },
+    {
+      "aliases": ["transactiontype", "C_E_TRANSACTIONTYPE"],
+      "valid": ["M", "B", "U", "P", "R", "X"],
+      "invalid_examples": []
+    }
+  ],
+  "time_windows": {
+    "standard": {
+      "近1天": "within 24 hours before current biztime",
+      "近24小时": "within 24 hours before current biztime",
+      "近7天": "within 7 days before current biztime",
+      "近90天": "within 90 days before current biztime"
+    },
+    "special": {
+      "90天剔除3天": "within 90 days, excluding the most recent 3 days",
+      "24小时剔除3天": "within 24 hours, excluding the most recent 3 days"
+    }
+  },
+  "isolation": {
+    "merchant_format": "M{row_number}",
+    "multi_merchant_suffixes": ["_1", "_2", "_3"],
+    "keys": ["card/account", "terminal", "customer/CIF", "MIDBIN"],
+    "rule": "Isolate every key used by the indicator; do not run cases concurrently when any relevant key is shared."
+  },
+  "field_mapping_notes": {
+    "userdata12_in_modify_disputes": "maps to C_F_TRANSACTIONAMOUNT, not C_F_ORIGINALTRXNAMOUNT",
+    "bank_card_number": "only AcqAuthorization requires paymentinstrumentid (C_S_PAYMENTINSTRUMENTID); AcqModify/AcqDisputes do not carry card numbers"
+  },
+  "known_issues": [
+    {
+      "id": 1,
+      "title": "Field Mapping Mismatch",
+      "problem": "userdata12 in AcqModify/AcqDisputes maps to C_F_TRANSACTIONAMOUNT, not C_F_ORIGINALTRXNAMOUNT",
+      "impact": "Chargeback ratio metrics incorrect if using ORIGINALTRXNAMOUNT",
+      "solution": "Use TRANSACTIONAMOUNT for AcqModify/AcqDisputes interfaces"
+    },
+    {
+      "id": 2,
+      "title": "Enum Value Mismatch",
+      "problem": "Card scheme enum only accepts V/M, not VISA/MasterCard",
+      "impact": "Test data with VISA/MasterCard fails enum validation",
+      "solution": "Use V for Visa, M for MasterCard"
+    },
+    {
+      "id": 3,
+      "title": "AcqAuthorization Encoding",
+      "problem": "AcqAuthorization requires JSON encoding, not form encoding",
+      "impact": "Test data with form encoding fails",
+      "solution": "Use application/json content-type for AcqAuthorization interface"
+    }
+  ]
+}
