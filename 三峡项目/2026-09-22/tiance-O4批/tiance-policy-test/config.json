@@ -1,0 +1,25 @@
+{
+  "platform": {
+    "host": "$ENV:TIANCE_PLATFORM_HOST",
+    "csrfSource": "sessionStorage._csrf_",
+    "note": "host=天策Nginx地址($ENV:占位,实际值export TIANCE_PLATFORM_HOST); csrfSource=CSRF token获取方式(sessionStorage/cookie/header)"
+  },
+  "db": {
+    "host": "$ENV:TIANCE_DB_HOST",
+    "port": 3306,
+    "user": "tongdun",
+    "password": "$ENV:TIANCE_DB_PASS",
+    "database": "tiance"
+  },
+  "acquiring": {
+    "settle": {
+      "defaultSeconds": 30,
+      "factor": 1.5,
+      "floorSeconds": 5,
+      "capSeconds": 120,
+      "naturalDaySeconds": 60
+    },
+    "settleNote": "O4 窗口物化等待(收单链)：无--settle时按用例指标窗口后缀(_5m/_2h/_1d)推导 seconds=clamp(窗口×factor, floorSeconds, capSeconds)，>=1天自然日窗口用naturalDaySeconds，指标无窗口后缀则回落到defaultSeconds；--settle显式秒数覆盖全部用例。环境物化延迟不同只调此节不改代码。"
+  },
+  "outputDir": "strategies"
+}

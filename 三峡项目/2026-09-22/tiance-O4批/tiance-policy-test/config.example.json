@@ -1,0 +1,25 @@
+{
+  "platform": {
+    "host": "https://tiance.example.invalid",
+    "csrfSource": "sessionStorage._csrf_",
+    "note": "Replace host with the authorized Tiance environment before use."
+  },
+  "db": {
+    "host": "$ENV:TIANCE_DB_HOST",
+    "port": 3306,
+    "user": "$ENV:TIANCE_DB_USER",
+    "password": "$ENV:TIANCE_DB_PASS",
+    "database": "$ENV:TIANCE_DB_NAME"
+  },
+  "acquiring": {
+    "settle": {
+      "defaultSeconds": 30,
+      "factor": 1.5,
+      "floorSeconds": 5,
+      "capSeconds": 120,
+      "naturalDaySeconds": 60
+    },
+    "settleNote": "Acquiring-chain metric-window settle (O4). Without --settle, wait is derived per case from the indicator window suffix (_5m/_2h/_1d): seconds = clamp(window*factor, floorSeconds, capSeconds); windows >= 1 day use naturalDaySeconds; no suffix falls back to defaultSeconds. An explicit --settle <seconds> overrides all cases. Tune here, not in code, for environments with different materialization lag."
+  },
+  "outputDir": "strategies"
+}
