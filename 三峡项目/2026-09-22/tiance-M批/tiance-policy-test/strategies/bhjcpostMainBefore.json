@@ -1,0 +1,91 @@
+{
+  "policyCode": "bhjcpostMainBefore",
+  "policyName": "保后检查贷前主策略",
+  "policyVersion": 6,
+  "bizType": 1,
+  "subStrategies": [
+    {"policyCode": "bhjcpostSubentBefore", "policyName": "保后检查贷前企业子策略", "role": "enterprise"},
+    {"policyCode": "bhjcpostSubperBefore", "policyName": "保后检查贷前个人子策略", "role": "personal"},
+    {"policyCode": "bhjcpostSubrelateentBefore", "policyName": "保后检查贷前关联企业子策略", "role": "related_enterprise"}
+  ],
+  "routingFields": {
+    "S_S_ENTERPRISETYPE": {"enum": ["国企", "民营"], "description": "企业类型，决定走哪套规则集"},
+    "C_S_BIZSCENARIO": {"enum": ["借款类", "债券委贷投资类", "非融类"], "description": "业务场景，决定走哪条规则路线"}
+  },
+  "decisionResults": [
+    {"name": "红色预警", "code": "redwarnbh", "priority": 150, "aliases": ["红色预警", "redwarnbh"]},
+    {"name": "黄色预警", "code": "yellowwarnbh", "priority": 130, "aliases": ["黄色预警", "yellowwarnbh"]},
+    {"name": "蓝色预警", "code": "bluewarnbh", "priority": 120, "aliases": ["蓝色预警", "bluewarnbh"]},
+    {"name": "绿色预警", "code": "greenwarnbh", "priority": 110, "aliases": ["绿色预警", "greenwarnbh"]},
+    {"name": "通过", "code": "Accept", "priority": 0, "aliases": ["通过", "Accept", "无风险"]}
+  ],
+  "comparisonRules": [
+    {"type": "pass_through", "triggers": ["通过", "Accept", "无风险"],
+     "matchActual": ["Accept", "通过"]},
+    {"type": "fuzzy_alias", "pattern": "中风险预警",
+     "matches": ["黄色预警", "蓝色预警", "yellowwarnbh", "bluewarnbh"],
+     "note": "中风险=黄色或蓝色预警，须在alias_group之前匹配"},
+    {"type": "alias_group", "groups": [
+      ["红色预警", "redwarnbh"],
+      ["黄色预警", "yellowwarnbh"],
+      ["蓝色预警", "bluewarnbh"],
+      ["绿色预警", "greenwarnbh"]
+    ]}
+  ],
+  "params": {
+    "common": {
+      "S_E_APIMODEL": {"type": "string", "fixed": "30"},
+      "S_S_BIZID": {"type": "string", "required": true},
+      "S_S_CUSTNO": {"type": "string", "required": true},
+      "S_S_ORGCODE": {"type": "string", "fixed": "sxdb"},
+      "S_F_LOANBALANCE": {"type": "number", "required": true}
+    },
+    "strategySpecific": {
+      "S_S_ENTERPRISETYPE": {"type": "string", "enum": ["国企", "民营"], "required": true,
+        "description": "企业类型（路由字段）"},
+      "C_S_BIZSCENARIO": {"type": "string", "enum": ["借款类", "债券委贷投资类", "非融类"], "required": true,
+        "description": "业务场景（路由字段）"},
+      "S_S_COMPANYNAME": {"type": "string", "description": "企业名称"},
+      "S_S_UNIFSOCLCRCOD": {"type": "string", "description": "统一社会信用代码"},
+      "C_S_QCCSEARCHKEY": {"type": "string", "description": "企查查查询Key（通常=统一社会信用代码）"},
+      "C_S_QCCPERSONNAME": {"type": "string", "description": "企查查人员姓名"},
+      "C_F_REGCAP": {"type": "number", "description": "注册资本"},
+      "C_F_PAIDCAP": {"type": "number", "description": "实缴资本"}
+    }
+  },
+  "testExecution": {
+    "semanticValidation": {
+      "requireMetadata": true,
+      "strictParams": false
+    },
+    "requiredParams": [
+      "S_S_IDNO",
+      "C_F_RANDOMNUM"
+    ],
+    "defaults": {
+      "S_S_IDNO": "500102199001011234",
+      "C_F_RANDOMNUM": 0.5,
+      "S_F_LOANBALANCE": 100000
+    },
+    "ruleCatalog": [],
+    "ruleDependencies": {},
+    "thirdPartyCapabilities": {
+      "default": {
+        "capability": "live_uncontrolled",
+        "reason": "保后检查三方接口会覆盖直接入参，严格no-mock下不能稳定构造命中和边界数据"
+      }
+    },
+    "functionCapabilities": {},
+    "riskLevelCapability": {
+      "capability": "derived_uncontrolled",
+      "reason": "预警等级依赖上游规则真实命中数量，当前没有可控测试数据集"
+    },
+    "note": "平台完整必填参数与规则依赖仍须在实时门禁后补齐；未知三方能力不得自动提升为可执行"
+  },
+  "notes": [
+    "主策略+3个子策略(企业/个人/关联企业)，baseInfo API返回的子策略数组顺序不固定，必须用policyCode匹配",
+    "路由字段enterpriseType和bizScenario决定走哪套规则集，设错会走错误分支导致测试无效",
+    "三方数据来自企查查系列接口(25+个)，需mock服务器配置",
+    "完整参数约120+个，可通过getTestInputParams API动态获取"
+  ]
+}

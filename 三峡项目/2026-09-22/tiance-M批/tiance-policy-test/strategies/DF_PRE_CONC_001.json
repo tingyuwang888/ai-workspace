@@ -1,0 +1,321 @@
+{
+  "policyCode": "DF_PRE_CONC_001",
+  "policyName": "保前集中度判断_单户关联户区域",
+  "policyVersion": 2,
+  "bizType": 1,
+  "decisionResults": [
+    {
+      "name": "通过",
+      "code": "Accept",
+      "priority": 0,
+      "aliases": [
+        "Accept",
+        "通过",
+        "不触发",
+        "全部通过"
+      ]
+    },
+    {
+      "name": "单户集中度超限",
+      "code": "单户集中度超限",
+      "priority": 1,
+      "aliases": [
+        "单户集中度超限"
+      ]
+    },
+    {
+      "name": "关联户集中度超限",
+      "code": "关联户集中度超限",
+      "priority": 1,
+      "aliases": [
+        "关联户集中度超限"
+      ]
+    },
+    {
+      "name": "区域集中度超限",
+      "code": "区域集中度超限",
+      "priority": 1,
+      "aliases": [
+        "区域集中度超限"
+      ]
+    },
+    {
+      "name": "部分超限",
+      "code": "部分超限",
+      "priority": 2,
+      "aliases": [
+        "部分超限"
+      ]
+    }
+  ],
+  "comparisonRules": [
+    {
+      "type": "keyword_absent",
+      "triggers": [
+        "未超限",
+        "不超限"
+      ],
+      "target": "超限",
+      "note": "否定语义必须在通用超限匹配之前判断"
+    },
+    {
+      "type": "keyword_absent",
+      "triggers": [
+        "不触发",
+        "通过",
+        "Accept",
+        "全部通过"
+      ],
+      "target": "超限",
+      "note": "预期不触发时，实际不应含超限"
+    },
+    {
+      "type": "keyword_present",
+      "triggers": [
+        "触发",
+        "超限"
+      ],
+      "target": "超限"
+    },
+    {
+      "type": "keyword_present",
+      "triggers": [
+        "部分超限"
+      ],
+      "target": "超限"
+    },
+    {
+      "type": "keyword_present",
+      "triggers": [
+        "报错",
+        "异常"
+      ],
+      "target": [
+        "失败",
+        "错误",
+        "异常"
+      ]
+    },
+    {
+      "type": "invalid_expectation",
+      "triggers": [
+        "待验证",
+        "待确认"
+      ],
+      "note": "实际仍含待验证/待确认则判未通过"
+    }
+  ],
+  "params": {
+    "common": {
+      "S_E_APIMODEL": {
+        "type": "string",
+        "fixed": "30"
+      },
+      "S_S_BIZID": {
+        "type": "string",
+        "required": true
+      },
+      "S_S_CUSTNO": {
+        "type": "string",
+        "required": true
+      },
+      "S_S_CUSTNAME": {
+        "type": "string",
+        "required": true
+      },
+      "S_S_ORGCODE": {
+        "type": "string",
+        "fixed": "sxdb"
+      },
+      "S_E_CUSTTYPE": {
+        "type": "string",
+        "fixed": "1"
+      },
+      "S_S_CUSTMANAGER": {
+        "type": "string",
+        "default": "wty"
+      },
+      "S_F_LOANBALANCE": {
+        "type": "number",
+        "required": true
+      },
+      "S_S_IDNO": {
+        "type": "string",
+        "required": true
+      },
+      "C_F_RANDOMNUM": {
+        "type": "number",
+        "default": 0.5
+      },
+      "CASE_ID": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "strategySpecific": {
+      "C_F_CREDITLIMITOFF": {
+        "type": "number",
+        "description": "单户限额（线下）"
+      },
+      "C_F_RELATEDCREDITLIMITOFF": {
+        "type": "number",
+        "description": "关联户限额（线下）"
+      },
+      "C_F_CONCLIMITSTANDARDOFF": {
+        "type": "number",
+        "description": "区域限额标准（线下）"
+      },
+      "C_F_PREAREAMERGEDUSEDQUOTA": {
+        "type": "number",
+        "description": "区域合并已用额度",
+        "warning": "会被三方数据覆盖，传入值可能不生效"
+      },
+      "C_S_AREAPROVINCE": {
+        "type": "string",
+        "description": "客户区域_省"
+      },
+      "C_S_AREACITY": {
+        "type": "string",
+        "description": "客户区域_市"
+      },
+      "C_S_AREADISTRICT": {
+        "type": "string",
+        "description": "客户区域_区"
+      },
+      "C_S_AREAPROVINCECODE": {
+        "type": "string",
+        "description": "客户区域_省代码"
+      },
+      "C_S_AREACITYCODE": {
+        "type": "string",
+        "description": "客户区域_市代码"
+      },
+      "C_S_AREADISTRICTCODE": {
+        "type": "string",
+        "description": "客户区域_区代码"
+      }
+    }
+  },
+  "testExecution": {
+    "semanticValidation": {
+      "requireMetadata": true,
+      "strictParams": true
+    },
+    "ruleCatalog": [
+      {
+        "code": "R001",
+        "name": "保前单户集中度判断"
+      },
+      {
+        "code": "R002",
+        "name": "保前关联户集中度判断"
+      },
+      {
+        "code": "R003",
+        "name": "保前区域集中度判断_地市级"
+      },
+      {
+        "code": "R004",
+        "name": "保前区域集中度判断_区县级"
+      }
+    ],
+    "requiredParams": [
+      "S_S_CUSTNAME",
+      "C_S_AREAPROVINCE",
+      "C_S_AREACITY",
+      "C_S_AREAPROVINCECODE",
+      "C_S_AREACITYCODE",
+      "C_S_AREADISTRICTCODE"
+    ],
+    "defaults": {
+      "S_F_LOANBALANCE": 100000,
+      "S_S_CUSTNAME": "四川华西建设集团有限公司",
+      "S_S_IDNO": "500102199001011234",
+      "C_F_RANDOMNUM": 0.5,
+      "C_S_AREAPROVINCE": "江苏省",
+      "C_S_AREACITY": "无锡市",
+      "C_S_AREADISTRICT": "江阴市",
+      "C_S_AREAPROVINCECODE": "320000",
+      "C_S_AREACITYCODE": "320200",
+      "C_S_AREADISTRICTCODE": "320201"
+    },
+    "defaultsByCaseType": {
+      "正案例": {
+        "S_S_CUSTNAME": "四川华西建设集团有限公司"
+      },
+      "反案例": {
+        "S_S_CUSTNAME": "成都天府新能源有限公司"
+      }
+    },
+    "sourceBindings": {
+      "dhjzdsearch": "S_S_CUSTNAME -> cust_name",
+      "dhjzdoffsearch": "S_S_CUSTNAME -> cust_name",
+      "glhjzdsearch": "S_S_CUSTNAME -> cust_name",
+      "glhjzdoffsearch": "S_S_CUSTNAME -> cust_name",
+      "sjqyjzdsearch": "C_S_AREACITYCODE -> rgst_addr_city_cd",
+      "sjqyjzdoffsearch": "C_S_AREACITYCODE -> rgst_addr_city_cd",
+      "qjqyjzdsearch": "C_S_AREADISTRICTCODE -> rgst_addr_area_cd",
+      "qjqyjzdoffsearch": "C_S_AREADISTRICTCODE -> rgst_addr_area_cd"
+    },
+    "note": "默认值均在实时和离线测试表中存在；只补缺失字段，不覆盖用例显式值。"
+  },
+  "thirdPartyOverrides": [
+    {
+      "field": "C_F_PREAREAMERGEDUSEDQUOTA",
+      "source": "ads_icr_area_conc_realtime",
+      "sourceField": "C_F_DISTRICTUSEDQUOTA",
+      "note": "区域合并已用额度被三方数据覆盖"
+    }
+  ],
+  "availableCities": [
+    {
+      "code": "340100",
+      "name": "合肥",
+      "area_used_quota": 5000000
+    },
+    {
+      "code": "500200",
+      "name": "重庆辖区",
+      "area_used_quota": 8000000
+    },
+    {
+      "code": "510300",
+      "name": "四川地市",
+      "area_used_quota": 10000000
+    },
+    {
+      "code": "420500",
+      "name": "宜昌",
+      "area_used_quota": 12000000
+    },
+    {
+      "code": "350100",
+      "name": "福州",
+      "area_used_quota": 42000000
+    },
+    {
+      "code": "330100",
+      "name": "杭州",
+      "area_used_quota": 48000000
+    },
+    {
+      "code": "500100",
+      "name": "重庆",
+      "area_used_quota": 52000000
+    },
+    {
+      "code": "500300",
+      "name": "重庆辖区",
+      "area_used_quota": 55000000
+    },
+    {
+      "code": "510100",
+      "name": "成都",
+      "area_used_quota": 60000000
+    }
+  ],
+  "pitfalls": [
+    "不在表中的城市(如哈尔滨230100)查询返回空数组但策略仍判区域集中度超限，不能通过选无数据城市规避",
+    "测试区域不超限时选合肥340100(area_used_quota仅5M)，CONCLIMITSTANDARDOFF设为80000000(≥area_quota)"
+  ]
+}
