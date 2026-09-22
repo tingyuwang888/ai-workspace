@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "fiveState": {
+    "enum": ["通过", "失败", "执行阻塞", "编排阻塞", "无效用例"]
+  },
+  "reasonCodes": {
+    "platform": ["assertion_satisfied", "assertion_mismatch", "decision_mismatch", "target_assertion_mismatch", "not_submitted", "execution_not_confirmed", "missing_execution_receipt", "evidence_retrieval_failed", "unbound_component_evidence", "incomplete_execution_path", "unresolved_rule_set_identity", "incomplete_target_hit_evidence", "missing_required_evidence", "target_skipped", "archive_identity_mismatch", "duplicate_request_field", "request_design_mismatch", "request_hash_mismatch", "request_identity_mismatch", "unverifiable_request"],
+    "acquiring": ["metric_null_env", "suspected_ingest_lag", "environment_regression", "preflight_failed", "runner_error", "classifier_error"]
+  },
+  "required": ["schemaVersion", "runId", "cases", "coveragePlan"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "runId": {"type": "string", "minLength": 1},
+    "cases": {"type": "array", "items": {"$ref": "#/$defs/case"}},
+    "coveragePlan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["policyCode", "targetRuleSet", "targetRule", "branchId", "caseKeys"],
+        "properties": {
+          "policyCode": {"type": "string", "minLength": 1},
+          "targetRuleSet": {"type": "string", "minLength": 1},
+          "targetRule": {"type": "string", "minLength": 1},
+          "branchId": {"type": "string", "minLength": 1},
+          "caseKeys": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rerun": {
+      "type": "object",
+      "required": ["schemaVersion", "previousRunId", "runId", "actions"],
+      "properties": {
+        "schemaVersion": {"const": "1.0"},
+        "previousRunId": {"type": "string", "minLength": 1},
+        "runId": {"type": "string", "minLength": 1},
+        "actions": {"type": "array", "minItems": 1, "items": {
+          "type": "object",
+          "required": ["caseKey", "approved", "reasonKind", "evidenceRefs", "preservedIntent", "newIsolationRefs"],
+          "properties": {
+            "caseKey": {"type": "string", "minLength": 1},
+            "approved": {"const": true},
+            "reasonKind": {"enum": ["data_fix", "platform_change", "prerequisite_change"]},
+            "evidenceRefs": {"$ref": "#/$defs/strings", "minItems": 1},
+            "preservedIntent": {"type": "string", "minLength": 1},
+            "newIsolationRefs": {"$ref": "#/$defs/strings", "minItems": 1}
+          }
+        }}
+      }
+    },
+    "strings": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "targetRuleSet": {"type": "string", "minLength": 1},
+        "rules": {"$ref": "#/$defs/strings"},
+        "requiredRules": {"$ref": "#/$defs/strings"},
+        "forbiddenRules": {"$ref": "#/$defs/strings"},
+        "executionPath": {"type": "object", "additionalProperties": false, "required": ["requiredRuleSets"], "properties": {"requiredRuleSets": {"$ref": "#/$defs/strings"}}},
+        "functions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["nodeName", "field", "value"], "properties": {
+          "value": {},
+          "nodeName": {"type": "string", "minLength": 1}, "field": {"type": "string", "minLength": 1}, "tolerance": {"type": "number", "minimum": 0}
+        }}},
+        "thirdPartyNodes": {"type": "array", "items": {"oneOf": [
+          {"type": "string", "minLength": 1},
+          {"type": "object", "additionalProperties": false, "required": ["nodeName"], "properties": {
+            "nodeName": {"type": "string", "minLength": 1}, "fields": {"$ref": "#/$defs/strings"},
+            "fieldValues": {"type": "object"}, "absentFields": {"$ref": "#/$defs/strings"}
+          }}
+        ]}}
+      }
+    },
+    "case": {
+      "type": "object",
+      "required": ["id", "caseKey", "assertionKind", "policyCode", "policyVersion", "bizType", "expectedParams", "expectedEvidence", "designReview"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "caseKey": {"type": "string", "minLength": 1},
+        "assertionKind": {"enum": ["rule", "function", "path", "decision", "data"]},
+        "policyCode": {"type": "string", "minLength": 1},
+        "policyVersion": {"type": ["integer", "string"]},
+        "bizType": {"type": ["integer", "string"]},
+        "targetRuleSet": {"type": "string", "minLength": 1},
+        "targetRule": {"type": "string", "minLength": 1},
+        "expectedHit": {"type": "boolean"},
+        "expectedDecision": {"type": "string", "minLength": 1},
+        "expectedParams": {"type": "object"},
+        "expectedEvidence": {"$ref": "#/$defs/evidence"},
+        "branchIds": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "designReview": {
+          "type": "object",
+          "required": ["status", "evidenceRefs"],
+          "properties": {
+            "status": {"const": "approved"},
+            "evidenceRefs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+          }
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"assertionKind": {"const": "rule"}}}, "then": {"required": ["targetRuleSet", "targetRule", "expectedHit", "branchIds"], "properties": {"branchIds": {"minItems": 1}}}},
+        {"if": {"properties": {"assertionKind": {"const": "decision"}}}, "then": {"required": ["expectedDecision"]}},
+        {"if": {"properties": {"assertionKind": {"const": "path"}}}, "then": {"properties": {"expectedEvidence": {"required": ["executionPath"], "properties": {"executionPath": {"type": "object", "required": ["requiredRuleSets"], "properties": {"requiredRuleSets": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}}}}}}},
+        {"if": {"properties": {"assertionKind": {"const": "function"}}}, "then": {"properties": {"expectedEvidence": {"required": ["functions"], "properties": {"functions": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["nodeName", "field", "value"]}}}}}}},
+        {"if": {"properties": {"assertionKind": {"const": "data"}}}, "then": {"properties": {"expectedEvidence": {"required": ["thirdPartyNodes"], "properties": {"thirdPartyNodes": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["nodeName"]}}}}}}}
+      ]
+    }
+  }
+}

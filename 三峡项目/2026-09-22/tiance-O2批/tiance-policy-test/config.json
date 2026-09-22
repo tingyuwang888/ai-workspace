@@ -1,0 +1,15 @@
+{
+  "platform": {
+    "host": "$ENV:TIANCE_PLATFORM_HOST",
+    "csrfSource": "sessionStorage._csrf_",
+    "note": "host=天策Nginx地址($ENV:占位,实际值export TIANCE_PLATFORM_HOST); csrfSource=CSRF token获取方式(sessionStorage/cookie/header)"
+  },
+  "db": {
+    "host": "$ENV:TIANCE_DB_HOST",
+    "port": 3306,
+    "user": "tongdun",
+    "password": "$ENV:TIANCE_DB_PASS",
+    "database": "tiance"
+  },
+  "outputDir": "strategies"
+}
