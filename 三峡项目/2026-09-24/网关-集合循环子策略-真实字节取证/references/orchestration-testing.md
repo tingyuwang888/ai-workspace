@@ -52,7 +52,7 @@
 |---|---|---|---|
 | `DecisionToolServiceNode` | **已实测**（三峡 `sxdb` 2026-09-24 逐字重抓：树 / 矩阵 / 表，fixture 为真实字节） | `decisionTools` | `nodeName` / `nodeId` / `toolCode`（`extension.code`） |
 | `ExclusiveGateway`（并行 / 包容网关仅文档） | **已实测**（`sxdb` 2026-09-24 `crossScoreFlow` 真实字节，fixture 落地；`nodeOutputList` **恒空**，分支选择落在 `extension.conditions`，见第 2.1 节） | `gateways` | `nodeName` / `nodeId` |
-| `ChildFlowNode`（集合循环 / 普通子策略，`runData nodeType=8`；文档旧名 `SubPolicyNode`/`CollectionSubPolicyNode` 见第 2.2 节纠正） | **已实测**（`sxdb` 2026-09-24 `bhjcpostMainBefore` 集合循环真实字节，子 token 落在 `extension.tokenIds[]`） | `subPolicies`（`.children`） | 子 `policyCode`（`extension.code`）/ `token`（`tokenIds[]`） |
+| `ChildFlowNode`（**子策略调用**；文档旧名 `SubPolicyNode`/`CollectionSubPolicyNode` 见第 2.2 节纠正。**集合循环逐元素迭代(N>1) 未在本 capture 覆盖**） | **已实测（子策略调用形态）**（`sxdb` 2026-09-24 `bhjcpostMainBefore`；每节点 `extension.tokenIds[]` 长度 1、`C_O_*` 集合数组长度 1，仅证明"一次子策略调用"；**"集合循环按元素迭代 N>1"未实测**） | `subPolicies`（`.children`） | 子 `policyCode`（`extension.code`）/ `token`（`tokenIds[]`） |
 | 全部类型（路径顺序 / 连线） | 已实测 | `flowOrder`、`pathLines` | `ordinal` |
 
 两个必须刻意的坑（已实测，写进了解析器与用例）：
@@ -75,15 +75,25 @@
 - 早期合成 fixture 里的 `routeTarget` / `routeCondition` 字段名是**编造的**，平台上并不存在——
   断言与渲染一律改用 `selectedBranch` + `inputs`，不再断言任何"路由目标"文本。
 
-### 2.2 集合循环 / 普通子策略真实形状（`bhjcpostMainBefore`，2026-09-24 `sxdb` 真实字节）
+### 2.2 子策略调用真实形状（`bhjcpostMainBefore`，2026-09-24 `sxdb` 真实字节；集合循环逐元素迭代 N>1 未实测）
 
 - **运行时 `nodeType` 是 `ChildFlowNode`**，不是文档旧名 `SubPolicyNode` / `CollectionSubPolicyNode`；
   解析器的 `SUB_POLICY_NODE_TYPES` 已补入 `ChildFlowNode`。早前只认文档旧名会导致真实
   `ChildFlowNode` **整条被跳过**、`subPolicies` 恒为 0——这正是"唯真实抓包能证伪"的又一例。
 - **子 token 落在 `extension.tokenIds`（数组）**，不是 `nodeOutputList` 里的 JSON、也不是假设的
   `subPolicyResultList`；`extension.code` 是子策略编码，解析器关联为子项 `policyCode`，
-  并记下 `sourceKey == "tokenIds"`。逐元素的子结果另镜像在 `nodeOutputList` 的 `C_O_*` 数组字段里。
-- 集合循环会产出**多个**子项（实测一次运行 3 个：企业 / 个人 / 关联企业子策略），每个各带一个子 token。
+  并记下 `sourceKey == "tokenIds"`。
+- 输出侧的集合字段（`C_O_ENTERPRISEINFO` / `C_O_PERSONINFO` / `C_O_RELATEDCOMPANYINFO`）值是
+  **序列化后的 JSON 字符串数组**；本 capture 每个数组长度为 1。子策略跑完把逐元素结果回写
+  进同名字段的行为**只能从"字段是数组形状"推测**，无法从"长度 1"证实按元素迭代。
+- **本 capture 的关键局限**：3 个 `ChildFlowNode` 并列调用 3 个不同实体的子策略
+  （企业 `bhjcpostSubentBefore` / 个人 `bhjcpostSubperBefore` / 关联企业 `bhjcpostSubrelateentBefore`），
+  每节点 `tokenIds` 长度 = 1、`C_O_*` 集合数组长度 = 1。这是"一次子策略调用"，**不是"某个集合
+  被循环了 3 次"**。因此**只实测到 `ChildFlowNode` 调用了一次子策略**，**"集合循环按元素
+  迭代 (N>1)"在运行时字节层面尚未证实**。要证实需以下任一条件成立：
+  (a) 同一 `ChildFlowNode` 的 `extension.tokenIds` 长度 > 1；
+  (b) `C_O_*` 输入集合长度 N > 1 且同节点 `tokenIds` 数 = N；
+  (c) 用子 token 二次调用 `getAllCompontlog`，看到子策略运行内部按元素迭代。
 - **降级不失败语义不变**：子项本身不带平台侧 `evidenceStatus`，解析器仍赋默认 `unavailable`，
   因此 `subPolicies` 断言命中"子策略证据不可用"时只进 `missing`、**不**进 `mismatch`（见第 4 节）。
 
@@ -152,15 +162,17 @@ field / operator / expected / actual）。工具被复用而只给 `nodeName` �
 
 对照 `subPolicies[*].children`（由 `_extract_child_tokens` 从 `extension.tokenIds[]` 挖出的子 token，
 真实形状见第 2.2 节），按 `policyCode`（`extension.code`）/ `token` / `nodeName` / `nodeId` 匹配。子项状态键是
-`evidenceStatus`（缺省视为 `ok`）。**子策略载荷已在 `sxdb` 真实采集（见第 2.2 节）**，但子项本身不带平台侧
-`evidenceStatus`，解析器赋的默认值是 `unavailable`；因此子项实际状态与显式预期不符（含该默认 `unavailable`）
+`evidenceStatus`（缺省视为 `ok`）。**子策略调用形态（`ChildFlowNode` + `extension.tokenIds`）已在 `sxdb`
+真实采集（见第 2.2 节）**；但**集合循环逐元素迭代（N>1）未实测**——本 capture 每节点 `tokenIds` 与 `C_O_*`
+数组长度均为 1。子项本身不带平台侧 `evidenceStatus`，解析器赋的默认值是 `unavailable`；因此子项实际状态
+与显式预期不符（含该默认 `unavailable`）
 一律降级为"子策略证据不可用"（`missing` / `inconclusive`），**永不**判为断言失败；完全没有子策略节点时也只记
 "子策略:名称"缺失、不判失败。
 
 ## 4. 降级不失败原则（degrade-don't-fail）
 
 编排证据不完整是常态（子项不带平台侧 `evidenceStatus`、可选分支本轮未命中、组件日志偶发未采集等），
-断言必须区分"值不符"与"没证据"（注意：这里的"没证据"是**运行时缺失**，不是形状未测——网关 / 子策略形状已实测，见第 2.1 / 2.2 节）：
+断言必须区分"值不符"与"没证据"（注意：这里的"没证据"是**运行时缺失**，不是形状未测——网关、子策略调用（`ChildFlowNode`）形状已实测，见第 2.1 / 2.2 节；但**集合循环逐元素迭代（N>1）语义未实测**，仍在降级不失败范围内）：
 
 | 情形 | `missing`（不确定） | `mismatch`（失败） |
 |---|---|---|
@@ -182,17 +194,21 @@ field / operator / expected / actual）。工具被复用而只给 `nodeName` �
   值类型混用（`leftValue`/actual 为 float、边界 `rightValue`/expected 为 string）。另实测
   `flowModelinAndOutputParams` 顺序权威性、`fieldMap.nodeIdList` 顺序不可靠、`diagramLine` = N-1 连线、
   复用工具 `nodeName` 相同。第 3.1 / 3.2 / 3.3 的断言语义建立在这些事实之上。
-- **已实测（本批新增）**（`sxdb` 2026-09-24，`crossScoreFlow` 排他网关 + `bhjcpostMainBefore` 集合循环子策略，
+- **已实测（本批新增）**（`sxdb` 2026-09-24，`crossScoreFlow` 排他网关 + `bhjcpostMainBefore` 子策略调用，
   fixture 落地真实字节）：**排他网关** `nodeOutputList` **恒空**，分支选择落在 `extension.conditions`（下标数组，
   如 `[2]`）+ `extension.conditionRuleUuid`（32 hex）+ `extension.type`（`"start"`），被判定字段在 `nodeInputList`；
-  **集合循环子策略**运行时 `nodeType` 是 **`ChildFlowNode`**（非文档旧名 `SubPolicyNode`/`CollectionSubPolicyNode`），
-  子 token 落在 `extension.tokenIds[]`、子策略编码在 `extension.code`、逐元素子结果镜像在 `nodeOutputList` 的
-  `C_O_*` 数组。早前合成 fixture 里的 `routeTarget` / `routeCondition` / `subPolicyResultList` 等字段名**均为编造**、
+  **子策略调用（`ChildFlowNode`）** 运行时 `nodeType` 是 **`ChildFlowNode`**（非文档旧名 `SubPolicyNode`/`CollectionSubPolicyNode`），
+  子 token 落在 `extension.tokenIds[]`、子策略编码在 `extension.code`、输出集合字段 `C_O_*` 是序列化 JSON 数组。
+  早前合成 fixture 里的 `routeTarget` / `routeCondition` / `subPolicyResultList` 等字段名**均为编造**、
   被真实抓包证伪；只认文档旧名 `SubPolicyNode` 会使真实 `ChildFlowNode` 整条被跳过（`subPolicies` 恒 0）。
   第 2.1 / 2.2 / 3.4 的形状纠正与断言语义建立在这些事实之上。
-- **仅文档级**（`api-reference.md`，本批仍未采集真实载荷）：`ParallelGateway` / `InclusiveGateway` 的载荷形状
-  （只实测了排他网关），以及**非集合循环的普通子策略**载荷（只实测了集合循环 `ChildFlowNode`）。解析按宽容实现、
-  可被 fixture 测试，但**不能**据此断言平台一定如此吐数；命中这些未测形状时一律走第 4 节的降级不失败路径。
+  **注意**：本 capture 中每个 `ChildFlowNode.tokenIds` 长度 = 1、`C_O_*` 数组长度 = 1，属"一次子策略调用"，
+  **并未证实"集合循环按元素迭代（N>1）"**——该迭代语义仍为文档/推断级（详见 §2.2 三条确认判据）。
+- **仅文档级 / 未实测**（`api-reference.md` 或本批未覆盖的运行时条件）：`ParallelGateway` / `InclusiveGateway`
+  的载荷形状（只实测了排他网关）；**非集合循环的普通子策略**载荷（只实测了 `ChildFlowNode` 一次调用形态）；
+  以及**集合循环的逐元素迭代语义（N>1）**（本样本每集合 1 元素、每节点 1 子 token，未见到多轮迭代）。
+  解析按宽容实现、可被 fixture 测试，但**不能**据此断言平台一定如此吐数；命中这些未测形状时一律走第 4 节的
+  降级不失败路径。
 
 ## 交叉引用
 

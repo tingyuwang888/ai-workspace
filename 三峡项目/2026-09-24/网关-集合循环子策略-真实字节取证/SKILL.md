@@ -597,12 +597,16 @@ UUID/Token/childToken 三者的区别和获取方式见 [api-reference.md](api-r
 > 改走 [orchestration-testing.md](references/orchestration-testing.md)——`getAllCompontlog` 逐节点取证
 > （`flowModelinAndOutputParams` 序=权威执行顺序，`fieldMap.nodeIdList` 顺序不可靠、`diagramLine`=N-1 连线）
 > → 四类 `expectedEvidence` 编排断言（`decisionTools` / `pathContains`+`executionPath.order` / `nodeVisited` /
-> `subPolicies`）→ 降级不失败（证据缺失=`inconclusive`、值不符=`failed`；仅 Parallel/Inclusive 网关与
-> 非集合循环的普通子策略未经实测，走降级不判失败）。
-> 决策工具、排他网关、集合循环子策略证据形状均已三峡 `sxdb` 真实字节实测（2026-09-24：`crossScoreFlow`
-> 排他网关 + `bhjcpostMainBefore` 集合循环子策略）——网关运行时 `nodeOutputList` 恒空、分支选择落在
-> `extension.conditions[idx]`；集合子策略运行时节点类型为 `ChildFlowNode`（非文档假设的
-> `SubPolicyNode`/`CollectionSubPolicyNode`），子 token 落在 `extension.tokenIds[]`。
+> `subPolicies`）→ 降级不失败（证据缺失=`inconclusive`、值不符=`failed`；Parallel/Inclusive 网关、
+> 非集合循环普通子策略、以及集合循环的逐元素迭代语义(N>1)均未经实测，一律走降级不判失败）。
+> 决策工具、排他网关、`ChildFlowNode` 子策略调用形态均已三峡 `sxdb` 真实字节实测（2026-09-24：
+> `crossScoreFlow` 排他网关 + `bhjcpostMainBefore` 子策略调用）——网关运行时 `nodeOutputList` 恒空、
+> 分支选择落在 `extension.conditions[idx]`；子策略运行时节点类型为 `ChildFlowNode`（非文档假设的
+> `SubPolicyNode`/`CollectionSubPolicyNode`），子 token 落在 `extension.tokenIds[]`、子策略编码在
+> `extension.code`、输出集合字段为 `C_O_*` 序列化 JSON 数组。注：`bhjcpostMainBefore` 样本每
+> `ChildFlowNode` 的 `tokenIds` 长度 = 1、`C_O_*` 数组长度 = 1，仅证明"一次子策略调用"；集合循环
+> 的"按元素迭代(N>1)"需 `tokenIds.length>1` 或 `C_O_*` 输入集合 N>1 且子 token 数 = N 才能证实，
+> 本样本未覆盖。
 
 ## 常见问题（通用）
 
@@ -649,4 +653,4 @@ UUID/Token/childToken 三者的区别和获取方式见 [api-reference.md](api-r
 - [ant-design-tips.md](ant-design-tips.md) — Ant Design组件交互技巧
 - [scorecard-pls-testing.md](references/scorecard-pls-testing.md) — 评分卡类策略：`.pls` 解码 → 落地方案 → 分箱边界用例 → httpOnly 浏览器 fetch 真实执行 → `C_F_APPLYSCORE` 证据 → 五态报告；配套解码器 `scripts/decode_pls.py`
 - [decision-tool-testing.md](references/decision-tool-testing.md) — 引用决策工具（决策表/决策矩阵/决策树）的策略：默认已有落地文档 → 按类型铺分支用例（表行/矩阵单元格/树根→叶路径 + 阈值±ε，树默认分支可测、表 else 常不可达）→ 画布搭建/核对引用策略 → 可编程单笔执行取 `contextFields`/`fieldMap.nodeIdList` 证据 → 五态报告；未上线工具走 profile `?type=view` 只读；决策树 D_TREE schema 已锁定
-- [orchestration-testing.md](references/orchestration-testing.md) — 复杂编排策略（多节点链/网关/集合循环子策略）：`getAllCompontlog` 逐节点取证（`flowModelinAndOutputParams` 序为权威执行顺序）→ 四类 `expectedEvidence` 断言（`decisionTools`/`pathContains`/`nodeVisited`/`subPolicies`）→ 降级不失败；决策工具、排他网关、集合循环子策略证据均已三峡 `sxdb` 真实字节实测（2026-09-24），仅 Parallel/Inclusive 网关与非集合循环普通子策略仍为文档级
+- [orchestration-testing.md](references/orchestration-testing.md) — 复杂编排策略（多节点链/网关/集合循环子策略）：`getAllCompontlog` 逐节点取证（`flowModelinAndOutputParams` 序为权威执行顺序）→ 四类 `expectedEvidence` 断言（`decisionTools`/`pathContains`/`nodeVisited`/`subPolicies`）→ 降级不失败；决策工具、排他网关、`ChildFlowNode` 子策略调用形态均已三峡 `sxdb` 真实字节实测（2026-09-24），Parallel/Inclusive 网关、非集合循环普通子策略、集合循环的逐元素迭代语义(N>1) 仍为文档/推断级
