@@ -10,32 +10,30 @@
     --bg:#f4f1ec; --card:#ffffff; --ink:#2b2b2b; --muted:#7c776e;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:28px 16px 48px;line-height:1.5}
-  .wrap{max-width:820px;margin:0 auto}
-  header{text-align:center;margin-bottom:22px}
-  header h1{font-size:26px;letter-spacing:1px}
+  body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:30px 18px 40px;line-height:1.5}
+  .wrap{max-width:860px;margin:0 auto}
+  header{text-align:center;margin-bottom:16px}
+  header h1{font-size:27px;letter-spacing:1px}
   header p{color:var(--muted);margin-top:6px;font-size:14px}
-  .legend{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:14px 0 26px;font-size:12px;color:var(--muted)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:12px 0 24px;font-size:12px;color:var(--muted)}
   .legend span{display:inline-flex;align-items:center;gap:5px}
   .dot{width:11px;height:11px;border-radius:50%}
-  .day{background:var(--card);border-radius:16px;padding:20px 22px 26px;margin-bottom:22px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
-  .day-title{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid #eee;padding-bottom:12px;margin-bottom:6px}
+  .day{background:var(--card);border-radius:16px;padding:20px 24px 26px;margin-bottom:22px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+  .day-title{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid #eee;padding-bottom:12px;margin-bottom:8px;flex-wrap:wrap}
   .day-title .no{font-size:22px;font-weight:700}
   .day-title .route{font-size:13px;color:var(--muted)}
-  .time-hint{font-size:12px;color:var(--warn);margin:2px 0 12px 4px}
-  .track{position:relative;padding-left:20px}
-  .track::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:#e3ded6}
-  .stop{position:relative;padding:12px 0 12px 18px}
-  .stop::before{content:"";position:absolute;left:-16px;top:18px;width:13px;height:13px;border-radius:50%;background:var(--t,var(--muted));border:2px solid #fff;box-shadow:0 0 0 2px var(--t,#ccc)}
-  .stop .t{font-size:12px;font-weight:700;color:var(--t,var(--ink));letter-spacing:.5px}
-  .stop .name{font-size:16px;font-weight:600;margin-top:1px}
-  .stop .desc{font-size:13px;color:var(--muted);margin-top:3px}
+  .track{position:relative;padding-left:74px}
+  .stop{position:relative;padding:11px 0 11px 18px}
+  .stop::before{content:"";position:absolute;left:-14px;top:16px;width:13px;height:13px;border-radius:50%;background:var(--t,var(--muted));border:2px solid #fff;box-shadow:0 0 0 2px var(--t,#ccc)}
+  .track::before{content:"";position:absolute;left:-8px;top:8px;bottom:8px;width:2px;background:#e3ded6}
+  .clock{position:absolute;left:-74px;top:12px;width:60px;text-align:right;font-size:13px;font-weight:700;color:var(--t,var(--ink));font-variant-numeric:tabular-nums}
+  .name{font-size:16px;font-weight:600}
+  .desc{font-size:13px;color:var(--muted);margin-top:2px}
   .tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px;margin-left:6px;vertical-align:middle}
   .tag.food{background:#fdece5;color:var(--food)} .tag.shop{background:#e7f0fc;color:var(--shop)}
   .tag.sight{background:#e5f5ee;color:var(--sight)} .tag.transit{background:#eceef0;color:var(--transit)}
   .tag.todo{background:#fdeaea;color:var(--warn)}
-  .stop.todo{border-left:3px dashed var(--warn);padding-left:15px;margin-left:-3px;background:#fff8f7;border-radius:6px}
-  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:8px}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:6px}
   @media print{body{background:#fff}}
 </style>
 </head>
@@ -43,49 +41,51 @@
 <div class="wrap">
   <header>
     <h1>NO.1 香港 · 兩日行程圖</h1>
-    <p>10.1 旺角＋九龍　|　10.2 中環＋堅尼地城＋太平山頂　·　大本营：西九龍站 / 柯士甸</p>
+    <p>10.1 旺角＋九龍　|　10.2 中環＋堅尼地城＋太平山頂　·　大本營：西九龍站 / 柯士甸</p>
   </header>
   <div class="legend">
     <span><i class="dot" style="background:var(--food)"></i>食</span>
     <span><i class="dot" style="background:var(--shop)"></i>逛/買</span>
     <span><i class="dot" style="background:var(--sight)"></i>景點</span>
-    <span><i class="dot" style="background:var(--transit)"></i>交通</span>
-    <span><i class="dot" style="background:var(--warn)"></i>待核實 / 需補</span>
+    <span><i class="dot" style="background:var(--transit)"></i>交通/返程</span>
+    <span><i class="dot" style="background:var(--warn)"></i>出發前確認</span>
   </div>
 
   <!-- DAY 1 -->
   <section class="day">
-    <div class="day-title"><span class="no">10.1</span><span class="route">西九龍 → 旺角 → 大角咀 → 油麻地/佐敦 → 尖沙咀 → 返程</span></div>
-    <div class="time-hint">⚠ 全天步行串聯、站點偏多，建議加時間塊並預留 1–2 個可捨棄項</div>
+    <div class="day-title"><span class="no">Day 1 · 10.1</span><span class="route">旺角 → 大角咀 → 油麻地/佐敦 → 尖沙咀　末班高鐵 22:26</span></div>
     <div class="track">
-      <div class="stop" style="--t:var(--transit)"><div class="t">出發</div><div class="name">西九龍站 → 旺角<span class="tag transit">交通</span></div><div class="desc">荃灣線約10分鐘；柯士甸站步行約5分鐘換乘</div></div>
-      <div class="stop" style="--t:var(--food)"><div class="t">早餐/早午餐</div><div class="name">佳記餐廳<span class="tag food">食</span></div><div class="desc">旺角砵蘭街177-181號地下｜人均約42（幣種待統一）</div></div>
-      <div class="stop" style="--t:var(--shop)"><div class="t">上午–午</div><div class="name">朗豪坊 · 女人街<span class="tag shop">逛</span></div><div class="desc">朗豪坊地標商場；女人街(通菜街)12點後開檔、傍晚最熱鬧</div></div>
-      <div class="stop" style="--t:var(--sight)"><div class="t">午後</div><div class="name">大角咀<span class="tag sight">景</span></div><div class="desc">旺角步行約15分鐘；《麥兜》街景取景的舊街道/茶餐廳/天橋</div></div>
-      <div class="stop" style="--t:var(--sight)"><div class="t">午後</div><div class="name">油麻地果欄<span class="tag sight">景</span><span class="tag todo">時機注意</span></div><div class="desc">百年果批市場，實為凌晨/清晨最熱鬧，白天去偏空</div></div>
-      <div class="stop" style="--t:var(--food)"><div class="t">餐（待定）</div><div class="name">沙嗲王 · 彌敦道店<span class="tag food">食</span></div><div class="desc">招牌白咖喱香茅豬扒飯｜支持支付寶、八達通（早/晚餐定位待明確）</div></div>
-      <div class="stop" style="--t:var(--shop)"><div class="t">下午</div><div class="name">Don Don Donki<span class="tag shop">買</span><span class="tag todo">地址待核實</span></div><div class="desc">原文「尖沙咀站」與「旺角站E1出口」互相矛盾，先確認哪家店再歸位</div></div>
-      <div class="stop" style="--t:var(--sight)"><div class="t">傍晚–夜</div><div class="name">尖沙咀星光大道<span class="tag sight">景</span></div><div class="desc">麥兜、梅艷芳雕像；九龍公園東側長廊漫畫雕塑；維港夜景</div></div>
-      <div class="stop" style="--t:var(--transit)"><div class="t">返程</div><div class="name">尖沙咀 → 西九龍<span class="tag transit">交通</span><span class="tag todo">末班待填</span></div><div class="desc">預留出關+安檢約45–60分鐘，趕末班高鐵回深圳北</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">09:45</div><div class="name">西九龍站 → 旺角<span class="tag transit">交通</span></div><div class="desc">荃灣線約10分鐘；柯士甸站出站步行約5分鐘換乘</div></div>
+      <div class="stop" style="--t:var(--food)"><div class="clock">10:15</div><div class="name">佳記餐廳（旺角）<span class="tag food">食</span></div><div class="desc">砵蘭街177-181號地下的早午餐，人均約42港幣</div></div>
+      <div class="stop" style="--t:var(--shop)"><div class="clock">11:30</div><div class="name">朗豪坊 · 女人街<span class="tag shop">逛</span></div><div class="desc">朗豪坊地標商場；女人街(通菜街)12點後開檔、傍晚最熱鬧</div></div>
+      <div class="stop" style="--t:var(--sight)"><div class="clock">13:20</div><div class="name">大角咀<span class="tag sight">景</span></div><div class="desc">旺角步行約15分鐘；《麥兜》街景取景的舊街道/茶餐廳/天橋</div></div>
+      <div class="stop" style="--t:var(--sight)"><div class="clock">14:40</div><div class="name">油麻地果欄<span class="tag sight">景</span><span class="tag todo">備選</span></div><div class="desc">百年果批市場、小吃水果；真正熱鬧在凌晨，白天偏空可捨</div></div>
+      <div class="stop" style="--t:var(--food)"><div class="clock">16:00</div><div class="name">沙嗲王 · 彌敦道店<span class="tag food">食</span></div><div class="desc">招牌白咖喱香茅豬扒飯，支持支付寶、八達通</div></div>
+      <div class="stop" style="--t:var(--shop)"><div class="clock">17:15</div><div class="name">Don Don Donki<span class="tag shop">買</span><span class="tag todo">確認門店</span></div><div class="desc">日本零食、美妝、熟食；出發前確認去旺角店還是尖沙咀店再歸位</div></div>
+      <div class="stop" style="--t:var(--sight)"><div class="clock">18:15</div><div class="name">尖沙咀 · 星光大道<span class="tag sight">景</span></div><div class="desc">麥兜、梅艷芳雕像；九龍公園東側漫畫雕塑；維港夜景、20:00「幻彩詠香江」</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">21:00</div><div class="name">尖沙咀 → 西九龍<span class="tag transit">返程</span></div><div class="desc">看完夜景從容返程，港鐵約10分鐘；21:26前到站留足出關安檢</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">22:26</div><div class="name">末班高鐵 → 深圳北<span class="tag transit">返程</span></div><div class="desc">西九龍 22:26 發車</div></div>
     </div>
   </section>
 
   <!-- DAY 2 -->
   <section class="day">
-    <div class="day-title"><span class="no">10.2</span><span class="route">西九龍 → 中環 → 堅尼地城 → 太平山頂 → 返程</span></div>
-    <div class="time-hint">⚠ 標題含「堅尼地城」但原稿正文缺失——已作為午後段插入（下方虛線）</div>
+    <div class="day-title"><span class="no">Day 2 · 10.2</span><span class="route">中環 → 堅尼地城 → 太平山頂　末班高鐵 23:00</span></div>
     <div class="track">
-      <div class="stop" style="--t:var(--transit)"><div class="t">出發</div><div class="name">西九龍站 → 中環<span class="tag transit">交通</span></div><div class="desc">港鐵直達中環站</div></div>
-      <div class="stop" style="--t:var(--food)"><div class="t">早餐</div><div class="name">Fineprint（咖啡）<span class="tag food">食</span></div><div class="desc">中環蘇豪卑利街38號地鋪，清晨6點開門｜人均100–150港幣（原稿誤寫pineprint）</div></div>
-      <div class="stop" style="--t:var(--shop)"><div class="t">上午–午</div><div class="name">中環街市<span class="tag shop">逛</span></div><div class="desc">舊街市改造的文創空間，特色小店+美食</div></div>
-      <div class="stop" style="--t:var(--food)"><div class="t">下午</div><div class="name">Vission Bakery<span class="tag food">食</span></div><div class="desc">開心果撻、酥皮點心｜(可選) c-dessert 龍眼冰 — 太遠就捨棄</div></div>
-      <div class="stop todo" style="--t:var(--warn)"><div class="t">午後–黃昏（新增）</div><div class="name">堅尼地城<span class="tag todo">補排</span></div><div class="desc">中環搭港島線/叮叮車約20分鐘；海旁、咖啡、池畔餐廳，填補午飯到17:00上山前空檔</div></div>
-      <div class="stop" style="--t:var(--sight)"><div class="t">17:00前</div><div class="name">太平山頂<span class="tag sight">景</span></div><div class="desc">上山坐右側視野佳；山頂走盧吉道免費步道360°俯瞰維港，一次收白天/日落/夜景（日落前走完更安全）</div></div>
-      <div class="stop" style="--t:var(--transit)"><div class="t">返程</div><div class="name">中環 → 西九龍<span class="tag transit">交通</span><span class="tag todo">末班待填</span></div><div class="desc">同樣預留出關與候車時間</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">08:30</div><div class="name">西九龍站 → 中環<span class="tag transit">交通</span></div><div class="desc">港鐵直達中環站</div></div>
+      <div class="stop" style="--t:var(--food)"><div class="clock">09:00</div><div class="name">Fineprint（咖啡）<span class="tag food">食</span></div><div class="desc">中環蘇豪卑利街38號地鋪，清晨6點開門；澳式風格，人均100-150港幣</div></div>
+      <div class="stop" style="--t:var(--shop)"><div class="clock">10:00</div><div class="name">中環街市<span class="tag shop">逛</span></div><div class="desc">舊街市改造的文創空間，特色小店與美食</div></div>
+      <div class="stop" style="--t:var(--food)"><div class="clock">11:00</div><div class="name">Vission Bakery<span class="tag food">食</span><span class="tag todo">備選</span></div><div class="desc">開心果撻、酥皮點心；c-dessert龍眼冰太遠即放棄</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">11:45</div><div class="name">中環 → 堅尼地城<span class="tag transit">交通</span></div><div class="desc">港島線或叮叮車，約20-30分鐘</div></div>
+      <div class="stop" style="--t:var(--sight)"><div class="clock">12:15</div><div class="name">堅尼地城<span class="tag sight">景</span><span class="tag food">食</span></div><div class="desc">海旁散步、咖啡、池畔餐廳含午餐，港島西岸日落機位</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">15:00</div><div class="name">堅尼地城 → 中環 → 山頂<span class="tag transit">交通</span></div><div class="desc">折返中環，花園道纜車總站上山，坐右側視野佳、需排隊</div></div>
+      <div class="stop" style="--t:var(--sight)"><div class="clock">16:30</div><div class="name">太平山頂<span class="tag sight">景</span></div><div class="desc">17:00前到；盧吉道免費步道360°俯瞰維港，白天→日落(約18:15)→夜景一次看全</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">20:45</div><div class="name">山頂 → 中環 → 西九龍<span class="tag transit">返程</span></div><div class="desc">看滿夜景再下山；纜車/巴士回中環，港鐵約25分鐘，21:45前到站</div></div>
+      <div class="stop" style="--t:var(--transit)"><div class="clock">23:00</div><div class="name">末班高鐵 → 深圳北<span class="tag transit">返程</span></div><div class="desc">西九龍 23:00 發車，出關候車充裕</div></div>
     </div>
   </section>
 
-  <footer>紅字為待核實/需補事項　·　10月仍炎熱且是颱風季，備應變方案；全程步行多，穿舒適鞋</footer>
+  <footer>10月炎熱且颱風季，備應變方案；全程步行多，穿舒適鞋；随身留少量港幣現金（小店/叮叮車常用）</footer>
 </div>
 </body>
 </html>
