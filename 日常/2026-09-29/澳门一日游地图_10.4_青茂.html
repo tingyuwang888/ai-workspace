@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>澳门一日游 · 真实地图标注 (10.4 青茂口岸)</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html,body{margin:0;height:100%;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  #app{display:flex;height:100%}
+  #map{flex:1;height:100%}
+  #side{width:300px;height:100%;overflow:auto;background:#fff;border-left:1px solid #ddd;padding:14px 16px;box-sizing:border-box}
+  #side h1{font-size:16px;margin:0 0 2px}
+  #side .sub{font-size:12px;color:#666;margin-bottom:10px}
+  ol{padding-left:0;margin:0;list-style:none}
+  li{font-size:12.5px;margin:6px 0;line-height:1.4;display:flex;gap:8px;align-items:flex-start}
+  .num{color:#fff;border-radius:50%;width:20px;height:20px;flex:0 0 20px;text-align:center;line-height:20px;font-size:11px;font-weight:700;margin-top:1px}
+  .warn{color:#d32f2f;font-weight:600}
+  .leg{margin-top:14px;border-top:1px solid #eee;padding-top:10px;font-size:12px}
+  .leg .row{margin:5px 0}
+  .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .ln{display:inline-block;width:22px;height:0;border-top:3px solid;margin-right:5px;vertical-align:middle}
+  .mk{width:28px;height:28px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;line-height:28px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+</style></head>
+<body><div id="app">
+  <div id="map"></div>
+  <div id="side">
+    <h1>澳门一日游 · 真实地图</h1>
+    <div class="sub">10.4(周日) · 青茂口岸进出 · 世遗线南→北 · 公交/轻轨优先</div>
+    <ol><li><span class="num" style="background:#455a64">1</span><b>青茂口岸</b> — 24小时通关·一次放行</li><li><span class="num" style="background:#0277bd">2</span><b>妈阁庙</b> — 1488年始建·世遗线起点</li><li><span class="num" style="background:#0277bd">3</span><b>郑家大屋·亚婆井</b> — 郑观应故居</li><li><span class="num" style="background:#0277bd">4</span><b>圣老楞佐教堂·岗顶</b> — 四大古教堂之一</li><li><span class="num" style="background:#c2185b">5</span><b>议事亭前地·玫瑰堂</b> — 玫瑰堂免费入内</li><li><span class="num" style="background:#0277bd">6</span><b>大三巴·大炮台</b> — 澳门博物馆(免费)</li><li><span class="num" style="background:#e8590c">7</span><b>午餐·番茄屋</b> —  <span class="warn">分店待核实</span></li><li><span class="num" style="background:#7b1fa2">8</span><b>东望洋灯塔</b> —  <span class="warn">灯塔不开放·东望洋新街机位</span></li><li><span class="num" style="background:#c2185b">9</span><b>疯堂斜巷</b> — 望德堂区·拍照</li><li><span class="num" style="background:#7b1fa2">10</span><b>新葡京·永利澳门</b> — 赌场·发财树·喷泉</li><li><span class="num" style="background:#e8590c">11</span><b>官也街</b> — 氹仔旧城区·晚餐</li><li><span class="num" style="background:#7b1fa2">12</span><b>伦敦人</b> — 皇家卫兵换岗</li><li><span class="num" style="background:#7b1fa2">13</span><b>永利皇宫</b> — 音乐喷泉·观光缆车</li><li><span class="num" style="background:#c2185b">14</span><b>威尼斯人·巴黎人</b> — 大运河·铁塔夜景</li></ol>
+    <div class="leg">
+      <div class="row"><span class="ln" style="border-top-style:solid;border-color:#34a853"></span>世遗区内步行</div>
+      <div class="row"><span class="ln" style="border-top-style:dashed;border-color:#0288d1"></span>跨区公交/轻轨</div>
+      <div class="row"><span class="sw" style="background:#455a64"></span>通关 <span class="sw" style="background:#0277bd"></span>世遗古迹 <span class="sw" style="background:#7b1fa2"></span>景点/表演</div>
+      <div class="row"><span class="sw" style="background:#c2185b"></span>逛街/拍照 <span class="sw" style="background:#e8590c"></span>美食</div>
+      <div class="row" style="color:#888;font-size:11px;margin-top:8px">底图 © Esri World Street Map · 站点坐标 OpenStreetMap/Photon</div>
+    </div>
+  </div>
+</div>
+<script>
+var POS={"1": [22.21316, 113.54188], "2": [22.186109, 113.531267], "3": [22.188587, 113.534413], "4": [22.190671, 113.536764], "5": [22.193827, 113.53999], "6": [22.197457, 113.54086], "7": [22.191, 113.538], "8": [22.196436, 113.549706], "9": [22.1997, 113.5464], "10": [22.190932, 113.543376], "11": [22.153585, 113.556974], "12": [22.147527, 113.565638], "13": [22.148099, 113.571403], "14": [22.1482, 113.560472]};
+var map=L.map('map').setView([22.187,113.545],14);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{attribution:'Esri',maxZoom:19}).addTo(map);
+L.polyline([POS[1],POS[2]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[2],POS[3]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[3],POS[4]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[4],POS[5]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[5],POS[6]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[6],POS[7]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[7],POS[8]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[8],POS[9]],{color:'#34a853',weight:5,dashArray:'0',opacity:.9}).addTo(map);;L.polyline([POS[9],POS[10]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[10],POS[11]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[11],POS[12]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[12],POS[13]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);;L.polyline([POS[13],POS[14]],{color:'#0288d1',weight:4,dashArray:'5,7',opacity:.9}).addTo(map);
+L.marker([22.213160,113.541880],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#455a64\">1</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>1. 青茂口岸</b><br>24小时通关·一次放行');;L.marker([22.186109,113.531267],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#0277bd\">2</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>2. 妈阁庙</b><br>1488年始建·世遗线起点');;L.marker([22.188587,113.534413],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#0277bd\">3</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>3. 郑家大屋·亚婆井</b><br>郑观应故居');;L.marker([22.190671,113.536764],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#0277bd\">4</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>4. 圣老楞佐教堂·岗顶</b><br>四大古教堂之一');;L.marker([22.193827,113.539990],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#c2185b\">5</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>5. 议事亭前地·玫瑰堂</b><br>玫瑰堂免费入内');;L.marker([22.197457,113.540860],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#0277bd\">6</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>6. 大三巴·大炮台</b><br>澳门博物馆(免费)');;L.marker([22.191000,113.538000],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#e8590c\">7</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>7. 午餐·番茄屋</b><br>分店待核实');;L.marker([22.196436,113.549706],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#7b1fa2\">8</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>8. 东望洋灯塔</b><br>灯塔不开放·东望洋新街机位');;L.marker([22.199700,113.546400],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#c2185b\">9</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>9. 疯堂斜巷</b><br>望德堂区·拍照');;L.marker([22.190932,113.543376],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#7b1fa2\">10</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>10. 新葡京·永利澳门</b><br>赌场·发财树·喷泉');;L.marker([22.153585,113.556974],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#e8590c\">11</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>11. 官也街</b><br>氹仔旧城区·晚餐');;L.marker([22.147527,113.565638],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#7b1fa2\">12</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>12. 伦敦人</b><br>皇家卫兵换岗');;L.marker([22.148099,113.571403],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#7b1fa2\">13</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>13. 永利皇宫</b><br>音乐喷泉·观光缆车');;L.marker([22.148200,113.560472],{icon:L.divIcon({className:'',html:'<div class=\"mk\" style=\"background:#c2185b\">14</div>',iconSize:[28,28],iconAnchor:[14,14]})}).addTo(map).bindPopup('<b>14. 威尼斯人·巴黎人</b><br>大运河·铁塔夜景');
+map.fitBounds(Object.values(POS),{padding:[45,45]});
+</script>
+</body></html>
