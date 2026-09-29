@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root{--d1:#e8734a;--d2:#3b6fd4;--ink:#2b2b2b;--muted:#7c776e;--bg:#f4f1ec}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:22px}
+  .head{text-align:center;margin-bottom:14px}
+  .head h1{font-size:24px;letter-spacing:.5px}
+  .head p{font-size:13px;color:var(--muted);margin-top:4px}
+  .board{display:flex;gap:16px;max-width:1240px;margin:0 auto}
+  #map{flex:1 1 auto;height:820px;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.08);z-index:0}
+  .side{flex:0 0 320px;display:flex;flex-direction:column;gap:12px}
+  .card{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+  .card h2{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .card h2 .bar{width:14px;height:14px;border-radius:4px}
+  .d1 h2 .bar{background:var(--d1)} .d2 h2 .bar{background:var(--d2)}
+  .card .sub{font-size:11px;color:var(--muted);font-weight:400}
+  ol{list-style:none;counter-reset:n}
+  li{display:flex;gap:9px;align-items:flex-start;padding:5px 0;font-size:12.5px;line-height:1.35;border-bottom:1px dashed #eee}
+  li:last-child{border-bottom:none}
+  .num{flex:0 0 20px;height:20px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .d1 .num{background:var(--d1)} .d2 .num{background:var(--d2)}
+  .li-t{color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 42px;font-weight:700}
+  .foot{max-width:1240px;margin:12px auto 0;font-size:11px;color:var(--muted);text-align:center}
+  .pin{background:none;border:none}
+  .pin span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+  .pin.d1 span{background:var(--d1)} .pin.d2 span{background:var(--d2)}
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>NO.1 香港 · 兩日行程地圖標注</h1>
+    <p>10.1 旺角＋九龍（橙）　|　10.2 中環＋堅尼地城＋太平山頂（藍）　·　大本營：西九龍站</p>
+  </div>
+  <div class="board">
+    <div id="map"></div>
+    <div class="side">
+      <div class="card d1"><h2><span class="bar"></span>Day 1 · 10.1 旺角＋九龍 <span class="sub">末班 22:26</span></h2><ol id="list1"></ol></div>
+      <div class="card d2"><h2><span class="bar"></span>Day 2 · 10.2 中環＋山頂 <span class="sub">末班 23:00</span></h2><ol id="list2"></ol></div>
+    </div>
+  </div>
+  <div class="foot">底圖 © Esri / OpenStreetMap　·　標記坐標為近似值，僅供行程可視化參考</div>
+
+<script>
+const D1=[
+ {t:"09:45",n:"西九龍站 → 旺角",c:[22.3040,114.1620]},
+ {t:"10:15",n:"佳記餐廳（早午餐）",c:[22.3198,114.1688]},
+ {t:"11:30",n:"朗豪坊 · 女人街",c:[22.3178,114.1704]},
+ {t:"13:20",n:"大角咀（麥兜街景）",c:[22.3150,114.1610]},
+ {t:"14:40",n:"油麻地果欄（備選）",c:[22.3118,114.1698]},
+ {t:"16:00",n:"沙嗲王 · 彌敦道",c:[22.3185,114.1700]},
+ {t:"17:15",n:"Don Don Donki",c:[22.3205,114.1710]},
+ {t:"18:15",n:"尖沙咀 · 星光大道",c:[22.2950,114.1778]},
+ {t:"22:26",n:"西九龍 → 深圳北",c:[22.3040,114.1620]},
+];
+const D2=[
+ {t:"08:30",n:"西九龍站 → 中環",c:[22.3040,114.1620]},
+ {t:"09:00",n:"Fineprint（卑利街）",c:[22.2835,114.1525]},
+ {t:"10:00",n:"中環街市",c:[22.2843,114.1558]},
+ {t:"11:00",n:"Vission Bakery",c:[22.2830,114.1545]},
+ {t:"12:15",n:"堅尼地城（海旁/午餐）",c:[22.2820,114.1270]},
+ {t:"15:45",n:"山頂纜車花園道總站",c:[22.2770,114.1550]},
+ {t:"16:30",n:"太平山頂（日落+夜景）",c:[22.2758,114.1451]},
+ {t:"23:00",n:"中環 → 西九龍 → 深圳北",c:[22.3040,114.1620]},
+];
+
+const map=L.map('map',{zoomControl:true,scrollWheelZoom:false,attributionControl:true}).setView([22.30,114.155],13);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'© Esri, OpenStreetMap'}).addTo(map);
+
+function pin(day,i){return L.divIcon({className:'pin '+day,html:'<span>'+(i+1)+'</span>',iconSize:[26,26],iconAnchor:[13,13]});}
+function draw(data,color,cls,listId){
+  const pts=[];
+  data.forEach((d,i)=>{
+    L.marker(d.c,{icon:pin(cls,i)}).addTo(map).bindTooltip(d.t+' '+d.n,{direction:'top',offset:[0,-10]});
+    pts.push(d.c);
+    const li=document.createElement('li');
+    li.innerHTML='<span class="num">'+(i+1)+'</span><span class="li-t">'+d.t+'</span><span>'+d.n+'</span>';
+    document.getElementById(listId).appendChild(li);
+  });
+  L.polyline(pts,{color:color,weight:3,opacity:.85,dashArray:'6,6'}).addTo(map);
+}
+draw(D1,'#e8734a','d1','list1');
+draw(D2,'#3b6fd4','d2','list2');
+
+const all=D1.map(d=>d.c).concat(D2.map(d=>d.c));
+map.fitBounds(L.latLngBounds(all).pad(0.12));
+</script>
+</body>
+</html>
