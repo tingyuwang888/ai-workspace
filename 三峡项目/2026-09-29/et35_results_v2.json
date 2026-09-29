@@ -1,0 +1,910 @@
+[
+  {
+    "caseId": "TC_606",
+    "bizid": "TC_FLOW_001",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_001",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_607",
+    "bizid": "TC_FLOW_002",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_002",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_608",
+    "bizid": "TC_FLOW_003",
+    "bizscene": "债券类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_003",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_609",
+    "bizid": "TC_FLOW_004",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_004",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_610",
+    "bizid": "TC_FLOW_005",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_005",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_611",
+    "bizid": "TC_FLOW_006",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_006",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_612",
+    "bizid": "TC_FLOW_007",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_007",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_613",
+    "bizid": "TC_FLOW_008",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_008",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_614",
+    "bizid": "TC_FLOW_009",
+    "bizscene": "非融类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_009",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_615",
+    "bizid": "TC_FLOW_010",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_010",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_618",
+    "bizid": "TC_FLOW_013",
+    "bizscene": "借款类",
+    "enterprisetype": "外资",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_013",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_619",
+    "bizid": "TC_FLOW_014",
+    "bizscene": "未知类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_014",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_620",
+    "bizid": "TC_FLOW_015",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_015",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_621",
+    "bizid": "TC_FLOW_016",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_016",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_622",
+    "bizid": "TC_FLOW_017",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_017",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_623",
+    "bizid": "TC_FLOW_018",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_018",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_624",
+    "bizid": "TC_FLOW_019",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_019",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_625",
+    "bizid": "TC_FLOW_020",
+    "bizscene": "其他类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_020",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_626",
+    "bizid": "TC_FLOW_021",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_FLOW_021",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_637",
+    "bizid": "TC_COMB_001",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_001",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_638",
+    "bizid": "TC_COMB_002",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_002",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_639",
+    "bizid": "TC_COMB_003",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_003",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_640",
+    "bizid": "TC_COMB_004",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_004",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_641",
+    "bizid": "TC_COMB_005",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_005",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_642",
+    "bizid": "TC_COMB_006",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_006",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_643",
+    "bizid": "TC_COMB_007",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_007",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_644",
+    "bizid": "TC_COMB_008",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_008",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_645",
+    "bizid": "TC_COMB_009",
+    "bizscene": "债券类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_009",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_646",
+    "bizid": "TC_COMB_010",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_010",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_647",
+    "bizid": "TC_COMB_011",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_011",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_648",
+    "bizid": "TC_COMB_012",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_012",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_649",
+    "bizid": "TC_COMB_013",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_013",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_650",
+    "bizid": "TC_COMB_014",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_014",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_651",
+    "bizid": "TC_COMB_015",
+    "bizscene": "非融类",
+    "enterprisetype": "国企",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_015",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  },
+  {
+    "caseId": "TC_652",
+    "bizid": "TC_COMB_016",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "captured": true,
+    "status": 1,
+    "reasonCode": 200,
+    "echoBizId": "TC_COMB_016",
+    "finalDecisionCode": "greenwarnbh",
+    "finalDecisionName": "绿色预警",
+    "ruleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "channel": "保后检查",
+    "note": "全部业务负面/征信规则集被调用但 hit=false; 仅 alertLevelJudgment 命中绿色预警"
+  }
+]

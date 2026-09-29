@@ -1,0 +1,993 @@
+[
+  {
+    "caseId": "TC_606",
+    "bizid": "TC_FLOW_001",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitLoanSoe",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntLawsuitLoanSoe",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingSoe, bhjcEntLawsuitLoanSoe, bhjcRelatedRiskFinancingSoe"
+  },
+  {
+    "caseId": "TC_607",
+    "bizid": "TC_FLOW_002",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitLoanPriv",
+      "bhjcEntNegativeLoan",
+      "bhjcPerLawsuitLoanEntrustPriv",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntLawsuitLoanPriv",
+      "bhjcPerLawsuitLoanEntrustPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingPriv, bhjcEntLawsuitLoanPriv, bhjcPerLawsuitLoanEntrustPriv, bhjcPrivateCounterGuarantee"
+  },
+  {
+    "caseId": "TC_608",
+    "bizid": "TC_FLOW_003",
+    "bizscene": "债券类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingSoe, bhjcEntLawsuitBelSoe, bhjcRelatedRiskFinancingSoe"
+  },
+  {
+    "caseId": "TC_609",
+    "bizid": "TC_FLOW_004",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelPriv",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingPriv"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntLawsuitBelPriv"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingPriv, bhjcEntLawsuitBelPriv"
+  },
+  {
+    "caseId": "TC_610",
+    "bizid": "TC_FLOW_005",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingSoe, bhjcEntLawsuitBelSoe, bhjcRelatedRiskFinancingSoe"
+  },
+  {
+    "caseId": "TC_611",
+    "bizid": "TC_FLOW_006",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelPriv",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitLoanEntrustPriv",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntLawsuitBelPriv",
+      "bhjcPerLawsuitLoanEntrustPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingPriv, bhjcEntLawsuitBelPriv, bhjcPerLawsuitLoanEntrustPriv, bhjcPrivateCounterGuarantee"
+  },
+  {
+    "caseId": "TC_612",
+    "bizid": "TC_FLOW_007",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingSoe",
+      "bhjcEntLawsuitBelSoe",
+      "bhjcRelatedRiskFinancingSoe"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingSoe, bhjcEntLawsuitBelSoe, bhjcRelatedRiskFinancingSoe"
+  },
+  {
+    "caseId": "TC_613",
+    "bizid": "TC_FLOW_008",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitBelPriv",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll",
+      "bhjcRelatedRiskFinancingPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicFinancingPriv",
+      "bhjcEntLawsuitBelPriv",
+      "bhjcPrivateCounterGuarantee"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicFinancingPriv, bhjcEntLawsuitBelPriv, bhjcPrivateCounterGuarantee"
+  },
+  {
+    "caseId": "TC_614",
+    "bizid": "TC_FLOW_009",
+    "bizscene": "非融类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicNonfinancingSoe",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitNonfSoe",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicNonfinancingSoe",
+      "bhjcEntLawsuitNonfSoe"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicNonfinancingSoe, bhjcEntLawsuitNonfSoe"
+  },
+  {
+    "caseId": "TC_615",
+    "bizid": "TC_FLOW_010",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": [
+      "bhjcEntBasicNonfinancingPriv",
+      "bhjcEntCreditAll",
+      "bhjcEntLawsuitNonfPriv",
+      "bhjcEntNegativeBelni",
+      "bhjcPerLawsuitBni",
+      "bhjcPerNegativeAll"
+    ],
+    "unreachedRuleSets": [
+      "bhjcEntBasicNonfinancingPriv",
+      "bhjcEntLawsuitNonfPriv"
+    ],
+    "verdict": "编排阻塞",
+    "basis": "设计预期规则集在接口服务路径(清空mock)下从未被执行: bhjcEntBasicNonfinancingPriv, bhjcEntLawsuitNonfPriv"
+  },
+  {
+    "caseId": "TC_618",
+    "bizid": "TC_FLOW_013",
+    "bizscene": "借款类",
+    "enterprisetype": "外资",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "预期企业子策略走DEFAULT; 实测企业子策略按业务场景(借款类)进入bhjcEntNegativeLoan, DEFAULT分支不因企业类型=外资而到达(DEFAULT由场景驱动,非企业类型驱动)"
+  },
+  {
+    "caseId": "TC_619",
+    "bizid": "TC_FLOW_014",
+    "bizscene": "未知类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "未知类下企业子策略走DEFAULT(无企业负面规则集执行)且最终绿色, 与'三子策略均走DEFAULT/无命中'一致"
+  },
+  {
+    "caseId": "TC_620",
+    "bizid": "TC_FLOW_015",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "预期企业子策略(国企投资类资管)分支被调用; 实测关联风险一律走bhjcRelatedRiskFinancingPriv, 国企/Soe分支及bhjcEntBasic*/bhjcEntLawsuit*规则集在接口路径下均未执行"
+  },
+  {
+    "caseId": "TC_621",
+    "bizid": "TC_FLOW_016",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "企业子策略被调用且关联风险走bhjcRelatedRiskFinancingPriv(民营分支可达), 与'民营投资类分支被调用'一致"
+  },
+  {
+    "caseId": "TC_622",
+    "bizid": "TC_FLOW_017",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "预期企业子策略(国企投资类非资管)分支被调用; 实测关联风险一律走bhjcRelatedRiskFinancingPriv, 国企/Soe分支及bhjcEntBasic*/bhjcEntLawsuit*规则集在接口路径下均未执行"
+  },
+  {
+    "caseId": "TC_623",
+    "bizid": "TC_FLOW_018",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "企业子策略被调用且关联风险走bhjcRelatedRiskFinancingPriv(民营分支可达), 与'民营投资类分支被调用'一致"
+  },
+  {
+    "caseId": "TC_624",
+    "bizid": "TC_FLOW_019",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "PLEP相关规则集(bhjcPerLawsuitLoanEntrustPriv/bhjcPrivateCounterGuarantee)确未执行, 符合'不进入PLEP规则集(仅民营)'"
+  },
+  {
+    "caseId": "TC_625",
+    "bizid": "TC_FLOW_020",
+    "bizscene": "其他类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "其他类下企业子策略DEFAULT、无规则命中、最终绿色; 个人负面规则集被调用但hit=false(命中维度不可达,见结论), 按'无命中绿色'判定通过"
+  },
+  {
+    "caseId": "TC_626",
+    "bizid": "TC_FLOW_021",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "决策流分支覆盖",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "三子策略均被执行、未见循环函数被额外触发(各子策略单次进入), '其他子策略正常'成立"
+  },
+  {
+    "caseId": "TC_637",
+    "bizid": "TC_COMB_001",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_638",
+    "bizid": "TC_COMB_002",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_639",
+    "bizid": "TC_COMB_003",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_640",
+    "bizid": "TC_COMB_004",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_641",
+    "bizid": "TC_COMB_005",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_642",
+    "bizid": "TC_COMB_006",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "编排阻塞",
+    "basis": "设计为'多规则同时命中EBGS/ECGX/ELLS/PLEP等→整体高/中风险等级'; 清空后的企查查mock对任意主体均不返回负面数据, 该接口服务路径无法按用例注入这些负面命中信号, 命中前提不可达(非用例无效)"
+  },
+  {
+    "caseId": "TC_643",
+    "bizid": "TC_COMB_007",
+    "bizscene": "借款类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_644",
+    "bizid": "TC_COMB_008",
+    "bizscene": "借款类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeLoan",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_645",
+    "bizid": "TC_COMB_009",
+    "bizscene": "债券类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_646",
+    "bizid": "TC_COMB_010",
+    "bizscene": "债券类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_647",
+    "bizid": "TC_COMB_011",
+    "bizscene": "委贷类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_648",
+    "bizid": "TC_COMB_012",
+    "bizscene": "委贷类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_649",
+    "bizid": "TC_COMB_013",
+    "bizscene": "投资类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_650",
+    "bizid": "TC_COMB_014",
+    "bizscene": "投资类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_651",
+    "bizid": "TC_COMB_015",
+    "bizscene": "非融类",
+    "enterprisetype": "国企",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  },
+  {
+    "caseId": "TC_652",
+    "bizid": "TC_COMB_016",
+    "bizscene": "非融类",
+    "enterprisetype": "民营",
+    "caseType": "正案例",
+    "group": "跨子策略综合",
+    "finalDecision": "greenwarnbh",
+    "executedRuleSets": [
+      "bhjcEntCreditAll",
+      "bhjcEntNegativeBelni",
+      "bhjcPerNegativeAll",
+      "bhjcPerLawsuitBni",
+      "bhjcRelatedRiskFinancingPriv",
+      "alertLevelJudgment"
+    ],
+    "hitRuleSets": [
+      "alertLevelJudgment"
+    ],
+    "negativeHit": false,
+    "expectedRuleSets": null,
+    "unreachedRuleSets": [],
+    "verdict": "通过",
+    "basis": "预期'三子策略均调用+无规则命中+最终绿色'; 实测企业+个人+关联企业子策略均执行、全部业务规则集hit=false、最终绿色预警, 与预期完全一致(TC_650/651/652初判405109系渠道标识复位所致, 恢复后复跑为绿色)"
+  }
+]
