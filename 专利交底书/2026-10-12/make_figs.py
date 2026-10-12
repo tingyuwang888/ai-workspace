@@ -98,11 +98,11 @@ for i,f in enumerate(fields):
 s.box(400, 70, 530, 550, "跨控制面引用图（示例）", "#f7f7fb", "#8a8ab0", fs=16)
 def node(x,y,w,h,lines,fill="#ffffff",stroke="#555"):
     s.rect(x,y,w,h,lines,fill,stroke,13)
-node(430,120,150,55,["Deployment","bifrost@risk-prod"],"#eafaf0","#2e9e5b")
+node(430,120,150,55,["Deployment","service-A@target-env"],"#eafaf0","#2e9e5b")
 node(430,240,150,55,["镜像内置 Nginx","proxy_pass"],"#fff3ea","#d97a2b")
-node(690,120,150,55,["Service","bifrost@risk-dev"],"#fdecec","#c0392b")
+node(690,120,150,55,["Service","service-A@source-env"],"#fdecec","#c0392b")
 node(690,240,150,55,["Nacos 配置","datasource.url"],"#fff3ea","#d97a2b")
-node(690,360,150,55,["数据库","risk_dev @ test"],"#fdecec","#c0392b")
+node(690,360,150,55,["数据库","database-A @ test"],"#fdecec","#c0392b")
 node(430,360,150,55,["外部清单","节点角色"],"#eef4ff","#3b6fb5")
 s.arrow(580,147,690,147,"引用", "#c0392b")
 s.arrow(505,175,505,240,"uses","#2e9e5b")
@@ -135,7 +135,7 @@ s.save("fig3")
 
 # ---------- 图4 环境标签推导与归一 ----------
 s = SVG(960, 560)
-prio = ["① 人工映射表（显式声明，最高）","② Namespace 名称（risk-dev / risk-prod）","③ 节点标签（K8s node label 环境维度）","④ Nacos 实例 / 命名空间","⑤ Harbor 项目","⑥ 镜像标签 / 集群名 命名约定"]
+prio = ["① 人工映射表（显式声明，最高）","② Namespace 名称（source-env / target-env）","③ 节点标签（K8s node label 环境维度）","④ Nacos 实例 / 命名空间","⑤ Harbor 项目","⑥ 镜像标签 / 集群名 命名约定"]
 for i,p in enumerate(prio):
     s.rect(40, 80+i*54, 470, 44, [p], "#eef4ff" if i==0 else "#ffffff", "#3b6fb5", 13)
     if i<len(prio)-1:
@@ -181,8 +181,8 @@ s.save("fig5")
 # ---------- 图6 静态/运行态语义比对与分级 ----------
 s = SVG(960, 560)
 s.rect(40, 80, 250, 54, ["前置：同一 scan_id / 有效窗口内", "跨窗或超过 valid_until → 转 warn"], "#f5f9ff", "#8fb3d9", 12, bold_first=True)
-s.rect(40, 158, 250, 54, ["declared_target（静态声明）","如 bifrost.risk-prod.svc.cluster.local"], "#eef4ff", "#3b6fb5", 11, bold_first=True)
-s.rect(40, 232, 250, 54, ["observed_target（运行观测）","如 ClusterIP 10.96.23.18 / UID"], "#fff3ea", "#d97a2b", 11, bold_first=True)
+s.rect(40, 158, 250, 54, ["declared_target（静态声明）","如 service-A.target-env.svc.cluster.local"], "#eef4ff", "#3b6fb5", 11, bold_first=True)
+s.rect(40, 232, 250, 54, ["observed_target（运行观测）","如 ClusterIP IP-A / UID"], "#fff3ea", "#d97a2b", 11, bold_first=True)
 s.arrow(290,185,360,190); s.arrow(290,259,360,215)
 s.rect(360, 165, 180, 78, ["分别归一为","同一 target_entity","（别名表）"], "#eafaf0", "#2e9e5b", 12, bold_first=True)
 s.arrow(540,204,610,204)
