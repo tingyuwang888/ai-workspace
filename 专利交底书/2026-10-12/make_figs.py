@@ -66,7 +66,6 @@ class SVG:
 
 # ---------- 图1 系统三层架构 ----------
 s = SVG(960, 640)
-s.text(30, 40, "图1  系统三层架构与处理链路", 20, "#12314f", bold=True)
 s.box(30, 60, 900, 120, "采集层（面向多控制面的采集器）", "#eafaf0", "#2e9e5b", fs=17)
 cols = ["编排\n采集器","配置中心\n采集器","镜像内置\n采集器","代理入口\n采集器","持久层\n采集器","镜像仓库\n采集器","外部清单\n采集器"]
 for i,c in enumerate(cols):
@@ -91,7 +90,6 @@ s.save("fig1")
 
 # ---------- 图2 统一环境引用记录与引用图 ----------
 s = SVG(960, 640)
-s.text(30, 40, "图2  统一环境引用记录与跨控制面引用图结构", 20, "#12314f", bold=True)
 s.box(30, 70, 330, 550, "统一环境引用记录", "#eef4ff", "#3b6fb5", fs=16)
 fields = ["resource_id","source_control_plane","ref_field","ref_type","declared_target_ref","declared_target_entity","observed_target_ref（可空）","observed_target_entity（可空）","target_version / target_digest","runtime_status（非引用目标）","declared_env_tag","observed_env_tags（可空）","resolved_env_tag","resolution_source","tag_conflict","scan_id","collected_at","resource_version","valid_until","evidence_source"]
 for i,f in enumerate(fields):
@@ -118,7 +116,6 @@ s.save("fig2")
 
 # ---------- 图3 目标实体规范化与引用解析 ----------
 s = SVG(960, 640)
-s.text(30, 40, "图3  目标实体规范化与引用解析流程", 20, "#12314f", bold=True)
 s.rect(40, 80, 200, 60, ["target_ref（原始引用串）"], "#eef4ff", "#3b6fb5", 15, bold_first=True)
 s.arrow(240,110,300,110)
 s.rect(300, 70, 200, 80, ["按 ref_type","分派解析器"], "#fff3ea", "#d97a2b", 15, bold_first=True)
@@ -138,7 +135,6 @@ s.save("fig3")
 
 # ---------- 图4 环境标签推导与归一 ----------
 s = SVG(960, 560)
-s.text(30, 40, "图4  环境标签推导、归一优先级与冲突保留", 20, "#12314f", bold=True)
 prio = ["① 人工映射表（显式声明，最高）","② Namespace 名称（risk-dev / risk-prod）","③ 节点标签（K8s node label 环境维度）","④ Nacos 实例 / 命名空间","⑤ Harbor 项目","⑥ 镜像标签 / 集群名 命名约定"]
 for i,p in enumerate(prio):
     s.rect(40, 80+i*54, 470, 44, [p], "#eef4ff" if i==0 else "#ffffff", "#3b6fb5", 13)
@@ -153,7 +149,6 @@ s.save("fig4")
 
 # ---------- 图5 污染边识别与四态判定（固定优先级·互斥） ----------
 s = SVG(960, 690)
-s.text(30, 38, "图5  污染边识别：固定优先级 BLOCK>UNKNOWN>WARN>ALLOW（先匹配先定性）", 17, "#12314f", bold=True)
 s.rect(340, 58, 260, 40, ["遍历每条引用边"], "#eef4ff", "#3b6fb5", 14, bold_first=True)
 s.arrow(470,98,470,124)
 # R1
@@ -185,7 +180,6 @@ s.save("fig5")
 
 # ---------- 图6 静态/运行态语义比对与分级 ----------
 s = SVG(960, 560)
-s.text(30, 40, "图6  声明目标与观测目标的语义冲突比对与分级", 20, "#12314f", bold=True)
 s.rect(40, 80, 250, 54, ["前置：同一 scan_id / 有效窗口内", "跨窗或超过 valid_until → 转 warn"], "#f5f9ff", "#8fb3d9", 12, bold_first=True)
 s.rect(40, 158, 250, 54, ["declared_target（静态声明）","如 bifrost.risk-prod.svc.cluster.local"], "#eef4ff", "#3b6fb5", 11, bold_first=True)
 s.rect(40, 232, 250, 54, ["observed_target（运行观测）","如 ClusterIP 10.96.23.18 / UID"], "#fff3ea", "#d97a2b", 11, bold_first=True)
@@ -205,7 +199,6 @@ s.save("fig6")
 
 # ---------- 图7 类型化转换—残留复验—断点续扫 ----------
 s = SVG(960, 560)
-s.text(30, 40, "图7  类型化引用转换—全量污染复检—断点续扫闭环", 20, "#12314f", bold=True)
 s.rect(40, 90, 180, 56, ["命中 block 的引用边"], "#fdecec", "#c0392b", 14, bold_first=True)
 s.arrow(220,118,280,118)
 s.rect(280, 80, 240, 80, ["按 ref_type 调用结构化解析器","（非字符串替换）"], "#fff3ea", "#d97a2b", 13, bold_first=True)
@@ -230,7 +223,6 @@ s.save("fig7")
 
 # ---------- 图8 门禁与关联闭包局部回滚 ----------
 s = SVG(960, 520)
-s.text(30, 40, "图8  部署前门禁与污染关联闭包局部回滚", 20, "#12314f", bold=True)
 s.box(40, 80, 400, 180, "部署前门禁（拟实现，见原型）", "#fff3ea", "#d97a2b", fs=15)
 s.text(60, 128, "触发阻断条件（任一）：", 14, "#12314f", bold=True)
 s.text(70, 156, "· 存在 block 级污染边（含未知态按关键性升级）", 13, "#12314f")
